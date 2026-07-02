@@ -133,6 +133,11 @@
     .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
 
+    /* O NOVO CSS DO CONTADOR FOI ADICIONADO AQUI COESO COM O FOOTER */
+    .visitor-counter { margin-top: 15px; font-size: 0.72rem; color: #64748b; display: inline-flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.15); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.03); }
+    .visitor-counter i { color: var(--accent); }
+    .visitor-counter img { height: 14px; vertical-align: middle; filter: grayscale(100%) brightness(130%); opacity: 0.7; }
+
     /* Botão Flutuante WhatsApp Comercial */
     .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
 
@@ -453,6 +458,15 @@
           <span style="color: rgba(255,255,255,0.2);">·</span>
           <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a>
         </p>
+		<!-- Contador de Visitas Discreto -->
+        <div>
+          <div class="visitor-counter" title="Total de visualizações de página">
+            <i class="fas fa-eye"></i>
+            <span>Visitas ao portal:</span>
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fveracatarina.github.io&count_bg=%230b251e00&title_bg=%2355555500&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true" alt="Contador de Acessos">
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </footer>
