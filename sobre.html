@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
+  <meta name="description" content="Conheça a trajetória da Dra. Vera Catarina, advogada especializada em Direito Criminal, Trabalhista, Previdenciário, Família, Consumidor e Direito Digital em Sapucaia do Sul - RS.">
+  <meta name="keywords" content="Sobre Vera Catarina, Advogada Sapucaia, Trajetória, Especialidades, OAB/RS 19.315">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta property="og:title" content="Sobre a Dra. Vera Catarina | Advocacia Especializada">
+  <meta property="og:description" content="Conheça a trajetória, missão e áreas de atuação da Dra. Vera Catarina em Sapucaia do Sul.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://veracatarina.github.io/sobre.html">
+
+  <title>Sobre a Dra. Vera Catarina | Advocacia Especializada</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ===== RESET & VARIÁVEIS ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary-dark: #0b251e;
+      --primary: #143d33;
+      --secondary: #0f172a;
+      --accent: #c5a880;
+      --accent-hover: #b39369;
+      --danger: #991b1b;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --bg-light: #f8fafc;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: #ffffff;
+      line-height: 1.6;
+      padding-top: 120px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
+
+    /* ===== TOP BAR ===== */
+    .top-bar {
+      background: #061612;
+      height: 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1001;
+      border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+      display: flex;
+      align-items: center;
+    }
+    .top-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-size: 0.8rem;
+      color: #cbd5e1;
+    }
+    .top-socials { display: flex; gap: 15px; }
+    .top-socials a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; font-size: 0.95rem; }
+    .top-socials a:hover { color: var(--accent); }
+    .top-contact-info { display: flex; gap: 15px; }
+    .top-contact-info span i { color: var(--accent); margin-right: 4px; }
+    .top-contact-info .obs-tel { font-size: 0.7rem; color: #94a3b8; font-weight: normal; margin-left: 2px; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 40px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: rgba(11, 37, 30, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .logo {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      z-index: 1002;
+    }
+    .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
+    .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav-menu a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: color 0.2s;
+      text-transform: uppercase;
+    }
+    .nav-menu a:hover { color: var(--accent); }
+    .nav-menu a.active { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 4px; }
+    .btn-emergency-nav {
+      background: var(--danger);
+      color: white !important;
+      padding: 6px 14px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem !important;
+      animation: pulse 2s infinite;
+    }
+
+    /* ===== MENU MOBILE ===== */
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
+    .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
+    #menu-checkbox { display: none; }
+
+    /* ===== HERO INTERNO ===== */
+    .hero-inner {
+      background: linear-gradient(rgba(11, 37, 30, 0.85), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover;
+      color: white;
+      padding: 80px 0 100px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+    .hero-inner h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    .hero-inner h1 span { color: var(--accent); }
+    .hero-inner p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 700px;
+      margin: 0 auto;
+      color: #cbd5e1;
+      font-weight: 300;
+    }
+
+    /* ===== SEÇÕES ===== */
+    section { padding: 80px 0; }
+    .bg-alt { background: var(--bg-light); }
+    .sec-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    .sec-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+    }
+    .sec-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto 50px;
+      font-size: 0.95rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .about-text p {
+      font-size: 1rem;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .about-text p strong { color: var(--primary); }
+    .about-image {
+      background: var(--primary-dark);
+      border-radius: 8px;
+      padding: 40px 30px;
+      color: white;
+      border-left: 4px solid var(--accent);
+      text-align: center;
+    }
+    .about-image .big-icon {
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+    .about-image h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .about-image .oab {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .value-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 6px;
+      text-align: center;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+    }
+    .value-card:hover { transform: translateY(-5px); }
+    .value-card i {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .value-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--secondary);
+    }
+    .value-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+
+    .areas-highlight {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .areas-highlight .item {
+      background: white;
+      padding: 18px 22px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: var(--shadow);
+    }
+    .areas-highlight .item i {
+      font-size: 1.5rem;
+      color: var(--accent);
+      width: 30px;
+      text-align: center;
+    }
+    .areas-highlight .item span {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary-dark);
+      color: #cbd5e1;
+      padding: 50px 0 30px;
+      border-top: 4px solid var(--accent);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 40px;
+      font-size: 0.9rem;
+    }
+    .footer-col h5 {
+      color: white;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a {
+      color: #cbd5e1;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 25px;
+      font-size: 0.78rem;
+      color: #94a3b8;
+    }
+    .visitor-counter {
+      margin-top: 15px;
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,0,0,0.3);
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid rgba(197, 168, 128, 0.2);
+    }
+    .visitor-counter i { color: var(--accent); }
+    .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
+
+    .btn-emergency-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      animation: pulse-green 2s infinite;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); }
+      70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); }
+    }
+    @keyframes pulse-green {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 992px) {
+      body { padding-top: 150px; }
+      header { top: 70px; height: 75px; }
+      .top-bar { height: auto; padding: 8px 0; position: fixed; }
+      .top-container { flex-direction: column; gap: 6px; text-align: center; }
+      .top-contact-info { flex-direction: column; gap: 2px; }
+      .menu-toggle { display: flex; }
+      .nav-menu {
+        position: fixed;
+        top: 145px;
+        right: -100%;
+        background: rgba(11, 37, 30, 0.98);
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 145px);
+        gap: 25px;
+        padding: 40px 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        border-top: 1px solid var(--accent);
+      }
+      #menu-checkbox:checked ~ .nav-menu { right: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+      .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      footer { padding-bottom: 110px; }
+    }
+    @media (max-width: 600px) {
+      .hero-inner { padding: 60px 0 80px; }
+      section { padding: 50px 0; }
+      .areas-highlight .item { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-container">
+      <div class="top-contact-info">
+        <span><i class="fas fa-phone"></i> (51) 3450-2229 <span class="obs-tel">(Somente WhatsApp)</span></span>
+        <span><i class="fas fa-location-dot"></i> Sapucaia do Sul - RS</span>
+      </div>
+      <div class="top-socials">
+        <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/AdvocaciaVeraCatarina" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://advocaciasapucaia.blogspot.com/" target="_blank" rel="noopener" title="Blogger Institucional"><i class="fab fa-blogger"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" rel="noopener" title="Atendimento WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Olá,%20gostaria de%20agendar%20uma%20consulta%20jurídica." class="btn-emergency-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> Fale Conosco
+  </a>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <span class="main-txt">Vera Catarina</span>
+        <span class="sub-txt">Advocacia Especializada</span>
+      </a>
+
+      <input type="checkbox" id="menu-checkbox">
+      <label for="menu-checkbox" class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+    <ul class="nav-menu">
+  <li><a href="index.html">Início</a></li>
+  <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
+  <li><a href="index.html#servicos">Utilidades</a></li>
+  <li><a href="index.html#restrito">Canal Restrito</a></li>
+  <li><a href="index.html#contato">Contato</a></li>
+  <li><a href="sobre.html" class="active">Sobre</a></li>
+  <li><a href="legal.html">Legal &amp; Suporte</a></li>
+  <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+</ul>
+    </div>
+  </header>
+
+  <!-- ===== HERO INTERNO ===== -->
+  <section class="hero-inner">
+    <div class="container">
+      <h1>Sobre a <span>Dra. Vera Catarina</span></h1>
+      <p>Conheça a trajetória, a missão e os valores que norteiam nossa atuação jurídica em Sapucaia do Sul e região.</p>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="sec-title" style="text-align:left; padding-bottom:0;">Quem Somos</h2>
+          <p style="margin-top:20px;">
+            <strong>Bel. Vera Catarina Rodrigues da Silva</strong> é advogada e pedagoga, formada pela 
+            <strong>Universidade do Vale do Rio dos Sinos (UNISINOS)</strong> em São Leopoldo – RS, 
+            com inscrição na <strong>OAB/RS sob o nº 19.315</strong>.
+          </p>
+          <p>
+            Com atuação sólida nas áreas <strong>cível, previdenciária, trabalhista, criminal, 
+            de família, do consumidor e direito digital</strong>, a Dra. Vera Catarina dedica-se 
+            a oferecer um atendimento jurídico de excelência, pautado pela ética, transparência 
+            e compromisso com a defesa dos direitos de seus clientes.
+          </p>
+          <p>
+            Nosso escritório atende <strong>pessoas físicas e jurídicas</strong> em Sapucaia do Sul 
+            e região metropolitana, com foco em resultados ágeis e estratégicos, sempre com o 
+            máximo de qualidade e eficiência.
+          </p>
+          <p>
+            <strong>Missão:</strong> Preservar e restaurar direitos com atuação técnica, 
+            humanizada e resolutiva, garantindo a satisfação plena de nossos clientes.
+          </p>
+        </div>
+        <div class="about-image">
+          <div class="big-icon"><i class="fas fa-scale-balanced"></i></div>
+          <h3>Dra. Vera Catarina</h3>
+          <p class="oab">OAB/RS 19.315</p>
+          <p style="font-size:0.85rem; color:#cbd5e1; margin-top:12px;">
+            <i class="fas fa-graduation-cap"></i> UNISINOS – São Leopoldo<br>
+            <i class="fas fa-map-pin"></i> Sapucaia do Sul – RS
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALORES ===== -->
+  <section class="bg-alt">
+    <div class="container">
+      <h2 class="sec-title">Nossos Valores</h2>
+      <p class="sec-subtitle">Princípios que orientam cada caso, cada cliente e cada decisão.</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-handshake"></i>
+          <h4>Ética e Transparência</h4>
+          <p>Conduzimos cada caso com honestidade, clareza e respeito ao cliente.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-bullseye"></i>
+          <h4>Excelência Técnica</h4>
+          <p>Atualização constante e domínio profundo das áreas em que atuamos.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-users"></i>
+          <h4>Atendimento Humanizado</h4>
+          <p>Escuta ativa e acolhimento, entendendo as necessidades reais de cada cliente.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-clock"></i>
+          <h4>Agilidade e Resolutividade</h4>
+          <p>Atuação célere, com foco em soluções práticas e eficazes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ÁREAS DE DESTAQUE ===== -->
+  <section>
+    <div class="container">
+      <h2 class="sec-title">Áreas de Atuação</h2>
+      <p class="sec-subtitle">Especialidades que abrangem as principais demandas do Direito contemporâneo.</p>
+      <div class="areas-highlight">
+        <div class="item"><i class="fas fa-gavel"></i><span>Direito Criminal</span></div>
+        <div class="item"><i class="fas fa-briefcase"></i><span>Direito Trabalhista</span></div>
+        <div class="item"><i class="fas fa-users-rays"></i><span>Direito Previdenciário</span></div>
+        <div class="item"><i class="fas fa-people-roof"></i><span>Direito de Família</span></div>
+        <div class="item"><i class="fas fa-scale-balanced"></i><span>Direito do Consumidor</span></div>
+        <div class="item"><i class="fas fa-laptop-code"></i><span>Direito Digital</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Dra. Vera Catarina</h5>
+          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Links Rápidos</h5>
+          <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/#atuacao">Áreas de Atuação</a></li>
+            <li><a href="sobre.html">Sobre a Dra. Vera Catarina</a></li>
+            <li><a href="legal.html">Legal &amp; Suporte</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal &amp; LGPD</h5>
+          <ul>
+            <li><a href="legal.html#privacidade">Diretivas de Privacidade</a></li>
+            <li><a href="legal.html#termos">Termos de Uso</a></li>
+            <li><a href="legal.html#cookies">Gerenciamento de Cookies</a></li>
+            <li><a href="legal.html#faq">FAQ – Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO e LGPD.</p>
+        <p style="font-size: 0.75rem; color: #94a3b8; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+          <span>⚡ Design & Desenvolvimento:</span>
+          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 600;">💻 Fábio Wlademir</a>
+          <span style="color: rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <span style="color: rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a>
+        </p>
+        <div>
+          <div class="visitor-counter" title="Total de visualizações de página">
+            <i class="fas fa-eye"></i>
+            <span>Visitas ao portal:</span>
+            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fecha o menu mobile ao clicar em um link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('menu-checkbox').checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
