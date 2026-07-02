@@ -8,7 +8,6 @@
   <meta name="keywords" content="Advogado Criminal Sapucaia, Advogada Vera Catarina, Crimes Virtuais, Calunia e Difamacao Internet, Direito Trabalhista Sapucaia, Aposentadoria, Plantao Criminal 24h RS">
   <meta name="robots" content="index, follow">
 
-  <!-- CORRIGIDO: Favicon apontando para o diretório principal da sua hospedagem -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
   <meta property="og:title" content="Advocacia Vera Catarina | Defesa Especializada & Estratégica">
@@ -65,7 +64,7 @@
     .nav-menu a:hover { color: var(--accent); }
     .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem !important; animation: pulse 2s infinite; }
 
-    /* CORREÇÃO DO MENU MOBILE (CSS PURO) */
+    /* Componentes do Menu Hambúrguer (CSS PURO) */
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
     .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
     #menu-checkbox { display: none; }
@@ -112,7 +111,7 @@
     .service-card h4 { font-size: 1.1rem; margin-bottom: 10px; color: var(--secondary); }
     .service-card p { font-size: 0.88rem; color: var(--text-light); margin-bottom: 15px; }
 
-    /* Nova Área Restrita / Canal de Envio Híbrido */
+    /* Área Restrita / Canal de Envio Híbrido */
     .client-zone { background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=600') center/cover; color: white; text-align: center; border-top: 3px solid var(--accent); border-bottom: 3px solid var(--accent); }
     .client-zone h2 { color: white; }
     .secure-form-box { max-width: 500px; margin: 0 auto; background: rgba(255,255,255,0.05); padding: 35px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); }
@@ -139,7 +138,7 @@
     .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
 
-    /* O NOVO CSS DO CONTADOR ATUALIZADO PARA EXIBIÇÃO CORRETA */
+    /* CSS do Contador de Visitas */
     .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
     .visitor-counter i { color: var(--accent); }
     .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
@@ -161,23 +160,45 @@
     
     /* REGRAS EXCLUSIVAS DE RESPONSIVIDADE E MOBILE EXCELENTE */
     @media (max-width: 992px) { 
-      body { padding-top: 130px; }
-      header { top: 50px; height: 75px; }
-      .top-bar { height: 50px; padding: 5px 0; }
-      .top-container { flex-direction: column; gap: 3px; text-align: center; }
-      .top-socials { gap: 12px; }
+      body { 
+        padding-top: 150px; /* Dá espaço suficiente para o topo expandido no telemóvel */
+      } 
+      header { 
+        top: 74px; /* Move o cabeçalho para baixo da barra de contactos */
+        height: 75px; 
+      }
       
-      /* CORREÇÃO DO MENU RESPONSIVO COM SCRIPTLESS HAMBÚRGUER */
-      .menu-toggle { display: flex; }
+      /* CORREÇÃO DO TEXTO CORTADO: Altura livre e espaço interno regulado */
+      .top-bar { 
+        height: auto; 
+        padding: 8px 0; 
+        position: fixed;
+      }
+      .top-container { 
+        flex-direction: column; 
+        gap: 6px; 
+        text-align: center; 
+      }
+      .top-contact-info {
+        flex-direction: column; /* Coloca o telefone e a localidade em linhas separadas no telemóvel */
+        gap: 2px;
+      }
+      .top-socials { 
+        gap: 15px; 
+      }
       
+      /* Configurações estruturadas do menu mobile */
+      .menu-toggle { 
+        display: flex; 
+      }
       .nav-menu { 
         position: fixed; 
-        top: 125px; 
+        top: 149px; /* Ajustado milimetricamente para acompanhar o novo topo */
         right: -100%; 
         background: rgba(11, 37, 30, 0.98); 
         flex-direction: column; 
         width: 100%; 
-        height: calc(100vh - 125px); 
+        height: calc(100vh - 149px); 
         gap: 25px; 
         padding: 40px 20px; 
         transition: right 0.3s ease; 
@@ -185,7 +206,6 @@
         border-top: 1px solid var(--accent);
       }
       
-      /* Quando o checkbox invisível estiver marcado, ativa o menu mobile */
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
@@ -194,8 +214,8 @@
       .contact-wrapper { grid-template-columns: 1fr; } 
       .footer-grid { grid-template-columns: 1fr; gap: 20px; } 
       .form-actions-split { grid-template-columns: 1fr; }
-
-      /* Adiciona margem extra na rolagem final do celular para o botão flutuante não cobrir os créditos */
+      
+      /* Margem extra para os créditos não serem tapados pelo botão flutuante */
       footer { padding-bottom: 110px; } 
     }
   </style>
@@ -225,10 +245,9 @@
     <div class="container nav-container">
       <a href="#" class="logo">
         <span class="main-txt">Vera Catarina</span>
-        <span class="sub-txt">Advocacia Especializada</span>
+        <span class="sub-txt">Advocacia Specialized</span>
       </a>
       
-      <!-- Componentes do Menu Hambúrguer -->
       <input type="checkbox" id="menu-checkbox">
       <label for="menu-checkbox" class="menu-toggle">
         <span></span>
@@ -278,7 +297,7 @@
 
         <div class="area-card">
           <div class="icon"><i class="fas fa-briefcase"></i></div>
-          <h3>Direito Trabalhista</h3>
+          <h3>Direito Trabalho</h3>
           <ul>
             <li><i class="fas fa-check"></i> Reversão de Justa Causa e Rescisão Indireta.</li>
             <li><i class="fas fa-check"></i> Indenizações por Acidente de Trabalho e Assédio Moral.</li>
@@ -469,14 +488,12 @@
           <ul>
             <li><a href="#home">Início</a></li>
             <li><a href="#atuacao">Áreas de Atuação</a></li>
-            <!-- CORRIGIDO: href alterado para javascript:void(0) para blindar contra pulo de tela -->
             <li><a href="javascript:void(0);" onclick="openModal('sobre')">Sobre a Dra. Vera Catarina</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Legal & LGPD</h5>
           <ul>
-            <!-- CORRIGIDO: href alterados para javascript:void(0) em todos os gatilhos de modais -->
             <li><a href="javascript:void(0);" onclick="openModal('privacidade')">Diretivas de Privacidade</a></li>
             <li><a href="javascript:void(0);" onclick="openModal('termos')">Termos de Uso</a></li>
             <li><a href="javascript:void(0);" onclick="openModal('cookies')">Gerenciamento de Cookies</a></li>
@@ -499,7 +516,7 @@
           <div class="visitor-counter" title="Total de visualizações de página">
             <i class="fas fa-eye"></i>
             <span>Visitas ao portal:</span>
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fveracatarina.github.io&count_bg=%23143D33&title_bg=%230B251E&icon=&icon_color=%23E7E7E7&title=Acessos&edge_flat=false" alt="Contador de Acessos">
+            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
           </div>
         </div>
       </div>
@@ -555,7 +572,7 @@
       window.location.href = mailtoLink;
     }
 
-    /* FUNÇÃO COMPLEMENTAR PARA FECHAR O MENU MOBILE AUTOMATICAMENTE AO CLICAR */
+    /* Função para fechar o menu mobile automaticamente ao clicar nos links */
     function closeMenu() {
       document.getElementById('menu-checkbox').checked = false;
     }
