@@ -8,7 +8,8 @@
   <meta name="keywords" content="Advogado Criminal Sapucaia, Advogada Vera Catarina, Crimes Virtuais, Calunia e Difamacao Internet, Direito Trabalhista Sapucaia, Aposentadoria, Plantao Criminal 24h RS">
   <meta name="robots" content="index, follow">
 
-  <link rel="icon" type="image/x-icon" href="https://advocaciasapucaia.blogspot.com/favicon.ico">
+  <!-- CORRIGIDO: Favicon apontando para o diretório principal da sua hospedagem -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
   <meta property="og:title" content="Advocacia Vera Catarina | Defesa Especializada & Estratégica">
   <meta property="og:description" content="Atuação jurídica imediata em Sapucaia do Sul. Especialista em Direito Criminal, Digital, Trabalhista e Cível.">
@@ -55,7 +56,7 @@
     /* Header Principal */
     header { position: fixed; top: 40px; left: 0; right: 0; height: 80px; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; align-items: center; }
     .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-    .logo { color: white; text-decoration: none; display: flex; flex-direction: column; }
+    .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
     .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
     .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
     
@@ -63,6 +64,11 @@
     .nav-menu a { color: #e2e8f0; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; text-transform: uppercase; }
     .nav-menu a:hover { color: var(--accent); }
     .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem !important; animation: pulse 2s infinite; }
+
+    /* CORREÇÃO DO MENU MOBILE (CSS PURO) */
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
+    .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
+    #menu-checkbox { display: none; }
 
     /* Hero Section */
     .hero { background: linear-gradient(rgba(11, 37, 30, 0.88), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover; color: white; padding: 100px 0 120px; text-align: center; border-bottom: 4px solid var(--accent); }
@@ -153,7 +159,7 @@
     @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
     @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
     
-    /* REGRAS EXCLUSIVAS DE RESPONSIVIDADE E MOBILE PREVENTIVO */
+    /* REGRAS EXCLUSIVAS DE RESPONSIVIDADE E MOBILE EXCELENTE */
     @media (max-width: 992px) { 
       body { padding-top: 130px; }
       header { top: 50px; height: 75px; }
@@ -161,10 +167,29 @@
       .top-container { flex-direction: column; gap: 3px; text-align: center; }
       .top-socials { gap: 12px; }
       
-      /* Otimização Responsiva: Em vez de esconder a navegação completa, deixa os botões principais fluidos */
-      .nav-menu { display: flex; gap: 10px; width: auto; }
-      .nav-menu li:not(:last-child) { display: none; } 
-      .nav-menu .btn-emergency-nav { padding: 8px 12px; font-size: 0.75rem !important; }
+      /* CORREÇÃO DO MENU RESPONSIVO COM SCRIPTLESS HAMBÚRGUER */
+      .menu-toggle { display: flex; }
+      
+      .nav-menu { 
+        position: fixed; 
+        top: 125px; 
+        right: -100%; 
+        background: rgba(11, 37, 30, 0.98); 
+        flex-direction: column; 
+        width: 100%; 
+        height: calc(100vh - 125px); 
+        gap: 25px; 
+        padding: 40px 20px; 
+        transition: right 0.3s ease; 
+        z-index: 999;
+        border-top: 1px solid var(--accent);
+      }
+      
+      /* Quando o checkbox invisível estiver marcado, ativa o menu mobile */
+      #menu-checkbox:checked ~ .nav-menu { right: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
       .contact-wrapper { grid-template-columns: 1fr; } 
       .footer-grid { grid-template-columns: 1fr; gap: 20px; } 
@@ -202,12 +227,21 @@
         <span class="main-txt">Vera Catarina</span>
         <span class="sub-txt">Advocacia Especializada</span>
       </a>
+      
+      <!-- Componentes do Menu Hambúrguer -->
+      <input type="checkbox" id="menu-checkbox">
+      <label for="menu-checkbox" class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
       <ul class="nav-menu">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#atuacao">Áreas de Atuação</a></li>
-        <li><a href="#servicos">Utilidades</a></li>
-        <li><a href="#restrito">Canal Restrito</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#home" onclick="closeMenu()">Início</a></li>
+        <li><a href="#atuacao" onclick="closeMenu()">Áreas de Atuação</a></li>
+        <li><a href="#servicos" onclick="closeMenu()">Utilidades</a></li>
+        <li><a href="#restrito" onclick="closeMenu()">Canal Restrito</a></li>
+        <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
         <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
       </ul>
     </div>
@@ -435,15 +469,17 @@
           <ul>
             <li><a href="#home">Início</a></li>
             <li><a href="#atuacao">Áreas de Atuação</a></li>
-            <li><a href="#" onclick="openModal('sobre')">Sobre a Dra. Vera Catarina</a></li>
+            <!-- CORRIGIDO: href alterado para javascript:void(0) para blindar contra pulo de tela -->
+            <li><a href="javascript:void(0);" onclick="openModal('sobre')">Sobre a Dra. Vera Catarina</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Legal & LGPD</h5>
           <ul>
-            <li><a href="#" onclick="openModal('privacidade')">Diretivas de Privacidade</a></li>
-            <li><a href="#" onclick="openModal('termos')">Termos de Uso</a></li>
-            <li><a href="#" onclick="openModal('cookies')">Gerenciamento de Cookies</a></li>
+            <!-- CORRIGIDO: href alterados para javascript:void(0) em todos os gatilhos de modais -->
+            <li><a href="javascript:void(0);" onclick="openModal('privacidade')">Diretivas de Privacidade</a></li>
+            <li><a href="javascript:void(0);" onclick="openModal('termos')">Termos de Uso</a></li>
+            <li><a href="javascript:void(0);" onclick="openModal('cookies')">Gerenciamento de Cookies</a></li>
           </ul>
         </div>
       </div>
@@ -460,7 +496,6 @@
         </p>
         
         <div>
-          <!-- CORREÇÃO DO CONTADOR: URL corrigida com parâmetros limpos e estáveis -->
           <div class="visitor-counter" title="Total de visualizações de página">
             <i class="fas fa-eye"></i>
             <span>Visitas ao portal:</span>
@@ -479,7 +514,6 @@
   </div>
 
   <script>
-    // CORREÇÃO DO SCRIPT DE CONTATO: Mapeado via ID específico para blindar contra bugs de indexação
     function handleGeneralForm(event) {
       event.preventDefault();
       const nome = document.getElementById('geralNome').value.trim();
@@ -490,7 +524,6 @@
       window.open(`https://api.whatsapp.com/send?phone=555134502229&text=${encodeURIComponent(text)}`, '_blank');
     }
 
-    // Validador de dados básicos do formulário híbrido
     function getHybridData() {
       const nome = document.getElementById('restritoNome').value.trim();
       const fone = document.getElementById('restritoFone').value.trim();
@@ -504,7 +537,6 @@
       return { nome, fone, email, msg };
     }
 
-    // Ação 1: Enviar dados da Área Restrita via WhatsApp
     function sendToWhatsApp() {
       const data = getHybridData();
       if(!data) return;
@@ -512,7 +544,10 @@
       window.open(`https://api.whatsapp.com/send?phone=555134502229&text=${encodeURIComponent(text)}`, '_blank');
     }
 
-    // Ação 2: Enviar dados da Área Restrita via Mailto (E-mail)
+    document.addEventListener("DOMContentLoaded", function() {
+       document.getElementById("hybridForm").removeAttribute("onsubmit");
+    });
+
     function sendToEmail() {
       const data = getHybridData();
       if(!data) return;
@@ -520,7 +555,11 @@
       window.location.href = mailtoLink;
     }
 
-    // Conteúdos Legais Estáticos
+    /* FUNÇÃO COMPLEMENTAR PARA FECHAR O MENU MOBILE AUTOMATICAMENTE AO CLICAR */
+    function closeMenu() {
+      document.getElementById('menu-checkbox').checked = false;
+    }
+
     const contents = {
       sobre: `<h3>Sobre a Dra. Vera Catarina</h3><p>A Dra. Vera Catarina é advogada de destacada atuação na região metropolitana de Porto Alegre, sediada em Sapucaia do Sul. O escritório foi concebido sob os pilares do atendimento personalizado, do sigilo absoluto e do rigor técnico-processual.</p>`,
       privacidade: `<h3>Diretivas de Privacidade e LGPD</h3><h4>1. Coleta Mínima de Dados</h4><p>Em total conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), nosso site adota o princípio da minimização. Coletamos seu nome, telefone e e-mail exclusivamente se você preencher voluntariamente nossos formulários.</p>`,
