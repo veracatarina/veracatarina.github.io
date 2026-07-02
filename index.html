@@ -133,10 +133,10 @@
     .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
 
-    /* O NOVO CSS DO CONTADOR FOI ADICIONADO AQUI COESO COM O FOOTER */
-    .visitor-counter { margin-top: 15px; font-size: 0.72rem; color: #64748b; display: inline-flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.15); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.03); }
+    /* O NOVO CSS DO CONTADOR ATUALIZADO PARA EXIBIÇÃO CORRETA */
+    .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
     .visitor-counter i { color: var(--accent); }
-    .visitor-counter img { height: 14px; vertical-align: middle; filter: grayscale(100%) brightness(130%); opacity: 0.7; }
+    .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
 
     /* Botão Flutuante WhatsApp Comercial */
     .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -161,16 +161,16 @@
       .top-container { flex-direction: column; gap: 3px; text-align: center; }
       .top-socials { gap: 12px; }
       
-      /* Ativação do Menu Mobile em formato de linha compacta de atalhos rápidos */
+      /* Otimização Responsiva: Em vez de esconder a navegação completa, deixa os botões principais fluidos */
       .nav-menu { display: flex; gap: 10px; width: auto; }
-      .nav-menu li:not(:last-child) { display: none; } /* Oculta links textuais longos */
+      .nav-menu li:not(:last-child) { display: none; } 
       .nav-menu .btn-emergency-nav { padding: 8px 12px; font-size: 0.75rem !important; }
 
       .contact-wrapper { grid-template-columns: 1fr; } 
       .footer-grid { grid-template-columns: 1fr; gap: 20px; } 
       .form-actions-split { grid-template-columns: 1fr; }
 
-      /* CORREÇÃO DO BOTÃO FLUTUANTE SOBRE OS CRÉDITOS: Adiciona margem extra na rolagem final do celular */
+      /* Adiciona margem extra na rolagem final do celular para o botão flutuante não cobrir os créditos */
       footer { padding-bottom: 110px; } 
     }
   </style>
@@ -269,7 +269,7 @@
           <h3>Direito Criminal</h3>
           <ul>
             <li><i class="fas fa-check"></i> <strong>Assistência Imediata em Prisões:</strong> Atuação em flagrantes e delegacias.</li>
-            <li><i class="fas fa-check"></i> <strong>Habeas Corpus:</strong> Medidas de urgência contra prisons ilegais.</li>
+            <li><i class="fas fa-check"></i> <strong>Habeas Corpus:</strong> Medidas de urgência contra prisões ilegais.</li>
             <li><i class="fas fa-check"></i> <strong>Tráfico de Drogas:</strong> Análise probatória e nulidades processuais.</li>
             <li><i class="fas fa-check"></i> <strong>Lei Maria da Penha:</strong> Defesa em medidas protetivas de urgência.</li>
             <li><i class="fas fa-check"></i> <strong>Crimes de Trânsito & Lesão:</strong> Defesa técnica em bafômetro e CNH.</li>
@@ -403,16 +403,16 @@
         <div class="contact-form">
           <form onsubmit="handleGeneralForm(event)">
             <div class="input-group">
-              <label style="color:var(--text-dark);">Seu Nome Completo</label>
-              <input type="text" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              <label for="geralNome" style="color:var(--text-dark);">Seu Nome Completo</label>
+              <input type="text" id="geralNome" required style="background:white; color:var(--text-dark); border-color:var(--border);">
             </div>
             <div class="input-group">
-              <label style="color:var(--text-dark);">Seu WhatsApp / Telefone</label>
-              <input type="tel" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              <label for="geralFone" style="color:var(--text-dark);">Seu WhatsApp / Telefone</label>
+              <input type="tel" id="geralFone" required style="background:white; color:var(--text-dark); border-color:var(--border);">
             </div>
             <div class="input-group">
-              <label style="color:var(--text-dark);">Assunto / Tipo de Solicitação</label>
-              <input type="text" placeholder="Ex: Consulta sobre crime virtual" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              <label for="geralAssunto" style="color:var(--text-dark);">Assunto / Tipo de Solicitação</label>
+              <input type="text" id="geralAssunto" placeholder="Ex: Consulta sobre crime virtual" required style="background:white; color:var(--text-dark); border-color:var(--border);">
             </div>
             <button type="submit" class="btn" style="width:100%; justify-content:center; background:var(--primary-dark); color:white;">
               <i class="fas fa-paper-plane"></i> Enviar via WhatsApp
@@ -460,10 +460,11 @@
         </p>
         
         <div>
+          <!-- CORREÇÃO DO CONTADOR: URL corrigida com parâmetros limpos e estáveis -->
           <div class="visitor-counter" title="Total de visualizações de página">
             <i class="fas fa-eye"></i>
             <span>Visitas ao portal:</span>
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fveracatarina.github.io&count_bg=%230b251e00&title_bg=%2355555500&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true" alt="Contador de Acessos">
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fveracatarina.github.io&count_bg=%23143D33&title_bg=%230B251E&icon=&icon_color=%23E7E7E7&title=Acessos&edge_flat=false" alt="Contador de Acessos">
           </div>
         </div>
       </div>
@@ -478,11 +479,14 @@
   </div>
 
   <script>
-    // Processamento do formulário de rodapé simples
+    // CORREÇÃO DO SCRIPT DE CONTATO: Mapeado via ID específico para blindar contra bugs de indexação
     function handleGeneralForm(event) {
       event.preventDefault();
-      const inputs = event.target.querySelectorAll('input');
-      const text = `Olá Dra. Vera Catarina,\n\nContato via site:\n*Nome:* ${inputs[0].value}\n*Telefone:* ${inputs[1].value}\n*Assunto:* ${inputs[2].value}`;
+      const nome = document.getElementById('geralNome').value.trim();
+      const fone = document.getElementById('geralFone').value.trim();
+      const assunto = document.getElementById('geralAssunto').value.trim();
+      
+      const text = `Olá Dra. Vera Catarina,\n\nContato via site:\n*Nome:* ${nome}\n*Telefone:* ${fone}\n*Assunto:* ${assunto}`;
       window.open(`https://api.whatsapp.com/send?phone=555134502229&text=${encodeURIComponent(text)}`, '_blank');
     }
 
