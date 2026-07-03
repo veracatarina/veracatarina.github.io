@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- PÁGINA INICIAL (contém todas as seções: home, atuação, serviços, restrito, contato) -->
+  <url>
+    <loc>https://veracatarina.github.io/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- PÁGINA SOBRE (página estática separada) -->
+  <url>
+    <loc>https://veracatarina.github.io/sobre.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- PÁGINA LEGAL (página estática separada com privacidade, termos, cookies e FAQ) -->
+  <url>
+    <loc>https://veracatarina.github.io/legal.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
