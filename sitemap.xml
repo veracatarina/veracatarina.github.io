@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- PÁGINA INICIAL (contém todas as seções: home, atuação, serviços, restrito, contato) -->
+  <!-- ===== 1. PÁGINA INICIAL ===== -->
   <url>
     <loc>https://veracatarina.github.io/</loc>
     <lastmod>2026-07-15</lastmod>
@@ -9,7 +9,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- PÁGINA DE NOTÍCIAS E ARTIGOS (nova página com conteúdo dinâmico e filtros) -->
+  <!-- ===== 2. PÁGINA DE NOTÍCIAS E ARTIGOS ===== -->
   <url>
     <loc>https://veracatarina.github.io/noticias.html</loc>
     <lastmod>2026-07-15</lastmod>
@@ -17,7 +17,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- PÁGINA SOBRE (página estática com biografia da Dra. Vera Catarina) -->
+  <!-- ===== 3. PÁGINA SOBRE ===== -->
   <url>
     <loc>https://veracatarina.github.io/sobre.html</loc>
     <lastmod>2026-07-15</lastmod>
@@ -25,12 +25,72 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- PÁGINA LEGAL (privacidade, termos, cookies e FAQ) -->
+  <!-- ===== 4. PÁGINA LEGAL ===== -->
   <url>
     <loc>https://veracatarina.github.io/legal.html</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <!-- ============================================================ -->
+  <!-- ===== NOVAS PÁGINAS DE ÁREAS DE ATUAÇÃO (7 páginas) ===== -->
+  <!-- ============================================================ -->
+
+  <!-- 5. DIREITO DE FAMÍLIA -->
+  <url>
+    <loc>https://veracatarina.github.io/direito-familia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 6. DIREITO DIGITAL -->
+  <url>
+    <loc>https://veracatarina.github.io/direito-digital.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 7. DIREITO CRIMINAL -->
+  <url>
+    <loc>https://veracatarina.github.io/direito-criminal.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 8. DIREITO TRABALHISTA -->
+  <url>
+    <loc>https://veracatarina.github.io/direito-trabalhista.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 9. DIREITO PREVIDENCIÁRIO -->
+  <url>
+    <loc>https://veracatarina.github.io/direito-previdenciario.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 10. DIREITO DO CONSUMIDOR -->
+  <url>
+    <loc>https://veracatarina.github.io/direito-consumidor.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 11. DIREITO CIVIL E SUCESSÕES -->
+  <url>
+    <loc>https://veracatarina.github.io/direito-civil.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
 </urlset>
