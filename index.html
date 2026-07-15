@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
-  <meta name="description" content="Advocacia Criminal Especializada em Sapucaia do Sul. Plantão 24h para prisões e flagrantes. Atuação em Direito Trabalhista, Previdenciário, Família, Consumidor e Direito Digital (Crimes Virtuais).">
+  <meta name="description" content="Dra. Vera Catarina em Sapucaia do Sul | 40 anos de experiência em Direito Criminal, Família, Consumidor, Trabalhista e Digital. Plantão 24h para prisões e flagrantes. Atendimento humanizado.">
   <meta name="keywords" content="Advogado Criminal Sapucaia, Advogada Vera Catarina, Crimes Virtuais, Calunia e Difamacao Internet, Direito Trabalhista Sapucaia, Aposentadoria, Plantao Criminal 24h RS">
   <meta name="robots" content="index, follow">
 
-  <!-- CORRIGIDO: Favicon apontando para o diretório principal da sua hospedagem -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
   <meta property="og:title" content="Advocacia Vera Catarina | Defesa Especializada & Estratégica">
@@ -60,10 +59,41 @@
     .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
     .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
     
-    .nav-menu { display: flex; list-style: none; gap: 20px; align-items: center; }
-    .nav-menu a { color: #e2e8f0; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; text-transform: uppercase; }
-    .nav-menu a:hover { color: var(--accent); }
-    .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem !important; animation: pulse 2s infinite; }
+    /* ===== MENU DESKTOP AJUSTADO ===== */
+    .nav-menu { display: flex; list-style: none; gap: 14px; align-items: center; }
+    .nav-menu a { 
+      color: #e2e8f0; 
+      text-decoration: none; 
+      font-size: 0.78rem; 
+      font-weight: 600; 
+      transition: color 0.2s, border-color 0.2s; 
+      text-transform: uppercase; 
+      letter-spacing: 0.3px;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-menu a:hover { 
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .btn-emergency-nav { 
+      background: var(--danger); 
+      color: white !important; 
+      padding: 6px 14px; 
+      border-radius: 4px; 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px; 
+      font-size: 0.75rem !important; 
+      animation: pulse 2s infinite; 
+      border: none !important;
+      border-bottom: none !important;
+    }
+    .btn-emergency-nav:hover { 
+      background: #b91c1c; 
+      color: white !important;
+      border-bottom: none !important;
+    }
 
     /* CORREÇÃO DO MENU MOBILE (CSS PURO) */
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
@@ -94,12 +124,14 @@
     .sec-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: var(--accent); }
     .sec-subtitle { text-align: center; color: var(--text-light); max-width: 600px; margin: 0 auto 50px; font-size: 0.95rem; }
 
-    /* Grid de Áreas de Atuação - 6 Cards */
+    /* Grid de Áreas de Atuação - 7 Cards */
     .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; }
     .area-card { background: white; border: 1px solid var(--border); border-top: 4px solid var(--primary); padding: 30px; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s; }
     .area-card:hover { transform: translateY(-5px); border-top-color: var(--accent); }
     .area-card .icon { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
     .area-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary-dark); }
+    .area-card h3 a { text-decoration: none; color: inherit; transition: color 0.2s; }
+    .area-card h3 a:hover { color: var(--accent); }
     .area-card ul { list-style: none; }
     .area-card ul li { font-size: 0.9rem; color: var(--text-dark); margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
     .area-card ul li i { color: var(--accent); margin-top: 4px; font-size: 0.8rem; }
@@ -139,7 +171,6 @@
     .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
 
-    /* O NOVO CSS DO CONTADOR ATUALIZADO PARA EXIBIÇÃO CORRETA */
     .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
     .visitor-counter i { color: var(--accent); }
     .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
@@ -159,83 +190,41 @@
     @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
     @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
     
-    /* REGRAS EXCLUSIVAS DE RESPONSIVIDADE E MOBILE EXCELENTE */
+    /* ===== RESPONSIVIDADE ===== */
     @media (max-width: 992px) { 
-  body { padding-top: 150px; } /* Aumentado para dar espaço ao topo expandido */
-  header { top: 70px; height: 75px; } /* Ajustado o recuo do menu */
-  
-  /* CORREÇÃO DO TEXTO CORTADO: Removida altura fixa e adicionado padding */
-  .top-bar { 
-    height: auto; 
-    padding: 8px 0; 
-    position: fixed;
-  }
-  .top-container { 
-    flex-direction: column; 
-    gap: 6px; 
-    text-align: center; 
-  }
-  .top-contact-info {
-    flex-direction: column; /* Faz o telefone e a cidade ficarem um embaixo do outro no celular */
-    gap: 2px;
-  }
-  
-  /* Mantendo as configurações do menu mobile que já funcionavam */
-  .menu-toggle { display: flex; }
-  .nav-menu { 
-    position: fixed; 
-    top: 145px; /* Ajustado sutilmente para acompanhar o novo topo */
-    right: -100%; 
-    background: rgba(11, 37, 30, 0.98); 
-    flex-direction: column; 
-    width: 100%; 
-    height: calc(100vh - 145px); 
-    gap: 25px; 
-    padding: 40px 20px; 
-    transition: right 0.3s ease; 
-    z-index: 999;
-    border-top: 1px solid var(--accent);
-  }
-  #menu-checkbox:checked ~ .nav-menu { right: 0; }
-  #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-  #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
-  #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-
-  .contact-wrapper { grid-template-columns: 1fr; } 
-  .footer-grid { grid-template-columns: 1fr; gap: 20px; } 
-  .form-actions-split { grid-template-columns: 1fr; }
-  footer { padding-bottom: 110px; } 
-}
-      
-      /* CORREÇÃO DO MENU RESPONSIVO COM SCRIPTLESS HAMBÚRGUER */
+      body { padding-top: 150px; }
+      header { top: 70px; height: 75px; }
+      .top-bar { height: auto; padding: 8px 0; position: fixed; }
+      .top-container { flex-direction: column; gap: 6px; text-align: center; }
+      .top-contact-info { flex-direction: column; gap: 2px; }
       .menu-toggle { display: flex; }
-      
       .nav-menu { 
         position: fixed; 
-        top: 125px; 
+        top: 145px;
         right: -100%; 
         background: rgba(11, 37, 30, 0.98); 
         flex-direction: column; 
         width: 100%; 
-        height: calc(100vh - 125px); 
+        height: calc(100vh - 145px); 
         gap: 25px; 
         padding: 40px 20px; 
         transition: right 0.3s ease; 
         z-index: 999;
         border-top: 1px solid var(--accent);
+        align-items: center;
       }
-      
-      /* Quando o checkbox invisível estiver marcado, ativa o menu mobile */
+      .nav-menu a { 
+        font-size: 1rem !important; 
+        border-bottom: none !important;
+      }
+      .nav-menu a:hover { border-bottom: none !important; }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-
       .contact-wrapper { grid-template-columns: 1fr; } 
       .footer-grid { grid-template-columns: 1fr; gap: 20px; } 
       .form-actions-split { grid-template-columns: 1fr; }
-
-      /* Adiciona margem extra na rolagem final do celular para o botão flutuante não cobrir os créditos */
       footer { padding-bottom: 110px; } 
     }
   </style>
@@ -268,7 +257,6 @@
         <span class="sub-txt">Advocacia Especializada</span>
       </a>
       
-      <!-- Componentes do Menu Hambúrguer -->
       <input type="checkbox" id="menu-checkbox">
       <label for="menu-checkbox" class="menu-toggle">
         <span></span>
@@ -276,17 +264,17 @@
         <span></span>
       </label>
 
-  <ul class="nav-menu">
-  <li><a href="#home" onclick="closeMenu()">Início</a></li>
-  <li><a href="#atuacao" onclick="closeMenu()">Áreas de Atuação</a></li>
-  <li><a href="noticias.html" onclick="closeMenu()">Notícias</a></li>  <!-- NOVO -->
-  <li><a href="#servicos" onclick="closeMenu()">Utilidades</a></li>
-  <li><a href="#restrito" onclick="closeMenu()">Canal Restrito</a></li>
-  <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
-  <li><a href="sobre.html" onclick="closeMenu()">Sobre</a></li>
-  <li><a href="legal.html" onclick="closeMenu()">Legal &amp; Suporte</a></li>
-  <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
-</ul>
+      <ul class="nav-menu">
+        <li><a href="#home" onclick="closeMenu()">Início</a></li>
+        <li><a href="#atuacao" onclick="closeMenu()">Áreas de Atuação</a></li>
+        <li><a href="noticias.html" onclick="closeMenu()">Notícias</a></li>
+        <li><a href="#servicos" onclick="closeMenu()">Utilidades</a></li>
+        <li><a href="#restrito" onclick="closeMenu()">Canal Restrito</a></li>
+        <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+        <li><a href="sobre.html" onclick="closeMenu()">Sobre</a></li>
+        <li><a href="legal.html" onclick="closeMenu()">Legal &amp; Suporte</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+      </ul>
     </div>
   </header>
 
@@ -308,9 +296,10 @@
       
       <div class="grid-areas">
         
+        <!-- 1. DIREITO DIGITAL -->
         <div class="area-card" style="border-top-color: var(--accent);">
           <div class="icon" style="color: var(--accent);"><i class="fas fa-laptop-code"></i></div>
-          <h3>Direito Digital</h3>
+          <h3><a href="direito-digital.html">Direito Digital</a></h3>
           <ul>
             <li><i class="fas fa-check"></i> <strong>Crimes Virtuais:</strong> Defesa e acusação em casos de Calúnia, Difamação e Injúria na internet.</li>
             <li><i class="fas fa-check"></i> <strong>Golpes Financeiros:</strong> Ações recuperatórias contra fraudes bancárias e Pix.</li>
@@ -319,9 +308,10 @@
           </ul>
         </div>
 
+        <!-- 2. DIREITO TRABALHISTA -->
         <div class="area-card">
           <div class="icon"><i class="fas fa-briefcase"></i></div>
-          <h3>Direito Trabalhista</h3>
+          <h3><a href="direito-trabalhista.html">Direito Trabalhista</a></h3>
           <ul>
             <li><i class="fas fa-check"></i> Reversão de Justa Causa e Rescisão Indireta.</li>
             <li><i class="fas fa-check"></i> Indenizações por Acidente de Trabalho e Assédio Moral.</li>
@@ -330,9 +320,10 @@
           </ul>
         </div>
 
+        <!-- 3. DIREITO PREVIDENCIÁRIO -->
         <div class="area-card">
           <div class="icon"><i class="fas fa-users-rays"></i></div>
-          <h3>Direito Previdenciário</h3>
+          <h3><a href="direito-previdenciario.html">Direito Previdenciário</a></h3>
           <ul>
             <li><i class="fas fa-check"></i> Aposentadoria por Idade, Tempo de Contribuição ou Especial.</li>
             <li><i class="fas fa-check"></i> Encaminhamento de Pensão por Morte e Auxílio Invalidez.</li>
@@ -341,9 +332,10 @@
           </ul>
         </div>
 
+        <!-- 4. DIREITO CRIMINAL -->
         <div class="area-card" style="border-top-color: var(--danger);">
           <div class="icon" style="color: var(--danger);"><i class="fas fa-shield-halved"></i><span class="badge-emergency">Urgente</span></div>
-          <h3>Direito Criminal</h3>
+          <h3><a href="direito-criminal.html">Direito Criminal</a></h3>
           <ul>
             <li><i class="fas fa-check"></i> <strong>Assistência Imediata em Prisões:</strong> Atuação em flagrantes e delegacias.</li>
             <li><i class="fas fa-check"></i> <strong>Habeas Corpus:</strong> Medidas de urgência contra prisões ilegais.</li>
@@ -353,9 +345,10 @@
           </ul>
         </div>
 
+        <!-- 5. DIREITO DO CONSUMIDOR -->
         <div class="area-card">
           <div class="icon"><i class="fas fa-scale-balanced"></i></div>
-          <h3>Direito do Consumidor</h3>
+          <h3><a href="direito-consumidor.html">Direito do Consumidor</a></h3>
           <ul>
             <li><i class="fas fa-check"></i> Exclusão de restrições indevidas no SPC/SERASA.</li>
             <li><i class="fas fa-check"></i> Revisão de Contratos Bancários e juros abusivos.</li>
@@ -364,9 +357,10 @@
           </ul>
         </div>
 
+        <!-- 6. DIREITO DE FAMÍLIA -->
         <div class="area-card">
           <div class="icon"><i class="fas fa-people-roof"></i></div>
-          <h3>Direito de Família</h3>
+          <h3><a href="direito-familia.html">Direito de Família</a></h3>
           <ul>
             <li><i class="fas fa-check"></i> Divórcio Consensual ou Litigioso e Partilha de Bens.</li>
             <li><i class="fas fa-check"></i> Reconhecimento e Dissolução de União Estável.</li>
@@ -374,6 +368,20 @@
             <li><i class="fas fa-check"></i> Regulamentação de Guarda, Visitas e Investigação de Paternidade.</li>
           </ul>
         </div>
+
+        <!-- 7. DIREITO CIVIL E SUCESSÕES (NOVO) -->
+        <div class="area-card">
+          <div class="icon"><i class="fas fa-gavel"></i></div>
+          <h3><a href="direito-civil.html">Direito Civil e Sucessões</a></h3>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Inventário e Usucapião:</strong> Regularização de imóveis e partilha de bens.</li>
+            <li><i class="fas fa-check"></i> <strong>Contratos:</strong> Revisão de contratos bancários, compra e venda, e doações.</li>
+            <li><i class="fas fa-check"></i> <strong>Responsabilidade Civil:</strong> Indenizações por danos morais, erro médico e acidentes.</li>
+            <li><i class="fas fa-check"></i> <strong>Direitos Reais:</strong> Proteção à propriedade, reintegração de posse e despejos.</li>
+            <li><i class="fas fa-check"></i> <strong>Cobranças:</strong> Títulos de crédito e defesa em execuções e penhoras.</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -508,19 +516,18 @@
           <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
         </div>
         <div class="footer-col">
-  <h5>Links Rápidos</h5>
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
-    <li><a href="noticias.html">📰 Notícias e Artigos</a></li> <!-- NOVO -->
-    <li><a href="sobre.html">Sobre a Dra. Vera Catarina</a></li>
-    <li><a href="legal.html">Legal &amp; Suporte</a></li>
-  </ul>
-</div>
-          <div class="footer-col">
+          <h5>Links Rápidos</h5>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
+            <li><a href="noticias.html">📰 Notícias e Artigos</a></li>
+            <li><a href="sobre.html">Sobre a Dra. Vera Catarina</a></li>
+            <li><a href="legal.html">Legal &amp; Suporte</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
           <h5>Legal & LGPD</h5>
           <ul>
-            <!-- CORRIGIDO: href alterados para javascript:void(0) em todos os gatilhos de modais -->
             <li><a href="javascript:void(0);" onclick="openModal('privacidade')">Diretivas de Privacidade</a></li>
             <li><a href="javascript:void(0);" onclick="openModal('termos')">Termos de Uso</a></li>
             <li><a href="javascript:void(0);" onclick="openModal('cookies')">Gerenciamento de Cookies</a></li>
@@ -539,14 +546,12 @@
           <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a>
         </p>
         
-       
         <div>
-  <div class="visitor-counter" title="Total de visualizações de página">
-    <i class="fas fa-eye"></i>
-    <span>Visitas ao portal:</span>
-    <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
-  </div>
-</div>
+          <div class="visitor-counter" title="Total de visualizações de página">
+            <i class="fas fa-eye"></i>
+            <span>Visitas ao portal:</span>
+            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
+          </div>
         </div>
       </div>
     </div>
@@ -601,7 +606,6 @@
       window.location.href = mailtoLink;
     }
 
-    /* FUNÇÃO COMPLEMENTAR PARA FECHAR O MENU MOBILE AUTOMATICAMENTE AO CLICAR */
     function closeMenu() {
       document.getElementById('menu-checkbox').checked = false;
     }
