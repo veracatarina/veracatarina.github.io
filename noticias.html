@@ -344,188 +344,154 @@
 
   <!-- ===== JAVASCRIPT ===== -->
   <script>
-    // ===== DADOS DAS POSTAGENS (20 ARTIGOS COMPLETOS) =====
-    const posts = [
-      // ===== 1. DIREITO DIGITAL (8 artigos) =====
-      {
-        titulo: "LGPD: Entenda a Lei Geral de Proteção de Dados e sua Importância para a Segurança Online",
-        link: "https://advocaciasapucaia.blogspot.com/2025/06/lgpd-entenda-lei-geral-de-protecao-de.html",
-        resumo: "A Lei Geral de Proteção de Dados (LGPD) é uma legislação brasileira que visa proteger os direitos fundamentais das pessoas em relação ao tratamento de seus dados pessoais.",
-        data: "05/06/2025",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
-      {
-        titulo: "Crimes Virtuais: Entenda Calúnia, Difamação e Injúria nas Redes Sociais",
-        link: "https://advocaciasapucaia.blogspot.com/2025/06/crimes-virtuais-entenda-calunia.html",
-        resumo: "As redes sociais se tornaram um espaço onde a liberdade de expressão pode ser usada de forma indevida, dando origem a crimes contra a honra, como calúnia, difamação e injúria.",
-        data: "18/06/2025",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
-      {
-        titulo: "🌐 MARCO CIVIL DA INTERNET: Seus Direitos Digitais e Proteção na Rede!",
-        link: "https://advocaciasapucaia.blogspot.com/2025/07/marco-civil-da-internet-seus-direitos.html",
-        resumo: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, equilibrando liberdade de expressão com proteção dos direitos dos usuários.",
-        data: "19/07/2025",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
-      {
-        titulo: "Perseguição Digital: 5 Anos da Lei do Stalking e a Importância da Prova Pericial",
-        link: "https://advocaciasapucaia.blogspot.com/2026/03/perseguicao-digital-5-anos-da-lei-do.html",
-        resumo: "O stalking (perseguição obsessiva) é crime grave no Brasil. A Lei 14.132/2021 completa cinco anos em 2026. Saiba como a prova pericial é fundamental para comprovar o crime.",
-        data: "31/03/2026",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
-      {
-        titulo: "Proteja-se: Denunciando Crimes na Internet com o Auxílio de um Advogado Especializado",
-        link: "https://advocaciasapucaia.blogspot.com/2025/06/proteja-se-denunciando-crimes-na.html",
-        resumo: "A internet é um espaço fértil para crimes e abusos. Se você está sendo vítima de crimes na internet, é fundamental buscar ajuda de um advogado especializado em direito digital.",
-        data: "16/06/2025",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
-      {
-        titulo: "Crimes nas Redes Sociais: Como se Proteger e Buscar Justiça | Dra. Vera Catarina",
-        link: "https://advocaciasapucaia.blogspot.com/2025/06/crimes-nas-redes-sociais-como-se.html",
-        resumo: "Cyberbullying, fake news, vingança pornográfica e golpes virtuais são perigos nas redes sociais. Conhecer seus direitos é o primeiro passo para se proteger.",
-        data: "19/06/2025",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
-      {
-        titulo: "ECA Digital: A Lei que as Plataformas Não Podem Mais Ignorar",
-        link: "https://advocaciasapucaia.blogspot.com/2026/04/eca-digital-lei-que-as-plataformas-nao.html",
-        resumo: "A Lei 15.211/2025 (ECA Digital) entrou em vigor em março de 2026. Redes sociais, jogos e aplicativos são obrigados a proteger crianças e adolescentes, com multas de até R$ 50 milhões.",
-        data: "13/04/2026",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
-      {
-        titulo: "5 Direitos Digitais que Todo Usuário da Internet Precisa Conhecer",
-        link: "https://advocaciasapucaia.blogspot.com/2026/04/5-direitos-digitais-que-todo-usuario-da.html",
-        resumo: "Do Marco Civil de 2014 à realidade de 2026: o que mudou, o que permanece e o que você ainda pode exigir. Conteúdo atualizado sobre neutralidade de rede, remoção de conteúdo e mais.",
-        data: "09/04/2026",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
-
-      // ===== 2. DIREITOS DO CIDADÃO (1 artigo) =====
-      {
-        titulo: "LBI | Lei Brasileira de Inclusão, download",
-        link: "https://advocaciasapucaia.blogspot.com/2015/09/lbi-lei-brasileira-de-inclusao-download.html",
-        resumo: "A Lei Brasileira de Inclusão (LBI) - nº 13.146/2015 - promove o exercício dos direitos e liberdades fundamentais pelas pessoas com deficiência, garantindo inclusão social e cidadania.",
-        data: "19/02/2015",
-        categoria: "direitos-cidadao",
-        categoriaLabel: "Direitos do Cidadão"
-      },
-
-      // ===== 3. DIREITO CRIMINAL (2 artigos) =====
-      {
-        titulo: "Advocacia Criminal em Sapucaia: Defesa Especializada | Dra. Vera Catarina",
-        link: "https://advocaciasapucaia.blogspot.com/2025/06/advocacia-criminal-em-sapucaia-defesa.html",
-        resumo: "Defesa criminal especializada com atuação estratégica e presença imediata: assistência em prisões, tráfico de drogas, crimes de trânsito, lesão corporal, Lei Maria da Penha e Habeas Corpus.",
-        data: "05/06/2025",
-        categoria: "direito-criminal",
-        categoriaLabel: "Direito Criminal"
-      },
-      {
-        titulo: "Defesa em Casos de Caça-Níquel, Jogo do Bicho e Máquinas de Ursinho | Dra. Vera Catarina",
-        link: "https://advocaciasapucaia.blogspot.com/2025/06/defesa-em-casos-de-caca-niquel-jogo-do.html",
-        resumo: "Defesa contra acusações criminais por operação de jogos ilegais. Atuação para reconhecimento da legalidade de máquinas lúdicas e negociação com autoridades para evitar processos penais.",
-        data: "10/06/2025",
-        categoria: "direito-criminal",
-        categoriaLabel: "Direito Criminal"
-      },
-
-      // ===== 4. DIREITO DO CONSUMIDOR (1 artigo) =====
-      {
-        titulo: "Busca e Apreensão de Veículos? Saiba Como Evitar e Reverter | Advogado Especializado",
-        link: "https://advocaciasapucaia.blogspot.com/2025/06/busca-e-apreensao-de-veiculos-saiba.html",
-        resumo: "Apreensão do veículo pode trazer prejuízos financeiros. Saiba como suspender a ordem de apreensão, negociar com bancos e recuperar o veículo em casos de apreensão indevida.",
-        data: "17/06/2025",
-        categoria: "direito-consumidor",
-        categoriaLabel: "Direito do Consumidor"
-      },
-
-      // ===== 5. DIREITO TRABALHISTA (2 artigos) =====
-      {
-        titulo: "Direito Trabalhista: Defender Seus Direitos é Valorizar Sua História de Trabalho",
-        link: "https://advocaciasapucaia.blogspot.com/2016/10/direito-trabalhista-defenda-seus.html",
-        resumo: "Assédio moral, desvio de função, horas extras não pagas, justa causa injusta e acidente de trabalho. Saiba como a lei protege você e garante o que é seu por direito.",
-        data: "15/04/2016",
-        categoria: "direito-trabalhista",
-        categoriaLabel: "Direito Trabalhista"
-      },
-      {
-        titulo: "Pejotização e Novas Formas de Trabalho: Desafios Éticos e Jurídicos em 2026",
-        link: "https://advocaciasapucaia.blogspot.com/2026/04/pejotizacao-e-novas-formas-de-trabalho.html",
-        resumo: "A pejotização e a 'falsa autonomia' continuam sendo pontos de atenção no Direito do Trabalho. Atuação tanto na defesa de trabalhadores quanto na consultoria a empresas.",
-        data: "10/04/2026",
-        categoria: "direito-trabalhista",
-        categoriaLabel: "Direito Trabalhista"
-      },
-
-      // ===== 6. DIREITO DE FAMÍLIA (6 artigos) =====
-      {
-        titulo: "Planejamento Sucessório e o Protocolo Familiar: Protegendo o Patrimônio e a Harmonia",
-        link: "https://advocaciasapucaia.blogspot.com/2026/04/planejamento-sucessorio-e-o-protocolo.html",
-        resumo: "Planejamento sucessório e Protocolo Familiar cresceram em 2026. Famílias buscam evitar a morosidade e o custo emocional de inventários judiciais complexos.",
-        data: "08/04/2026",
-        categoria: "direito-familia",
-        categoriaLabel: "Direito de Família"
-      },
-      {
-        titulo: "Advogada Especialista em Divórcio em Sapucaia do Sul | 40 anos de experiência",
-        link: "https://advocaciasapucaia.blogspot.com/2026/07/advogada-especialista-em-divorcio-em.html",
-        resumo: "Com mais de quatro décadas de atuação, a Dra. Vera Catarina oferece segurança jurídica e acolhimento em um dos momentos mais delicados da vida: o divórcio.",
-        data: "15/07/2026",
-        categoria: "direito-familia",
-        categoriaLabel: "Direito de Família"
-      },
-      {
-        titulo: "Como pedir Pensão Alimentícia em Sapucaia do Sul? Passo a passo completo",
-        link: "https://advocaciasapucaia.blogspot.com/2026/07/como-pedir-pensao-alimenticia-em.html",
-        resumo: "Entenda quem tem direito à pensão, quais documentos reunir, como calcular o valor e quando procurar uma advogada especializada. Com o respaldo de quem tem 40 anos de atuação.",
-        data: "15/07/2026",
-        categoria: "direito-familia",
-        categoriaLabel: "Direito de Família"
-      },
-      {
-        titulo: "Guarda dos Filhos: Esclareça suas dúvidas com uma advogada experiente",
-        link: "https://advocaciasapucaia.blogspot.com/2026/07/guarda-dos-filhos-esclareca-suas.html",
-        resumo: "Entenda as diferenças entre guarda compartilhada, unilateral e alternada. Saiba como uma advogada com 40 anos de estrada pode proteger o que há de mais importante: seus filhos.",
-        data: "15/07/2026",
-        categoria: "direito-familia",
-        categoriaLabel: "Direito de Família"
-      },
-      {
-        titulo: "Inventário e Usucapião em Sapucaia do Sul: Regularize seu imóvel",
-        link: "https://advocaciasapucaia.blogspot.com/2026/07/inventario-e-usucapiao-em-sapucaia-do.html",
-        resumo: "Seja para transferir um patrimônio após um falecimento ou para regularizar um imóvel sem escritura, o Direito Imobiliário oferece soluções com quem tem 40 anos de experiência.",
-        data: "15/07/2026",
-        categoria: "direito-familia",
-        categoriaLabel: "Direito de Família"
-      },
-      {
-        titulo: "Separação Consensual x Litigiosa: Qual a melhor saída?",
-        link: "https://advocaciasapucaia.blogspot.com/2026/07/separacao-consensual-x-litigiosa-qual.html",
-        resumo: "Conheça as diferenças entre separação consensual e litigiosa, os custos envolvidos, o tempo de duração e saiba qual caminho é mais adequado para o seu caso.",
-        data: "15/07/2026",
-        categoria: "direito-familia",
-        categoriaLabel: "Direito de Família"
-      }
-	  {
-       titulo: "Como pedir Pensão Alimentícia em Sapucaia do Sul? Passo a passo completo",
-       link: "https://veracatarina.github.io/noticias/como-pedir-pensao-alimenticia.html",
-       resumo: "Entenda quem tem direito à pensão, quais documentos reunir, como calcular o valor e quando procurar uma advogada especializada. Com o respaldo de quem tem 40 anos de atuação.",
-       data: "15/07/2026",
-       categoria: "direito-familia",
-       categoriaLabel: "Direito de Família"
-      }
-    ];
+   const posts = [
+  // ===== ARTIGOS DO SITE (5 novos) =====
+  {
+    titulo: "Como pedir Pensão Alimentícia em Sapucaia do Sul? Passo a passo completo",
+    link: "https://veracatarina.github.io/noticias/como-pedir-pensao-alimenticia.html",
+    resumo: "Entenda quem tem direito à pensão, quais documentos reunir, como calcular o valor e quando procurar uma advogada especializada. Com o respaldo de quem tem 40 anos de atuação.",
+    data: "15/07/2026",
+    categoria: "direito-familia",
+    categoriaLabel: "Direito de Família"
+  },
+  {
+    titulo: "LGPD: Entenda a Lei Geral de Proteção de Dados e sua Importância para a Segurança Online",
+    link: "https://veracatarina.github.io/noticias/lgpd-entenda-lei-geral-protecao-dados.html",
+    resumo: "A Lei Geral de Proteção de Dados (LGPD) é uma legislação brasileira que visa proteger os direitos fundamentais das pessoas em relação ao tratamento de seus dados pessoais.",
+    data: "05/06/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital"
+  },
+  {
+    titulo: "Crimes Virtuais: Entenda Calúnia, Difamação e Injúria nas Redes Sociais",
+    link: "https://veracatarina.github.io/noticias/crimes-virtuais-calunia-difamacao-injuria.html",
+    resumo: "As redes sociais se tornaram um espaço onde a liberdade de expressão pode ser usada de forma indevida, dando origem a crimes contra a honra, como calúnia, difamação e injúria.",
+    data: "18/06/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital"
+  },
+  {
+    titulo: "🌐 MARCO CIVIL DA INTERNET: Seus Direitos Digitais e Proteção na Rede!",
+    link: "https://veracatarina.github.io/noticias/marco-civil-internet-direitos-digitais.html",
+    resumo: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, equilibrando liberdade de expressão com proteção dos direitos dos usuários.",
+    data: "19/07/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital"
+  },
+  {
+    titulo: "Perseguição Digital: 5 Anos da Lei do Stalking e a Importância da Prova Pericial",
+    link: "https://veracatarina.github.io/noticias/perseguicao-digital-stalking-prova-pericial.html",
+    resumo: "O stalking (perseguição obsessiva) é crime grave no Brasil. A Lei 14.132/2021 completa cinco anos em 2026. Saiba como a prova pericial é fundamental para comprovar o crime.",
+    data: "31/03/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital"
+  },
+  // ===== ARTIGOS DO BLOGGER (mantidos como fallback) =====
+  {
+    titulo: "Proteja-se: Denunciando Crimes na Internet com o Auxílio de um Advogado Especializado",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/proteja-se-denunciando-crimes-na.html",
+    resumo: "A internet é um espaço fértil para crimes e abusos. Se você está sendo vítima de crimes na internet, é fundamental buscar ajuda de um advogado especializado em direito digital.",
+    data: "16/06/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital"
+  },
+  {
+    titulo: "Crimes nas Redes Sociais: Como se Proteger e Buscar Justiça | Dra. Vera Catarina",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/crimes-nas-redes-sociais-como-se.html",
+    resumo: "Cyberbullying, fake news, vingança pornográfica e golpes virtuais são perigos nas redes sociais. Conhecer seus direitos é o primeiro passo para se proteger.",
+    data: "19/06/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital"
+  },
+  {
+    titulo: "ECA Digital: A Lei que as Plataformas Não Podem Mais Ignorar",
+    link: "https://advocaciasapucaia.blogspot.com/2026/04/eca-digital-lei-que-as-plataformas-nao.html",
+    resumo: "A Lei 15.211/2025 (ECA Digital) entrou em vigor em março de 2026. Redes sociais, jogos e aplicativos são obrigados a proteger crianças e adolescentes, com multas de até R$ 50 milhões.",
+    data: "13/04/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital"
+  },
+  {
+    titulo: "5 Direitos Digitais que Todo Usuário da Internet Precisa Conhecer",
+    link: "https://advocaciasapucaia.blogspot.com/2026/04/5-direitos-digitais-que-todo-usuario-da.html",
+    resumo: "Do Marco Civil de 2014 à realidade de 2026: o que mudou, o que permanece e o que você ainda pode exigir. Conteúdo atualizado sobre neutralidade de rede, remoção de conteúdo e mais.",
+    data: "09/04/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital"
+  },
+  {
+    titulo: "LBI | Lei Brasileira de Inclusão, download",
+    link: "https://advocaciasapucaia.blogspot.com/2015/09/lbi-lei-brasileira-de-inclusao-download.html",
+    resumo: "A Lei Brasileira de Inclusão (LBI) - nº 13.146/2015 - promove o exercício dos direitos e liberdades fundamentais pelas pessoas com deficiência, garantindo inclusão social e cidadania.",
+    data: "19/02/2015",
+    categoria: "direitos-cidadao",
+    categoriaLabel: "Direitos do Cidadão"
+  },
+  {
+    titulo: "Advocacia Criminal em Sapucaia: Defesa Especializada | Dra. Vera Catarina",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/advocacia-criminal-em-sapucaia-defesa.html",
+    resumo: "Defesa criminal especializada com atuação estratégica e presença imediata: assistência em prisões, tráfico de drogas, crimes de trânsito, lesão corporal, Lei Maria da Penha e Habeas Corpus.",
+    data: "05/06/2025",
+    categoria: "direito-criminal",
+    categoriaLabel: "Direito Criminal"
+  },
+  {
+    titulo: "Defesa em Casos de Caça-Níquel, Jogo do Bicho e Máquinas de Ursinho | Dra. Vera Catarina",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/defesa-em-casos-de-caca-niquel-jogo-do.html",
+    resumo: "Defesa contra acusações criminais por operação de jogos ilegais. Atuação para reconhecimento da legalidade de máquinas lúdicas e negociação com autoridades para evitar processos penais.",
+    data: "10/06/2025",
+    categoria: "direito-criminal",
+    categoriaLabel: "Direito Criminal"
+  },
+  {
+    titulo: "Busca e Apreensão de Veículos? Saiba Como Evitar e Reverter | Advogado Especializado",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/busca-e-apreensao-de-veiculos-saiba.html",
+    resumo: "Apreensão do veículo pode trazer prejuízos financeiros. Saiba como suspender a ordem de apreensão, negociar com bancos e recuperar o veículo em casos de apreensão indevida.",
+    data: "17/06/2025",
+    categoria: "direito-consumidor",
+    categoriaLabel: "Direito do Consumidor"
+  },
+  {
+    titulo: "Direito Trabalhista: Defender Seus Direitos é Valorizar Sua História de Trabalho",
+    link: "https://advocaciasapucaia.blogspot.com/2016/10/direito-trabalhista-defenda-seus.html",
+    resumo: "Assédio moral, desvio de função, horas extras não pagas, justa causa injusta e acidente de trabalho. Saiba como a lei protege você e garante o que é seu por direito.",
+    data: "15/04/2016",
+    categoria: "direito-trabalhista",
+    categoriaLabel: "Direito Trabalhista"
+  },
+  {
+    titulo: "Pejotização e Novas Formas de Trabalho: Desafios Éticos e Jurídicos em 2026",
+    link: "https://advocaciasapucaia.blogspot.com/2026/04/pejotizacao-e-novas-formas-de-trabalho.html",
+    resumo: "A pejotização e a 'falsa autonomia' continuam sendo pontos de atenção no Direito do Trabalho. Atuação tanto na defesa de trabalhadores quanto na consultoria a empresas.",
+    data: "10/04/2026",
+    categoria: "direito-trabalhista",
+    categoriaLabel: "Direito Trabalhista"
+  },
+  {
+    titulo: "Planejamento Sucessório e o Protocolo Familiar: Protegendo o Patrimônio e a Harmonia",
+    link: "https://advocaciasapucaia.blogspot.com/2026/04/planejamento-sucessorio-e-o-protocolo.html",
+    resumo: "Planejamento sucessório e Protocolo Familiar cresceram em 2026. Famílias buscam evitar a morosidade e o custo emocional de inventários judiciais complexos.",
+    data: "08/04/2026",
+    categoria: "direito-familia",
+    categoriaLabel: "Direito de Família"
+  },
+  {
+    titulo: "Separação Consensual x Litigiosa: Qual a melhor saída?",
+    link: "https://advocaciasapucaia.blogspot.com/2026/07/separacao-consensual-x-litigiosa-qual.html",
+    resumo: "Conheça as diferenças entre separação consensual e litigiosa, os custos envolvidos, o tempo de duração e saiba qual caminho é mais adequado para o seu caso.",
+    data: "15/07/2026",
+    categoria: "direito-familia",
+    categoriaLabel: "Direito de Família"
+  },
+  {
+    titulo: "Inventário e Usucapião em Sapucaia do Sul: Regularize seu imóvel",
+    link: "https://advocaciasapucaia.blogspot.com/2026/07/inventario-e-usucapiao-em-sapucaia-do.html",
+    resumo: "Seja para transferir um patrimônio após um falecimento ou para regularizar um imóvel sem escritura, o Direito Imobiliário oferece soluções com quem tem 40 anos de experiência.",
+    data: "15/07/2026",
+    categoria: "direito-familia",
+    categoriaLabel: "Direito de Família"
+  }
+];
 
     // ===== FUNÇÃO PARA RENDERIZAR OS CARDS =====
     function renderizarPosts(categoriaFiltro = 'todos') {
