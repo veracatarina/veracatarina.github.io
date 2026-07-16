@@ -4,22 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
-  <meta name="description" content="Mapa do site da Advocacia Vera Catarina. Encontre todas as páginas e áreas de atuação em um só lugar.">
+  <meta name="description" content="Mapa do site da Advocacia Vera Catarina. Encontre todas as páginas, áreas de atuação e notícias em um só lugar.">
   <meta name="keywords" content="mapa do site, sitemap, todas as páginas, advocacia vera catarina, sapucaia do sul">
   <meta name="robots" content="index, follow">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
   <meta property="og:title" content="Mapa do Site | Advocacia Vera Catarina">
-  <meta property="og:description" content="Mapa do site com todas as páginas e áreas de atuação da Dra. Vera Catarina.">
+  <meta property="og:description" content="Mapa do site com todas as páginas, áreas de atuação e notícias da Dra. Vera Catarina.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://veracatarina.github.io/sitemap.html">
-
   <title>Mapa do Site | Advocacia Vera Catarina</title>
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <style>
     /* ===== CSS PADRÃO DO SITE ===== */
     :root {
@@ -35,11 +30,9 @@
       --border: #e2e8f0;
       --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
-
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
 
@@ -59,49 +52,15 @@
     .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
     .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
     .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
-
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
     .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
     #menu-checkbox { display: none; }
-
     .nav-menu { display: flex; list-style: none; gap: 14px; align-items: center; }
-    .nav-menu a { 
-      color: #e2e8f0; 
-      text-decoration: none; 
-      font-size: 0.78rem; 
-      font-weight: 600; 
-      transition: color 0.2s, border-color 0.2s; 
-      text-transform: uppercase; 
-      letter-spacing: 0.3px;
-      padding: 4px 0;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-menu a:hover { 
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-    .nav-menu a.ativo { 
-      color: var(--accent); 
-      border-bottom: 2px solid var(--accent); 
-    }
-    .btn-emergency-nav { 
-      background: var(--danger); 
-      color: white !important; 
-      padding: 6px 14px; 
-      border-radius: 4px; 
-      display: inline-flex; 
-      align-items: center; 
-      gap: 6px; 
-      font-size: 0.75rem !important; 
-      animation: pulse 2s infinite; 
-      border: none !important;
-      border-bottom: none !important;
-    }
-    .btn-emergency-nav:hover { 
-      background: #b91c1c; 
-      color: white !important;
-      border-bottom: none !important;
-    }
+    .nav-menu a { color: #e2e8f0; text-decoration: none; font-size: 0.78rem; font-weight: 600; transition: color 0.2s, border-color 0.2s; text-transform: uppercase; letter-spacing: 0.3px; padding: 4px 0; border-bottom: 2px solid transparent; }
+    .nav-menu a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .nav-menu a.ativo { color: var(--accent); border-bottom: 2px solid var(--accent); }
+    .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem !important; animation: pulse 2s infinite; border: none !important; border-bottom: none !important; }
+    .btn-emergency-nav:hover { background: #b91c1c; color: white !important; border-bottom: none !important; }
 
     /* ===== HERO ===== */
     .page-hero { background: linear-gradient(rgba(11, 37, 30, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover; color: white; padding: 70px 0 60px; text-align: center; border-bottom: 4px solid var(--accent); }
@@ -117,7 +76,6 @@
 
     /* ===== GRID DE SITEMAP ===== */
     .sitemap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-
     .sitemap-category { background: var(--bg-light); padding: 25px 30px; border-radius: 8px; border-left: 4px solid var(--accent); }
     .sitemap-category h3 { font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
     .sitemap-category h3 i { color: var(--accent); }
@@ -148,7 +106,6 @@
     .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
     .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
-
     .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
     .visitor-counter i { color: var(--accent); }
     .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
@@ -210,7 +167,7 @@
   </div>
 
   <!-- ===== BOTÃO FLUTUANTE WHATSAPP ===== -->
-  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20jurídica." class="btn-emergency-float" target="_blank" rel="noopener">
+  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica." class="btn-emergency-float" target="_blank" rel="noopener">
     <i class="fab fa-whatsapp"></i> Fale Conosco
   </a>
 
@@ -221,24 +178,19 @@
         <span class="main-txt">Vera Catarina</span>
         <span class="sub-txt">Advocacia Especializada</span>
       </a>
-
       <input type="checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
+      <label for="menu-checkbox" class="menu-toggle"><span></span><span></span><span></span></label>
       <ul class="nav-menu">
         <li><a href="index.html">Início</a></li>
         <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
         <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="blog/">Blog</a></li>
         <li><a href="index.html#servicos">Utilidades</a></li>
         <li><a href="index.html#restrito">Canal Restrito</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="contato.html">Contato</a></li>
         <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="legal.html">Legal &amp; Suporte</a></li>
-        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+        <li><a href="legal.html">Legal</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
       </ul>
     </div>
   </header>
@@ -247,7 +199,7 @@
   <section class="page-hero">
     <div class="container">
       <h1>🗺️ Mapa do <span>Site</span></h1>
-      <p>Encontre todas as páginas, áreas de atuação e conteúdos do site da Dra. Vera Catarina em um só lugar.</p>
+      <p>Encontre todas as páginas, áreas de atuação e notícias do site da Dra. Vera Catarina em um só lugar.</p>
     </div>
   </section>
 
@@ -267,7 +219,10 @@
               <li><a href="index.html"><i class="fas fa-arrow-right"></i> Início <span class="desc">Página inicial com todas as áreas de atuação</span></a></li>
               <li><a href="sobre.html"><i class="fas fa-arrow-right"></i> Sobre a Dra. Vera Catarina <span class="desc">Biografia e trajetória profissional</span></a></li>
               <li><a href="legal.html"><i class="fas fa-arrow-right"></i> Legal &amp; Suporte <span class="desc">Políticas de privacidade, termos e cookies</span></a></li>
+              <li><a href="contato.html"><i class="fas fa-arrow-right"></i> Contato <span class="desc">Formulário e canais de atendimento</span></a></li>
+              <li><a href="depoimentos.html"><i class="fas fa-arrow-right"></i> Depoimentos <span class="desc">O que nossos clientes dizem</span></a></li>
               <li><a href="noticias.html"><i class="fas fa-arrow-right"></i> Notícias e Artigos <span class="desc">Blog com conteúdo jurídico atualizado</span></a></li>
+              <li><a href="sitemap.html"><i class="fas fa-arrow-right"></i> Mapa do Site <span class="desc">Você está aqui</span></a></li>
             </ul>
           </div>
 
@@ -293,6 +248,13 @@
             </ul>
           </div>
 
+          <div class="sitemap-category">
+            <h3><i class="fas fa-users-rays"></i> Direito Previdenciário</h3>
+            <ul>
+              <li><a href="direito-previdenciario.html"><i class="fas fa-arrow-right"></i> Direito Previdenciário <span class="desc">Aposentadorias, pensão por morte, LOAS/BPC e planejamento previdenciário</span></a></li>
+            </ul>
+          </div>
+
         </div>
 
         <!-- COLUNA 2 -->
@@ -303,14 +265,6 @@
             <h3><i class="fas fa-people-roof"></i> Direito de Família</h3>
             <ul>
               <li><a href="direito-familia.html"><i class="fas fa-arrow-right"></i> Direito de Família <span class="desc">Divórcio, guarda dos filhos, pensão alimentícia, união estável e partilha de bens</span></a></li>
-            </ul>
-          </div>
-
-          <!-- DIREITO PREVIDENCIÁRIO -->
-          <div class="sitemap-category">
-            <h3><i class="fas fa-users-rays"></i> Direito Previdenciário</h3>
-            <ul>
-              <li><a href="direito-previdenciario.html"><i class="fas fa-arrow-right"></i> Direito Previdenciário <span class="desc">Aposentadorias, pensão por morte, LOAS/BPC e planejamento previdenciário</span></a></li>
             </ul>
           </div>
 
@@ -327,6 +281,18 @@
             <h3><i class="fas fa-gavel"></i> Direito Civil e Sucessões</h3>
             <ul>
               <li><a href="direito-civil.html"><i class="fas fa-arrow-right"></i> Direito Civil e Sucessões <span class="desc">Inventário, usucapião, contratos, responsabilidade civil e direitos reais</span></a></li>
+            </ul>
+          </div>
+
+          <!-- NOTÍCIAS DO SITE -->
+          <div class="sitemap-category">
+            <h3><i class="fas fa-newspaper"></i> Notícias e Artigos do Site</h3>
+            <ul>
+              <li><a href="noticias/como-pedir-pensao-alimenticia.html"><i class="fas fa-arrow-right"></i> Como pedir Pensão Alimentícia em Sapucaia do Sul? <span class="desc">Passo a passo completo</span></a></li>
+              <li><a href="noticias/lgpd-entenda-lei-geral-protecao-dados.html"><i class="fas fa-arrow-right"></i> LGPD: Entenda a Lei Geral de Proteção de Dados <span class="desc">Direitos digitais e segurança online</span></a></li>
+              <li><a href="noticias/crimes-virtuais-calunia-difamacao-injuria.html"><i class="fas fa-arrow-right"></i> Crimes Virtuais: Calúnia, Difamação e Injúria <span class="desc">Proteja sua honra nas redes sociais</span></a></li>
+              <li><a href="noticias/marco-civil-internet-direitos-digitais.html"><i class="fas fa-arrow-right"></i> Marco Civil da Internet <span class="desc">Seus direitos e proteção na rede</span></a></li>
+              <li><a href="noticias/perseguicao-digital-stalking-prova-pericial.html"><i class="fas fa-arrow-right"></i> Perseguição Digital e Stalking <span class="desc">5 anos da Lei e a importância da prova pericial</span></a></li>
             </ul>
           </div>
 
@@ -360,8 +326,9 @@
             <li><a href="index.html">Início</a></li>
             <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
             <li><a href="noticias.html">📰 Notícias e Artigos</a></li>
-            <li><a href="sobre.html">Sobre a Dra. Vera Catarina</a></li>
-            <li><a href="legal.html">Legal &amp; Suporte</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html">Legal</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -377,7 +344,6 @@
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO e LGPD.</p>
         <p style="font-size: 0.75rem; color: #94a3b8; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
@@ -388,7 +354,6 @@
           <span style="color: rgba(255,255,255,0.2);">·</span>
           <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a>
         </p>
-
         <div>
           <div class="visitor-counter" title="Total de visualizações de página">
             <i class="fas fa-eye"></i>
@@ -405,7 +370,7 @@
     function closeMenu() {
       document.getElementById('menu-checkbox').checked = false;
     }
-    document.querySelectorAll('.nav-menu a').forEach(link => {
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
       link.addEventListener('click', closeMenu);
     });
   </script>
