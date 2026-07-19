@@ -606,7 +606,51 @@
           </ul>
         </div>
       </div>
-      
+      <!-- ===== AVISO LGPD E COOKIES (CONFORME LGPD) ===== -->
+<div id="cookie-consent-banner" style="background: rgba(0,0,0,0.85); backdrop-filter: blur(6px); padding: 18px 25px; border-radius: 8px; margin-bottom: 25px; text-align: center; font-size: 0.85rem; color: #e2e8f0; border: 1px solid var(--accent); box-shadow: 0 4px 20px rgba(0,0,0,0.5); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 15px; transition: opacity 0.5s ease;">
+  
+  <div style="flex: 1 1 100%; max-width: 700px; text-align: center;">
+    <i class="fas fa-shield-alt" style="color: var(--accent); margin-right: 8px; font-size: 1.1rem;"></i>
+    <span style="font-weight: 300;">Este site utiliza cookies essenciais para seu funcionamento. Para uma experiência aprimorada, pedimos seu consentimento para usar cookies de análise e personalização. Você pode gerenciar suas preferências a qualquer momento.</span>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; margin-top: 5px;">
+    <a href="javascript:void(0);" onclick="openModal('privacidade')" style="color: var(--accent); text-decoration: underline; font-size: 0.8rem; font-weight: 500;">Política de Privacidade</a>
+    <span style="color: #94a3b8;">|</span>
+    <a href="javascript:void(0);" onclick="openModal('cookies')" style="color: #cbd5e1; text-decoration: underline; font-size: 0.8rem;">Configurar Cookies</a>
+    <span style="color: #94a3b8;">|</span>
+    <button onclick="acceptCookies()" style="background: var(--accent); color: var(--primary-dark); border: none; padding: 8px 28px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: background 0.2s;">Aceitar</button>
+    <button onclick="rejectCookies()" style="background: transparent; color: #cbd5e1; border: 1px solid #64748b; padding: 8px 28px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: background 0.2s;">Recusar</button>
+  </div>
+</div>
+
+<script>
+  // Função para ocultar o banner e salvar a preferência
+  function setCookieConsent(choice) {
+    localStorage.setItem('cookieConsent', choice);
+    document.getElementById('cookie-consent-banner').style.display = 'none';
+  }
+
+  function acceptCookies() {
+    setCookieConsent('accepted');
+    // Aqui você pode ativar scripts de análise (Google Analytics, etc.)
+    console.log('Cookies de análise ativados.');
+  }
+
+  function rejectCookies() {
+    setCookieConsent('rejected');
+    // Aqui você pode desativar scripts de análise (se houver)
+    console.log('Cookies de análise recusados.');
+  }
+
+  // Verificar preferência salva ao carregar a página
+  document.addEventListener('DOMContentLoaded', function() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent === 'accepted' || consent === 'rejected') {
+      document.getElementById('cookie-consent-banner').style.display = 'none';
+    }
+  });
+</script>
       <div class="footer-bottom">
         <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO e LGPD.</p>
         <p style="font-size: 0.75rem; color: #94a3b8; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
