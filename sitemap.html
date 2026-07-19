@@ -8,10 +8,13 @@
   <meta name="keywords" content="mapa do site, sitemap, todas as páginas, advocacia vera catarina, sapucaia do sul">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="canonical" href="https://veracatarina.github.io/sitemap.html">
   <meta property="og:title" content="Mapa do Site | Advocacia Vera Catarina">
   <meta property="og:description" content="Mapa do site com todas as páginas, áreas de atuação e notícias da Dra. Vera Catarina.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://veracatarina.github.io/sitemap.html">
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/advogado-online-24h.jpg">
+  <meta property="og:image:alt" content="Advocacia Vera Catarina - Mapa do Site">
   <title>Mapa do Site | Advocacia Vera Catarina</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -184,7 +187,6 @@
         <li><a href="index.html">Início</a></li>
         <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
         <li><a href="noticias.html">Notícias</a></li>
-        <li><a href="blog/">Blog</a></li>
         <li><a href="index.html#servicos">Utilidades</a></li>
         <li><a href="index.html#restrito">Canal Restrito</a></li>
         <li><a href="contato.html">Contato</a></li>
@@ -223,6 +225,9 @@
               <li><a href="depoimentos.html"><i class="fas fa-arrow-right"></i> Depoimentos <span class="desc">O que nossos clientes dizem</span></a></li>
               <li><a href="noticias.html"><i class="fas fa-arrow-right"></i> Notícias e Artigos <span class="desc">Blog com conteúdo jurídico atualizado</span></a></li>
               <li><a href="sitemap.html"><i class="fas fa-arrow-right"></i> Mapa do Site <span class="desc">Você está aqui</span></a></li>
+              <!-- NOVAS PÁGINAS CRIADAS HOJE -->
+              <li><a href="advogado-online.html"><i class="fas fa-arrow-right"></i> Advogado Online 24h <span class="desc">Atendimento jurídico imediato pelo WhatsApp</span></a></li>
+              <li><a href="direito-empresarial.html"><i class="fas fa-arrow-right"></i> Advocacia Empresarial <span class="desc">Defesa trabalhista patronal, contratos e compliance</span></a></li>
             </ul>
           </div>
 
@@ -286,8 +291,9 @@
 
           <!-- NOTÍCIAS DO SITE -->
           <div class="sitemap-category">
-            <h3><i class="fas fa-newspaper"></i> Notícias e Artigos do Site</h3>
+            <h3><i class="fas fa-newspaper"></i> Notícias e Artigos</h3>
             <ul>
+              <li><a href="noticias/direito-ao-esquecimento-case-academico-premiado.html"><i class="fas fa-arrow-right"></i> Direito ao Esquecimento – Case Premiado <span class="desc">Análise do RE 1.010.606/STF com Kelsen, Dworkin e Bobbio</span></a></li>
               <li><a href="noticias/como-pedir-pensao-alimenticia.html"><i class="fas fa-arrow-right"></i> Como pedir Pensão Alimentícia em Sapucaia do Sul? <span class="desc">Passo a passo completo</span></a></li>
               <li><a href="noticias/lgpd-entenda-lei-geral-protecao-dados.html"><i class="fas fa-arrow-right"></i> LGPD: Entenda a Lei Geral de Proteção de Dados <span class="desc">Direitos digitais e segurança online</span></a></li>
               <li><a href="noticias/crimes-virtuais-calunia-difamacao-injuria.html"><i class="fas fa-arrow-right"></i> Crimes Virtuais: Calúnia, Difamação e Injúria <span class="desc">Proteja sua honra nas redes sociais</span></a></li>
@@ -317,10 +323,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-  <h5>Dra. Vera Catarina</h5>
-  <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
-  <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
-</div>
+          <h5>Dra. Vera Catarina</h5>
+          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
+          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
+        </div>
         <div class="footer-col">
           <h5>Links Rápidos</h5>
           <ul>
@@ -342,6 +348,8 @@
             <li><a href="direito-previdenciario.html">Direito Previdenciário</a></li>
             <li><a href="direito-consumidor.html">Direito do Consumidor</a></li>
             <li><a href="direito-civil.html">Direito Civil e Sucessões</a></li>
+            <li><a href="direito-empresarial.html">🏢 Advocacia Empresarial</a></li>
+            <li><a href="advogado-online.html">📱 Advogado Online 24h</a></li>
           </ul>
         </div>
       </div>
@@ -366,8 +374,67 @@
     </div>
   </footer>
 
-  <!-- ===== JAVASCRIPT ===== -->
+  <!-- ===== BANNER LGPD E COOKIES ===== -->
+  <div id="cookie-consent-banner" style="
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 900px;
+    background: rgba(11, 37, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 18px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    border: 1px solid var(--accent, #c5a880);
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  ">
+    <div style="flex: 1 1 100%; text-align: center; color: #e2e8f0; font-size: 0.9rem; line-height: 1.5;">
+      <i class="fas fa-shield-alt" style="color: var(--accent, #c5a880); margin-right: 8px; font-size: 1.1rem;"></i>
+      <span style="font-weight: 300;">
+        Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. 
+        <a href="legal.html#privacidade" style="color: var(--accent, #c5a880); text-decoration: underline; font-weight: 500;">Política de Privacidade</a>
+        <span style="color: #94a3b8; margin: 0 6px;">|</span>
+        <a href="legal.html#cookies" style="color: #cbd5e1; text-decoration: underline;">Configurar</a>
+      </span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+      <button onclick="rejectCookies()" style="background: transparent; color: #cbd5e1; border: 1px solid #64748b; padding: 8px 20px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: background 0.2s, border-color 0.2s;">Recusar</button>
+      <button onclick="acceptCookies()" style="background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); border: none; padding: 8px 28px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: background 0.2s;">Aceitar</button>
+    </div>
+  </div>
+
   <script>
+    function setCookieConsent(choice) {
+      localStorage.setItem('cookieConsent', choice);
+      const banner = document.getElementById('cookie-consent-banner');
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateX(-50%) translateY(20px)';
+      setTimeout(() => { banner.style.display = 'none'; }, 500);
+    }
+    function acceptCookies() {
+      setCookieConsent('accepted');
+      console.log('📊 Cookies de análise ativados.');
+    }
+    function rejectCookies() {
+      setCookieConsent('rejected');
+      console.log('❌ Cookies de análise recusados.');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent === 'accepted' || consent === 'rejected') {
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+      }
+    });
+
     function closeMenu() {
       document.getElementById('menu-checkbox').checked = false;
     }
