@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
-  <meta name="description" content="Política de Privacidade, Termos de Uso, Política de Cookies e FAQ da Advocacia Vera Catarina. Conformidade com a LGPD.">
-  <meta name="keywords" content="LGPD, Privacidade, Termos de Uso, Cookies, FAQ, Advocacia Vera Catarina">
+  <meta name="description" content="Política de Privacidade, Termos de Uso, Política de Cookies e FAQ da Advocacia Vera Catarina. Conformidade com a LGPD e proteção de dados.">
+  <meta name="keywords" content="LGPD, Privacidade, Termos de Uso, Cookies, FAQ, Proteção de Dados, Advocacia Vera Catarina">
   <meta name="robots" content="index, follow">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
+  <link rel="canonical" href="https://veracatarina.github.io/legal.html">
   <meta property="og:title" content="Legal &amp; Suporte | Advocacia Vera Catarina">
-  <meta property="og:description" content="Política de Privacidade, Termos de Uso, Cookies e Perguntas Frequentes.">
+  <meta property="og:description" content="Política de Privacidade, Termos de Uso, Cookies e Perguntas Frequentes em conformidade com a LGPD.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://veracatarina.github.io/legal.html">
-
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/legal-lgpd-privacidade-cookies.jpg">
+  <meta property="og:image:alt" content="Segurança Jurídica e LGPD - Advocacia Vera Catarina">
   <title>Legal &amp; Suporte | Advocacia Vera Catarina</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/acessibilidade.css">
 
   <style>
-    /* ===== MESMO ESTILO BASE DO INDEX ===== */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ===== ESTILOS (mesmos do index) ===== */
     :root {
       --primary-dark: #0b251e;
       --primary: #143d33;
@@ -36,38 +37,16 @@
       --border: #e2e8f0;
       --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background: #ffffff;
-      line-height: 1.6;
-      padding-top: 120px;
-    }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
 
     /* ===== TOP BAR ===== */
-    .top-bar {
-      background: #061612;
-      height: 40px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1001;
-      border-bottom: 1px solid rgba(197, 168, 128, 0.2);
-      display: flex;
-      align-items: center;
-    }
-    .top-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      font-size: 0.8rem;
-      color: #cbd5e1;
-    }
+    .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
+    .top-container { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.8rem; color: #cbd5e1; }
     .top-socials { display: flex; gap: 15px; }
     .top-socials a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; font-size: 0.95rem; }
     .top-socials a:hover { color: var(--accent); }
@@ -76,51 +55,47 @@
     .top-contact-info .obs-tel { font-size: 0.7rem; color: #94a3b8; font-weight: normal; margin-left: 2px; }
 
     /* ===== HEADER ===== */
-    header {
-      position: fixed;
-      top: 40px;
-      left: 0;
-      right: 0;
-      height: 80px;
-      background: rgba(11, 37, 30, 0.98);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 2px solid var(--accent);
-      display: flex;
-      align-items: center;
-    }
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-    .logo {
-      color: white;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      z-index: 1002;
-    }
+    header { position: fixed; top: 40px; left: 0; right: 0; height: 80px; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; align-items: center; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
     .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
     .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
 
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
+    .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
+    #menu-checkbox { display: none; }
+
+    /* ===== NAVEGAÇÃO PRINCIPAL ===== */
     .nav-menu {
       display: flex;
       list-style: none;
-      gap: 20px;
+      gap: 14px;
       align-items: center;
     }
-    .nav-menu a {
+    .nav-menu > li {
+      position: relative;
+      list-style: none;
+    }
+    .nav-menu > li > a {
       color: #e2e8f0;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      transition: color 0.2s;
+      transition: color 0.2s, border-color 0.2s;
       text-transform: uppercase;
+      letter-spacing: 0.3px;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      display: inline-block;
     }
-    .nav-menu a:hover { color: var(--accent); }
-    .nav-menu a.active { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 4px; }
+    .nav-menu > li > a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .nav-menu > li > a.ativo {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
     .btn-emergency-nav {
       background: var(--danger);
       color: white !important;
@@ -129,16 +104,64 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.8rem !important;
+      font-size: 0.75rem !important;
       animation: pulse 2s infinite;
+      border: none !important;
+      border-bottom: none !important;
+    }
+    .btn-emergency-nav:hover {
+      background: #b91c1c;
+      color: white !important;
+      border-bottom: none !important;
     }
 
-    /* ===== MENU MOBILE ===== */
-    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
-    .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
-    #menu-checkbox { display: none; }
+    /* ===== DROPDOWN ===== */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(11, 37, 30, 0.98);
+      backdrop-filter: blur(10px);
+      min-width: 200px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 8px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      z-index: 1003;
+    }
+    .dropdown-content li {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 20px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border-bottom: none !important;
+      transition: background 0.2s;
+    }
+    .dropdown-content li a:hover {
+      background: rgba(197, 168, 128, 0.15);
+      color: var(--accent);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn i {
+      transition: transform 0.2s;
+    }
+    .dropdown:hover .dropbtn i {
+      transform: rotate(180deg);
+    }
 
-    /* ===== HERO INTERNO ===== */
+    /* ===== HERO ===== */
     .hero-inner {
       background: linear-gradient(rgba(11, 37, 30, 0.85), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1200') center/cover;
       color: white;
@@ -332,7 +355,6 @@
       padding-left: 30px;
     }
 
-    /* ===== BOTÃO VOLTAR ===== */
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -345,56 +367,44 @@
     }
     .back-link:hover { color: var(--accent-hover); }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--primary-dark);
-      color: #cbd5e1;
-      padding: 50px 0 30px;
-      border-top: 4px solid var(--accent);
+    /* ===== BACKLINKS ===== */
+    .backlinks-section {
+      background: var(--bg-light);
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-    .footer-grid {
+    .backlinks-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 30px;
-      margin-bottom: 40px;
-      font-size: 0.9rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .footer-col h5 {
-      color: white;
-      margin-bottom: 15px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a {
-      color: #cbd5e1;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .footer-col ul li a:hover { color: var(--accent); }
-    .footer-bottom {
+    .backlink-item {
+      background: white;
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
       text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 25px;
-      font-size: 0.78rem;
-      color: #94a3b8;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .visitor-counter {
-      margin-top: 15px;
-      font-size: 0.78rem;
-      color: #cbd5e1;
-      display: inline-flex;
+    .backlink-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+    .backlink-item a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      background: rgba(0,0,0,0.3);
-      padding: 6px 12px;
-      border-radius: 4px;
-      border: 1px solid rgba(197, 168, 128, 0.2);
     }
-    .visitor-counter i { color: var(--accent); }
-    .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
+    .backlink-item a i { color: var(--accent); font-size: 1.1rem; }
+    .backlink-item a:hover { color: var(--accent); }
 
     .btn-emergency-float {
       position: fixed;
@@ -417,18 +427,22 @@
       letter-spacing: 0.5px;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); }
-      70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); }
-    }
-    @keyframes pulse-green {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
+    footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
+    .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
+    .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
+    .visitor-counter i { color: var(--accent); }
+    .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
 
-    /* ===== RESPONSIVO ===== */
+    @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
+    @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+    /* ===== RESPONSIVIDADE ===== */
     @media (max-width: 992px) {
       body { padding-top: 150px; }
       header { top: 70px; height: 75px; }
@@ -449,12 +463,32 @@
         transition: right 0.3s ease;
         z-index: 999;
         border-top: 1px solid var(--accent);
+        align-items: center;
+      }
+      .nav-menu > li { width: 100%; text-align: center; }
+      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
+      .nav-menu > li > a:hover { border-bottom: none !important; }
+      .dropdown-content {
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        min-width: auto;
+        display: none !important;
+      }
+      .dropdown.open .dropdown-content {
+        display: block !important;
+      }
+      .dropdown-content li a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
       }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-
       .legal-nav { top: 145px; }
       .legal-nav ul { gap: 12px 20px; }
       .footer-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -497,387 +531,542 @@
   <!-- ===== HEADER ===== -->
   <header>
     <div class="container nav-container">
-      <a href="/" class="logo">
+      <a href="index.html" class="logo">
         <span class="main-txt">Vera Catarina</span>
         <span class="sub-txt">Advocacia Especializada</span>
       </a>
-
       <input type="checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="menu-toggle">
+      <label for="menu-checkbox" class="menu-toggle" aria-label="Abrir menu de navegação">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
       <ul class="nav-menu">
-  <li><a href="index.html">Início</a></li>
-  <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
-  <li><a href="index.html#servicos">Utilidades</a></li>
-  <li><a href="index.html#restrito">Canal Restrito</a></li>
-  <li><a href="index.html#contato">Contato</a></li>
-  <li><a href="sobre.html">Sobre</a></li>
-  <li><a href="legal.html" class="active">Legal &amp; Suporte</a></li>
-  <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
-</ul>
+        <!-- ITENS PRINCIPAIS -->
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="contato.html">Contato</a></li>
+
+        <!-- DROPDOWN "MAIS" -->
+        <li class="dropdown" onmouseenter="openDropdown()" onmouseleave="closeDropdown()">
+          <a href="javascript:void(0)" onclick="toggleDropdown()" class="dropbtn">
+            Mais <i class="fas fa-chevron-down" style="font-size:0.5rem; margin-left:4px;"></i>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="index.html#servicos">Utilidades</a></li>
+            <li><a href="index.html#restrito">Canal Restrito</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html" class="ativo">Legal &amp; Suporte</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
+          </ul>
+        </li>
+
+        <!-- BOTÃO PLANTÃO 24h -->
+        <li>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav">
+            <i class="fas fa-shield-halved"></i> Plantão 24h
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero-inner">
-    <div class="container">
-      <h1>Legal &amp; <span>Suporte</span></h1>
-      <p>Transparência, conformidade e informações claras sobre privacidade, termos, cookies e perguntas frequentes.</p>
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main id="main-content">
+    <section class="hero-inner">
+      <div class="container">
+        <h1>Legal &amp; <span>Suporte</span></h1>
+        <p>Transparência, conformidade e informações claras sobre privacidade, termos, cookies e perguntas frequentes.</p>
+      </div>
+    </section>
+
+    <!-- ===== IMAGEM ILUSTRATIVA ===== -->
+    <div style="text-align: center; padding: 30px 0 10px; background: var(--bg-light);">
+      <div style="max-width: 500px; margin: 0 auto;">
+        <img 
+          src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/legal-lgpd-privacidade-cookies.jpg" 
+          alt="Segurança Jurídica e LGPD - Política de Privacidade e Cookies da Advocacia Vera Catarina" 
+          title="LGPD, Privacidade e Proteção de Dados | Advocacia Vera Catarina"
+          loading="lazy"
+          style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
+        />
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
+          <i class="fas fa-shield-halved" style="color: var(--accent);"></i> 
+          Compromisso com a transparência e a proteção de seus dados
+        </p>
+      </div>
     </div>
-  </section>
 
-  <!-- ===== NAVEGAÇÃO POR ÂNCORA ===== -->
-  <nav class="legal-nav">
-    <div class="container">
-      <ul>
-        <li><a href="#privacidade">Privacidade</a></li>
-        <li><a href="#termos">Termos de Uso</a></li>
-        <li><a href="#cookies">Cookies</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- ===== NAVEGAÇÃO POR ÂNCORA ===== -->
+    <nav class="legal-nav">
+      <div class="container">
+        <ul>
+          <li><a href="#privacidade">Privacidade</a></li>
+          <li><a href="#termos">Termos de Uso</a></li>
+          <li><a href="#cookies">Cookies</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- ===== SEÇÃO: PRIVACIDADE ===== -->
-  <section id="privacidade" class="legal-section">
-    <div class="container">
-      <h2><i class="fas fa-shield-halved"></i> Política de Privacidade</h2>
-      <span class="update">Última atualização: Maio de 2026 <span class="badge-lgpd">LGPD Compliant</span></span>
+    <!-- ===== SEÇÃO: PRIVACIDADE ===== -->
+    <section id="privacidade" class="legal-section">
+      <div class="container">
+        <h2><i class="fas fa-shield-halved"></i> Política de Privacidade</h2>
+        <span class="update">Última atualização: Maio de 2026 <span class="badge-lgpd">LGPD Compliant</span></span>
 
-      <p>A Advocacia Vera Catarina respeita sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD – Lei 13.709/2018)</strong>.</p>
+        <p>A Advocacia Vera Catarina respeita sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD – Lei 13.709/2018)</strong>.</p>
 
-      <h3>1. Dados Coletados</h3>
-      <p>Coletamos exclusivamente as informações que você nos fornece de forma voluntária através dos formulários de contato e da área restrita do cliente:</p>
-      <ul>
-        <li><strong>Nome completo</strong></li>
-        <li><strong>Telefone / WhatsApp</strong></li>
-        <li><strong>Endereço de e-mail</strong></li>
-        <li><strong>Conteúdo da mensagem ou solicitação</strong></li>
-      </ul>
-      <p>Adicionalmente, podemos coletar dados de navegação anonimizados por meio de <strong>cookies de sessão</strong>, com o objetivo de melhorar a experiência do site e garantir o funcionamento correto dos formulários.</p>
-      <p><strong>Não coletamos</strong> dados sensíveis como CPF, número de cartão, dados bancários ou qualquer informação biométrica sem seu consentimento explícito e base legal adequada.</p>
+        <h3>1. Dados Coletados</h3>
+        <p>Coletamos exclusivamente as informações que você nos fornece de forma voluntária através dos formulários de contato e da área restrita do cliente:</p>
+        <ul>
+          <li><strong>Nome completo</strong></li>
+          <li><strong>Telefone / WhatsApp</strong></li>
+          <li><strong>Endereço de e-mail</strong></li>
+          <li><strong>Conteúdo da mensagem ou solicitação</strong></li>
+        </ul>
+        <p>Adicionalmente, podemos coletar dados de navegação anonimizados por meio de <strong>cookies de sessão</strong>, com o objetivo de melhorar a experiência do site e garantir o funcionamento correto dos formulários.</p>
+        <p><strong>Não coletamos</strong> dados sensíveis como CPF, número de cartão, dados bancários ou qualquer informação biométrica sem seu consentimento explícito e base legal adequada.</p>
 
-      <h3>2. Finalidade do Tratamento</h3>
-      <p>Os dados pessoais coletados são utilizados exclusivamente para:</p>
-      <ul>
-        <li>Responder às suas solicitações, dúvidas e mensagens enviadas pelos formulários</li>
-        <li>Enviar informações institucionais sobre a Advocacia Vera Catarina</li>
-        <li>Processar pedidos de andamento processual e atualizações de casos</li>
-        <li>Melhorar continuamente nossos serviços e comunicação com os clientes</li>
-      </ul>
-      <p><strong>Nunca vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros</strong> sem seu consentimento explícito, exceto quando exigido por lei.</p>
+        <h3>2. Finalidade do Tratamento</h3>
+        <p>Os dados pessoais coletados são utilizados exclusivamente para:</p>
+        <ul>
+          <li>Responder às suas solicitações, dúvidas e mensagens enviadas pelos formulários</li>
+          <li>Enviar informações institucionais sobre a Advocacia Vera Catarina</li>
+          <li>Processar pedidos de andamento processual e atualizações de casos</li>
+          <li>Melhorar continuamente nossos serviços e comunicação com os clientes</li>
+        </ul>
+        <p><strong>Nunca vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros</strong> sem seu consentimento explícito, exceto quando exigido por lei.</p>
 
-      <h3>3. Armazenamento e Segurança</h3>
-      <p>Seus dados ficam armazenados em ambiente seguro com acesso restrito exclusivamente à Dra. Vera Catarina e seus colaboradores devidamente autorizados. Adotamos as seguintes medidas de proteção:</p>
-      <ul>
-        <li><strong>Acesso Restrito:</strong> Somente membros autorizados têm acesso aos dados coletados.</li>
-        <li><strong>Segurança Técnica:</strong> Utilizamos medidas técnicas e organizacionais para evitar acessos não autorizados.</li>
-        <li><strong>Retenção Mínima:</strong> Os dados são mantidos apenas pelo tempo necessário para cumprir a finalidade coletada.</li>
-      </ul>
+        <h3>3. Armazenamento e Segurança</h3>
+        <p>Seus dados ficam armazenados em ambiente seguro com acesso restrito exclusivamente à Dra. Vera Catarina e seus colaboradores devidamente autorizados. Adotamos as seguintes medidas de proteção:</p>
+        <ul>
+          <li><strong>Acesso Restrito:</strong> Somente membros autorizados têm acesso aos dados coletados.</li>
+          <li><strong>Segurança Técnica:</strong> Utilizamos medidas técnicas e organizacionais para evitar acessos não autorizados.</li>
+          <li><strong>Retenção Mínima:</strong> Os dados são mantidos apenas pelo tempo necessário para cumprir a finalidade coletada.</li>
+        </ul>
 
-      <h3>4. Seus Direitos (LGPD – Art. 18)</h3>
-      <p>Em conformidade com a Lei Geral de Proteção de Dados, você tem os seguintes direitos em relação aos seus dados pessoais:</p>
-      <ul>
-        <li><strong>Confirmação:</strong> saber se tratamos seus dados pessoais</li>
-        <li><strong>Acesso:</strong> obter cópia dos dados que mantemos sobre você</li>
-        <li><strong>Correção:</strong> solicitar a retificação de dados incompletos, inexatos ou desatualizados</li>
-        <li><strong>Anonimização ou Exclusão:</strong> solicitar que seus dados sejam anonimizados, bloqueados ou deletados</li>
-        <li><strong>Portabilidade:</strong> receber seus dados em formato estruturado para transferência a outro fornecedor</li>
-        <li><strong>Revogação do Consentimento:</strong> retirar seu consentimento a qualquer momento</li>
-      </ul>
-      <p>Para exercer qualquer um desses direitos, entre em contato conosco pelo e-mail <a href="mailto:dra.veracatarina@gmail.com">dra.veracatarina@gmail.com</a> ou pelo WhatsApp (51) 3450-2229.</p>
+        <h3>4. Seus Direitos (LGPD – Art. 18)</h3>
+        <p>Em conformidade com a Lei Geral de Proteção de Dados, você tem os seguintes direitos em relação aos seus dados pessoais:</p>
+        <ul>
+          <li><strong>Confirmação:</strong> saber se tratamos seus dados pessoais</li>
+          <li><strong>Acesso:</strong> obter cópia dos dados que mantemos sobre você</li>
+          <li><strong>Correção:</strong> solicitar a retificação de dados incompletos, inexatos ou desatualizados</li>
+          <li><strong>Anonimização ou Exclusão:</strong> solicitar que seus dados sejam anonimizados, bloqueados ou deletados</li>
+          <li><strong>Portabilidade:</strong> receber seus dados em formato estruturado para transferência a outro fornecedor</li>
+          <li><strong>Revogação do Consentimento:</strong> retirar seu consentimento a qualquer momento</li>
+        </ul>
+        <p>Para exercer qualquer um desses direitos, entre em contato conosco pelo e-mail <a href="mailto:dra.veracatarina@gmail.com">dra.veracatarina@gmail.com</a> ou pelo WhatsApp (51) 3450-2229.</p>
 
-      <h3>5. Cookies e Ferramentas de Análise</h3>
-      <p>Este site utiliza cookies de sessão para garantir o funcionamento correto do formulário e da navegação. Não utilizamos cookies de rastreamento de terceiros, ferramentas de publicidade comportamental ou análises invasivas de perfil de usuário. Para mais informações detalhadas, consulte nossa <a href="#cookies">Política de Cookies</a>.</p>
+        <h3>5. Cookies e Ferramentas de Análise</h3>
+        <p>Este site utiliza cookies de sessão para garantir o funcionamento correto do formulário e da navegação. Não utilizamos cookies de rastreamento de terceiros, ferramentas de publicidade comportamental ou análises invasivas de perfil de usuário. Para mais informações detalhadas, consulte nossa <a href="#cookies">Política de Cookies</a>.</p>
 
-      <h3>6. Contato do Encarregado (DPO)</h3>
-      <p>Para questões relacionadas à privacidade, proteção de dados ou para exercer seus direitos, entre em contato com o responsável pela proteção de dados da Advocacia Vera Catarina:</p>
-      <p><strong>E-mail:</strong> <a href="mailto:dra.veracatarina@gmail.com">dra.veracatarina@gmail.com</a><br>
-      <strong>WhatsApp:</strong> (51) 3450-2229</p>
+        <h3>6. Contato do Encarregado (DPO)</h3>
+        <p>Para questões relacionadas à privacidade, proteção de dados ou para exercer seus direitos, entre em contato com o responsável pela proteção de dados da Advocacia Vera Catarina:</p>
+        <p><strong>E-mail:</strong> <a href="mailto:dra.veracatarina@gmail.com">dra.veracatarina@gmail.com</a><br>
+        <strong>WhatsApp:</strong> (51) 3450-2229</p>
 
-      <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao topo</a>
-    </div>
-  </section>
+        <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao topo</a>
+      </div>
+    </section>
 
-  <!-- ===== SEÇÃO: TERMOS DE USO ===== -->
-  <section id="termos" class="legal-section bg-alt">
-    <div class="container">
-      <h2><i class="fas fa-file-signature"></i> Termos de Uso</h2>
-      <span class="update">Última atualização: Maio de 2026</span>
+    <!-- ===== SEÇÃO: TERMOS DE USO ===== -->
+    <section id="termos" class="legal-section bg-alt">
+      <div class="container">
+        <h2><i class="fas fa-file-signature"></i> Termos de Uso</h2>
+        <span class="update">Última atualização: Maio de 2026</span>
 
-      <p>Ao acessar o site da Advocacia Vera Catarina, você concorda com os termos e condições descritos nesta página.</p>
+        <p>Ao acessar o site da Advocacia Vera Catarina, você concorda com os termos e condições descritos nesta página.</p>
 
-      <h3>1. Sobre o Escritório</h3>
-      <p>A Advocacia Vera Catarina é um escritório de advocacia sediado em Sapucaia do Sul – RS, com atuação nas áreas cível, previdenciária, trabalhista, criminal, de família, do consumidor e direito digital. Este site tem caráter informativo e institucional.</p>
+        <h3>1. Sobre o Escritório</h3>
+        <p>A Advocacia Vera Catarina é um escritório de advocacia sediado em Sapucaia do Sul – RS, com atuação nas áreas cível, previdenciária, trabalhista, criminal, de família, do consumidor, direito digital e empresarial. Este site tem caráter informativo e institucional.</p>
 
-      <h3>2. Conteúdo e Informações</h3>
-      <p>As informações publicadas neste site são de caráter informativo e educacional. Empregamos nossos melhores esforços para manter o conteúdo atualizado e preciso, porém:</p>
-      <ul>
-        <li>O conteúdo pode ser alterado, corrigido ou removido sem aviso prévio</li>
-        <li>Não garantimos a completude ou exatidão absoluta das informações publicadas</li>
-        <li>Artigos e comunicados refletem o contexto no momento da publicação</li>
-      </ul>
+        <h3>2. Conteúdo e Informações</h3>
+        <p>As informações publicadas neste site são de caráter informativo e educacional. Empregamos nossos melhores esforços para manter o conteúdo atualizado e preciso, porém:</p>
+        <ul>
+          <li>O conteúdo pode ser alterado, corrigido ou removido sem aviso prévio</li>
+          <li>Não garantimos a completude ou exatidão absoluta das informações publicadas</li>
+          <li>Artigos e comunicados refletem o contexto no momento da publicação</li>
+        </ul>
 
-      <h3>3. Propriedade Intelectual</h3>
-      <p>Todo o conteúdo deste site — incluindo design, logotipos, marcas, textos, imagens, ícones, código-fonte e elementos visuais — é propriedade da Advocacia Vera Catarina ou de seus criadores, e está protegido pelas leis de propriedade intelectual brasileiras.</p>
-      <p>⚠️ É expressamente proibida a reprodução, distribuição, modificação ou uso comercial de qualquer conteúdo deste site sem autorização prévia e por escrito.</p>
+        <h3>3. Propriedade Intelectual</h3>
+        <p>Todo o conteúdo deste site — incluindo design, logotipos, marcas, textos, imagens, ícones, código-fonte e elementos visuais — é propriedade da Advocacia Vera Catarina ou de seus criadores, e está protegido pelas leis de propriedade intelectual brasileiras.</p>
+        <p>⚠️ É expressamente proibida a reprodução, distribuição, modificação ou uso comercial de qualquer conteúdo deste site sem autorização prévia e por escrito.</p>
 
-      <h3>4. Links Externos</h3>
-      <p>Este site pode conter links para sites de terceiros (como Instagram, WhatsApp, Blogger e outros). Não nos responsabilizamos pelo conteúdo, políticas de privacidade ou disponibilidade de sites externos vinculados. A inclusão de um link não implica endosso ou parceria.</p>
+        <h3>4. Links Externos</h3>
+        <p>Este site pode conter links para sites de terceiros (como Instagram, WhatsApp, Blogger e outros). Não nos responsabilizamos pelo conteúdo, políticas de privacidade ou disponibilidade de sites externos vinculados. A inclusão de um link não implica endosso ou parceria.</p>
 
-      <h3>5. Disponibilidade do Site</h3>
-      <p>Empreenderemos esforços razoáveis para manter o site disponível continuamente. Contudo, o site pode sofrer interrupções temporárias por razões de:</p>
-      <ul>
-        <li>Manutenção programada ou emergencial</li>
-        <li>Falhas técnicas de infraestrutura (hospedagem GitHub Pages)</li>
-        <li>Casos fortuitos ou de força maior</li>
-        <li>Ataques cibernéticos ou falhas de conectividade</li>
-      </ul>
+        <h3>5. Disponibilidade do Site</h3>
+        <p>Empreenderemos esforços razoáveis para manter o site disponível continuamente. Contudo, o site pode sofrer interrupções temporárias por razões de:</p>
+        <ul>
+          <li>Manutenção programada ou emergencial</li>
+          <li>Falhas técnicas de infraestrutura (hospedagem GitHub Pages)</li>
+          <li>Casos fortuitos ou de força maior</li>
+          <li>Ataques cibernéticos ou falhas de conectividade</li>
+        </ul>
 
-      <h3>6. Conduta do Usuário</h3>
-      <p>Ao utilizar este site, você se compromete a:</p>
-      <ul>
-        <li>Não utilizar o site para fins ilegais ou não autorizados</li>
-        <li>Não tentar acessar áreas restritas ou dados de outros usuários</li>
-        <li>Não disseminar conteúdo ofensivo, difamatório ou que viole direitos de terceiros</li>
-      </ul>
+        <h3>6. Conduta do Usuário</h3>
+        <p>Ao utilizar este site, você se compromete a:</p>
+        <ul>
+          <li>Não utilizar o site para fins ilegais ou não autorizados</li>
+          <li>Não tentar acessar áreas restritas ou dados de outros usuários</li>
+          <li>Não disseminar conteúdo ofensivo, difamatório ou que viole direitos de terceiros</li>
+        </ul>
 
-      <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao topo</a>
-    </div>
-  </section>
+        <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao topo</a>
+      </div>
+    </section>
 
-  <!-- ===== SEÇÃO: COOKIES ===== -->
-  <section id="cookies" class="legal-section">
-    <div class="container">
-      <h2><i class="fas fa-cookie-bite"></i> Política de Cookies</h2>
-      <span class="update">Última atualização: Maio de 2026</span>
+    <!-- ===== SEÇÃO: COOKIES ===== -->
+    <section id="cookies" class="legal-section">
+      <div class="container">
+        <h2><i class="fas fa-cookie-bite"></i> Política de Cookies</h2>
+        <span class="update">Última atualização: Maio de 2026</span>
 
-      <h3>O que são Cookies?</h3>
-      <p>Cookies são pequenos arquivos de texto que um site salva no seu navegador quando você o visita. Eles permitem que o site lembre suas preferências e informações de sessão, tornando a navegação mais eficiente e personalizada.</p>
-      <p>Os cookies não contêm vírus e não podem executar programas. São amplamente utilizados para melhorar a experiência de navegação na internet.</p>
+        <h3>O que são Cookies?</h3>
+        <p>Cookies são pequenos arquivos de texto que um site salva no seu navegador quando você o visita. Eles permitem que o site lembre suas preferências e informações de sessão, tornando a navegação mais eficiente e personalizada.</p>
+        <p>Os cookies não contêm vírus e não podem executar programas. São amplamente utilizados para melhorar a experiência de navegação na internet.</p>
 
-      <h3>Cookies que Utilizamos</h3>
-      <p>O site da Advocacia Vera Catarina utiliza <strong>apenas cookies estritamente necessários</strong> ao funcionamento. Não utilizamos cookies de rastreamento publicitário ou perfil comportamental.</p>
+        <h3>Cookies que Utilizamos</h3>
+        <p>O site da Advocacia Vera Catarina utiliza <strong>apenas cookies estritamente necessários</strong> ao funcionamento. Não utilizamos cookies de rastreamento publicitário ou perfil comportamental.</p>
 
-      <table class="cookie-table">
-        <thead>
-          <tr>
-            <th>Nome / Tipo</th>
-            <th>Finalidade</th>
-            <th>Duração</th>
-            <th>Necessário?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Sessão de formulário</strong></td>
-            <td>Manter o estado do formulário de contato durante a navegação</td>
-            <td>Sessão (expira ao fechar o navegador)</td>
-            <td class="yes">✅ Sim</td>
-          </tr>
-          <tr>
-            <td><strong>Preferências de navegação</strong></td>
-            <td>Lembrar preferências locais do usuário (ex: menu mobile)</td>
-            <td>Sessão</td>
-            <td class="yes">✅ Sim</td>
-          </tr>
-          <tr>
-            <td><strong>Google Fonts</strong></td>
-            <td>Carregamento das fontes tipográficas utilizadas no design</td>
-            <td>1 ano (cache)</td>
-            <td class="yes">✅ Funcional</td>
-          </tr>
-        </tbody>
-      </table>
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Nome / Tipo</th>
+              <th>Finalidade</th>
+              <th>Duração</th>
+              <th>Necessário?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Sessão de formulário</strong></td>
+              <td>Manter o estado do formulário de contato durante a navegação</td>
+              <td>Sessão (expira ao fechar o navegador)</td>
+              <td class="yes">✅ Sim</td>
+            </tr>
+            <tr>
+              <td><strong>Preferências de navegação</strong></td>
+              <td>Lembrar preferências locais do usuário (ex: menu mobile)</td>
+              <td>Sessão</td>
+              <td class="yes">✅ Sim</td>
+            </tr>
+            <tr>
+              <td><strong>Google Fonts</strong></td>
+              <td>Carregamento das fontes tipográficas utilizadas no design</td>
+              <td>1 ano (cache)</td>
+              <td class="yes">✅ Funcional</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <p>🍪 <strong>Não utilizamos</strong> cookies de analytics, publicidade, redes sociais embutidas (pixels do Facebook/Instagram) ou qualquer forma de rastreamento comportamental.</p>
+        <p>🍪 <strong>Não utilizamos</strong> cookies de analytics, publicidade, redes sociais embutidas (pixels do Facebook/Instagram) ou qualquer forma de rastreamento comportamental.</p>
 
-      <h3>Cookies de Terceiros</h3>
-      <p>Ao clicar em links externos presentes neste site (WhatsApp, Instagram, Blogger), você será direcionado a outros domínios que possuem suas próprias políticas de cookies. A Advocacia Vera Catarina não tem controle sobre os cookies dessas plataformas e recomenda que você consulte as respectivas políticas de privacidade.</p>
+        <h3>Cookies de Terceiros</h3>
+        <p>Ao clicar em links externos presentes neste site (WhatsApp, Instagram, Blogger), você será direcionado a outros domínios que possuem suas próprias políticas de cookies. A Advocacia Vera Catarina não tem controle sobre os cookies dessas plataformas e recomenda que você consulte as respectivas políticas de privacidade.</p>
 
-      <h3>Como Gerenciar os Cookies</h3>
-      <p>Você pode controlar e/ou excluir cookies quando quiser. Para isso, acesse as configurações do seu navegador:</p>
+        <h3>Como Gerenciar os Cookies</h3>
+        <p>Você pode controlar e/ou excluir cookies quando quiser. Para isso, acesse as configurações do seu navegador:</p>
 
-      <div class="browser-grid">
-        <div class="browser-item">
-          <i class="fab fa-chrome" style="color:#4285F4;"></i>
-          <div>
-            <div class="browser-name">Google Chrome</div>
-            <div class="browser-desc">Configurações → Privacidade e segurança → Cookies e outros dados do site</div>
+        <div class="browser-grid">
+          <div class="browser-item">
+            <i class="fab fa-chrome" style="color:#4285F4;"></i>
+            <div>
+              <div class="browser-name">Google Chrome</div>
+              <div class="browser-desc">Configurações → Privacidade e segurança → Cookies e outros dados do site</div>
+            </div>
+          </div>
+          <div class="browser-item">
+            <i class="fab fa-firefox" style="color:#FF7139;"></i>
+            <div>
+              <div class="browser-name">Mozilla Firefox</div>
+              <div class="browser-desc">Opções → Privacidade e segurança → Cookies e dados do site</div>
+            </div>
+          </div>
+          <div class="browser-item">
+            <i class="fab fa-safari" style="color:#0066CC;"></i>
+            <div>
+              <div class="browser-name">Safari</div>
+              <div class="browser-desc">Preferências → Privacidade → Cookies e dados do site</div>
+            </div>
+          </div>
+          <div class="browser-item">
+            <i class="fab fa-edge" style="color:#0078D7;"></i>
+            <div>
+              <div class="browser-name">Microsoft Edge</div>
+              <div class="browser-desc">Configurações → Privacidade, pesquisa e serviços → Cookies</div>
+            </div>
           </div>
         </div>
-        <div class="browser-item">
-          <i class="fab fa-firefox" style="color:#FF7139;"></i>
-          <div>
-            <div class="browser-name">Mozilla Firefox</div>
-            <div class="browser-desc">Opções → Privacidade e segurança → Cookies e dados do site</div>
+
+        <p><strong>Atenção:</strong> desativar cookies essenciais pode impedir o funcionamento correto do formulário de contato e outras funcionalidades do site.</p>
+
+        <h3>Base Legal</h3>
+        <p>O uso de cookies essenciais está amparado no legítimo interesse da Advocacia Vera Catarina em garantir o funcionamento técnico adequado do site, conforme previsto na LGPD (Lei 13.709/2018), Art. 7º, inciso IX.</p>
+
+        <p>Para dúvidas sobre nossa política de cookies: <a href="mailto:dra.veracatarina@gmail.com">dra.veracatarina@gmail.com</a></p>
+
+        <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao topo</a>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO: FAQ ===== -->
+    <section id="faq" class="legal-section bg-alt">
+      <div class="container">
+        <h2><i class="fas fa-question-circle"></i> Perguntas Frequentes (FAQ)</h2>
+        <span class="update">Atualizado em: Maio de 2026</span>
+
+        <div class="faq-item">
+          <h4><i class="fas fa-user-graduate"></i> Quem é a Dra. Vera Catarina?</h4>
+          <p>A Dra. Vera Catarina é advogada e pedagoga, formada pela UNISINOS – São Leopoldo, com inscrição na OAB/RS sob o nº 19.315. Atua nas áreas cível, previdenciária, trabalhista, criminal, de família, do consumidor, direito digital e empresarial.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4><i class="fas fa-map-pin"></i> Onde fica o escritório?</h4>
+          <p>O escritório está localizado em Sapucaia do Sul – RS. Para endereço completo e mapa, consulte a seção <a href="contato.html">Contato</a> do site.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4><i class="fas fa-phone"></i> Como posso entrar em contato?</h4>
+          <p>Você pode nos contatar pelo WhatsApp (51) 3450-2229, pelo e-mail <a href="mailto:dra.veracatarina@gmail.com">dra.veracatarina@gmail.com</a>, ou através do <a href="contato.html">formulário de contato</a> no site.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4><i class="fas fa-clock"></i> Vocês atendem casos urgentes?</h4>
+          <p>Sim! Oferecemos <strong>plantão 24h</strong> para casos criminais, prisões em flagrante e medidas de urgência. Basta acionar o botão <strong>"Plantão 24h"</strong> no menu ou entrar em contato diretamente pelo WhatsApp.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4><i class="fas fa-file-contract"></i> Como funciona a primeira consulta?</h4>
+          <p>Agendamos uma conversa inicial para entender seu caso, avaliar a viabilidade jurídica e apresentar as melhores estratégias. O atendimento pode ser presencial, por telefone ou videoconferência.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4><i class="fas fa-laptop"></i> O que é a Área Restrita do Cliente?</h4>
+          <p>É um canal seguro para clientes enviarem documentos, procurações, contratos e solicitações de andamento processual. O acesso é feito pelo formulário na seção <a href="index.html#restrito">Canal Restrito</a> do site.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4><i class="fas fa-shield-halved"></i> Meus dados estão seguros?</h4>
+          <p>Sim. Seguimos rigorosamente a LGPD e adotamos medidas técnicas e organizacionais para proteger suas informações. Consulte nossa <a href="#privacidade">Política de Privacidade</a> para mais detalhes.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4><i class="fas fa-globe"></i> Vocês atendem fora de Sapucaia do Sul?</h4>
+          <p>Atendemos toda a região metropolitana de Porto Alegre e também podemos atuar em outras comarcas mediante análise prévia. Entre em contato para verificar a viabilidade.</p>
+        </div>
+
+        <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao topo</a>
+      </div>
+    </section>
+
+    <!-- ===== BACKLINKS ===== -->
+    <section class="backlinks-section">
+      <div class="container">
+        <h3 style="text-align: center; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px;">
+          <i class="fas fa-gavel" style="color: var(--accent);"></i> Conheça nossas áreas de atuação
+        </h3>
+        <div class="backlinks-grid">
+          <div class="backlink-item">
+            <a href="direito-familia.html"><i class="fas fa-people-roof"></i> Direito de Família</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Direito Digital</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a>
+          </div>
+          <div class="backlink-item">
+            <a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a>
           </div>
         </div>
-        <div class="browser-item">
-          <i class="fab fa-safari" style="color:#0066CC;"></i>
-          <div>
-            <div class="browser-name">Safari</div>
-            <div class="browser-desc">Preferências → Privacidade → Cookies e dados do site</div>
-          </div>
-        </div>
-        <div class="browser-item">
-          <i class="fab fa-edge" style="color:#0078D7;"></i>
-          <div>
-            <div class="browser-name">Microsoft Edge</div>
-            <div class="browser-desc">Configurações → Privacidade, pesquisa e serviços → Cookies</div>
-          </div>
-        </div>
       </div>
-
-      <p><strong>Atenção:</strong> desativar cookies essenciais pode impedir o funcionamento correto do formulário de contato e outras funcionalidades do site.</p>
-
-      <h3>Base Legal</h3>
-      <p>O uso de cookies essenciais está amparado no legítimo interesse da Advocacia Vera Catarina em garantir o funcionamento técnico adequado do site, conforme previsto na LGPD (Lei 13.709/2018), Art. 7º, inciso IX.</p>
-
-      <p>Para dúvidas sobre nossa política de cookies: <a href="mailto:dra.veracatarina@gmail.com">dra.veracatarina@gmail.com</a></p>
-
-      <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao topo</a>
-    </div>
-  </section>
-
-  <!-- ===== SEÇÃO: FAQ ===== -->
-  <section id="faq" class="legal-section bg-alt">
-    <div class="container">
-      <h2><i class="fas fa-question-circle"></i> Perguntas Frequentes (FAQ)</h2>
-      <span class="update">Atualizado em: Maio de 2026</span>
-
-      <div class="faq-item">
-        <h4><i class="fas fa-user-graduate"></i> Quem é a Dra. Vera Catarina?</h4>
-        <p>A Dra. Vera Catarina é advogada e pedagoga, formada pela UNISINOS – São Leopoldo, com inscrição na OAB/RS sob o nº 19.315. Atua nas áreas cível, previdenciária, trabalhista, criminal, de família, do consumidor e direito digital.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4><i class="fas fa-map-pin"></i> Onde fica o escritório?</h4>
-        <p>O escritório está localizado em Sapucaia do Sul – RS. Para endereço completo e mapa, consulte a seção <a href="/#contato">Contato</a> do site.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4><i class="fas fa-phone"></i> Como posso entrar em contato?</h4>
-        <p>Você pode nos contatar pelo WhatsApp (51) 3450-2229, pelo e-mail <a href="mailto:dra.veracatarina@gmail.com">dra.veracatarina@gmail.com</a>, ou através do <a href="/#contato">formulário de contato</a> no site.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4><i class="fas fa-clock"></i> Vocês atendem casos urgentes?</h4>
-        <p>Sim! Oferecemos <strong>plantão 24h</strong> para casos criminais, prisões em flagrante e medidas de urgência. Basta acionar o botão <strong>"Plantão 24h"</strong> no menu ou entrar em contato diretamente pelo WhatsApp.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4><i class="fas fa-file-contract"></i> Como funciona a primeira consulta?</h4>
-        <p>Agendamos uma conversa inicial para entender seu caso, avaliar a viabilidade jurídica e apresentar as melhores estratégias. O atendimento pode ser presencial, por telefone ou videoconferência.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4><i class="fas fa-laptop"></i> O que é a Área Restrita do Cliente?</h4>
-        <p>É um canal seguro para clientes enviarem documentos, procurações, contratos e solicitações de andamento processual. O acesso é feito pelo formulário na seção <a href="/#restrito">Canal Restrito</a> do site.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4><i class="fas fa-shield-halved"></i> Meus dados estão seguros?</h4>
-        <p>Sim. Seguimos rigorosamente a LGPD e adotamos medidas técnicas e organizacionais para proteger suas informações. Consulte nossa <a href="#privacidade">Política de Privacidade</a> para mais detalhes.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4><i class="fas fa-globe"></i> Vocês atendem fora de Sapucaia do Sul?</h4>
-        <p>Atendemos toda a região metropolitana de Porto Alegre e também podemos atuar em outras comarcas mediante análise prévia. Entre em contato para verificar a viabilidade.</p>
-      </div>
-
-      <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao topo</a>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ===== FOOTER ===== -->
- <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-  <h5>Dra. Vera Catarina</h5>
-  <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
-  <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
-</div>
-      <div class="footer-col">
-        <h5>Links Rápidos</h5>
-        <ul>
-          <!-- TODOS OS LINKS AGORA APONTAM EXPLICITAMENTE PARA O index.html -->
-          <li><a href="index.html">Início</a></li>
-          <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
-          <li><a href="index.html#servicos">Utilidades</a></li>
-          <li><a href="index.html#restrito">Canal Restrito</a></li>
-          <li><a href="index.html#contato">Contato</a></li>
-          <li><a href="sobre.html">Sobre a Dra. Vera Catarina</a></li>
-          <li><a href="legal.html">Legal &amp; Suporte</a></li>
-          <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
-        </ul>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Dra. Vera Catarina</h5>
+          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
+          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
+        </div>
+        <div class="footer-col">
+          <h5>Links Rápidos</h5>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
+            <li><a href="noticias.html">📰 Notícias e Artigos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html">Legal</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Áreas Específicas</h5>
+          <ul>
+            <li><a href="direito-familia.html">Direito de Família</a></li>
+            <li><a href="direito-digital.html">Direito Digital</a></li>
+            <li><a href="direito-criminal.html">Direito Criminal</a></li>
+            <li><a href="direito-trabalhista.html">Direito Trabalhista</a></li>
+            <li><a href="direito-previdenciario.html">Direito Previdenciário</a></li>
+            <li><a href="direito-consumidor.html">Direito do Consumidor</a></li>
+            <li><a href="direito-civil.html">Direito Civil e Sucessões</a></li>
+            <li><a href="direito-empresarial.html">🏢 Advocacia Empresarial</a></li>
+            <li><a href="advogado-online.html">📱 Advogado Online 24h</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-col">
-        <h5>Legal &amp; LGPD</h5>
-        <ul>
-          <!-- ESTES LINKS JÁ ESTAVAM PERFEITOS, POIS APONTAM PARA A PÁGINA legal.html COM ÂNCORA -->
-          <li><a href="legal.html#privacidade">Diretivas de Privacidade</a></li>
-          <li><a href="legal.html#termos">Termos de Uso</a></li>
-          <li><a href="legal.html#cookies">Gerenciamento de Cookies</a></li>
-          <li><a href="legal.html#faq">FAQ – Perguntas Frequentes</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO e LGPD.</p>
-      <p style="font-size: 0.75rem; color: #94a3b8; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
-        <span>⚡ Design & Desenvolvimento:</span>
-        <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 600;">💻 Fábio Wlademir</a>
-        <span style="color: rgba(255,255,255,0.2);">·</span>
-        <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <span style="color: rgba(255,255,255,0.2);">·</span>
-        <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a>
-      </p>
-      
-      <div>
-        <div class="visitor-counter" title="Total de visualizações de página">
-          <i class="fas fa-eye"></i>
-          <span>Visitas ao portal:</span>
-          <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
+      <div class="footer-bottom">
+        <p style="margin-bottom:12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
+        <p style="font-size:0.75rem; color:#94a3b8; display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;">
+          <span>⚡ Design & Desenvolvimento:</span>
+          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-weight:600;">💻 Fábio Wlademir</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
+        </p>
+        <div>
+          <div class="visitor-counter" title="Total de visualizações de página">
+            <i class="fas fa-eye"></i>
+            <span>Visitas ao portal:</span>
+            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
+      <i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i>
+      <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+      <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
+      <button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
+    </div>
+  </div>
+
+  <!-- ===== VLIBRAS ===== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== ACESSIBILIDADE JS ===== -->
+  <script src="/acessibilidade.js"></script>
+
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    // Fecha o menu mobile ao clicar em um link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('menu-checkbox').checked = false;
-      });
+    // ===== DROPDOWN (MOBILE) =====
+    function toggleDropdown() {
+      const dropdown = document.querySelector('.dropdown');
+      if (window.innerWidth <= 992) {
+        dropdown.classList.toggle('open');
+      }
+    }
+    function openDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'block';
+      }
+    }
+    function closeDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'none';
+      }
+    }
+    document.addEventListener('click', function(e) {
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
     });
 
-    // Destaca o link da âncora ativa na navegação fixa
+    // ===== LGPD COOKIES =====
+    function setCookieConsent(choice) {
+      localStorage.setItem('cookieConsent', choice);
+      const banner = document.getElementById('cookie-consent-banner');
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateX(-50%) translateY(20px)';
+      setTimeout(() => { banner.style.display = 'none'; }, 500);
+    }
+    function acceptCookies() {
+      setCookieConsent('accepted');
+      console.log('📊 Cookies de análise ativados.');
+    }
+    function rejectCookies() {
+      setCookieConsent('rejected');
+      console.log('❌ Cookies de análise recusados.');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent === 'accepted' || consent === 'rejected') {
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+      }
+    });
+
+    // ===== NAVEGAÇÃO POR ÂNCORA (destacar link ativo) =====
     const navLinks = document.querySelectorAll('.legal-nav ul li a');
     const sections = document.querySelectorAll('.legal-section');
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', function() {
       let current = '';
-      sections.forEach(section => {
+      sections.forEach(function(section) {
         const sectionTop = section.offsetTop - 160;
         if (window.scrollY >= sectionTop) {
           current = section.getAttribute('id');
         }
       });
-      navLinks.forEach(link => {
+      navLinks.forEach(function(link) {
         link.classList.remove('active');
         if (link.getAttribute('href') === '#' + current) {
           link.classList.add('active');
         }
       });
     });
+
+    // ===== FECHAR MENU MOBILE =====
+    function closeMenu() {
+      document.getElementById('menu-checkbox').checked = false;
+    }
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ===== ARIA EXPANDED PARA MENU MOBILE =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuCheckbox = document.getElementById('menu-checkbox');
+    if (menuToggle && menuCheckbox) {
+      menuCheckbox.addEventListener('change', function() {
+        menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+      });
+    }
   </script>
 </body>
 </html>
