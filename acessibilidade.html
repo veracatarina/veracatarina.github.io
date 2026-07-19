@@ -7,35 +7,24 @@
   <meta name="description" content="Recursos de acessibilidade do site da Advocacia Vera Catarina. Navegação por teclado, compatibilidade com leitores de tela, alto contraste, modo escuro, VLibras e muito mais.">
   <meta name="keywords" content="acessibilidade, WCAG, eMAG, libras, navegação por teclado, alto contraste, dislexia, inclusão, LBI, Fabrícia Elissa">
   <meta name="robots" content="index, follow">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="canonical" href="https://veracatarina.github.io/acessibilidade.html">
-
   <meta property="og:title" content="Acessibilidade | Advocacia Vera Catarina">
   <meta property="og:description" content="Conheça os recursos de acessibilidade do site da Dra. Vera Catarina. Compromisso com a inclusão digital.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://veracatarina.github.io/acessibilidade.html">
-  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/advogado-online-24h.jpg">
-  <meta property="og:image:alt" content="Advocacia Vera Catarina - Acessibilidade">
-
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/acessibilidade-digital-inclusao.webp">
+  <meta property="og:image:alt" content="Acessibilidade digital e inclusão - Advocacia Vera Catarina">
   <title>Acessibilidade | Advocacia Vera Catarina</title>
 
   <!-- ===== FONTS ===== -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
-
-  <!-- ===== FONT OPENDYSLEXIC (para dislexia) ===== -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
-
-  <!-- ===== FONT AWESOME ===== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- ===== ARQUIVOS DE ACESSIBILIDADE ===== -->
   <link rel="stylesheet" href="/acessibilidade.css">
 
   <style>
-    /* ============================================================
-       ESTILOS ESPECÍFICOS DA PÁGINA DE ACESSIBILIDADE
-       ============================================================ */
+    /* ===== ESTILOS PADRÃO ===== */
     :root {
       --primary-dark: #0b251e;
       --primary: #143d33;
@@ -52,38 +41,13 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background: #ffffff;
-      line-height: 1.6;
-      padding-top: 120px;
-    }
-
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
     .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
     h1, h2, h3, h4 { font-family: 'Cinzel', serif; }
 
     /* ===== TOP BAR ===== */
-    .top-bar {
-      background: #061612;
-      height: 40px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1001;
-      border-bottom: 1px solid rgba(197, 168, 128, 0.2);
-      display: flex;
-      align-items: center;
-    }
-    .top-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      font-size: 0.8rem;
-      color: #cbd5e1;
-    }
+    .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
+    .top-container { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.8rem; color: #cbd5e1; }
     .top-socials { display: flex; gap: 15px; }
     .top-socials a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; font-size: 0.95rem; }
     .top-socials a:hover { color: var(--accent); }
@@ -92,54 +56,28 @@
     .top-contact-info .obs-tel { font-size: 0.7rem; color: #94a3b8; font-weight: normal; margin-left: 2px; }
 
     /* ===== HEADER ===== */
-    header {
-      position: fixed;
-      top: 40px;
-      left: 0;
-      right: 0;
-      height: 80px;
-      background: rgba(11, 37, 30, 0.98);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 2px solid var(--accent);
-      display: flex;
-      align-items: center;
-    }
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-    .logo {
-      color: white;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      z-index: 1002;
-    }
+    header { position: fixed; top: 40px; left: 0; right: 0; height: 80px; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; align-items: center; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
     .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
     .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
 
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      z-index: 1002;
-      background: transparent;
-      border: none;
-    }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
     .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
     #menu-checkbox { display: none; }
 
+    /* ===== NAVEGAÇÃO PRINCIPAL ===== */
     .nav-menu {
       display: flex;
       list-style: none;
       gap: 14px;
       align-items: center;
     }
-    .nav-menu a {
+    .nav-menu > li {
+      position: relative;
+      list-style: none;
+    }
+    .nav-menu > li > a {
       color: #e2e8f0;
       text-decoration: none;
       font-size: 0.78rem;
@@ -149,9 +87,16 @@
       letter-spacing: 0.3px;
       padding: 4px 0;
       border-bottom: 2px solid transparent;
+      display: inline-block;
     }
-    .nav-menu a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-    .nav-menu a.ativo { color: var(--accent); border-bottom: 2px solid var(--accent); }
+    .nav-menu > li > a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .nav-menu > li > a.ativo {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
     .btn-emergency-nav {
       background: var(--danger);
       color: white !important;
@@ -165,7 +110,57 @@
       border: none !important;
       border-bottom: none !important;
     }
-    .btn-emergency-nav:hover { background: #b91c1c; color: white !important; border-bottom: none !important; }
+    .btn-emergency-nav:hover {
+      background: #b91c1c;
+      color: white !important;
+      border-bottom: none !important;
+    }
+
+    /* ===== DROPDOWN ===== */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(11, 37, 30, 0.98);
+      backdrop-filter: blur(10px);
+      min-width: 200px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 8px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      z-index: 1003;
+    }
+    .dropdown-content li {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 20px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border-bottom: none !important;
+      transition: background 0.2s;
+    }
+    .dropdown-content li a:hover {
+      background: rgba(197, 168, 128, 0.15);
+      color: var(--accent);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn i {
+      transition: transform 0.2s;
+    }
+    .dropdown:hover .dropbtn i {
+      transform: rotate(180deg);
+    }
 
     /* ===== HERO ===== */
     .page-hero {
@@ -254,7 +249,6 @@
       font-weight: 500;
       font-size: 0.95rem;
     }
-
     .feature-item.completed {
       border-left-color: #16a34a;
     }
@@ -262,75 +256,46 @@
       color: #16a34a;
     }
 
-    /* ===== ARTIGOS RELACIONADOS ===== */
-    .related-articles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin: 25px 0;
+    /* ===== BACKLINKS ===== */
+    .backlinks-section {
+      background: var(--bg-light);
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-    .related-article {
+    .backlinks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .backlink-item {
       background: white;
+      padding: 12px 18px;
+      border-radius: 6px;
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: var(--shadow);
+      text-align: center;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .related-article:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    .backlink-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     }
-    .related-article .tag {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(197, 168, 128, 0.12);
-      padding: 2px 10px;
-      border-radius: 20px;
-      margin-bottom: 8px;
-    }
-    .related-article h4 {
-      font-size: 1rem;
-      color: var(--primary-dark);
-      margin-bottom: 8px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-    }
-    .related-article h4 a {
-      color: var(--primary-dark);
+    .backlink-item a {
+      color: var(--text-dark);
       text-decoration: none;
-      transition: color 0.2s;
-    }
-    .related-article h4 a:hover {
-      color: var(--accent);
-    }
-    .related-article p {
-      font-size: 0.88rem;
-      color: var(--text-light);
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
-    .related-article .btn-read {
-      background: var(--primary-dark);
-      color: white;
-      padding: 6px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 0.75rem;
-      font-weight: 600;
-      display: inline-flex;
+      font-weight: 500;
+      font-size: 0.85rem;
+      display: flex;
       align-items: center;
-      gap: 6px;
-      transition: background 0.2s;
+      justify-content: center;
+      gap: 8px;
     }
-    .related-article .btn-read:hover {
-      background: var(--primary);
-    }
+    .backlink-item a i { color: var(--accent); font-size: 1.1rem; }
+    .backlink-item a:hover { color: var(--accent); }
 
-    /* ===== CTA BOX ===== */
+    /* ===== CTA ===== */
     .cta-box {
       background: var(--primary-dark);
       color: white;
@@ -339,8 +304,15 @@
       text-align: center;
       margin: 40px 0;
     }
-    .cta-box h3 { color: white; font-size: 1.8rem; margin-bottom: 10px; }
-    .cta-box p { color: #cbd5e1; margin-bottom: 20px; }
+    .cta-box h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .cta-box p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
     .btn-cta {
       background: var(--accent);
       color: var(--primary-dark);
@@ -356,7 +328,6 @@
     }
     .btn-cta:hover { background: var(--accent-hover); }
 
-    /* ===== BOTÃO FLUTUANTE WHATSAPP ===== */
     .btn-emergency-float {
       position: fixed;
       bottom: 25px;
@@ -378,69 +349,20 @@
       letter-spacing: 0.5px;
     }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--primary-dark);
-      color: #cbd5e1;
-      padding: 50px 0 30px;
-      border-top: 4px solid var(--accent);
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 30px;
-      margin-bottom: 40px;
-      font-size: 0.9rem;
-    }
-    .footer-col h5 {
-      color: white;
-      margin-bottom: 15px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+    footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
+    .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
     .footer-col ul { list-style: none; }
     .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a {
-      color: #cbd5e1;
-      text-decoration: none;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
+    .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
     .footer-col ul li a:hover { color: var(--accent); }
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 25px;
-      font-size: 0.78rem;
-      color: #94a3b8;
-    }
-    .visitor-counter {
-      margin-top: 15px;
-      font-size: 0.78rem;
-      color: #cbd5e1;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0,0,0,0.3);
-      padding: 6px 12px;
-      border-radius: 4px;
-      border: 1px solid rgba(197, 168, 128, 0.2);
-    }
+    .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
+    .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
     .visitor-counter i { color: var(--accent); }
     .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
 
-    /* ===== KEYFRAMES ===== */
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); }
-      70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); }
-    }
-    @keyframes pulse-green {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
+    @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
+    @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
     /* ===== RESPONSIVIDADE ===== */
     @media (max-width: 992px) {
@@ -465,8 +387,26 @@
         border-top: 1px solid var(--accent);
         align-items: center;
       }
-      .nav-menu a { font-size: 1rem !important; border-bottom: none !important; }
-      .nav-menu a:hover { border-bottom: none !important; }
+      .nav-menu > li { width: 100%; text-align: center; }
+      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
+      .nav-menu > li > a:hover { border-bottom: none !important; }
+      .dropdown-content {
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        min-width: auto;
+        display: none !important;
+      }
+      .dropdown.open .dropdown-content {
+        display: block !important;
+      }
+      .dropdown-content li a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+      }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
@@ -474,7 +414,6 @@
       .feature-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 20px; }
       footer { padding-bottom: 110px; }
-      .related-articles { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
       .content-section { padding: 40px 0; }
@@ -501,7 +440,7 @@
     </div>
   </div>
 
-  <!-- ===== BOTÃO FLUTUANTE WHATSAPP ===== -->
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
   <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20Acessibilidade." class="btn-emergency-float" target="_blank" rel="noopener">
     <i class="fab fa-whatsapp"></i> Fale Conosco
   </a>
@@ -519,32 +458,65 @@
         <span></span>
         <span></span>
       </label>
+
       <ul class="nav-menu">
+        <!-- ITENS PRINCIPAIS -->
         <li><a href="index.html">Início</a></li>
         <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
         <li><a href="noticias.html">Notícias</a></li>
-        <li><a href="index.html#servicos">Utilidades</a></li>
-        <li><a href="index.html#restrito">Canal Restrito</a></li>
         <li><a href="contato.html">Contato</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="legal.html">Legal</a></li>
-        <li><a href="sitemap.html">🗺️ Mapa</a></li>
-        <li><a href="acessibilidade.html" class="ativo">♿ Acessibilidade</a></li>
-        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+
+        <!-- DROPDOWN "MAIS" -->
+        <li class="dropdown" onmouseenter="openDropdown()" onmouseleave="closeDropdown()">
+          <a href="javascript:void(0)" onclick="toggleDropdown()" class="dropbtn">
+            Mais <i class="fas fa-chevron-down" style="font-size:0.5rem; margin-left:4px;"></i>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="index.html#servicos">Utilidades</a></li>
+            <li><a href="index.html#restrito">Canal Restrito</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html">Legal &amp; Suporte</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa</a></li>
+            <li><a href="acessibilidade.html" class="ativo">♿ Acessibilidade</a></li>
+          </ul>
+        </li>
+
+        <!-- BOTÃO PLANTÃO 24h -->
+        <li>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav">
+            <i class="fas fa-shield-halved"></i> Plantão 24h
+          </a>
+        </li>
       </ul>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>♿ <span>Acessibilidade</span></h1>
-      <p>Compromisso com a inclusão digital. Este site foi desenvolvido buscando atender às recomendações da WCAG 2.2, do eMAG e da Lei Brasileira de Inclusão (LBI).</p>
-    </div>
-  </section>
-
   <!-- ===== CONTEÚDO PRINCIPAL ===== -->
   <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <h1>♿ <span>Acessibilidade</span></h1>
+        <p>Compromisso com a inclusão digital. Este site foi desenvolvido buscando atender às recomendações da WCAG 2.2, do eMAG e da Lei Brasileira de Inclusão (LBI).</p>
+      </div>
+    </section>
+
+    <!-- ===== IMAGEM ILUSTRATIVA ===== -->
+    <div style="text-align: center; padding: 30px 20px 10px; background: var(--bg-light);">
+      <div style="max-width: 500px; margin: 0 auto;">
+        <img
+          src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/acessibilidade-digital-inclusao.webp"
+          alt="Acessibilidade digital e inclusão - Advocacia Vera Catarina - Recursos para pessoas com deficiência"
+          title="Acessibilidade Digital | Advocacia Vera Catarina"
+          loading="lazy"
+          style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
+        />
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
+          <i class="fas fa-universal-access" style="color: var(--accent);"></i>
+          Inclusão digital para todos — acessibilidade é um direito de todos
+        </p>
+      </div>
+    </div>
+
     <section class="content-section">
       <div class="container">
 
@@ -612,57 +584,7 @@
         <p>Se você encontrou alguma barreira de acessibilidade ao navegar em nosso site, por favor, entre em contato conosco. Sua opinião é fundamental para melhorarmos continuamente.</p>
         <p><strong>Atendimento especializado:</strong> Nossa equipe está preparada para oferecer suporte a pessoas com deficiência auditiva (via WhatsApp/escrita) e visual (via telefone).</p>
 
-        <!-- ===== ARTIGOS RELACIONADOS ===== -->
-        <h2>📰 Artigos que você pode gostar de ler</h2>
-        <p>Confira alguns dos nossos conteúdos sobre Direito Digital, Família e Inclusão:</p>
-
-        <div class="related-articles">
-
-          <article class="related-article">
-            <span class="tag">💻 Direito Digital</span>
-            <h4><a href="noticias/direito-ao-esquecimento-case-academico-premiado.html">Direito ao Esquecimento – Case Acadêmico Premiado</a></h4>
-            <p>Análise do RE 1.010.606/STF (Caso Aída Curi) sob as lentes de Kelsen, Dworkin e Bobbio. Trabalho nota máxima na UNISINOS.</p>
-            <a href="noticias/direito-ao-esquecimento-case-academico-premiado.html" class="btn-read">Leia mais →</a>
-          </article>
-
-          <article class="related-article">
-            <span class="tag">📋 Direito de Família</span>
-            <h4><a href="noticias/como-pedir-pensao-alimenticia.html">Como pedir Pensão Alimentícia em Sapucaia do Sul?</a></h4>
-            <p>Passo a passo completo para solicitar pensão alimentícia com uma advogada especialista em Direito de Família.</p>
-            <a href="noticias/como-pedir-pensao-alimenticia.html" class="btn-read">Leia mais →</a>
-          </article>
-
-          <article class="related-article">
-            <span class="tag">💻 Direito Digital</span>
-            <h4><a href="noticias/lgpd-entenda-lei-geral-protecao-dados.html">LGPD: Entenda a Lei Geral de Proteção de Dados</a></h4>
-            <p>Entenda como a LGPD protege seus dados pessoais e quais são seus direitos na era digital.</p>
-            <a href="noticias/lgpd-entenda-lei-geral-protecao-dados.html" class="btn-read">Leia mais →</a>
-          </article>
-
-          <article class="related-article">
-            <span class="tag">💻 Direito Digital</span>
-            <h4><a href="noticias/crimes-virtuais-calunia-difamacao-injuria.html">Crimes Virtuais: Calúnia, Difamação e Injúria</a></h4>
-            <p>Saiba como se proteger e buscar justiça em casos de crimes contra a honra nas redes sociais.</p>
-            <a href="noticias/crimes-virtuais-calunia-difamacao-injuria.html" class="btn-read">Leia mais →</a>
-          </article>
-
-          <article class="related-article">
-            <span class="tag">📋 Direito de Família</span>
-            <h4><a href="noticias/perseguicao-digital-stalking-prova-pericial.html">Perseguição Digital e Stalking</a></h4>
-            <p>5 anos da Lei do Stalking e a importância da prova pericial para comprovar o crime de perseguição digital.</p>
-            <a href="noticias/perseguicao-digital-stalking-prova-pericial.html" class="btn-read">Leia mais →</a>
-          </article>
-
-          <article class="related-article">
-            <span class="tag">💻 Direito Digital</span>
-            <h4><a href="noticias/marco-civil-internet-direitos-digitais.html">Marco Civil da Internet: Seus Direitos Digitais</a></h4>
-            <p>Entenda o Marco Civil da Internet e como ele protege sua privacidade, neutralidade de rede e liberdade de expressão.</p>
-            <a href="noticias/marco-civil-internet-direitos-digitais.html" class="btn-read">Leia mais →</a>
-          </article>
-
-        </div>
-
-        <!-- ===== CTA BOX ===== -->
+        <!-- ===== CTA ===== -->
         <div class="cta-box">
           <h3>Precisa de ajuda com a navegação?</h3>
           <p>Nossa equipe está pronta para atendê-lo com a atenção que você merece.</p>
@@ -671,6 +593,41 @@
           </a>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ===== BACKLINKS ===== -->
+    <section class="backlinks-section">
+      <div class="container">
+        <h3 style="text-align: center; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px;">
+          <i class="fas fa-gavel" style="color: var(--accent);"></i> Conheça nossas áreas de atuação
+        </h3>
+        <div class="backlinks-grid">
+          <div class="backlink-item">
+            <a href="direito-familia.html"><i class="fas fa-people-roof"></i> Direito de Família</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Direito Digital</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a>
+          </div>
+          <div class="backlink-item">
+            <a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -711,16 +668,15 @@
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
-        <p style="font-size: 0.75rem; color: #94a3b8; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+        <p style="margin-bottom:12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
+        <p style="font-size:0.75rem; color:#94a3b8; display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;">
           <span>⚡ Design & Desenvolvimento:</span>
-          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 600;">💻 Fábio Wlademir</a>
-          <span style="color: rgba(255,255,255,0.2);">·</span>
-          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <span style="color: rgba(255,255,255,0.2);">·</span>
-          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-weight:600;">💻 Fábio Wlademir</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
         </p>
         <div>
           <div class="visitor-counter" title="Total de visualizações de página">
@@ -733,59 +689,58 @@
     </div>
   </footer>
 
-  <!-- ===== BANNER LGPD E COOKIES ===== -->
-  <div id="cookie-consent-banner" style="
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 900px;
-    background: rgba(11, 37, 30, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 18px 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
-    border: 1px solid var(--accent, #c5a880);
-    z-index: 9999;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    font-family: 'Inter', sans-serif;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  ">
-    <div style="flex: 1 1 100%; text-align: center; color: #e2e8f0; font-size: 0.9rem; line-height: 1.5;">
-      <i class="fas fa-shield-alt" style="color: var(--accent, #c5a880); margin-right: 8px; font-size: 1.1rem;"></i>
-      <span style="font-weight: 300;">
-        Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência.
-        <a href="legal.html#privacidade" style="color: var(--accent, #c5a880); text-decoration: underline; font-weight: 500;">Política de Privacidade</a>
-        <span style="color: #94a3b8; margin: 0 6px;">|</span>
-        <a href="legal.html#cookies" style="color: #cbd5e1; text-decoration: underline;">Configurar</a>
-      </span>
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
+      <i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i>
+      <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
     </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-      <button onclick="rejectCookies()" style="background: transparent; color: #cbd5e1; border: 1px solid #64748b; padding: 8px 20px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: background 0.2s, border-color 0.2s;">Recusar</button>
-      <button onclick="acceptCookies()" style="background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); border: none; padding: 8px 28px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: background 0.2s;">Aceitar</button>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+      <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
+      <button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
     </div>
   </div>
 
-  <!-- ===== VLIBRAS (Libras Virtual) ===== -->
+  <!-- ===== VLIBRAS ===== -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== ACESSIBILIDADE JS ===== -->
+  <script src="/acessibilidade.js"></script>
 
   <!-- ===== SCRIPTS ===== -->
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
-    // VLibras
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    // ===== DROPDOWN (MOBILE) =====
+    function toggleDropdown() {
+      const dropdown = document.querySelector('.dropdown');
+      if (window.innerWidth <= 992) {
+        dropdown.classList.toggle('open');
+      }
+    }
+    function openDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'block';
+      }
+    }
+    function closeDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'none';
+      }
+    }
+    document.addEventListener('click', function(e) {
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
 
-    // ===== LGPD - Cookie Consent =====
+    // ===== LGPD COOKIES =====
     function setCookieConsent(choice) {
       localStorage.setItem('cookieConsent', choice);
       const banner = document.getElementById('cookie-consent-banner');
@@ -793,18 +748,14 @@
       banner.style.transform = 'translateX(-50%) translateY(20px)';
       setTimeout(() => { banner.style.display = 'none'; }, 500);
     }
-
     function acceptCookies() {
       setCookieConsent('accepted');
       console.log('📊 Cookies de análise ativados.');
     }
-
     function rejectCookies() {
       setCookieConsent('rejected');
       console.log('❌ Cookies de análise recusados.');
     }
-
-    // Verificar preferência salva
     document.addEventListener('DOMContentLoaded', function() {
       const consent = localStorage.getItem('cookieConsent');
       if (consent === 'accepted' || consent === 'rejected') {
@@ -829,9 +780,5 @@
       });
     }
   </script>
-
-  <!-- ===== ARQUIVO DE ACESSIBILIDADE (TOOLBAR, BREADCRUMB, SKIP LINK, TEMAS) ===== -->
-  <script src="/acessibilidade.js"></script>
-
 </body>
 </html>
