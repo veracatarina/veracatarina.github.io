@@ -7,20 +7,23 @@
   <meta name="description" content="Dra. Vera Catarina em Sapucaia do Sul | 40 anos de experiência em Direito Criminal, Família, Consumidor, Trabalhista e Digital. Plantão 24h para prisões e flagrantes. Atendimento humanizado.">
   <meta name="keywords" content="Advogado Criminal Sapucaia, Advogada Vera Catarina, Crimes Virtuais, Calunia e Difamacao Internet, Direito Trabalhista Sapucaia, Aposentadoria, Plantao Criminal 24h RS">
   <meta name="robots" content="index, follow">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
+  <link rel="canonical" href="https://veracatarina.github.io/">
   <meta property="og:title" content="Advocacia Vera Catarina | Defesa Especializada & Estratégica">
   <meta property="og:description" content="Atuação jurídica imediata em Sapucaia do Sul. Especialista em Direito Criminal, Digital, Trabalhista e Cível.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://veracatarina.github.io/">
-
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/advogado-online-24h.jpg">
+  <meta property="og:image:alt" content="Advocacia Vera Catarina - Defesa Especializada">
   <title>Advocacia Vera Catarina | Defesa Especializada e Estratégica</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/acessibilidade.css">
 
   <style>
+    /* ===== ESTILOS ORIGINAIS (MANTIDOS) ===== */
     :root {
       --primary-dark: #0b251e;
       --primary: #143d33;
@@ -38,11 +41,10 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
-
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
 
-    /* Top Bar de Redes Sociais e Telefone atualizado */
+    /* ===== TOP BAR ===== */
     .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
     .top-container { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.8rem; color: #cbd5e1; }
     .top-socials { display: flex; gap: 15px; }
@@ -52,63 +54,116 @@
     .top-contact-info span i { color: var(--accent); margin-right: 4px; }
     .top-contact-info .obs-tel { font-size: 0.7rem; color: #94a3b8; font-weight: normal; margin-left: 2px; }
 
-    /* Header Principal */
+    /* ===== HEADER ===== */
     header { position: fixed; top: 40px; left: 0; right: 0; height: 80px; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; align-items: center; }
     .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
     .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
     .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
     .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
-    
-    /* ===== MENU DESKTOP AJUSTADO ===== */
-    .nav-menu { display: flex; list-style: none; gap: 14px; align-items: center; }
-    .nav-menu a { 
-      color: #e2e8f0; 
-      text-decoration: none; 
-      font-size: 0.78rem; 
-      font-weight: 600; 
-      transition: color 0.2s, border-color 0.2s; 
-      text-transform: uppercase; 
-      letter-spacing: 0.3px;
-      padding: 4px 0;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-menu a:hover { 
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-    .btn-emergency-nav { 
-      background: var(--danger); 
-      color: white !important; 
-      padding: 6px 14px; 
-      border-radius: 4px; 
-      display: inline-flex; 
-      align-items: center; 
-      gap: 6px; 
-      font-size: 0.75rem !important; 
-      animation: pulse 2s infinite; 
-      border: none !important;
-      border-bottom: none !important;
-    }
-    .btn-emergency-nav:hover { 
-      background: #b91c1c; 
-      color: white !important;
-      border-bottom: none !important;
-    }
 
-    /* CORREÇÃO DO MENU MOBILE (CSS PURO) */
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
     .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
     #menu-checkbox { display: none; }
 
-    /* Hero Section */
+    /* ===== NAVEGAÇÃO PRINCIPAL ===== */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 14px;
+      align-items: center;
+    }
+    .nav-menu > li {
+      position: relative;
+      list-style: none;
+    }
+    .nav-menu > li > a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: color 0.2s, border-color 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      display: inline-block;
+    }
+    .nav-menu > li > a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .btn-emergency-nav {
+      background: var(--danger);
+      color: white !important;
+      padding: 6px 14px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem !important;
+      animation: pulse 2s infinite;
+      border: none !important;
+      border-bottom: none !important;
+    }
+    .btn-emergency-nav:hover {
+      background: #b91c1c;
+      color: white !important;
+      border-bottom: none !important;
+    }
+
+    /* ===== DROPDOWN ===== */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(11, 37, 30, 0.98);
+      backdrop-filter: blur(10px);
+      min-width: 200px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 8px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      z-index: 1003;
+    }
+    .dropdown-content li {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 20px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border-bottom: none !important;
+      transition: background 0.2s;
+    }
+    .dropdown-content li a:hover {
+      background: rgba(197, 168, 128, 0.15);
+      color: var(--accent);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn i {
+      transition: transform 0.2s;
+    }
+    .dropdown:hover .dropbtn i {
+      transform: rotate(180deg);
+    }
+
+    /* ===== HERO ===== */
     .hero { background: linear-gradient(rgba(11, 37, 30, 0.88), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover; color: white; padding: 100px 0 120px; text-align: center; border-bottom: 4px solid var(--accent); }
     .hero-box { max-width: 850px; margin: 0 auto; }
     .hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 15px; color: white; font-weight: 500; }
     .hero h1 span { color: var(--accent); }
     .hero p { font-size: clamp(1rem, 2.5vw, 1.25rem); max-width: 650px; margin: 0 auto 30px; color: #cbd5e1; font-weight: 300; }
-    
-    /* Botões */
-    .cta-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
     .btn { padding: 12px 28px; font-size: 0.9rem; font-weight: 700; text-decoration: none; text-transform: uppercase; border-radius: 4px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; }
     .btn-accent { background: var(--accent); color: var(--primary-dark); }
     .btn-accent:hover { background: var(--accent-hover); transform: translateY(-2px); }
@@ -117,14 +172,13 @@
     .btn-outline { background: transparent; border: 1px solid var(--accent); color: var(--accent); }
     .btn-outline:hover { background: var(--accent); color: var(--primary-dark); }
 
-    /* Seções */
+    /* ===== SEÇÕES ===== */
     section { padding: 80px 0; }
     .bg-alt { background: var(--bg-light); }
     .sec-title { text-align: center; font-size: 2rem; color: var(--primary-dark); margin-bottom: 10px; font-weight: 700; position: relative; padding-bottom: 15px; }
     .sec-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: var(--accent); }
     .sec-subtitle { text-align: center; color: var(--text-light); max-width: 600px; margin: 0 auto 50px; font-size: 0.95rem; }
 
-    /* Grid de Áreas de Atuação - 7 Cards */
     .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; }
     .area-card { background: white; border: 1px solid var(--border); border-top: 4px solid var(--primary); padding: 30px; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s; }
     .area-card:hover { transform: translateY(-5px); border-top-color: var(--accent); }
@@ -137,14 +191,12 @@
     .area-card ul li i { color: var(--accent); margin-top: 4px; font-size: 0.8rem; }
     .badge-emergency { background: var(--danger); color: white; font-size: 0.65rem; padding: 2px 6px; border-radius: 3px; font-family: 'Inter', sans-serif; font-weight: 700; margin-left: 8px; vertical-align: middle; }
 
-    /* Serviços & Utilidades */
     .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .service-card { background: white; padding: 25px; border-radius: 6px; border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow); }
     .service-card i { font-size: 2.2rem; color: var(--primary); margin-bottom: 12px; }
     .service-card h4 { font-size: 1.1rem; margin-bottom: 10px; color: var(--secondary); }
     .service-card p { font-size: 0.88rem; color: var(--text-light); margin-bottom: 15px; }
 
-    /* Nova Área Restrita / Canal de Envio Híbrido */
     .client-zone { background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=600') center/cover; color: white; text-align: center; border-top: 3px solid var(--accent); border-bottom: 3px solid var(--accent); }
     .client-zone h2 { color: white; }
     .secure-form-box { max-width: 500px; margin: 0 auto; background: rgba(255,255,255,0.05); padding: 35px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); }
@@ -154,14 +206,14 @@
     .input-group input:focus, .input-group textarea:focus { border-color: var(--accent); outline: none; }
     .form-actions-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
 
-    /* Contato & Links */
     .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .contact-info h3 { margin-bottom: 15px; color: var(--primary-dark); }
     .info-item { display: flex; gap: 12px; margin-bottom: 15px; font-size: 0.95rem; }
     .info-item i { color: var(--accent); font-size: 1.1rem; margin-top: 3px; }
     .contact-form { background: var(--bg-light); padding: 30px; border-radius: 6px; border: 1px solid var(--border); }
 
-    /* Footer Estruturado */
+    .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
+
     footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
     .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
@@ -170,15 +222,10 @@
     .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
     .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
-
     .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
     .visitor-counter i { color: var(--accent); }
     .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
 
-    /* Botão Flutuante WhatsApp Comercial */
-    .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
-
-    /* Modais Estilizados */
     .legal-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 37, 30, 0.95); z-index: 2000; display: none; justify-content: center; align-items: center; padding: 20px; overflow-y: auto; backdrop-filter: blur(8px); }
     .modal-content { background: white; width: 100%; max-width: 800px; max-height: 85vh; border-radius: 8px; padding: 40px; overflow-y: auto; border-top: 6px solid var(--accent); position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
     .modal-close { position: absolute; top: 20px; right: 20px; font-size: 1.5rem; color: var(--text-light); cursor: pointer; transition: color 0.2s; }
@@ -189,48 +236,65 @@
 
     @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
     @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-    
+
     /* ===== RESPONSIVIDADE ===== */
-    @media (max-width: 992px) { 
+    @media (max-width: 992px) {
       body { padding-top: 150px; }
       header { top: 70px; height: 75px; }
       .top-bar { height: auto; padding: 8px 0; position: fixed; }
       .top-container { flex-direction: column; gap: 6px; text-align: center; }
       .top-contact-info { flex-direction: column; gap: 2px; }
       .menu-toggle { display: flex; }
-      .nav-menu { 
-        position: fixed; 
+      .nav-menu {
+        position: fixed;
         top: 145px;
-        right: -100%; 
-        background: rgba(11, 37, 30, 0.98); 
-        flex-direction: column; 
-        width: 100%; 
-        height: calc(100vh - 145px); 
-        gap: 25px; 
-        padding: 40px 20px; 
-        transition: right 0.3s ease; 
+        right: -100%;
+        background: rgba(11, 37, 30, 0.98);
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 145px);
+        gap: 25px;
+        padding: 40px 20px;
+        transition: right 0.3s ease;
         z-index: 999;
         border-top: 1px solid var(--accent);
         align-items: center;
       }
-      .nav-menu a { 
-        font-size: 1rem !important; 
-        border-bottom: none !important;
+      .nav-menu > li { width: 100%; text-align: center; }
+      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
+      .nav-menu > li > a:hover { border-bottom: none !important; }
+      /* Dropdown no mobile */
+      .dropdown-content {
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        min-width: auto;
+        display: none !important;
       }
-      .nav-menu a:hover { border-bottom: none !important; }
+      .dropdown.open .dropdown-content {
+        display: block !important;
+      }
+      .dropdown-content li a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+      }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-      .contact-wrapper { grid-template-columns: 1fr; } 
-      .footer-grid { grid-template-columns: 1fr; gap: 20px; } 
+      .contact-wrapper { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
       .form-actions-split { grid-template-columns: 1fr; }
-      footer { padding-bottom: 110px; } 
+      footer { padding-bottom: 110px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- ===== TOP BAR ===== -->
   <div class="top-bar">
     <div class="container top-container">
       <div class="top-contact-info">
@@ -246,376 +310,348 @@
     </div>
   </div>
 
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
   <a href="https://api.whatsapp.com/send?phone=555134502229&text=Olá,%20gostaria de%20agendar%20uma%20consulta%20jurídica." class="btn-emergency-float" target="_blank" rel="noopener">
     <i class="fab fa-whatsapp"></i> Fale Conosco
   </a>
 
+  <!-- ===== HEADER ===== -->
   <header>
     <div class="container nav-container">
       <a href="#" class="logo">
         <span class="main-txt">Vera Catarina</span>
         <span class="sub-txt">Advocacia Especializada</span>
       </a>
-      
       <input type="checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="menu-toggle">
+      <label for="menu-checkbox" class="menu-toggle" aria-label="Abrir menu de navegação">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
       <ul class="nav-menu">
+        <!-- ITENS PRINCIPAIS -->
         <li><a href="#home" onclick="closeMenu()">Início</a></li>
         <li><a href="#atuacao" onclick="closeMenu()">Áreas de Atuação</a></li>
         <li><a href="noticias.html" onclick="closeMenu()">Notícias</a></li>
-        <li><a href="#servicos" onclick="closeMenu()">Utilidades</a></li>
-        <li><a href="#restrito" onclick="closeMenu()">Canal Restrito</a></li>
         <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
-        <li><a href="sobre.html" onclick="closeMenu()">Sobre</a></li>
-        <li><a href="legal.html" onclick="closeMenu()">Legal &amp; Suporte</a></li>
-        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+
+        <!-- DROPDOWN "MAIS" -->
+        <li class="dropdown" onmouseenter="openDropdown()" onmouseleave="closeDropdown()">
+          <a href="javascript:void(0)" onclick="toggleDropdown()" class="dropbtn">
+            Mais <i class="fas fa-chevron-down" style="font-size:0.5rem; margin-left:4px;"></i>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="#servicos" onclick="closeMenu()">Utilidades</a></li>
+            <li><a href="#restrito" onclick="closeMenu()">Canal Restrito</a></li>
+            <li><a href="sobre.html" onclick="closeMenu()">Sobre</a></li>
+            <li><a href="legal.html" onclick="closeMenu()">Legal &amp; Suporte</a></li>
+            <li><a href="sitemap.html" onclick="closeMenu()">🗺️ Mapa</a></li>
+            <li><a href="acessibilidade.html" onclick="closeMenu()">♿ Acessibilidade</a></li>
+          </ul>
+        </li>
+
+        <!-- BOTÃO PLANTÃO 24h -->
+        <li>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav" onclick="closeMenu()">
+            <i class="fas fa-shield-halved"></i> Plantão 24h
+          </a>
+        </li>
       </ul>
     </div>
   </header>
 
-  <section class="hero" id="home">
-    <div class="container hero-box">
-      <h1>Advogada em Sapucaia do Sul | 40 anos protegendo <span>seus direitos</span></h1>
-      <p>Defesa criminal especializada, crimes virtuais e sólida atuação nas esferas trabalhista, previdenciária, de família e do consumidor.</p>
-      <div class="cta-group">
-        <a href="https://api.whatsapp.com/send?phone=555134502229&text=Contato%20via%20Website" class="btn btn-accent" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Consultar Advogada</a>
-        <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Preciso%20de%20assistência%20criminal%20imediata" class="btn btn-danger" target="_blank" rel="noopener"><i class="fas fa-gavel"></i> Casos Urgentes 24h</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="atuacao">
-    <div class="container">
-      <h2 class="sec-title">Áreas de Atuação Estratégica</h2>
-      <p class="sec-subtitle">Defesa técnica robusta fundamentada na precisão e garantia das prerrogativas legais.</p>
-      
-      <div class="grid-areas">
-        
-        <!-- 1. DIREITO DIGITAL -->
-        <div class="area-card" style="border-top-color: var(--accent);">
-          <div class="icon" style="color: var(--accent);"><i class="fas fa-laptop-code"></i></div>
-          <h3><a href="direito-digital.html">Direito Digital</a></h3>
-          <ul>
-            <li><i class="fas fa-check"></i> <strong>Crimes Virtuais:</strong> Defesa e acusação em casos de Calúnia, Difamação e Injúria na internet.</li>
-            <li><i class="fas fa-check"></i> <strong>Golpes Financeiros:</strong> Ações recuperatórias contra fraudes bancárias e Pix.</li>
-            <li><i class="fas fa-check"></i> <strong>Remoção de Conteúdo:</strong> Medidas judiciais urgentes para retirada de conteúdo ofensivo do ar.</li>
-            <li><i class="fas fa-check"></i> <strong>Danos Morais Digitais:</strong> Responsabilização por vazamento de dados e exposição ilegal.</li>
-          </ul>
-        </div>
-
-        <!-- 2. DIREITO TRABALHISTA -->
-        <div class="area-card">
-          <div class="icon"><i class="fas fa-briefcase"></i></div>
-          <h3><a href="direito-trabalhista.html">Direito Trabalhista</a></h3>
-          <ul>
-            <li><i class="fas fa-check"></i> Reversão de Justa Causa e Rescisão Indireta.</li>
-            <li><i class="fas fa-check"></i> Indenizações por Acidente de Trabalho e Assédio Moral.</li>
-            <li><i class="fas fa-check"></i> Adicionais de Insalubridade e Periculosidade.</li>
-            <li><i class="fas fa-check"></i> Reconhecimento de Vínculo e Verbas Rescisórias completas.</li>
-          </ul>
-        </div>
-
-        <!-- 3. DIREITO PREVIDENCIÁRIO -->
-        <div class="area-card">
-          <div class="icon"><i class="fas fa-users-rays"></i></div>
-          <h3><a href="direito-previdenciario.html">Direito Previdenciário</a></h3>
-          <ul>
-            <li><i class="fas fa-check"></i> Aposentadoria por Idade, Tempo de Contribuição ou Especial.</li>
-            <li><i class="fas fa-check"></i> Encaminhamento de Pensão por Morte e Auxílio Invalidez.</li>
-            <li><i class="fas fa-check"></i> Concessão de Benefício Assistencial (LOAS/BPC).</li>
-            <li><i class="fas fa-check"></i> Planejamento Previdenciário Administrativo e Judicial.</li>
-          </ul>
-        </div>
-
-        <!-- 4. DIREITO CRIMINAL -->
-        <div class="area-card" style="border-top-color: var(--danger);">
-          <div class="icon" style="color: var(--danger);"><i class="fas fa-shield-halved"></i><span class="badge-emergency">Urgente</span></div>
-          <h3><a href="direito-criminal.html">Direito Criminal</a></h3>
-          <ul>
-            <li><i class="fas fa-check"></i> <strong>Assistência Imediata em Prisões:</strong> Atuação em flagrantes e delegacias.</li>
-            <li><i class="fas fa-check"></i> <strong>Habeas Corpus:</strong> Medidas de urgência contra prisões ilegais.</li>
-            <li><i class="fas fa-check"></i> <strong>Tráfico de Drogas:</strong> Análise probatória e nulidades processuais.</li>
-            <li><i class="fas fa-check"></i> <strong>Lei Maria da Penha:</strong> Defesa em medidas protetivas de urgência.</li>
-            <li><i class="fas fa-check"></i> <strong>Crimes de Trânsito & Lesão:</strong> Defesa técnica em bafômetro e CNH.</li>
-          </ul>
-        </div>
-
-        <!-- 5. DIREITO DO CONSUMIDOR -->
-        <div class="area-card">
-          <div class="icon"><i class="fas fa-scale-balanced"></i></div>
-          <h3><a href="direito-consumidor.html">Direito do Consumidor</a></h3>
-          <ul>
-            <li><i class="fas fa-check"></i> Exclusão de restrições indevidas no SPC/SERASA.</li>
-            <li><i class="fas fa-check"></i> Revisão de Contratos Bancários e juros abusivos.</li>
-            <li><i class="fas fa-check"></i> Ações contra limitação abusiva de desconto em folha.</li>
-            <li><i class="fas fa-check"></i> Indenizações por Erro Médico e falhas na prestação de serviços.</li>
-          </ul>
-        </div>
-
-        <!-- 6. DIREITO DE FAMÍLIA -->
-        <div class="area-card">
-          <div class="icon"><i class="fas fa-people-roof"></i></div>
-          <h3><a href="direito-familia.html">Direito de Família</a></h3>
-          <ul>
-            <li><i class="fas fa-check"></i> Divórcio Consensual ou Litigioso e Partilha de Bens.</li>
-            <li><i class="fas fa-check"></i> Reconhecimento e Dissolução de União Estável.</li>
-            <li><i class="fas fa-check"></i> Fixação, Revisão e Execução de Pensão Alimentícia.</li>
-            <li><i class="fas fa-check"></i> Regulamentação de Guarda, Visitas e Investigação de Paternidade.</li>
-          </ul>
-        </div>
-
-        <!-- 7. DIREITO CIVIL E SUCESSÕES (NOVO) -->
-        <div class="area-card">
-          <div class="icon"><i class="fas fa-gavel"></i></div>
-          <h3><a href="direito-civil.html">Direito Civil e Sucessões</a></h3>
-          <ul>
-            <li><i class="fas fa-check"></i> <strong>Inventário e Usucapião:</strong> Regularização de imóveis e partilha de bens.</li>
-            <li><i class="fas fa-check"></i> <strong>Contratos:</strong> Revisão de contratos bancários, compra e venda, e doações.</li>
-            <li><i class="fas fa-check"></i> <strong>Responsabilidade Civil:</strong> Indenizações por danos morais, erro médico e acidentes.</li>
-            <li><i class="fas fa-check"></i> <strong>Direitos Reais:</strong> Proteção à propriedade, reintegração de posse e despejos.</li>
-            <li><i class="fas fa-check"></i> <strong>Cobranças:</strong> Títulos de crédito e defesa em execuções e penhoras.</li>
-          </ul>
-        </div>
-<!-- 8. ADVOCACIA EMPRESARIAL (NOVO) -->
-<div class="area-card">
-  <div class="icon"><i class="fas fa-handshake"></i></div>
-  <h3><a href="direito-empresarial.html">Advocacia Empresarial</a></h3>
-  <ul>
-    <li><i class="fas fa-check"></i> <strong>Defesa Trabalhista Patronal:</strong> Reversão de multas, acordos coletivos e redução de passivo.</li>
-    <li><i class="fas fa-check"></i> <strong>Contratos &amp; Compliance:</strong> Revisão de contratos B2B, LGPD e proteção de dados.</li>
-    <li><i class="fas fa-check"></i> <strong>Cobrança Judicial e Extrajudicial:</strong> Títulos de crédito, duplicatas e cheques.</li>
-    <li><i class="fas fa-check"></i> <strong>Responsabilidade Civil Empresarial:</strong> Danos morais e materiais em relações comerciais.</li>
-    <li><i class="fas fa-check"></i> <strong>Planejamento Societário:</strong> Holdings, sucessão empresarial e fusões.</li>
-  </ul>
-</div>
-        <!-- 9. ADVOGADO ONLINE 24H (COM ÍCONE WHATSAPP E BADGE) -->
-<div class="area-card" style="border-top-color: #25d366; position: relative; overflow: hidden;">
-  
-  <!-- Selo "Online" no canto superior direito -->
-  <div style="position: absolute; top: 12px; right: 12px; background: #25d366; color: white; font-size: 0.6rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(37, 211, 102, 0.4);">
-    <i class="fas fa-circle" style="font-size: 0.4rem; vertical-align: middle; margin-right: 4px;"></i> Online 24h
-  </div>
-
-  <div class="icon" style="color: #25d366; font-size: 2.2rem; display: flex; align-items: center; gap: 12px;">
-    <i class="fab fa-whatsapp" style="background: #25d366; color: white; padding: 10px; border-radius: 50%; font-size: 1.6rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);"></i>
-    <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-dark);">Atendimento Imediato</span>
-  </div>
-  
-  <h3 style="margin-top: 10px;"><a href="advogado-online.html" style="text-decoration: none; color: inherit;">Advogado Online 24h</a></h3>
-  
-  <ul>
-    <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Atendimento Imediato:</strong> Fale com nossa equipe pelo WhatsApp ou chat, sem sair de casa.</li>
-    <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Processos Judiciais Online:</strong> Acompanhe todo o andamento pelo celular.</li>
-    <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Orientação Jurídica</strong> com 40 anos de experiência, disponível onde você estiver.</li>
-    <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Consultoria para Empresas</strong> com soluções personalizadas e ágeis.</li>
-    <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Suporte em Todas as Áreas:</strong> Família, Trabalhista, Digital, Consumidor, Criminal e mais.</li>
-  </ul>
-  
-  <!-- Botão de ação rápido dentro do card -->
-  <div style="margin-top: 15px; text-align: center;">
-    <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%2C%20vim%20pelo%20card%20Advogado%20Online%20e%20gostaria%20de%20atendimento." target="_blank" style="display: inline-block; background: #25d366; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.8rem; text-decoration: none; transition: background 0.2s; box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);">
-      <i class="fab fa-whatsapp"></i> Falar agora
-    </a>
-  </div>
-</div>
-      </div>
-    </div>
-  </section>
-<!-- ===== DEPOIMENTOS ===== -->
-<section id="depoimentos" style="padding: 60px 0; background: var(--bg-light);">
-  <div class="container">
-    <h2 class="sec-title">O que nossos clientes dizem</h2>
-    <p class="sec-subtitle">Relatos de quem confiou na experiência e no atendimento humanizado da Dra. Vera Catarina.</p>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
-      
-      <!-- Depoimento 1 -->
-      <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
-        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-          <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">M.S.</div>
-          <div>
-            <strong style="display: block; color: var(--primary-dark);">Maria S.</strong>
-            <span style="font-size: 0.8rem; color: var(--text-light);">Cliente – Divórcio Consensual</span>
-          </div>
-        </div>
-        <p style="font-size: 0.95rem; color: var(--text-dark); font-style: italic; line-height: 1.6;">
-          "A Dra. Vera Catarina foi essencial durante meu divórcio. Me senti acolhida e segura em um momento muito difícil. Sua experiência de 40 anos faz toda a diferença. Recomendo de olhos fechados!"
-        </p>
-        <div style="margin-top: 10px; color: var(--accent); font-size: 1.2rem;">★★★★★</div>
-      </div>
-      
-      <!-- Depoimento 2 -->
-<div style="background: white; padding: 25px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
-  <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-    <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">J.R.</div>
-    <div>
-      <strong style="display: block; color: var(--primary-dark);">João R.</strong>
-      <span style="font-size: 0.8rem; color: var(--text-light);">Cliente – Direito Trabalhista</span>
-    </div>
-  </div>
-  <p style="font-size: 0.95rem; color: var(--text-dark); font-style: italic; line-height: 1.6;">
-    "Fui demitido injustamente e a Dra. Vera me orientou em cada passo com total transparência e segurança jurídica. Sua atuação foi firme e estratégica, proporcionando a confiança necessária para enfrentar o processo. Profissional extremamente competente e humana."
-  </p>
-  <div style="margin-top: 10px; color: var(--accent); font-size: 1.2rem;">★★★★★</div>
-</div>
-      
-      <!-- Depoimento 3 -->
-      <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
-        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-          <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">A.C.</div>
-          <div>
-            <strong style="display: block; color: var(--primary-dark);">Ana C.</strong>
-            <span style="font-size: 0.8rem; color: var(--text-light);">Cliente – Direito de Família</span>
-          </div>
-        </div>
-        <p style="font-size: 0.95rem; color: var(--text-dark); font-style: italic; line-height: 1.6;">
-          "A Dra. Vera me ajudou com a guarda do meu filho. Além de ser uma excelente advogada, tem um coração enorme. Me senti amparada e confiante durante todo o processo."
-        </p>
-        <div style="margin-top: 10px; color: var(--accent); font-size: 1.2rem;">★★★★★</div>
-      </div>
-      
-    </div>
-    
-    <div style="text-align: center; margin-top: 30px;">
-      <a href="depoimentos.html" style="color: var(--accent); font-weight: 600; text-decoration: none;">Ver todos os depoimentos →</a>
-    </div>
-  </div>
-</section>
-  <section id="servicos" class="bg-alt">
-    <div class="container">
-      <h2 class="sec-title">Central de Utilidades e Links Úteis</h2>
-      <p class="sec-subtitle">Acesso rápido aos principais portais de acompanhamento e solicitações.</p>
-      
-      <div class="grid-services">
-        <div class="service-card">
-          <i class="fas fa-magnifying-glass-chart"></i>
-          <h4>Acompanhar Processos</h4>
-          <p>Links diretos e instruções consolidadas para verificar o andamento oficial da sua ação.</p>
-          <a href="https://advocaciasapucaia.blogspot.com/p/sites-uteis-andamentos-de-processos.html" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size:0.75rem;">Acessar Links</a>
-        </div>
-
-        <div class="service-card">
-          <i class="fas fa-file-signature"></i>
-          <h4>Solicitar Andamento</h4>
-          <p>Envie uma requisição interna para nossa equipe atualizar você sobre a atual situação da pasta.</p>
-          <a href="#restrito" class="btn btn-outline" style="padding: 6px 14px; font-size:0.75rem;">Pedir Atualização</a>
-        </div>
-
-        <div class="service-card">
-          <i class="fab fa-instagram"></i>
-          <h4>Informativo Digital</h4>
-          <p>Acompanhe updates sobre direitos civis, trabalhistas e novidades de leis pelo Instagram.</p>
-          <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size:0.75rem;">Visitar Perfil</a>
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="container hero-box">
+        <h1>Advogada em Sapucaia do Sul | 40 anos protegendo <span>seus direitos</span></h1>
+        <p>Defesa criminal especializada, crimes virtuais e sólida atuação nas esferas trabalhista, previdenciária, de família e do consumidor.</p>
+        <div class="cta-group">
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=Contato%20via%20Website" class="btn btn-accent" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Consultar Advogada</a>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Preciso%20de%20assistência%20criminal%20imediata" class="btn btn-danger" target="_blank" rel="noopener"><i class="fas fa-gavel"></i> Casos Urgentes 24h</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="restrito" class="client-zone">
-    <div class="container">
-      <h2 class="sec-title" style="color:white;">Área Restrita do Cliente</h2>
-      <p class="sec-subtitle" style="color:#cbd5e1;">Acesse com segurança os canais de triagem para envio de contratos, procurações e cópias de documentos digitais.</p>
-      
-      <div class="secure-form-box">
-        <form id="hybridForm">
-          <div class="input-group">
-            <label for="restritoNome">Seu Nome Completo</label>
-            <input type="text" id="restritoNome" required placeholder="Digite seu nome">
+    <section id="atuacao">
+      <div class="container">
+        <h2 class="sec-title">Áreas de Atuação Estratégica</h2>
+        <p class="sec-subtitle">Defesa técnica robusta fundamentada na precisão e garantia das prerrogativas legais.</p>
+        <div class="grid-areas">
+          <!-- 1. DIREITO DIGITAL -->
+          <div class="area-card" style="border-top-color: var(--accent);">
+            <div class="icon" style="color: var(--accent);"><i class="fas fa-laptop-code"></i></div>
+            <h3><a href="direito-digital.html">Direito Digital</a></h3>
+            <ul>
+              <li><i class="fas fa-check"></i> <strong>Crimes Virtuais:</strong> Defesa e acusação em casos de Calúnia, Difamação e Injúria na internet.</li>
+              <li><i class="fas fa-check"></i> <strong>Golpes Financeiros:</strong> Ações recuperatórias contra fraudes bancárias e Pix.</li>
+              <li><i class="fas fa-check"></i> <strong>Remoção de Conteúdo:</strong> Medidas judiciais urgentes para retirada de conteúdo ofensivo do ar.</li>
+              <li><i class="fas fa-check"></i> <strong>Danos Morais Digitais:</strong> Responsabilização por vazamento de dados e exposição ilegal.</li>
+            </ul>
           </div>
-          <div class="input-group">
-            <label for="restritoFone">Seu WhatsApp / Telefone</label>
-            <input type="tel" id="restritoFone" required placeholder="(00) 00000-0000">
+          <!-- 2. DIREITO TRABALHISTA -->
+          <div class="area-card">
+            <div class="icon"><i class="fas fa-briefcase"></i></div>
+            <h3><a href="direito-trabalhista.html">Direito Trabalhista</a></h3>
+            <ul>
+              <li><i class="fas fa-check"></i> Reversão de Justa Causa e Rescisão Indireta.</li>
+              <li><i class="fas fa-check"></i> Indenizações por Acidente de Trabalho e Assédio Moral.</li>
+              <li><i class="fas fa-check"></i> Adicionais de Insalubridade e Periculosidade.</li>
+              <li><i class="fas fa-check"></i> Reconhecimento de Vínculo e Verbas Rescisórias completas.</li>
+            </ul>
           </div>
-          <div class="input-group">
-            <label for="restritoEmail">Seu E-mail de Contato</label>
-            <input type="email" id="restritoEmail" required placeholder="nome@exemplo.com">
+          <!-- 3. DIREITO PREVIDENCIÁRIO -->
+          <div class="area-card">
+            <div class="icon"><i class="fas fa-users-rays"></i></div>
+            <h3><a href="direito-previdenciario.html">Direito Previdenciário</a></h3>
+            <ul>
+              <li><i class="fas fa-check"></i> Aposentadoria por Idade, Tempo de Contribuição ou Especial.</li>
+              <li><i class="fas fa-check"></i> Encaminhamento de Pensão por Morte e Auxílio Invalidez.</li>
+              <li><i class="fas fa-check"></i> Concessão de Benefício Assistencial (LOAS/BPC).</li>
+              <li><i class="fas fa-check"></i> Planejamento Previdenciário Administrativo e Judicial.</li>
+            </ul>
           </div>
-          <div class="input-group">
-            <label for="restritoMsg">Assunto / Tipo de Solicitação</label>
-            <textarea id="restritoMsg" rows="3" required placeholder="Descreva brevemente o seu caso ou informe o número do processo..."></textarea>
+          <!-- 4. DIREITO CRIMINAL -->
+          <div class="area-card" style="border-top-color: var(--danger);">
+            <div class="icon" style="color: var(--danger);"><i class="fas fa-shield-halved"></i><span class="badge-emergency">Urgente</span></div>
+            <h3><a href="direito-criminal.html">Direito Criminal</a></h3>
+            <ul>
+              <li><i class="fas fa-check"></i> <strong>Assistência Imediata em Prisões:</strong> Atuação em flagrantes e delegacias.</li>
+              <li><i class="fas fa-check"></i> <strong>Habeas Corpus:</strong> Medidas de urgência contra prisões ilegais.</li>
+              <li><i class="fas fa-check"></i> <strong>Tráfico de Drogas:</strong> Análise probatória e nulidades processuais.</li>
+              <li><i class="fas fa-check"></i> <strong>Lei Maria da Penha:</strong> Defesa em medidas protetivas de urgência.</li>
+              <li><i class="fas fa-check"></i> <strong>Crimes de Trânsito & Lesão:</strong> Defesa técnica em bafômetro e CNH.</li>
+            </ul>
           </div>
-          
-          <div class="form-actions-split">
-            <button type="button" class="btn" style="background:#25d366; color:white; font-size:0.8rem;" onclick="sendToWhatsApp()">
-              <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
-            </button>
-            <button type="button" class="btn" style="background:var(--accent); color:var(--primary-dark); font-size:0.8rem;" onclick="sendToEmail()">
-              <i class="fas fa-envelope"></i> Enviar por E-mail
-            </button>
+          <!-- 5. DIREITO DO CONSUMIDOR -->
+          <div class="area-card">
+            <div class="icon"><i class="fas fa-scale-balanced"></i></div>
+            <h3><a href="direito-consumidor.html">Direito do Consumidor</a></h3>
+            <ul>
+              <li><i class="fas fa-check"></i> Exclusão de restrições indevidas no SPC/SERASA.</li>
+              <li><i class="fas fa-check"></i> Revisão de Contratos Bancários e juros abusivos.</li>
+              <li><i class="fas fa-check"></i> Ações contra limitação abusiva de desconto em folha.</li>
+              <li><i class="fas fa-check"></i> Indenizações por Erro Médico e falhas na prestação de serviços.</li>
+            </ul>
           </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato">
-    <div class="container">
-      <h2 class="sec-title">Fale Conosco</h2>
-      <p class="sec-subtitle">Atendimento personalizado com absoluto sigilo profissional. Envie sua mensagem.</p>
-      
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <h3>Canais Diretos</h3>
-          <div class="info-item">
-            <i class="fab fa-whatsapp"></i>
-            <div>
-              <strong>WhatsApp Geral:</strong><br>
-              <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" style="color:var(--primary); text-decoration:none;">(51) 3450-2229</a>
+          <!-- 6. DIREITO DE FAMÍLIA -->
+          <div class="area-card">
+            <div class="icon"><i class="fas fa-people-roof"></i></div>
+            <h3><a href="direito-familia.html">Direito de Família</a></h3>
+            <ul>
+              <li><i class="fas fa-check"></i> Divórcio Consensual ou Litigioso e Partilha de Bens.</li>
+              <li><i class="fas fa-check"></i> Reconhecimento e Dissolução de União Estável.</li>
+              <li><i class="fas fa-check"></i> Fixação, Revisão e Execução de Pensão Alimentícia.</li>
+              <li><i class="fas fa-check"></i> Regulamentação de Guarda, Visitas e Investigação de Paternidade.</li>
+            </ul>
+          </div>
+          <!-- 7. DIREITO CIVIL E SUCESSÕES -->
+          <div class="area-card">
+            <div class="icon"><i class="fas fa-gavel"></i></div>
+            <h3><a href="direito-civil.html">Direito Civil e Sucessões</a></h3>
+            <ul>
+              <li><i class="fas fa-check"></i> <strong>Inventário e Usucapião:</strong> Regularização de imóveis e partilha de bens.</li>
+              <li><i class="fas fa-check"></i> <strong>Contratos:</strong> Revisão de contratos bancários, compra e venda, e doações.</li>
+              <li><i class="fas fa-check"></i> <strong>Responsabilidade Civil:</strong> Indenizações por danos morais, erro médico e acidentes.</li>
+              <li><i class="fas fa-check"></i> <strong>Direitos Reais:</strong> Proteção à propriedade, reintegração de posse e despejos.</li>
+              <li><i class="fas fa-check"></i> <strong>Cobranças:</strong> Títulos de crédito e defesa em execuções e penhoras.</li>
+            </ul>
+          </div>
+          <!-- 8. ADVOCACIA EMPRESARIAL -->
+          <div class="area-card">
+            <div class="icon"><i class="fas fa-handshake"></i></div>
+            <h3><a href="direito-empresarial.html">Advocacia Empresarial</a></h3>
+            <ul>
+              <li><i class="fas fa-check"></i> <strong>Defesa Trabalhista Patronal:</strong> Reversão de multas, acordos coletivos e redução de passivo.</li>
+              <li><i class="fas fa-check"></i> <strong>Contratos &amp; Compliance:</strong> Revisão de contratos B2B, LGPD e proteção de dados.</li>
+              <li><i class="fas fa-check"></i> <strong>Cobrança Judicial e Extrajudicial:</strong> Títulos de crédito, duplicatas e cheques.</li>
+              <li><i class="fas fa-check"></i> <strong>Responsabilidade Civil Empresarial:</strong> Danos morais e materiais em relações comerciais.</li>
+              <li><i class="fas fa-check"></i> <strong>Planejamento Societário:</strong> Holdings, sucessão empresarial e fusões.</li>
+            </ul>
+          </div>
+          <!-- 9. ADVOGADO ONLINE 24H -->
+          <div class="area-card" style="border-top-color: #25d366; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 12px; right: 12px; background: #25d366; color: white; font-size: 0.6rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(37, 211, 102, 0.4);">
+              <i class="fas fa-circle" style="font-size: 0.4rem; vertical-align: middle; margin-right: 4px;"></i> Online 24h
             </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <strong>E-mail Institucional:</strong><br>
-              <a href="mailto:dra.veracatarina@gmail.com" style="color:var(--primary); text-decoration:none;">dra.veracatarina@gmail.com</a>
+            <div class="icon" style="color: #25d366; font-size: 2.2rem; display: flex; align-items: center; gap: 12px;">
+              <i class="fab fa-whatsapp" style="background: #25d366; color: white; padding: 10px; border-radius: 50%; font-size: 1.6rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);"></i>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-dark);">Atendimento Imediato</span>
             </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-location-dot"></i>
-            <div>
-              <strong>Atendimento Presencial:</strong><br>
-              Sapucaia do Sul - RS<br>
-              <a href="https://advocaciasapucaia.blogspot.com/p/fale-conosco-mapa.html" target="_blank" style="font-size: 0.85rem; color:var(--accent); font-weight:700;">Ver Mapa de Localização <i class="fas fa-arrow-right"></i></a>
+            <h3 style="margin-top: 10px;"><a href="advogado-online.html" style="text-decoration: none; color: inherit;">Advogado Online 24h</a></h3>
+            <ul>
+              <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Atendimento Imediato:</strong> Fale com nossa equipe pelo WhatsApp ou chat, sem sair de casa.</li>
+              <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Processos Judiciais Online:</strong> Acompanhe todo o andamento pelo celular.</li>
+              <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Orientação Jurídica</strong> com 40 anos de experiência, disponível onde você estiver.</li>
+              <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Consultoria para Empresas</strong> com soluções personalizadas e ágeis.</li>
+              <li><i class="fas fa-check" style="color: #25d366;"></i> <strong>Suporte em Todas as Áreas:</strong> Família, Trabalhista, Digital, Consumidor, Criminal e mais.</li>
+            </ul>
+            <div style="margin-top: 15px; text-align: center;">
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%2C%20vim%20pelo%20card%20Advogado%20Online%20e%20gostaria%20de%20atendimento." target="_blank" style="display: inline-block; background: #25d366; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.8rem; text-decoration: none; transition: background 0.2s; box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);">
+                <i class="fab fa-whatsapp"></i> Falar agora
+              </a>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="contact-form">
-          <form onsubmit="handleGeneralForm(event)">
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section id="depoimentos" style="padding: 60px 0; background: var(--bg-light);">
+      <div class="container">
+        <h2 class="sec-title">O que nossos clientes dizem</h2>
+        <p class="sec-subtitle">Relatos de quem confiou na experiência e no atendimento humanizado da Dra. Vera Catarina.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+          <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">M.S.</div>
+              <div><strong style="display: block; color: var(--primary-dark);">Maria S.</strong><span style="font-size: 0.8rem; color: var(--text-light);">Cliente – Divórcio Consensual</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-dark); font-style: italic; line-height: 1.6;">"A Dra. Vera Catarina foi essencial durante meu divórcio. Me senti acolhida e segura em um momento muito difícil. Sua experiência de 40 anos faz toda a diferença. Recomendo de olhos fechados!"</p>
+            <div style="margin-top: 10px; color: var(--accent); font-size: 1.2rem;">★★★★★</div>
+          </div>
+          <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">J.R.</div>
+              <div><strong style="display: block; color: var(--primary-dark);">João R.</strong><span style="font-size: 0.8rem; color: var(--text-light);">Cliente – Direito Trabalhista</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-dark); font-style: italic; line-height: 1.6;">"Fui demitido injustamente e a Dra. Vera me orientou em cada passo com total transparência e segurança jurídica. Sua atuação foi firme e estratégica, proporcionando a confiança necessária para enfrentar o processo. Profissional extremamente competente e humana."</p>
+            <div style="margin-top: 10px; color: var(--accent); font-size: 1.2rem;">★★★★★</div>
+          </div>
+          <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">A.C.</div>
+              <div><strong style="display: block; color: var(--primary-dark);">Ana C.</strong><span style="font-size: 0.8rem; color: var(--text-light);">Cliente – Direito de Família</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-dark); font-style: italic; line-height: 1.6;">"A Dra. Vera me ajudou com a guarda do meu filho. Além de ser uma excelente advogada, tem um coração enorme. Me senti amparada e confiante durante todo o processo."</p>
+            <div style="margin-top: 10px; color: var(--accent); font-size: 1.2rem;">★★★★★</div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+          <a href="depoimentos.html" style="color: var(--accent); font-weight: 600; text-decoration: none;">Ver todos os depoimentos →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVIÇOS E UTILIDADES ===== -->
+    <section id="servicos" class="bg-alt">
+      <div class="container">
+        <h2 class="sec-title">Central de Utilidades e Links Úteis</h2>
+        <p class="sec-subtitle">Acesso rápido aos principais portais de acompanhamento e solicitações.</p>
+        <div class="grid-services">
+          <div class="service-card">
+            <i class="fas fa-magnifying-glass-chart"></i>
+            <h4>Acompanhar Processos</h4>
+            <p>Links diretos e instruções consolidadas para verificar o andamento oficial da sua ação.</p>
+            <a href="https://advocaciasapucaia.blogspot.com/p/sites-uteis-andamentos-de-processos.html" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size:0.75rem;">Acessar Links</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-file-signature"></i>
+            <h4>Solicitar Andamento</h4>
+            <p>Envie uma requisição interna para nossa equipe atualizar você sobre a atual situação da pasta.</p>
+            <a href="#restrito" class="btn btn-outline" style="padding: 6px 14px; font-size:0.75rem;">Pedir Atualização</a>
+          </div>
+          <div class="service-card">
+            <i class="fab fa-instagram"></i>
+            <h4>Informativo Digital</h4>
+            <p>Acompanhe updates sobre direitos civis, trabalhistas e novidades de leis pelo Instagram.</p>
+            <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size:0.75rem;">Visitar Perfil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÁREA RESTRITA ===== -->
+    <section id="restrito" class="client-zone">
+      <div class="container">
+        <h2 class="sec-title" style="color:white;">Área Restrita do Cliente</h2>
+        <p class="sec-subtitle" style="color:#cbd5e1;">Acesse com segurança os canais de triagem para envio de contratos, procurações e cópias de documentos digitais.</p>
+        <div class="secure-form-box">
+          <form id="hybridForm">
             <div class="input-group">
-              <label for="geralNome" style="color:var(--text-dark);">Seu Nome Completo</label>
-              <input type="text" id="geralNome" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              <label for="restritoNome">Seu Nome Completo</label>
+              <input type="text" id="restritoNome" required placeholder="Digite seu nome">
             </div>
             <div class="input-group">
-              <label for="geralFone" style="color:var(--text-dark);">Seu WhatsApp / Telefone</label>
-              <input type="tel" id="geralFone" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              <label for="restritoFone">Seu WhatsApp / Telefone</label>
+              <input type="tel" id="restritoFone" required placeholder="(00) 00000-0000">
             </div>
             <div class="input-group">
-              <label for="geralAssunto" style="color:var(--text-dark);">Assunto / Tipo de Solicitação</label>
-              <input type="text" id="geralAssunto" placeholder="Ex: Consulta sobre crime virtual" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              <label for="restritoEmail">Seu E-mail de Contato</label>
+              <input type="email" id="restritoEmail" required placeholder="nome@exemplo.com">
             </div>
-            <button type="submit" class="btn" style="width:100%; justify-content:center; background:var(--primary-dark); color:white;">
-              <i class="fas fa-paper-plane"></i> Enviar via WhatsApp
-            </button>
+            <div class="input-group">
+              <label for="restritoMsg">Assunto / Tipo de Solicitação</label>
+              <textarea id="restritoMsg" rows="3" required placeholder="Descreva brevemente o seu caso ou informe o número do processo..."></textarea>
+            </div>
+            <div class="form-actions-split">
+              <button type="button" class="btn" style="background:#25d366; color:white; font-size:0.8rem;" onclick="sendToWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+              </button>
+              <button type="button" class="btn" style="background:var(--accent); color:var(--primary-dark); font-size:0.8rem;" onclick="sendToEmail()">
+                <i class="fas fa-envelope"></i> Enviar por E-mail
+              </button>
+            </div>
           </form>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- ===== CONTATO ===== -->
+    <section id="contato">
+      <div class="container">
+        <h2 class="sec-title">Fale Conosco</h2>
+        <p class="sec-subtitle">Atendimento personalizado com absoluto sigilo profissional. Envie sua mensagem.</p>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3>Canais Diretos</h3>
+            <div class="info-item">
+              <i class="fab fa-whatsapp"></i>
+              <div><strong>WhatsApp Geral:</strong><br><a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" style="color:var(--primary); text-decoration:none;">(51) 3450-2229</a></div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div><strong>E-mail Institucional:</strong><br><a href="mailto:dra.veracatarina@gmail.com" style="color:var(--primary); text-decoration:none;">dra.veracatarina@gmail.com</a></div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-location-dot"></i>
+              <div><strong>Atendimento Presencial:</strong><br>Sapucaia do Sul - RS<br><a href="https://advocaciasapucaia.blogspot.com/p/fale-conosco-mapa.html" target="_blank" style="font-size: 0.85rem; color:var(--accent); font-weight:700;">Ver Mapa de Localização <i class="fas fa-arrow-right"></i></a></div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form onsubmit="handleGeneralForm(event)">
+              <div class="input-group">
+                <label for="geralNome" style="color:var(--text-dark);">Seu Nome Completo</label>
+                <input type="text" id="geralNome" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              </div>
+              <div class="input-group">
+                <label for="geralFone" style="color:var(--text-dark);">Seu WhatsApp / Telefone</label>
+                <input type="tel" id="geralFone" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              </div>
+              <div class="input-group">
+                <label for="geralAssunto" style="color:var(--text-dark);">Assunto / Tipo de Solicitação</label>
+                <input type="text" id="geralAssunto" placeholder="Ex: Consulta sobre crime virtual" required style="background:white; color:var(--text-dark); border-color:var(--border);">
+              </div>
+              <button type="submit" class="btn" style="width:100%; justify-content:center; background:var(--primary-dark); color:white;">
+                <i class="fas fa-paper-plane"></i> Enviar via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
       <div class="footer-grid">
-       <div class="footer-col">
-  <h5>Dra. Vera Catarina</h5>
-  <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
-  <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
-</div>
+        <div class="footer-col">
+          <h5>Dra. Vera Catarina</h5>
+          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
+          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
+        </div>
         <div class="footer-col">
           <h5>Links Rápidos</h5>
           <ul>
@@ -625,6 +661,7 @@
             <li><a href="sobre.html">Sobre a Dra. Vera Catarina</a></li>
             <li><a href="legal.html">Legal &amp; Suporte</a></li>
             <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -636,103 +673,8 @@
           </ul>
         </div>
       </div>
-      <!-- ===== BANNER LGPD E COOKIES (FIXO NA TELA) ===== -->
-<div id="cookie-consent-banner" style="
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 900px;
-  background: rgba(11, 37, 30, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 18px 25px;
-  border-radius: 12px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
-  border: 1px solid var(--accent, #c5a880);
-  z-index: 9999;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  font-family: 'Inter', sans-serif;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-">
-  
-  <!-- Ícone e texto -->
-  <div style="flex: 1 1 100%; text-align: center; color: #e2e8f0; font-size: 0.9rem; line-height: 1.5;">
-    <i class="fas fa-shield-alt" style="color: var(--accent, #c5a880); margin-right: 8px; font-size: 1.1rem;"></i>
-    <span style="font-weight: 300;">
-      Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. 
-      <a href="javascript:void(0);" onclick="openModal('privacidade')" style="color: var(--accent, #c5a880); text-decoration: underline; font-weight: 500;">Política de Privacidade</a>
-      <span style="color: #94a3b8; margin: 0 6px;">|</span>
-      <a href="javascript:void(0);" onclick="openModal('cookies')" style="color: #cbd5e1; text-decoration: underline;">Configurar</a>
-    </span>
-  </div>
-
-  <!-- Botões de ação -->
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-    <button onclick="rejectCookies()" style="
-      background: transparent;
-      color: #cbd5e1;
-      border: 1px solid #64748b;
-      padding: 8px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: background 0.2s, border-color 0.2s;
-    ">Recusar</button>
-    <button onclick="acceptCookies()" style="
-      background: var(--accent, #c5a880);
-      color: var(--primary-dark, #0b251e);
-      border: none;
-      padding: 8px 28px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    ">Aceitar</button>
-  </div>
-</div>
-
-<script>
-  // Função para ocultar o banner e salvar a preferência
-  function setCookieConsent(choice) {
-    localStorage.setItem('cookieConsent', choice);
-    const banner = document.getElementById('cookie-consent-banner');
-    banner.style.opacity = '0';
-    banner.style.transform = 'translateX(-50%) translateY(20px)';
-    setTimeout(() => {
-      banner.style.display = 'none';
-    }, 500);
-  }
-
-  function acceptCookies() {
-    setCookieConsent('accepted');
-    // Ative aqui scripts de análise (Google Analytics, Meta Pixel, etc.)
-    console.log('📊 Cookies de análise ativados.');
-  }
-
-  function rejectCookies() {
-    setCookieConsent('rejected');
-    // Desative aqui scripts de análise
-    console.log('❌ Cookies de análise recusados.');
-  }
-
-  // Verificar preferência salva ao carregar a página
-  document.addEventListener('DOMContentLoaded', function() {
-    const consent = localStorage.getItem('cookieConsent');
-    if (consent === 'accepted' || consent === 'rejected') {
-      const banner = document.getElementById('cookie-consent-banner');
-      banner.style.display = 'none';
-    }
-  });
-</script>
       <div class="footer-bottom">
-        <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO e LGPD.</p>
+        <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
         <p style="font-size: 0.75rem; color: #94a3b8; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
           <span>⚡ Design & Desenvolvimento:</span>
           <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 600;">💻 Fábio Wlademir</a>
@@ -741,7 +683,6 @@
           <span style="color: rgba(255,255,255,0.2);">·</span>
           <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a>
         </p>
-        
         <div>
           <div class="visitor-counter" title="Total de visualizações de página">
             <i class="fas fa-eye"></i>
@@ -753,6 +694,7 @@
     </div>
   </footer>
 
+  <!-- ===== MODAL LEGAL ===== -->
   <div id="legalModal" class="legal-modal">
     <div class="modal-content">
       <span class="modal-close" onclick="closeModal()">&times;</span>
@@ -760,13 +702,109 @@
     </div>
   </div>
 
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
+      <i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i>
+      <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+      <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
+      <button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
+    </div>
+  </div>
+
+  <!-- ===== VLIBRAS ===== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== ACESSIBILIDADE JS ===== -->
+  <script src="/acessibilidade.js"></script>
+
+  <!-- ===== SCRIPTS GERAIS ===== -->
   <script>
+    // ===== DROPDOWN (MOBILE) =====
+    let dropdownOpen = false;
+
+    function toggleDropdown() {
+      const dropdown = document.querySelector('.dropdown');
+      if (window.innerWidth <= 992) {
+        dropdown.classList.toggle('open');
+      }
+    }
+
+    function openDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'block';
+      }
+    }
+
+    function closeDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'none';
+      }
+    }
+
+    // Fechar dropdown ao clicar fora (mobile)
+    document.addEventListener('click', function(e) {
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+
+    // ===== LGPD COOKIES =====
+    function setCookieConsent(choice) {
+      localStorage.setItem('cookieConsent', choice);
+      const banner = document.getElementById('cookie-consent-banner');
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateX(-50%) translateY(20px)';
+      setTimeout(() => { banner.style.display = 'none'; }, 500);
+    }
+    function acceptCookies() {
+      setCookieConsent('accepted');
+      console.log('📊 Cookies de análise ativados.');
+    }
+    function rejectCookies() {
+      setCookieConsent('rejected');
+      console.log('❌ Cookies de análise recusados.');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent === 'accepted' || consent === 'rejected') {
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+      }
+    });
+
+    // ===== FECHAR MENU MOBILE =====
+    function closeMenu() {
+      document.getElementById('menu-checkbox').checked = false;
+    }
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ===== ARIA EXPANDED PARA MENU MOBILE =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuCheckbox = document.getElementById('menu-checkbox');
+    if (menuToggle && menuCheckbox) {
+      menuCheckbox.addEventListener('change', function() {
+        menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+      });
+    }
+
+    // ===== FORMULÁRIOS =====
     function handleGeneralForm(event) {
       event.preventDefault();
       const nome = document.getElementById('geralNome').value.trim();
       const fone = document.getElementById('geralFone').value.trim();
       const assunto = document.getElementById('geralAssunto').value.trim();
-      
       const text = `Olá Dra. Vera Catarina,\n\nContato via site:\n*Nome:* ${nome}\n*Telefone:* ${fone}\n*Assunto:* ${assunto}`;
       window.open(`https://api.whatsapp.com/send?phone=555134502229&text=${encodeURIComponent(text)}`, '_blank');
     }
@@ -776,11 +814,7 @@
       const fone = document.getElementById('restritoFone').value.trim();
       const email = document.getElementById('restritoEmail').value.trim();
       const msg = document.getElementById('restritoMsg').value.trim();
-      
-      if(!nome || !fone || !email || !msg) {
-        alert("Por favor, preencha todos os campos do formulário de triagem segura.");
-        return null;
-      }
+      if(!nome || !fone || !email || !msg) { alert("Preencha todos os campos."); return null; }
       return { nome, fone, email, msg };
     }
 
@@ -791,10 +825,6 @@
       window.open(`https://api.whatsapp.com/send?phone=555134502229&text=${encodeURIComponent(text)}`, '_blank');
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-       document.getElementById("hybridForm").removeAttribute("onsubmit");
-    });
-
     function sendToEmail() {
       const data = getHybridData();
       if(!data) return;
@@ -802,12 +832,9 @@
       window.location.href = mailtoLink;
     }
 
-    function closeMenu() {
-      document.getElementById('menu-checkbox').checked = false;
-    }
-
+    // ===== MODAL =====
     const contents = {
-      sobre: `<h3>Sobre a Dra. Vera Catarina</h3><p>A Dra. Vera Catarina é advogada de destacada atuação na região metropolitana de Porto Alegre, sediada em Sapucaia do Sul. O escritório foi concebido sob os pilares do atendimento personalizado, do sigilo absoluto e do rigor técnico-processual.</p>`,
+      sobre: `<h3>Sobre a Dra. Vera Catarina</h3><p>A Dra. Vera Catarina é advogada de destacada atuação na região metropolitana de Porto Alegre, sediada em Sapucaia do Sul.</p>`,
       privacidade: `<h3>Diretivas de Privacidade e LGPD</h3><h4>1. Coleta Mínima de Dados</h4><p>Em total conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), nosso site adota o princípio da minimização. Coletamos seu nome, telefone e e-mail exclusivamente se você preencher voluntariamente nossos formulários.</p>`,
       termos: `<h3>Termos de Uso do Portal</h3><h4>1. Caráter Meramente Informativo</h4><p>Todo o conteúdo publicado neste domínio possui natureza estritamente informativa e educacional. Não constitui parecer jurídico formal.</p>`,
       cookies: `<h3>Uso e Gerenciamento de Cookies</h3><p>Este site utiliza apenas cookies estritamente necessários para permitir a navegação segura e estabilidade de layout responsivo para smartphones.</p>`
@@ -825,16 +852,5 @@
       if (event.target == modal) { modal.style.display = 'none'; }
     }
   </script>
-  <!-- ===== VLIBRAS (Libras Virtual) ===== -->
-<div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
 </body>
 </html>
