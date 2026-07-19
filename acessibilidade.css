@@ -1,0 +1,405 @@
+/* ============================================================
+   ACESSIBILIDADE - TOOLBAR, TEMAS E RECURSOS
+   ============================================================ */
+
+/* ----- 1. SKIP LINK (Ir para o conteúdo) ----- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent, #c5a880);
+  color: var(--primary-dark, #0b251e);
+  padding: 12px 24px;
+  border-radius: 0 0 8px 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  z-index: 10000;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ----- 2. BREADCRUMB ----- */
+.breadcrumb-container {
+  background: var(--bg-light, #f8fafc);
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border, #e2e8f0);
+}
+
+.breadcrumb-container ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-container ol li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb-container ol li::after {
+  content: "›";
+  color: var(--text-light, #64748b);
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.breadcrumb-container ol li:last-child::after {
+  display: none;
+}
+
+.breadcrumb-container ol li a {
+  color: var(--accent, #c5a880);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb-container ol li a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-container ol li span {
+  color: var(--text-dark, #1e293b);
+  font-weight: 600;
+}
+
+/* ----- 3. TOOLBAR DE ACESSIBILIDADE (flutuante) ----- */
+.accessibility-toolbar-toggle {
+  position: fixed;
+  bottom: 90px;
+  left: 20px;
+  z-index: 9998;
+  background: var(--primary-dark, #0b251e);
+  color: white;
+  border: 2px solid var(--accent, #c5a880);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accessibility-toolbar-toggle:hover {
+  transform: scale(1.05);
+  background: var(--accent, #c5a880);
+  color: var(--primary-dark, #0b251e);
+}
+
+.accessibility-toolbar {
+  position: fixed;
+  bottom: 150px;
+  left: 20px;
+  z-index: 9997;
+  background: rgba(11, 37, 30, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--accent, #c5a880);
+  border-radius: 12px;
+  padding: 20px 16px;
+  width: 220px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+}
+
+.accessibility-toolbar.open {
+  display: flex;
+}
+
+.accessibility-toolbar .toolbar-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent, #c5a880);
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+}
+
+.accessibility-toolbar .btn-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.accessibility-toolbar button {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #e2e8f0;
+  padding: 8px 6px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.accessibility-toolbar button:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--accent, #c5a880);
+}
+
+.accessibility-toolbar button.active {
+  background: var(--accent, #c5a880);
+  color: var(--primary-dark, #0b251e);
+  border-color: var(--accent, #c5a880);
+}
+
+.accessibility-toolbar .btn-full {
+  grid-column: 1 / -1;
+}
+
+/* ----- 4. MODOS DE EXIBIÇÃO (classes aplicadas ao <html>) ----- */
+
+/* 4a. Modo Escuro */
+html.dark-mode {
+  background-color: #121212;
+}
+
+html.dark-mode body {
+  background-color: #121212;
+  color: #e2e8f0;
+}
+
+html.dark-mode .area-card,
+html.dark-mode .service-card,
+html.dark-mode .testimonial-card,
+html.dark-mode .servico-box,
+html.dark-mode .sitemap-category,
+html.dark-mode .faq-item,
+html.dark-mode .contact-form,
+html.dark-mode .contact-info-box,
+html.dark-mode .contact-form-box {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+html.dark-mode .area-card h3,
+html.dark-mode .area-card h3 a,
+html.dark-mode .servico-box h3,
+html.dark-mode .content-section h2,
+html.dark-mode .content-section h3,
+html.dark-mode .sitemap-category h3,
+html.dark-mode .sitemap-category ul li a {
+  color: #f1f5f9;
+}
+
+html.dark-mode .area-card ul li,
+html.dark-mode .sitemap-category ul li .desc {
+  color: #cbd5e1;
+}
+
+html.dark-mode .bg-alt {
+  background: #0f172a;
+}
+
+html.dark-mode .breadcrumb-container {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark-mode .breadcrumb-container ol li span {
+  color: #f1f5f9;
+}
+
+html.dark-mode .page-hero p {
+  color: #94a3b8;
+}
+
+html.dark-mode .top-bar {
+  background: #0a0a0a;
+}
+
+html.dark-mode header {
+  background: rgba(10, 10, 10, 0.98);
+}
+
+html.dark-mode .btn-outline {
+  border-color: #64748b;
+  color: #cbd5e1;
+}
+
+html.dark-mode .btn-outline:hover {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* 4b. Alto Contraste */
+html.high-contrast {
+  --accent: #ffd700;
+  --accent-hover: #ffed4a;
+  --primary-dark: #000000;
+  --primary: #003366;
+  --text-dark: #000000;
+  --text-light: #1a1a1a;
+  --bg-light: #ffffff;
+  --border: #000000;
+}
+
+html.high-contrast body {
+  background: #ffffff;
+  color: #000000;
+}
+
+html.high-contrast .area-card,
+html.high-contrast .service-card,
+html.high-contrast .testimonial-card,
+html.high-contrast .servico-box,
+html.high-contrast .sitemap-category {
+  border: 2px solid #000000;
+  background: #ffffff;
+}
+
+html.high-contrast .area-card h3 a {
+  color: #0000cc;
+}
+
+html.high-contrast a {
+  color: #0000cc;
+  text-decoration: underline;
+}
+
+html.high-contrast .btn-accent {
+  background: #000000;
+  color: #ffffff;
+}
+
+html.high-contrast .btn-accent:hover {
+  background: #333333;
+}
+
+html.high-contrast .cta-box {
+  background: #000000;
+  color: #ffffff;
+}
+
+html.high-contrast .cta-box h3,
+html.high-contrast .cta-box p {
+  color: #ffffff;
+}
+
+html.high-contrast .btn-cta {
+  background: #ffffff;
+  color: #000000;
+}
+
+html.high-contrast .btn-cta:hover {
+  background: #dddddd;
+}
+
+html.high-contrast .top-bar {
+  background: #000000;
+}
+
+html.high-contrast header {
+  background: rgba(0, 0, 0, 0.98);
+}
+
+/* 4c. Fonte para Dislexia (OpenDyslexic) */
+html.dyslexic-font {
+  font-family: 'OpenDyslexic', 'Inter', sans-serif;
+}
+
+html.dyslexic-font body,
+html.dyslexic-font .container,
+html.dyslexic-font p,
+html.dyslexic-font h1,
+html.dyslexic-font h2,
+html.dyslexic-font h3,
+html.dyslexic-font h4,
+html.dyslexic-font li,
+html.dyslexic-font a,
+html.dyslexic-font span,
+html.dyslexic-font button,
+html.dyslexic-font input,
+html.dyslexic-font textarea {
+  font-family: 'OpenDyslexic', 'Inter', sans-serif !important;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+}
+
+/* 4d. Reduzir animações */
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* 4e. Tamanho da fonte (classes) */
+html.font-small body {
+  font-size: 14px;
+}
+
+html.font-medium body {
+  font-size: 18px;
+}
+
+html.font-large body {
+  font-size: 22px;
+}
+
+html.font-xlarge body {
+  font-size: 26px;
+}
+
+html.font-small .container,
+html.font-medium .container,
+html.font-large .container,
+html.font-xlarge .container {
+  max-width: 100%;
+}
+
+/* ----- 5. RESPONSIVIDADE DA TOOLBAR ----- */
+@media (max-width: 768px) {
+  .accessibility-toolbar {
+    width: 190px;
+    bottom: 140px;
+    left: 10px;
+    padding: 15px 12px;
+  }
+
+  .accessibility-toolbar .btn-group {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .accessibility-toolbar button {
+    font-size: 0.6rem;
+    padding: 6px 4px;
+  }
+
+  .accessibility-toolbar-toggle {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+    bottom: 80px;
+    left: 10px;
+  }
+}
