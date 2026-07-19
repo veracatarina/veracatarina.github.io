@@ -4,19 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
-  <meta name="description" content="Depoimentos de clientes que confiaram na Dra. Vera Catarina. Relatos reais sobre Direito de Família, Trabalhista, Criminal e mais. 40 anos de experiência.">
-  <meta name="keywords" content="depoimentos, avaliações, clientes, advocacia vera catarina, sapucaia do sul">
+  <meta name="description" content="Depoimentos de clientes que confiaram na Dra. Vera Catarina. Relatos reais sobre Direito de Família, Trabalhista, Criminal, Consumidor e mais. 40 anos de experiência.">
+  <meta name="keywords" content="depoimentos, avaliações, clientes, advocacia vera catarina, sapucaia do sul, direito de família, direito trabalhista, direito criminal">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="canonical" href="https://veracatarina.github.io/depoimentos.html">
   <meta property="og:title" content="Depoimentos | Advocacia Vera Catarina">
   <meta property="og:description" content="O que nossos clientes dizem sobre a Dra. Vera Catarina. Relatos reais de quem confiou em nossa atuação.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://veracatarina.github.io/depoimentos.html">
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/depoimentos-clientes-advocacia.jpg">
+  <meta property="og:image:alt" content="Depoimentos de clientes satisfeitos - Advocacia Vera Catarina">
   <title>Depoimentos | Advocacia Vera Catarina</title>
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/acessibilidade.css">
+
   <style>
-    /* ===== CSS PADRÃO DO SITE ===== */
+    /* ===== ESTILOS ===== */
     :root {
       --primary-dark: #0b251e;
       --primary: #143d33;
@@ -30,12 +37,14 @@
       --border: #e2e8f0;
       --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
 
+    /* ===== TOP BAR ===== */
     .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
     .top-container { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.8rem; color: #cbd5e1; }
     .top-socials { display: flex; gap: 15px; }
@@ -45,41 +54,288 @@
     .top-contact-info span i { color: var(--accent); margin-right: 4px; }
     .top-contact-info .obs-tel { font-size: 0.7rem; color: #94a3b8; font-weight: normal; margin-left: 2px; }
 
+    /* ===== HEADER ===== */
     header { position: fixed; top: 40px; left: 0; right: 0; height: 80px; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; align-items: center; }
     .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
     .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
     .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
     .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
+
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
     .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
     #menu-checkbox { display: none; }
-    .nav-menu { display: flex; list-style: none; gap: 14px; align-items: center; }
-    .nav-menu a { color: #e2e8f0; text-decoration: none; font-size: 0.78rem; font-weight: 600; transition: color 0.2s, border-color 0.2s; text-transform: uppercase; letter-spacing: 0.3px; padding: 4px 0; border-bottom: 2px solid transparent; }
-    .nav-menu a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-    .nav-menu a.ativo { color: var(--accent); border-bottom: 2px solid var(--accent); }
-    .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem !important; animation: pulse 2s infinite; border: none !important; border-bottom: none !important; }
-    .btn-emergency-nav:hover { background: #b91c1c; color: white !important; border-bottom: none !important; }
 
-    .page-hero { background: linear-gradient(rgba(11, 37, 30, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover; color: white; padding: 70px 0 60px; text-align: center; border-bottom: 4px solid var(--accent); }
-    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 10px; font-weight: 500; }
+    /* ===== NAVEGAÇÃO PRINCIPAL ===== */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 14px;
+      align-items: center;
+    }
+    .nav-menu > li {
+      position: relative;
+      list-style: none;
+    }
+    .nav-menu > li > a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: color 0.2s, border-color 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      display: inline-block;
+    }
+    .nav-menu > li > a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .nav-menu > li > a.ativo {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .btn-emergency-nav {
+      background: var(--danger);
+      color: white !important;
+      padding: 6px 14px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem !important;
+      animation: pulse 2s infinite;
+      border: none !important;
+      border-bottom: none !important;
+    }
+    .btn-emergency-nav:hover {
+      background: #b91c1c;
+      color: white !important;
+      border-bottom: none !important;
+    }
+
+    /* ===== DROPDOWN ===== */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(11, 37, 30, 0.98);
+      backdrop-filter: blur(10px);
+      min-width: 200px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 8px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      z-index: 1003;
+    }
+    .dropdown-content li {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 20px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border-bottom: none !important;
+      transition: background 0.2s;
+    }
+    .dropdown-content li a:hover {
+      background: rgba(197, 168, 128, 0.15);
+      color: var(--accent);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn i {
+      transition: transform 0.2s;
+    }
+    .dropdown:hover .dropbtn i {
+      transform: rotate(180deg);
+    }
+
+    /* ===== HERO ===== */
+    .page-hero {
+      background: linear-gradient(rgba(11, 37, 30, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover;
+      color: white;
+      padding: 70px 0 60px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
     .page-hero h1 span { color: var(--accent); }
-    .page-hero p { font-size: clamp(0.95rem, 2vw, 1.15rem); color: #cbd5e1; max-width: 650px; margin: 0 auto; }
+    .page-hero p {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto;
+    }
 
+    /* ===== DEPOIMENTOS ===== */
     .content-section { padding: 60px 0; }
     .content-section h2 { font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 15px; position: relative; padding-bottom: 10px; }
     .content-section h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--accent); }
 
-    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px; }
-    .testimonial-card { background: white; padding: 30px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent); transition: transform 0.2s; }
-    .testimonial-card:hover { transform: translateY(-5px); }
-    .testimonial-card .header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-    .testimonial-card .avatar { width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700; flex-shrink: 0; }
-    .testimonial-card .name { font-weight: 700; color: var(--primary-dark); }
-    .testimonial-card .role { font-size: 0.8rem; color: var(--text-light); }
-    .testimonial-card .text { font-size: 0.95rem; color: var(--text-dark); font-style: italic; line-height: 1.6; }
-    .testimonial-card .stars { margin-top: 10px; color: var(--accent); font-size: 1.2rem; }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .testimonial-card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .testimonial-card .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .testimonial-card .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .testimonial-card .name {
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+    .testimonial-card .role {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .testimonial-card .text {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .testimonial-card .stars {
+      margin-top: 10px;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
 
-    .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
+    /* ===== BACKLINKS ===== */
+    .backlinks-section {
+      background: var(--bg-light);
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .backlinks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .backlink-item {
+      background: white;
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .backlink-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+    .backlink-item a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .backlink-item a i { color: var(--accent); font-size: 1.1rem; }
+    .backlink-item a:hover { color: var(--accent); }
+
+    /* ===== CTA ===== */
+    .cta-box {
+      background: var(--primary-dark);
+      color: white;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta-box h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .cta-box p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+    .btn-cta {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 14px 40px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s;
+    }
+    .btn-cta:hover { background: var(--accent-hover); }
+
+    .btn-emergency-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      animation: pulse-green 2s infinite;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
     footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
@@ -96,6 +352,7 @@
     @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
     @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
+    /* ===== RESPONSIVIDADE ===== */
     @media (max-width: 992px) {
       body { padding-top: 150px; }
       header { top: 70px; height: 75px; }
@@ -103,9 +360,41 @@
       .top-container { flex-direction: column; gap: 6px; text-align: center; }
       .top-contact-info { flex-direction: column; gap: 2px; }
       .menu-toggle { display: flex; }
-      .nav-menu { position: fixed; top: 145px; right: -100%; background: rgba(11, 37, 30, 0.98); flex-direction: column; width: 100%; height: calc(100vh - 145px); gap: 25px; padding: 40px 20px; transition: right 0.3s ease; z-index: 999; border-top: 1px solid var(--accent); align-items: center; }
-      .nav-menu a { font-size: 1rem !important; border-bottom: none !important; }
-      .nav-menu a:hover { border-bottom: none !important; }
+      .nav-menu {
+        position: fixed;
+        top: 145px;
+        right: -100%;
+        background: rgba(11, 37, 30, 0.98);
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 145px);
+        gap: 25px;
+        padding: 40px 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        border-top: 1px solid var(--accent);
+        align-items: center;
+      }
+      .nav-menu > li { width: 100%; text-align: center; }
+      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
+      .nav-menu > li > a:hover { border-bottom: none !important; }
+      .dropdown-content {
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        min-width: auto;
+        display: none !important;
+      }
+      .dropdown.open .dropdown-content {
+        display: block !important;
+      }
+      .dropdown-content li a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+      }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
@@ -113,9 +402,16 @@
       .footer-grid { grid-template-columns: 1fr; gap: 20px; }
       footer { padding-bottom: 110px; }
     }
+    @media (max-width: 600px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .testimonial-card { padding: 20px; }
+      .cta-box { padding: 25px; }
+      .cta-box h3 { font-size: 1.4rem; }
+    }
   </style>
 </head>
 <body>
+
   <!-- ===== TOP BAR ===== -->
   <div class="top-bar">
     <div class="container top-container">
@@ -124,121 +420,235 @@
         <span><i class="fas fa-location-dot"></i> Sapucaia do Sul - RS</span>
       </div>
       <div class="top-socials">
-        <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/AdvocaciaVeraCatarina" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-        <a href="https://advocaciasapucaia.blogspot.com/" target="_blank" rel="noopener"><i class="fab fa-blogger"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/AdvocaciaVeraCatarina" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://advocaciasapucaia.blogspot.com/" target="_blank" rel="noopener" title="Blogger Institucional"><i class="fab fa-blogger"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" rel="noopener" title="Atendimento WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </div>
 
-  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica." class="btn-emergency-float" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica." class="btn-emergency-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> Fale Conosco
+  </a>
 
+  <!-- ===== HEADER ===== -->
   <header>
     <div class="container nav-container">
-      <a href="index.html" class="logo"><span class="main-txt">Vera Catarina</span><span class="sub-txt">Advocacia Especializada</span></a>
+      <a href="index.html" class="logo">
+        <span class="main-txt">Vera Catarina</span>
+        <span class="sub-txt">Advocacia Especializada</span>
+      </a>
       <input type="checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="menu-toggle"><span></span><span></span><span></span></label>
+      <label for="menu-checkbox" class="menu-toggle" aria-label="Abrir menu de navegação">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
       <ul class="nav-menu">
+        <!-- ITENS PRINCIPAIS -->
         <li><a href="index.html">Início</a></li>
         <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
         <li><a href="noticias.html">Notícias</a></li>
-        <li><a href="index.html#servicos">Utilidades</a></li>
-        <li><a href="index.html#restrito">Canal Restrito</a></li>
         <li><a href="contato.html">Contato</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="legal.html">Legal</a></li>
-        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+
+        <!-- DROPDOWN "MAIS" -->
+        <li class="dropdown" onmouseenter="openDropdown()" onmouseleave="closeDropdown()">
+          <a href="javascript:void(0)" onclick="toggleDropdown()" class="dropbtn">
+            Mais <i class="fas fa-chevron-down" style="font-size:0.5rem; margin-left:4px;"></i>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="index.html#servicos">Utilidades</a></li>
+            <li><a href="index.html#restrito">Canal Restrito</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html">Legal &amp; Suporte</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
+          </ul>
+        </li>
+
+        <!-- BOTÃO PLANTÃO 24h -->
+        <li>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav">
+            <i class="fas fa-shield-halved"></i> Plantão 24h
+          </a>
+        </li>
       </ul>
     </div>
   </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <h1>💬 Depoimentos de <span>Clientes</span></h1>
-      <p>Relatos reais de quem confiou na experiência e no atendimento humanizado da Dra. Vera Catarina.</p>
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <h1>💬 Depoimentos de <span>Clientes</span></h1>
+        <p>Relatos reais de quem confiou na experiência e no atendimento humanizado da Dra. Vera Catarina.</p>
+      </div>
+    </section>
+
+    <!-- ===== IMAGEM ILUSTRATIVA ===== -->
+    <div style="text-align: center; padding: 30px 20px 10px; background: var(--bg-light);">
+      <div style="max-width: 500px; margin: 0 auto;">
+        <img 
+          src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/depoimentos-clientes-advocacia.jpg" 
+          alt="Depoimentos de clientes satisfeitos - Advocacia Vera Catarina em Sapucaia do Sul" 
+          title="Clientes confiam na Dra. Vera Catarina | 40 anos de experiência"
+          loading="lazy"
+          style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
+        />
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
+          <i class="fas fa-star" style="color: var(--accent);"></i> 
+          A satisfação de nossos clientes é a nossa maior recompensa
+        </p>
+      </div>
     </div>
-  </section>
 
-  <section class="content-section">
-    <div class="container">
-      <h2>O que nossos clientes dizem</h2>
-      <p style="color: var(--text-light); margin-bottom: 20px;">Cada depoimento reflete o compromisso com a excelência, a ética e a defesa dos direitos de nossos clientes.</p>
+    <section class="content-section">
+      <div class="container">
+        <h2>O que nossos clientes dizem</h2>
+        <p style="color: var(--text-light); margin-bottom: 20px;">Cada depoimento reflete o compromisso com a excelência, a ética e a defesa dos direitos de nossos clientes.</p>
 
-      <div class="testimonial-grid">
+        <div class="testimonial-grid">
 
-        <div class="testimonial-card">
-          <div class="header">
-            <div class="avatar">M.S.</div>
-            <div><div class="name">Maria S.</div><div class="role">Cliente – Divórcio Consensual</div></div>
+          <!-- Depoimento 1 -->
+          <div class="testimonial-card">
+            <div class="header">
+              <div class="avatar">M.S.</div>
+              <div>
+                <div class="name">Maria S.</div>
+                <div class="role">Cliente – Divórcio Consensual</div>
+              </div>
+            </div>
+            <p class="text">"A Dra. Vera Catarina foi essencial durante meu divórcio. Me senti acolhida e segura em um momento muito difícil. Sua experiência de 40 anos faz toda a diferença. Recomendo de olhos fechados!"</p>
+            <div class="stars">★★★★★</div>
           </div>
-          <p class="text">"A Dra. Vera Catarina foi essencial durante meu divórcio. Me senti acolhida e segura em um momento muito difícil. Sua experiência de 40 anos faz toda a diferença. Recomendo de olhos fechados!"</p>
-          <div class="stars">★★★★★</div>
+
+          <!-- Depoimento 2 -->
+          <div class="testimonial-card">
+            <div class="header">
+              <div class="avatar">J.R.</div>
+              <div>
+                <div class="name">João R.</div>
+                <div class="role">Cliente – Direito Trabalhista</div>
+              </div>
+            </div>
+            <p class="text">"Fui demitido injustamente e a Dra. Vera me orientou em cada passo com total transparência e segurança jurídica. Sua atuação foi firme e estratégica, proporcionando a confiança necessária para enfrentar o processo. Profissional extremamente competente e humana."</p>
+            <div class="stars">★★★★★</div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="testimonial-card">
+            <div class="header">
+              <div class="avatar">A.C.</div>
+              <div>
+                <div class="name">Ana C.</div>
+                <div class="role">Cliente – Direito de Família</div>
+              </div>
+            </div>
+            <p class="text">"A Dra. Vera me ajudou com a guarda do meu filho. Além de ser uma excelente advogada, tem um coração enorme. Me senti amparada e confiante durante todo o processo."</p>
+            <div class="stars">★★★★★</div>
+          </div>
+
+          <!-- Depoimento 4 -->
+          <div class="testimonial-card">
+            <div class="header">
+              <div class="avatar">P.L.</div>
+              <div>
+                <div class="name">Paulo L.</div>
+                <div class="role">Cliente – Direito do Consumidor</div>
+              </div>
+            </div>
+            <p class="text">"Tinha meu nome negativado indevidamente há anos. A Dra. Vera me orientou com clareza sobre meus direitos e conduziu todo o processo com agilidade e profissionalismo. Sua dedicação foi essencial para restaurar minha tranquilidade. Profissional nota 10!"</p>
+            <div class="stars">★★★★★</div>
+          </div>
+
+          <!-- Depoimento 5 -->
+          <div class="testimonial-card">
+            <div class="header">
+              <div class="avatar">C.M.</div>
+              <div>
+                <div class="name">Carla M.</div>
+                <div class="role">Cliente – Direito Previdenciário</div>
+              </div>
+            </div>
+            <p class="text">"A Dra. Vera analisou todo meu histórico com cuidado e atenção aos detalhes, sempre me explicando cada passo do caminho. Sua orientação foi fundamental para que eu pudesse tomar as melhores decisões sobre meu planejamento previdenciário. Sou muito grata pela segurança que ela me passou!"</p>
+            <div class="stars">★★★★★</div>
+          </div>
+
+          <!-- Depoimento 6 -->
+          <div class="testimonial-card">
+            <div class="header">
+              <div class="avatar">R.S.</div>
+              <div>
+                <div class="name">Roberto S.</div>
+                <div class="role">Cliente – Direito Criminal</div>
+              </div>
+            </div>
+            <p class="text">"Em um momento de grande aflição, a Dra. Vera atendeu prontamente e agiu com total empenho e estratégia. Sua presença e orientação foram fundamentais para que eu me sentisse amparado e confiante. O atendimento 24h realmente funciona e faz toda a diferença."</p>
+            <div class="stars">★★★★★</div>
+          </div>
+
         </div>
 
-        <div class="testimonial-card">
-  <div class="header">
-    <div class="avatar">J.R.</div>
-    <div><div class="name">João R.</div><div class="role">Cliente – Direito Trabalhista</div></div>
-  </div>
-  <p class="text">"Fui demitido injustamente e a Dra. Vera me orientou em cada passo com total transparência e segurança jurídica. Sua atuação foi firme e estratégica, proporcionando a confiança necessária para enfrentar o processo. Profissional extremamente competente e humana."</p>
-  <div class="stars">★★★★★</div>
-</div>
-
-        <div class="testimonial-card">
-          <div class="header">
-            <div class="avatar">A.C.</div>
-            <div><div class="name">Ana C.</div><div class="role">Cliente – Direito de Família</div></div>
-          </div>
-          <p class="text">"A Dra. Vera me ajudou com a guarda do meu filho. Além de ser uma excelente advogada, tem um coração enorme. Me senti amparada e confiante durante todo o processo."</p>
-          <div class="stars">★★★★★</div>
+        <!-- ===== CTA ===== -->
+        <div class="cta-box">
+          <h3>Compartilhe sua experiência</h3>
+          <p>Sua opinião é muito importante para nós. Ajude outras pessoas a encontrarem a orientação jurídica que precisam.</p>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20gostaria%20de%20deixar%20meu%20depoimento." class="btn-cta" target="_blank">
+            <i class="fab fa-whatsapp"></i> Deixe seu depoimento
+          </a>
         </div>
 
-       <div class="testimonial-card">
-  <div class="header">
-    <div class="avatar">P.L.</div>
-    <div><div class="name">Paulo L.</div><div class="role">Cliente – Direito do Consumidor</div></div>
-  </div>
-  <p class="text">"Tinha meu nome negativado indevidamente há anos. A Dra. Vera me orientou com clareza sobre meus direitos e conduziu todo o processo com agilidade e profissionalismo. Sua dedicação foi essencial para restaurar minha tranquilidade. Profissional nota 10!"</p>
-  <div class="stars">★★★★★</div>
-</div>
-
-        <div class="testimonial-card">
-  <div class="header">
-    <div class="avatar">C.M.</div>
-    <div><div class="name">Carla M.</div><div class="role">Cliente – Direito Previdenciário</div></div>
-  </div>
-  <p class="text">"A Dra. Vera analisou todo meu histórico com cuidado e atenção aos detalhes, sempre me explicando cada passo do caminho. Sua orientação foi fundamental para que eu pudesse tomar as melhores decisões sobre meu planejamento previdenciário. Sou muito grata pela segurança que ela me passou!"</p>
-  <div class="stars">★★★★★</div>
-</div>
-
-        <div class="testimonial-card">
-  <div class="header">
-    <div class="avatar">R.S.</div>
-    <div><div class="name">Roberto S.</div><div class="role">Cliente – Direito Criminal</div></div>
-  </div>
-  <p class="text">"Em um momento de grande aflição, a Dra. Vera atendeu prontamente e agiu com total empenho e estratégia. Sua presença e orientação foram fundamentais para que eu me sentisse amparado e confiante. O atendimento 24h realmente funciona e faz toda a diferença."</p>
-  <div class="stars">★★★★★</div>
-</div>
-
       </div>
+    </section>
 
-      <div style="text-align: center; margin-top: 40px; padding: 30px; background: var(--bg-light); border-radius: 8px;">
-        <p style="font-size: 1.1rem; color: var(--text-dark);">Compartilhe sua experiência e ajude outras pessoas a encontrarem a orientação jurídica que precisam.</p>
-        <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20gostaria%20de%20deixar%20meu%20depoimento." class="btn-emergency-float" style="position: static; display: inline-flex; margin-top: 15px; animation: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);" target="_blank"><i class="fab fa-whatsapp"></i> Deixe seu depoimento</a>
+    <!-- ===== BACKLINKS ===== -->
+    <section class="backlinks-section">
+      <div class="container">
+        <h3 style="text-align: center; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px;">
+          <i class="fas fa-gavel" style="color: var(--accent);"></i> Conheça nossas áreas de atuação
+        </h3>
+        <div class="backlinks-grid">
+          <div class="backlink-item">
+            <a href="direito-familia.html"><i class="fas fa-people-roof"></i> Direito de Família</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Direito Digital</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a>
+          </div>
+          <div class="backlink-item">
+            <a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
-
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-  <h5>Dra. Vera Catarina</h5>
-  <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
-  <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
-</div>
+          <h5>Dra. Vera Catarina</h5>
+          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
+          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
+        </div>
         <div class="footer-col">
           <h5>Links Rápidos</h5>
           <ul>
@@ -248,6 +658,7 @@
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="legal.html">Legal</a></li>
             <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -260,19 +671,122 @@
             <li><a href="direito-previdenciario.html">Direito Previdenciário</a></li>
             <li><a href="direito-consumidor.html">Direito do Consumidor</a></li>
             <li><a href="direito-civil.html">Direito Civil e Sucessões</a></li>
+            <li><a href="direito-empresarial.html">🏢 Advocacia Empresarial</a></li>
+            <li><a href="advogado-online.html">📱 Advogado Online 24h</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados.</p>
-        <div><div class="visitor-counter"><i class="fas fa-eye"></i><span>Visitas ao portal:</span><img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos"></div></div>
+        <p style="margin-bottom:12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
+        <p style="font-size:0.75rem; color:#94a3b8; display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;">
+          <span>⚡ Design & Desenvolvimento:</span>
+          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-weight:600;">💻 Fábio Wlademir</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
+        </p>
+        <div>
+          <div class="visitor-counter" title="Total de visualizações de página">
+            <i class="fas fa-eye"></i>
+            <span>Visitas ao portal:</span>
+            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
+          </div>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
+      <i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i>
+      <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+      <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
+      <button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
+    </div>
+  </div>
+
+  <!-- ===== VLIBRAS ===== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== ACESSIBILIDADE JS ===== -->
+  <script src="/acessibilidade.js"></script>
+
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    function closeMenu() { document.getElementById('menu-checkbox').checked = false; }
-    document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', closeMenu); });
+    // ===== DROPDOWN (MOBILE) =====
+    function toggleDropdown() {
+      const dropdown = document.querySelector('.dropdown');
+      if (window.innerWidth <= 992) {
+        dropdown.classList.toggle('open');
+      }
+    }
+    function openDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'block';
+      }
+    }
+    function closeDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'none';
+      }
+    }
+    document.addEventListener('click', function(e) {
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+
+    // ===== LGPD COOKIES =====
+    function setCookieConsent(choice) {
+      localStorage.setItem('cookieConsent', choice);
+      const banner = document.getElementById('cookie-consent-banner');
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateX(-50%) translateY(20px)';
+      setTimeout(() => { banner.style.display = 'none'; }, 500);
+    }
+    function acceptCookies() {
+      setCookieConsent('accepted');
+      console.log('📊 Cookies de análise ativados.');
+    }
+    function rejectCookies() {
+      setCookieConsent('rejected');
+      console.log('❌ Cookies de análise recusados.');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent === 'accepted' || consent === 'rejected') {
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+      }
+    });
+
+    // ===== FECHAR MENU MOBILE =====
+    function closeMenu() {
+      document.getElementById('menu-checkbox').checked = false;
+    }
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ===== ARIA EXPANDED PARA MENU MOBILE =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuCheckbox = document.getElementById('menu-checkbox');
+    if (menuToggle && menuCheckbox) {
+      menuCheckbox.addEventListener('change', function() {
+        menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+      });
+    }
   </script>
 </body>
 </html>
