@@ -7,21 +7,23 @@
   <meta name="description" content="Notícias e artigos jurídicos atualizados sobre Direito Digital, Família, Trabalhista, Previdenciário, Consumidor e Criminal. Dra. Vera Catarina - Sapucaia do Sul.">
   <meta name="keywords" content="notícias jurídicas, artigos direito, direito digital sapucaia, crimes virtuais, divórcio, pensão alimentícia, guarda dos filhos, inventário, usucapião, advocacia sapucaia">
   <meta name="robots" content="index, follow">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
+  <link rel="canonical" href="https://veracatarina.github.io/noticias.html">
   <meta property="og:title" content="Notícias e Artigos | Advocacia Vera Catarina">
   <meta property="og:description" content="Acompanhe as últimas notícias e artigos jurídicos da Dra. Vera Catarina. Atualizações sobre Direito Digital, Família, Trabalhista e mais.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://veracatarina.github.io/noticias.html">
-
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias-juridicas-artigos-advocacia.jpg">
+  <meta property="og:image:alt" content="Notícias e artigos jurídicos - Advocacia Vera Catarina">
   <title>Notícias e Artigos | Advocacia Vera Catarina</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/acessibilidade.css">
 
   <style>
-    /* ===== HERDADO DO INDEX.HTML ===== */
+    /* ===== ESTILOS (mesmo padrão das demais páginas) ===== */
     :root {
       --primary-dark: #0b251e;
       --primary: #143d33;
@@ -39,7 +41,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
-
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
 
@@ -64,69 +65,389 @@
     .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
     #menu-checkbox { display: none; }
 
-    .nav-menu { display: flex; list-style: none; gap: 20px; align-items: center; }
-    .nav-menu a { color: #e2e8f0; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; text-transform: uppercase; }
-    .nav-menu a:hover { color: var(--accent); }
-    .nav-menu a.ativo { color: var(--accent); border-bottom: 2px solid var(--accent); }
-    .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem !important; animation: pulse 2s infinite; }
+    /* ===== NAVEGAÇÃO PRINCIPAL ===== */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 14px;
+      align-items: center;
+    }
+    .nav-menu > li {
+      position: relative;
+      list-style: none;
+    }
+    .nav-menu > li > a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: color 0.2s, border-color 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      display: inline-block;
+    }
+    .nav-menu > li > a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .nav-menu > li > a.ativo {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .btn-emergency-nav {
+      background: var(--danger);
+      color: white !important;
+      padding: 6px 14px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem !important;
+      animation: pulse 2s infinite;
+      border: none !important;
+      border-bottom: none !important;
+    }
+    .btn-emergency-nav:hover {
+      background: #b91c1c;
+      color: white !important;
+      border-bottom: none !important;
+    }
 
-    /* ===== HERO DA PÁGINA ===== */
-    .page-hero { background: linear-gradient(rgba(11, 37, 30, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover; color: white; padding: 70px 0 60px; text-align: center; border-bottom: 4px solid var(--accent); }
-    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 10px; font-weight: 500; }
+    /* ===== DROPDOWN ===== */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(11, 37, 30, 0.98);
+      backdrop-filter: blur(10px);
+      min-width: 200px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 8px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      z-index: 1003;
+    }
+    .dropdown-content li {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 20px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border-bottom: none !important;
+      transition: background 0.2s;
+    }
+    .dropdown-content li a:hover {
+      background: rgba(197, 168, 128, 0.15);
+      color: var(--accent);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn i {
+      transition: transform 0.2s;
+    }
+    .dropdown:hover .dropbtn i {
+      transform: rotate(180deg);
+    }
+
+    /* ===== HERO ===== */
+    .page-hero {
+      background: linear-gradient(rgba(11, 37, 30, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover;
+      color: white;
+      padding: 70px 0 60px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
     .page-hero h1 span { color: var(--accent); }
-    .page-hero p { font-size: clamp(0.95rem, 2vw, 1.15rem); color: #cbd5e1; max-width: 650px; margin: 0 auto; }
+    .page-hero p {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ===== ÁREAS DE ATUAÇÃO (NAVEGAÇÃO RÁPIDA) ===== */
+    .areas-rapidas {
+      padding: 30px 0 10px;
+    }
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .areas-grid a {
+      background: var(--bg-light);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: 0.2s;
+    }
+    .areas-grid a:hover {
+      background: var(--primary-dark);
+      color: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+    .areas-grid a i {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: var(--accent);
+    }
+    .areas-grid a:hover i {
+      color: var(--accent);
+    }
 
     /* ===== FILTROS ===== */
-    .filtros { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 30px 0 40px; }
-    .filtro-btn { background: var(--bg-light); border: 1px solid var(--border); padding: 8px 20px; border-radius: 30px; font-size: 0.8rem; font-weight: 600; color: var(--text-dark); cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
-    .filtro-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
-    .filtro-btn.ativo { background: var(--accent); color: var(--primary-dark); border-color: var(--accent); }
+    .filtros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 30px 0 40px;
+    }
+    .filtro-btn {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .filtro-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .filtro-btn.ativo {
+      background: var(--accent);
+      color: var(--primary-dark);
+      border-color: var(--accent);
+    }
 
     /* ===== GRID DE NOTÍCIAS ===== */
-    .grid-noticias { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; margin-bottom: 50px; }
+    .grid-noticias {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
 
-    .card-noticia { background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
-    .card-noticia:hover { transform: translateY(-5px); box-shadow: 0 15px 35px -8px rgba(0, 0, 0, 0.12); }
+    .card-noticia {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-noticia:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px -8px rgba(0, 0, 0, 0.12);
+    }
 
-    .card-header { padding: 20px 24px 12px; border-bottom: 1px solid var(--border); }
-    .card-header .categoria { display: inline-block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); background: rgba(197, 168, 128, 0.12); padding: 2px 10px; border-radius: 20px; margin-bottom: 8px; }
-    .card-header .data { font-size: 0.75rem; color: var(--text-light); display: block; margin-bottom: 6px; }
-    .card-header h3 { font-size: 1.1rem; color: var(--primary-dark); line-height: 1.3; font-family: 'Inter', sans-serif; font-weight: 700; }
-    .card-header h3 a { color: var(--primary-dark); text-decoration: none; transition: color 0.2s; }
-    .card-header h3 a:hover { color: var(--accent); }
+    .card-header {
+      padding: 20px 24px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-header .categoria {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      background: rgba(197, 168, 128, 0.12);
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .card-header .data {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .card-header h3 {
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      line-height: 1.3;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    .card-header h3 a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .card-header h3 a:hover {
+      color: var(--accent);
+    }
 
-    .card-body { padding: 12px 24px 16px; flex: 1; }
-    .card-body p { font-size: 0.9rem; color: var(--text-light); line-height: 1.5; }
+    .card-body {
+      padding: 12px 24px 16px;
+      flex: 1;
+    }
+    .card-body p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
 
-    .card-footer { padding: 12px 24px 20px; display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--border); background: var(--bg-light); }
-    .card-footer .btn-leia { background: var(--primary); color: white; padding: 8px 18px; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: 600; transition: background 0.2s; display: inline-flex; align-items: center; gap: 6px; }
-    .card-footer .btn-leia:hover { background: var(--primary-dark); }
-    .card-footer .btn-wpp { background: #25d366; color: white; padding: 8px 18px; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: 600; transition: background 0.2s; display: inline-flex; align-items: center; gap: 6px; }
-    .card-footer .btn-wpp:hover { background: #1da851; }
+    .card-footer {
+      padding: 12px 24px 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      background: var(--bg-light);
+    }
+    .card-footer .btn-leia {
+      background: var(--primary);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-footer .btn-leia:hover {
+      background: var(--primary-dark);
+    }
+    .card-footer .btn-wpp {
+      background: #25d366;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-footer .btn-wpp:hover {
+      background: #1da851;
+    }
 
     /* ===== SEM RESULTADOS ===== */
-    .sem-resultados { text-align: center; padding: 60px 20px; color: var(--text-light); display: none; }
-    .sem-resultados i { font-size: 3rem; color: var(--border); margin-bottom: 15px; }
+    .sem-resultados {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-light);
+      display: none;
+    }
+    .sem-resultados i {
+      font-size: 3rem;
+      color: var(--border);
+      margin-bottom: 15px;
+    }
 
-    /* ===== BOTÃO FLUTUANTE WHATSAPP ===== */
-    .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
+    /* ===== BACKLINKS ===== */
+    .backlinks-section {
+      background: var(--bg-light);
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .backlinks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .backlink-item {
+      background: white;
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .backlink-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+    .backlink-item a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .backlink-item a i { color: var(--accent); font-size: 1.1rem; }
+    .backlink-item a:hover { color: var(--accent); }
 
-    /* ===== FOOTER ===== */
+    .btn-emergency-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      animation: pulse-green 2s infinite;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
     footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
     .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
     .footer-col ul { list-style: none; }
     .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a { color: #cbd5e1; text-decoration: none; }
+    .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
     .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
-    .footer-bottom a { color: var(--accent); text-decoration: none; }
-    .footer-bottom a:hover { text-decoration: underline; }
     .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
     .visitor-counter i { color: var(--accent); }
     .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
 
-    /* ===== KEYFRAMES ===== */
     @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
     @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
@@ -134,7 +455,7 @@
     @media (max-width: 992px) {
       body { padding-top: 150px; }
       header { top: 70px; height: 75px; }
-      .top-bar { height: auto; padding: 8px 0; }
+      .top-bar { height: auto; padding: 8px 0; position: fixed; }
       .top-container { flex-direction: column; gap: 6px; text-align: center; }
       .top-contact-info { flex-direction: column; gap: 2px; }
       .menu-toggle { display: flex; }
@@ -151,6 +472,27 @@
         transition: right 0.3s ease;
         z-index: 999;
         border-top: 1px solid var(--accent);
+        align-items: center;
+      }
+      .nav-menu > li { width: 100%; text-align: center; }
+      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
+      .nav-menu > li > a:hover { border-bottom: none !important; }
+      .dropdown-content {
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        min-width: auto;
+        display: none !important;
+      }
+      .dropdown.open .dropdown-content {
+        display: block !important;
+      }
+      .dropdown-content li a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
       }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -187,8 +529,8 @@
     </div>
   </div>
 
-  <!-- ===== BOTÃO FLUTUANTE WHATSAPP ===== -->
-  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20jurídica." class="btn-emergency-float" target="_blank" rel="noopener">
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica." class="btn-emergency-float" target="_blank" rel="noopener">
     <i class="fab fa-whatsapp"></i> Fale Conosco
   </a>
 
@@ -199,138 +541,196 @@
         <span class="main-txt">Vera Catarina</span>
         <span class="sub-txt">Advocacia Especializada</span>
       </a>
-
       <input type="checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="menu-toggle">
+      <label for="menu-checkbox" class="menu-toggle" aria-label="Abrir menu de navegação">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
       <ul class="nav-menu">
+        <!-- ITENS PRINCIPAIS -->
         <li><a href="index.html">Início</a></li>
         <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
         <li><a href="noticias.html" class="ativo">Notícias</a></li>
-        <li><a href="index.html#restrito">Canal Restrito</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
-        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+        <li><a href="contato.html">Contato</a></li>
+
+        <!-- DROPDOWN "MAIS" -->
+        <li class="dropdown" onmouseenter="openDropdown()" onmouseleave="closeDropdown()">
+          <a href="javascript:void(0)" onclick="toggleDropdown()" class="dropbtn">
+            Mais <i class="fas fa-chevron-down" style="font-size:0.5rem; margin-left:4px;"></i>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="index.html#servicos">Utilidades</a></li>
+            <li><a href="index.html#restrito">Canal Restrito</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html">Legal &amp; Suporte</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
+          </ul>
+        </li>
+
+        <!-- BOTÃO PLANTÃO 24h -->
+        <li>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav">
+            <i class="fas fa-shield-halved"></i> Plantão 24h
+          </a>
+        </li>
       </ul>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="page-hero">
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <h1>📰 Notícias e <span>Artigos Jurídicos</span></h1>
+        <p>Fique por dentro das atualizações legais, direitos digitais, família, trabalho e muito mais. Conteúdo produzido pela Dra. Vera Catarina, com 40 anos de experiência.</p>
+      </div>
+    </section>
+
+    <!-- ===== IMAGEM ILUSTRATIVA ===== -->
+    <div style="text-align: center; padding: 30px 20px 10px; background: var(--bg-light);">
+      <div style="max-width: 500px; margin: 0 auto;">
+        <img 
+          src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias-juridicas-artigos-advocacia.jpg" 
+          alt="Notícias e artigos jurídicos - Advocacia Vera Catarina em Sapucaia do Sul" 
+          title="Acompanhe as notícias e artigos da Dra. Vera Catarina"
+          loading="lazy"
+          style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
+        />
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
+          <i class="fas fa-newspaper" style="color: var(--accent);"></i> 
+          Informação jurídica de qualidade para você e sua família
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== ÁREAS DE ATUAÇÃO (NAVEGAÇÃO RÁPIDA) ===== -->
+    <section class="areas-rapidas">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 1.5rem; color: var(--primary-dark); margin-bottom: 20px;">
+          <i class="fas fa-gavel"></i> Nossas Áreas de Atuação
+        </h2>
+        <div class="areas-grid">
+          <a href="direito-familia.html"><i class="fas fa-people-roof"></i> Família</a>
+          <a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Digital</a>
+          <a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Criminal</a>
+          <a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Trabalhista</a>
+          <a href="direito-previdenciario.html"><i class="fas fa-users-rays"></i> Previdenciário</a>
+          <a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Consumidor</a>
+          <a href="direito-civil.html"><i class="fas fa-gavel"></i> Civil e Sucessões</a>
+          <a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Empresarial</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FILTROS ===== -->
     <div class="container">
-      <h1>📰 Notícias e <span>Artigos Jurídicos</span></h1>
-      <p>Fique por dentro das atualizações legais, direitos digitais, família, trabalho e muito mais. Conteúdo produzido pela Dra. Vera Catarina, com 40 anos de experiência.</p>
-    </div>
-  </section>
-<!-- ===== ÁREAS DE ATUAÇÃO (NAVEGAÇÃO RÁPIDA) ===== -->
-<section style="padding: 30px 0 10px;">
-  <div class="container">
-    <h2 style="text-align: center; font-size: 1.5rem; color: var(--primary-dark); margin-bottom: 20px;">
-      <i class="fas fa-gavel"></i> Nossas Áreas de Atuação
-    </h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto;">
-      <a href="direito-familia.html" style="background: var(--bg-light); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; color: var(--text-dark); font-weight: 600; border: 1px solid var(--border); transition: 0.2s;">
-        <i class="fas fa-people-roof" style="color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 5px;"></i>
-        Família
-      </a>
-      <a href="direito-digital.html" style="background: var(--bg-light); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; color: var(--text-dark); font-weight: 600; border: 1px solid var(--border); transition: 0.2s;">
-        <i class="fas fa-laptop-code" style="color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 5px;"></i>
-        Digital
-      </a>
-      <a href="direito-criminal.html" style="background: var(--bg-light); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; color: var(--text-dark); font-weight: 600; border: 1px solid var(--border); transition: 0.2s;">
-        <i class="fas fa-shield-halved" style="color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 5px;"></i>
-        Criminal
-      </a>
-      <a href="direito-trabalhista.html" style="background: var(--bg-light); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; color: var(--text-dark); font-weight: 600; border: 1px solid var(--border); transition: 0.2s;">
-        <i class="fas fa-briefcase" style="color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 5px;"></i>
-        Trabalhista
-      </a>
-      <a href="direito-previdenciario.html" style="background: var(--bg-light); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; color: var(--text-dark); font-weight: 600; border: 1px solid var(--border); transition: 0.2s;">
-        <i class="fas fa-users-rays" style="color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 5px;"></i>
-        Previdenciário
-      </a>
-      <a href="direito-consumidor.html" style="background: var(--bg-light); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; color: var(--text-dark); font-weight: 600; border: 1px solid var(--border); transition: 0.2s;">
-        <i class="fas fa-scale-balanced" style="color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 5px;"></i>
-        Consumidor
-      </a>
-      <a href="direito-civil.html" style="background: var(--bg-light); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; color: var(--text-dark); font-weight: 600; border: 1px solid var(--border); transition: 0.2s;">
-        <i class="fas fa-gavel" style="color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 5px;"></i>
-        Civil e Sucessões
-      </a>
-    </div>
-  </div>
-</section>
-  <!-- ===== FILTROS ===== -->
-  <div class="container">
-    <div class="filtros" id="filtros">
-      <button class="filtro-btn ativo" data-categoria="todos">📌 Todos</button>
-      <button class="filtro-btn" data-categoria="direito-digital">💻 Direito Digital</button>
-      <button class="filtro-btn" data-categoria="direito-criminal">⚖️ Direito Criminal</button>
-      <button class="filtro-btn" data-categoria="direito-familia">👨‍👩‍👧‍👦 Direito de Família</button>
-      <button class="filtro-btn" data-categoria="direito-trabalhista">📋 Direito Trabalhista</button>
-      <button class="filtro-btn" data-categoria="direito-consumidor">🛒 Direito do Consumidor</button>
-      <button class="filtro-btn" data-categoria="direitos-cidadao">📜 Direitos do Cidadão</button>
-    </div>
-  </div>
-
-  <!-- ===== GRID DE NOTÍCIAS ===== -->
-  <div class="container">
-    <div class="grid-noticias" id="gridNoticias">
-      <!-- Os cards serão inseridos via JavaScript -->
+      <div class="filtros" id="filtros">
+        <button class="filtro-btn ativo" data-categoria="todos">📌 Todos</button>
+        <button class="filtro-btn" data-categoria="direito-digital">💻 Direito Digital</button>
+        <button class="filtro-btn" data-categoria="direito-criminal">⚖️ Direito Criminal</button>
+        <button class="filtro-btn" data-categoria="direito-familia">👨‍👩‍👧‍👦 Direito de Família</button>
+        <button class="filtro-btn" data-categoria="direito-trabalhista">📋 Direito Trabalhista</button>
+        <button class="filtro-btn" data-categoria="direito-consumidor">🛒 Direito do Consumidor</button>
+        <button class="filtro-btn" data-categoria="direitos-cidadao">📜 Direitos do Cidadão</button>
+      </div>
     </div>
 
-    <div class="sem-resultados" id="semResultados">
-      <i class="fas fa-search"></i>
-      <p>Nenhum artigo encontrado nesta categoria.</p>
+    <!-- ===== GRID DE NOTÍCIAS ===== -->
+    <div class="container">
+      <div class="grid-noticias" id="gridNoticias">
+        <!-- Os cards serão inseridos via JavaScript -->
+      </div>
+
+      <div class="sem-resultados" id="semResultados">
+        <i class="fas fa-search"></i>
+        <p>Nenhum artigo encontrado nesta categoria.</p>
+      </div>
     </div>
-  </div>
+
+    <!-- ===== BACKLINKS ===== -->
+    <section class="backlinks-section">
+      <div class="container">
+        <h3 style="text-align: center; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px;">
+          <i class="fas fa-gavel" style="color: var(--accent);"></i> Conheça nossas áreas de atuação
+        </h3>
+        <div class="backlinks-grid">
+          <div class="backlink-item">
+            <a href="direito-familia.html"><i class="fas fa-people-roof"></i> Direito de Família</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Direito Digital</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a>
+          </div>
+          <div class="backlink-item">
+            <a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a>
+          </div>
+          <div class="backlink-item">
+            <a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
-    <div class="footer-grid">
-  <div class="footer-col">
-  <h5>Dra. Vera Catarina</h5>
-  <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
-  <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
-</div>
-  <div class="footer-col">
-    <h5>Links Rápidos</h5>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
-      <li><a href="noticias.html">📰 Notícias e Artigos</a></li>
-      <li><a href="sobre.html">Sobre a Dra. Vera Catarina</a></li>
-      <li><a href="legal.html">Legal &amp; Suporte</a></li>
-      <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h5>Áreas Específicas</h5>
-    <ul>
-      <li><a href="direito-familia.html">Direito de Família</a></li>
-      <li><a href="direito-digital.html">Direito Digital</a></li>
-      <li><a href="direito-criminal.html">Direito Criminal</a></li>
-      <li><a href="direito-trabalhista.html">Direito Trabalhista</a></li>
-      <li><a href="direito-previdenciario.html">Direito Previdenciário</a></li>
-      <li><a href="direito-consumidor.html">Direito do Consumidor</a></li>
-      <li><a href="direito-civil.html">Direito Civil e Sucessões</a></li>
-    </ul>
-  </div>
-</div>
-
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Dra. Vera Catarina</h5>
+          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
+          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
+        </div>
+        <div class="footer-col">
+          <h5>Links Rápidos</h5>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
+            <li><a href="noticias.html">📰 Notícias e Artigos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html">Legal</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Áreas Específicas</h5>
+          <ul>
+            <li><a href="direito-familia.html">Direito de Família</a></li>
+            <li><a href="direito-digital.html">Direito Digital</a></li>
+            <li><a href="direito-criminal.html">Direito Criminal</a></li>
+            <li><a href="direito-trabalhista.html">Direito Trabalhista</a></li>
+            <li><a href="direito-previdenciario.html">Direito Previdenciário</a></li>
+            <li><a href="direito-consumidor.html">Direito do Consumidor</a></li>
+            <li><a href="direito-civil.html">Direito Civil e Sucessões</a></li>
+            <li><a href="direito-empresarial.html">🏢 Advocacia Empresarial</a></li>
+            <li><a href="advogado-online.html">📱 Advogado Online 24h</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="footer-bottom">
-        <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO e LGPD.</p>
-        <p style="font-size: 0.75rem; color: #94a3b8; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+        <p style="margin-bottom:12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
+        <p style="font-size:0.75rem; color:#94a3b8; display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;">
           <span>⚡ Design & Desenvolvimento:</span>
-          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 600;">💻 Fábio Wlademir</a>
-          <span style="color: rgba(255,255,255,0.2);">·</span>
-          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <span style="color: rgba(255,255,255,0.2);">·</span>
-          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-weight:600;">💻 Fábio Wlademir</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
         </p>
         <div>
           <div class="visitor-counter" title="Total de visualizações de página">
@@ -343,187 +743,278 @@
     </div>
   </footer>
 
-  <!-- ===== JAVASCRIPT ===== -->
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
+      <i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i>
+      <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+      <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
+      <button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
+    </div>
+  </div>
+
+  <!-- ===== VLIBRAS ===== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== ACESSIBILIDADE JS ===== -->
+  <script src="/acessibilidade.js"></script>
+
+  <!-- ===== SCRIPTS ===== -->
   <script>
-   const posts = [
-  // ===== ARTIGOS DO SITE (7 novos) =====
-     <!-- ===== CARD: SITE ADEQUADO À LGPD, ACESSIBILIDADE E OAB ===== -->
-<div class="card-noticia" style="border-top: 4px solid #c5a880; background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);">
-  <div class="card-header">
-    <span class="categoria" style="background: #0b251e; color: #c5a880;">🌟 Destaque</span>
-    <span class="data"><i class="far fa-calendar-alt"></i> 19/07/2026</span>
-    <h3><a href="noticias/site-lgpd-acessibilidade-oab.html" style="color: #0b251e;">Site agora está 100% adequado à LGPD, Acessibilidade e OAB</a></h3>
-  </div>
-  <div class="card-body">
-    <p>O portal da Advocacia Vera Catarina foi completamente reformulado para atender às exigências da <strong>LGPD</strong>, às diretrizes de <strong>acessibilidade digital (WCAG 2.2, eMAG e LBI)</strong> e ao <strong>Provimento 205/2021 da OAB</strong>. Conheça as melhorias implementadas.</p>
-  </div>
-  <div class="card-footer">
-    <a href="noticias/site-lgpd-acessibilidade-oab.html" class="btn-leia"><i class="fas fa-book-open"></i> Leia mais</a>
-    <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20artigo%20sobre%20LGPD%20e%20Acessibilidade%20e%20gostaria%20de%20saber%20mais." class="btn-wpp"><i class="fab fa-whatsapp"></i> Fale via WhatsApp</a>
-  </div>
-</div>
-     {
-  titulo: "Direito ao Esquecimento: Case Acadêmico Premiado – Análise do RE 1.010.606/STF",
-  link: "https://veracatarina.github.io/noticias/direito-ao-esquecimento-case-academico-premiado.html",
-  resumo: "Trabalho interdisciplinar com Kelsen, Dworkin e Bobbio sobre o Caso Aída Curi. Nota máxima na UNISINOS, com recursos interativos, QR Code e homenagem à colega Carolina Willmann.",
-  data: "18/07/2026",
-  categoria: "direito-digital",
-  categoriaLabel: "Direito Digital"
-},
-  {
-    titulo: "Como pedir Pensão Alimentícia em Sapucaia do Sul? Passo a passo completo",
-    link: "https://veracatarina.github.io/noticias/como-pedir-pensao-alimenticia.html",
-    resumo: "Entenda quem tem direito à pensão, quais documentos reunir, como calcular o valor e quando procurar uma advogada especializada. Com o respaldo de quem tem 40 anos de atuação.",
-    data: "15/07/2026",
-    categoria: "direito-familia",
-    categoriaLabel: "Direito de Família"
-  },
-  {
-    titulo: "LGPD: Entenda a Lei Geral de Proteção de Dados e sua Importância para a Segurança Online",
-    link: "https://veracatarina.github.io/noticias/lgpd-entenda-lei-geral-protecao-dados.html",
-    resumo: "A Lei Geral de Proteção de Dados (LGPD) é uma legislação brasileira que visa proteger os direitos fundamentais das pessoas em relação ao tratamento de seus dados pessoais.",
-    data: "05/06/2025",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital"
-  },
-  {
-    titulo: "Crimes Virtuais: Entenda Calúnia, Difamação e Injúria nas Redes Sociais",
-    link: "https://veracatarina.github.io/noticias/crimes-virtuais-calunia-difamacao-injuria.html",
-    resumo: "As redes sociais se tornaram um espaço onde a liberdade de expressão pode ser usada de forma indevida, dando origem a crimes contra a honra, como calúnia, difamação e injúria.",
-    data: "18/06/2025",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital"
-  },
-  {
-    titulo: "🌐 MARCO CIVIL DA INTERNET: Seus Direitos Digitais e Proteção na Rede!",
-    link: "https://veracatarina.github.io/noticias/marco-civil-internet-direitos-digitais.html",
-    resumo: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, equilibrando liberdade de expressão com proteção dos direitos dos usuários.",
-    data: "19/07/2025",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital"
-  },
-  {
-    titulo: "Perseguição Digital: 5 Anos da Lei do Stalking e a Importância da Prova Pericial",
-    link: "https://veracatarina.github.io/noticias/perseguicao-digital-stalking-prova-pericial.html",
-    resumo: "O stalking (perseguição obsessiva) é crime grave no Brasil. A Lei 14.132/2021 completa cinco anos em 2026. Saiba como a prova pericial é fundamental para comprovar o crime.",
-    data: "31/03/2026",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital"
-  },
-  // ===== ARTIGOS DO BLOGGER (mantidos como fallback) =====
-  {
-    titulo: "Proteja-se: Denunciando Crimes na Internet com o Auxílio de um Advogado Especializado",
-    link: "https://advocaciasapucaia.blogspot.com/2025/06/proteja-se-denunciando-crimes-na.html",
-    resumo: "A internet é um espaço fértil para crimes e abusos. Se você está sendo vítima de crimes na internet, é fundamental buscar ajuda de um advogado especializado em direito digital.",
-    data: "16/06/2025",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital"
-  },
-  {
-    titulo: "Crimes nas Redes Sociais: Como se Proteger e Buscar Justiça | Dra. Vera Catarina",
-    link: "https://advocaciasapucaia.blogspot.com/2025/06/crimes-nas-redes-sociais-como-se.html",
-    resumo: "Cyberbullying, fake news, vingança pornográfica e golpes virtuais são perigos nas redes sociais. Conhecer seus direitos é o primeiro passo para se proteger.",
-    data: "19/06/2025",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital"
-  },
-  {
-    titulo: "ECA Digital: A Lei que as Plataformas Não Podem Mais Ignorar",
-    link: "https://advocaciasapucaia.blogspot.com/2026/04/eca-digital-lei-que-as-plataformas-nao.html",
-    resumo: "A Lei 15.211/2025 (ECA Digital) entrou em vigor em março de 2026. Redes sociais, jogos e aplicativos são obrigados a proteger crianças e adolescentes, com multas de até R$ 50 milhões.",
-    data: "13/04/2026",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital"
-  },
-  {
-    titulo: "5 Direitos Digitais que Todo Usuário da Internet Precisa Conhecer",
-    link: "https://advocaciasapucaia.blogspot.com/2026/04/5-direitos-digitais-que-todo-usuario-da.html",
-    resumo: "Do Marco Civil de 2014 à realidade de 2026: o que mudou, o que permanece e o que você ainda pode exigir. Conteúdo atualizado sobre neutralidade de rede, remoção de conteúdo e mais.",
-    data: "09/04/2026",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital"
-  },
-  {
-    titulo: "LBI | Lei Brasileira de Inclusão, download",
-    link: "https://advocaciasapucaia.blogspot.com/2015/09/lbi-lei-brasileira-de-inclusao-download.html",
-    resumo: "A Lei Brasileira de Inclusão (LBI) - nº 13.146/2015 - promove o exercício dos direitos e liberdades fundamentais pelas pessoas com deficiência, garantindo inclusão social e cidadania.",
-    data: "19/02/2015",
-    categoria: "direitos-cidadao",
-    categoriaLabel: "Direitos do Cidadão"
-  },
-  {
-    titulo: "Advocacia Criminal em Sapucaia: Defesa Especializada | Dra. Vera Catarina",
-    link: "https://advocaciasapucaia.blogspot.com/2025/06/advocacia-criminal-em-sapucaia-defesa.html",
-    resumo: "Defesa criminal especializada com atuação estratégica e presença imediata: assistência em prisões, tráfico de drogas, crimes de trânsito, lesão corporal, Lei Maria da Penha e Habeas Corpus.",
-    data: "05/06/2025",
-    categoria: "direito-criminal",
-    categoriaLabel: "Direito Criminal"
-  },
-  {
-    titulo: "Defesa em Casos de Caça-Níquel, Jogo do Bicho e Máquinas de Ursinho | Dra. Vera Catarina",
-    link: "https://advocaciasapucaia.blogspot.com/2025/06/defesa-em-casos-de-caca-niquel-jogo-do.html",
-    resumo: "Defesa contra acusações criminais por operação de jogos ilegais. Atuação para reconhecimento da legalidade de máquinas lúdicas e negociação com autoridades para evitar processos penais.",
-    data: "10/06/2025",
-    categoria: "direito-criminal",
-    categoriaLabel: "Direito Criminal"
-  },
-  {
-    titulo: "Busca e Apreensão de Veículos? Saiba Como Evitar e Reverter | Advogado Especializado",
-    link: "https://advocaciasapucaia.blogspot.com/2025/06/busca-e-apreensao-de-veiculos-saiba.html",
-    resumo: "Apreensão do veículo pode trazer prejuízos financeiros. Saiba como suspender a ordem de apreensão, negociar com bancos e recuperar o veículo em casos de apreensão indevida.",
-    data: "17/06/2025",
-    categoria: "direito-consumidor",
-    categoriaLabel: "Direito do Consumidor"
-  },
-  {
-    titulo: "Direito Trabalhista: Defender Seus Direitos é Valorizar Sua História de Trabalho",
-    link: "https://advocaciasapucaia.blogspot.com/2016/10/direito-trabalhista-defenda-seus.html",
-    resumo: "Assédio moral, desvio de função, horas extras não pagas, justa causa injusta e acidente de trabalho. Saiba como a lei protege você e garante o que é seu por direito.",
-    data: "15/04/2016",
-    categoria: "direito-trabalhista",
-    categoriaLabel: "Direito Trabalhista"
-  },
-  {
-    titulo: "Pejotização e Novas Formas de Trabalho: Desafios Éticos e Jurídicos em 2026",
-    link: "https://advocaciasapucaia.blogspot.com/2026/04/pejotizacao-e-novas-formas-de-trabalho.html",
-    resumo: "A pejotização e a 'falsa autonomia' continuam sendo pontos de atenção no Direito do Trabalho. Atuação tanto na defesa de trabalhadores quanto na consultoria a empresas.",
-    data: "10/04/2026",
-    categoria: "direito-trabalhista",
-    categoriaLabel: "Direito Trabalhista"
-  },
-  {
-    titulo: "Planejamento Sucessório e o Protocolo Familiar: Protegendo o Patrimônio e a Harmonia",
-    link: "https://advocaciasapucaia.blogspot.com/2026/04/planejamento-sucessorio-e-o-protocolo.html",
-    resumo: "Planejamento sucessório e Protocolo Familiar cresceram em 2026. Famílias buscam evitar a morosidade e o custo emocional de inventários judiciais complexos.",
-    data: "08/04/2026",
-    categoria: "direito-familia",
-    categoriaLabel: "Direito de Família"
-  },
-  {
-    titulo: "Separação Consensual x Litigiosa: Qual a melhor saída?",
-    link: "https://advocaciasapucaia.blogspot.com/2026/07/separacao-consensual-x-litigiosa-qual.html",
-    resumo: "Conheça as diferenças entre separação consensual e litigiosa, os custos envolvidos, o tempo de duração e saiba qual caminho é mais adequado para o seu caso.",
-    data: "15/07/2026",
-    categoria: "direito-familia",
-    categoriaLabel: "Direito de Família"
-  },
-  {
-    titulo: "Inventário e Usucapião em Sapucaia do Sul: Regularize seu imóvel",
-    link: "https://advocaciasapucaia.blogspot.com/2026/07/inventario-e-usucapiao-em-sapucaia-do.html",
-    resumo: "Seja para transferir um patrimônio após um falecimento ou para regularizar um imóvel sem escritura, o Direito Imobiliário oferece soluções com quem tem 40 anos de experiência.",
-    data: "15/07/2026",
-    categoria: "direito-familia",
-    categoriaLabel: "Direito de Família"
-  }
-];
+    // ===== DROPDOWN (MOBILE) =====
+    function toggleDropdown() {
+      const dropdown = document.querySelector('.dropdown');
+      if (window.innerWidth <= 992) {
+        dropdown.classList.toggle('open');
+      }
+    }
+    function openDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'block';
+      }
+    }
+    function closeDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'none';
+      }
+    }
+    document.addEventListener('click', function(e) {
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+
+    // ===== LGPD COOKIES =====
+    function setCookieConsent(choice) {
+      localStorage.setItem('cookieConsent', choice);
+      const banner = document.getElementById('cookie-consent-banner');
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateX(-50%) translateY(20px)';
+      setTimeout(() => { banner.style.display = 'none'; }, 500);
+    }
+    function acceptCookies() {
+      setCookieConsent('accepted');
+      console.log('📊 Cookies de análise ativados.');
+    }
+    function rejectCookies() {
+      setCookieConsent('rejected');
+      console.log('❌ Cookies de análise recusados.');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent === 'accepted' || consent === 'rejected') {
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+      }
+    });
+
+    // ===== FECHAR MENU MOBILE =====
+    function closeMenu() {
+      document.getElementById('menu-checkbox').checked = false;
+    }
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ===== ARIA EXPANDED PARA MENU MOBILE =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuCheckbox = document.getElementById('menu-checkbox');
+    if (menuToggle && menuCheckbox) {
+      menuCheckbox.addEventListener('change', function() {
+        menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+      });
+    }
+
+    // ===== POSTS =====
+    const posts = [
+      // ===== ARTIGOS DO SITE =====
+      {
+        titulo: "Site adequado à LGPD, Acessibilidade e OAB",
+        link: "https://veracatarina.github.io/noticias/site-lgpd-acessibilidade-oab.html",
+        resumo: "O portal foi reformulado para atender à LGPD, às diretrizes de acessibilidade digital (WCAG 2.2, eMAG, LBI) e ao Provimento 205/2021 da OAB.",
+        data: "19/07/2026",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "Direito ao Esquecimento: Case Acadêmico Premiado – Análise do RE 1.010.606/STF",
+        link: "https://veracatarina.github.io/noticias/direito-ao-esquecimento-case-academico-premiado.html",
+        resumo: "Trabalho interdisciplinar com Kelsen, Dworkin e Bobbio sobre o Caso Aída Curi. Nota máxima na UNISINOS.",
+        data: "18/07/2026",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "Como pedir Pensão Alimentícia em Sapucaia do Sul? Passo a passo completo",
+        link: "https://veracatarina.github.io/noticias/como-pedir-pensao-alimenticia.html",
+        resumo: "Entenda quem tem direito à pensão, quais documentos reunir, como calcular o valor e quando procurar uma advogada especializada.",
+        data: "15/07/2026",
+        categoria: "direito-familia",
+        categoriaLabel: "Direito de Família"
+      },
+      {
+        titulo: "Site agora com recursos de acessibilidade",
+        link: "https://veracatarina.github.io/noticias/site-agora-acessivel.html",
+        resumo: "Conheça os recursos de acessibilidade do portal da Dra. Vera Catarina: modo escuro, alto contraste, VLibras, fonte para dislexia e muito mais.",
+        data: "19/07/2026",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "LGPD: Entenda a Lei Geral de Proteção de Dados e sua Importância para a Segurança Online",
+        link: "https://veracatarina.github.io/noticias/lgpd-entenda-lei-geral-protecao-dados.html",
+        resumo: "A Lei Geral de Proteção de Dados (LGPD) é uma legislação brasileira que visa proteger os direitos fundamentais das pessoas em relação ao tratamento de seus dados pessoais.",
+        data: "05/06/2025",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "Crimes Virtuais: Entenda Calúnia, Difamação e Injúria nas Redes Sociais",
+        link: "https://veracatarina.github.io/noticias/crimes-virtuais-calunia-difamacao-injuria.html",
+        resumo: "As redes sociais se tornaram um espaço onde a liberdade de expressão pode ser usada de forma indevida, dando origem a crimes contra a honra.",
+        data: "18/06/2025",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "🌐 MARCO CIVIL DA INTERNET: Seus Direitos Digitais e Proteção na Rede!",
+        link: "https://veracatarina.github.io/noticias/marco-civil-internet-direitos-digitais.html",
+        resumo: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil.",
+        data: "19/07/2025",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "Perseguição Digital: 5 Anos da Lei do Stalking e a Importância da Prova Pericial",
+        link: "https://veracatarina.github.io/noticias/perseguicao-digital-stalking-prova-pericial.html",
+        resumo: "O stalking (perseguição obsessiva) é crime grave no Brasil. A Lei 14.132/2021 completa cinco anos em 2026.",
+        data: "31/03/2026",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      // ===== ARTIGOS DO BLOGGER =====
+      {
+        titulo: "Proteja-se: Denunciando Crimes na Internet com o Auxílio de um Advogado Especializado",
+        link: "https://advocaciasapucaia.blogspot.com/2025/06/proteja-se-denunciando-crimes-na.html",
+        resumo: "A internet é um espaço fértil para crimes e abusos. Se você está sendo vítima, é fundamental buscar ajuda de um advogado especializado.",
+        data: "16/06/2025",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "Crimes nas Redes Sociais: Como se Proteger e Buscar Justiça | Dra. Vera Catarina",
+        link: "https://advocaciasapucaia.blogspot.com/2025/06/crimes-nas-redes-sociais-como-se.html",
+        resumo: "Cyberbullying, fake news, vingança pornográfica e golpes virtuais são perigos nas redes sociais. Conhecer seus direitos é o primeiro passo.",
+        data: "19/06/2025",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "ECA Digital: A Lei que as Plataformas Não Podem Mais Ignorar",
+        link: "https://advocaciasapucaia.blogspot.com/2026/04/eca-digital-lei-que-as-plataformas-nao.html",
+        resumo: "A Lei 15.211/2025 (ECA Digital) entrou em vigor em março de 2026. Redes sociais, jogos e aplicativos são obrigados a proteger crianças e adolescentes.",
+        data: "13/04/2026",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "5 Direitos Digitais que Todo Usuário da Internet Precisa Conhecer",
+        link: "https://advocaciasapucaia.blogspot.com/2026/04/5-direitos-digitais-que-todo-usuario-da.html",
+        resumo: "Do Marco Civil de 2014 à realidade de 2026: o que mudou, o que permanece e o que você ainda pode exigir.",
+        data: "09/04/2026",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
+      },
+      {
+        titulo: "LBI | Lei Brasileira de Inclusão, download",
+        link: "https://advocaciasapucaia.blogspot.com/2015/09/lbi-lei-brasileira-de-inclusao-download.html",
+        resumo: "A Lei Brasileira de Inclusão (LBI) - nº 13.146/2015 - promove o exercício dos direitos e liberdades fundamentais pelas pessoas com deficiência.",
+        data: "19/02/2015",
+        categoria: "direitos-cidadao",
+        categoriaLabel: "Direitos do Cidadão"
+      },
+      {
+        titulo: "Advocacia Criminal em Sapucaia: Defesa Especializada | Dra. Vera Catarina",
+        link: "https://advocaciasapucaia.blogspot.com/2025/06/advocacia-criminal-em-sapucaia-defesa.html",
+        resumo: "Defesa criminal especializada com atuação estratégica e presença imediata: assistência em prisões, tráfico de drogas, crimes de trânsito, Lei Maria da Penha e Habeas Corpus.",
+        data: "05/06/2025",
+        categoria: "direito-criminal",
+        categoriaLabel: "Direito Criminal"
+      },
+      {
+        titulo: "Defesa em Casos de Caça-Níquel, Jogo do Bicho e Máquinas de Ursinho | Dra. Vera Catarina",
+        link: "https://advocaciasapucaia.blogspot.com/2025/06/defesa-em-casos-de-caca-niquel-jogo-do.html",
+        resumo: "Defesa contra acusações criminais por operação de jogos ilegais. Atuação para reconhecimento da legalidade de máquinas lúdicas.",
+        data: "10/06/2025",
+        categoria: "direito-criminal",
+        categoriaLabel: "Direito Criminal"
+      },
+      {
+        titulo: "Busca e Apreensão de Veículos? Saiba Como Evitar e Reverter | Advogado Especializado",
+        link: "https://advocaciasapucaia.blogspot.com/2025/06/busca-e-apreensao-de-veiculos-saiba.html",
+        resumo: "Apreensão do veículo pode trazer prejuízos financeiros. Saiba como suspender a ordem de apreensão, negociar com bancos e recuperar o veículo.",
+        data: "17/06/2025",
+        categoria: "direito-consumidor",
+        categoriaLabel: "Direito do Consumidor"
+      },
+      {
+        titulo: "Direito Trabalhista: Defender Seus Direitos é Valorizar Sua História de Trabalho",
+        link: "https://advocaciasapucaia.blogspot.com/2016/10/direito-trabalhista-defenda-seus.html",
+        resumo: "Assédio moral, desvio de função, horas extras não pagas, justa causa injusta e acidente de trabalho. Saiba como a lei protege você.",
+        data: "15/04/2016",
+        categoria: "direito-trabalhista",
+        categoriaLabel: "Direito Trabalhista"
+      },
+      {
+        titulo: "Pejotização e Novas Formas de Trabalho: Desafios Éticos e Jurídicos em 2026",
+        link: "https://advocaciasapucaia.blogspot.com/2026/04/pejotizacao-e-novas-formas-de-trabalho.html",
+        resumo: "A pejotização e a 'falsa autonomia' continuam sendo pontos de atenção no Direito do Trabalho. Atuação tanto na defesa de trabalhadores quanto na consultoria a empresas.",
+        data: "10/04/2026",
+        categoria: "direito-trabalhista",
+        categoriaLabel: "Direito Trabalhista"
+      },
+      {
+        titulo: "Planejamento Sucessório e o Protocolo Familiar: Protegendo o Patrimônio e a Harmonia",
+        link: "https://advocaciasapucaia.blogspot.com/2026/04/planejamento-sucessorio-e-o-protocolo.html",
+        resumo: "Planejamento sucessório e Protocolo Familiar cresceram em 2026. Famílias buscam evitar a morosidade e o custo emocional de inventários judiciais complexos.",
+        data: "08/04/2026",
+        categoria: "direito-familia",
+        categoriaLabel: "Direito de Família"
+      },
+      {
+        titulo: "Separação Consensual x Litigiosa: Qual a melhor saída?",
+        link: "https://advocaciasapucaia.blogspot.com/2026/07/separacao-consensual-x-litigiosa-qual.html",
+        resumo: "Conheça as diferenças entre separação consensual e litigiosa, os custos envolvidos, o tempo de duração e saiba qual caminho é mais adequado para o seu caso.",
+        data: "15/07/2026",
+        categoria: "direito-familia",
+        categoriaLabel: "Direito de Família"
+      },
+      {
+        titulo: "Inventário e Usucapião em Sapucaia do Sul: Regularize seu imóvel",
+        link: "https://advocaciasapucaia.blogspot.com/2026/07/inventario-e-usucapiao-em-sapucaia-do.html",
+        resumo: "Seja para transferir um patrimônio após um falecimento ou para regularizar um imóvel sem escritura, o Direito Imobiliário oferece soluções com quem tem 40 anos de experiência.",
+        data: "15/07/2026",
+        categoria: "direito-familia",
+        categoriaLabel: "Direito de Família"
+      }
+    ];
 
     // ===== FUNÇÃO PARA RENDERIZAR OS CARDS =====
     function renderizarPosts(categoriaFiltro = 'todos') {
       const grid = document.getElementById('gridNoticias');
       const semResultados = document.getElementById('semResultados');
-      
-      const postsFiltrados = categoriaFiltro === 'todos' 
-        ? posts 
+
+      const postsFiltrados = categoriaFiltro === 'todos'
+        ? posts
         : posts.filter(p => p.categoria === categoriaFiltro);
 
       if (postsFiltrados.length === 0) {
@@ -566,17 +1057,8 @@
       });
     });
 
-    // ===== FECHAR MENU MOBILE AO CLICAR EM UM LINK =====
-    function closeMenu() {
-      document.getElementById('menu-checkbox').checked = false;
-    }
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-
     // ===== INICIALIZA =====
     renderizarPosts('todos');
   </script>
-
 </body>
 </html>
