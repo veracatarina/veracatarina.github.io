@@ -606,21 +606,65 @@
           </ul>
         </div>
       </div>
-      <!-- ===== AVISO LGPD E COOKIES (CONFORME LGPD) ===== -->
-<div id="cookie-consent-banner" style="background: rgba(0,0,0,0.85); backdrop-filter: blur(6px); padding: 18px 25px; border-radius: 8px; margin-bottom: 25px; text-align: center; font-size: 0.85rem; color: #e2e8f0; border: 1px solid var(--accent); box-shadow: 0 4px 20px rgba(0,0,0,0.5); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 15px; transition: opacity 0.5s ease;">
+      <!-- ===== BANNER LGPD E COOKIES (FIXO NA TELA) ===== -->
+<div id="cookie-consent-banner" style="
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 900px;
+  background: rgba(11, 37, 30, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 18px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  border: 1px solid var(--accent, #c5a880);
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-family: 'Inter', sans-serif;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+">
   
-  <div style="flex: 1 1 100%; max-width: 700px; text-align: center;">
-    <i class="fas fa-shield-alt" style="color: var(--accent); margin-right: 8px; font-size: 1.1rem;"></i>
-    <span style="font-weight: 300;">Este site utiliza cookies essenciais para seu funcionamento. Para uma experiência aprimorada, pedimos seu consentimento para usar cookies de análise e personalização. Você pode gerenciar suas preferências a qualquer momento.</span>
+  <!-- Ícone e texto -->
+  <div style="flex: 1 1 100%; text-align: center; color: #e2e8f0; font-size: 0.9rem; line-height: 1.5;">
+    <i class="fas fa-shield-alt" style="color: var(--accent, #c5a880); margin-right: 8px; font-size: 1.1rem;"></i>
+    <span style="font-weight: 300;">
+      Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. 
+      <a href="javascript:void(0);" onclick="openModal('privacidade')" style="color: var(--accent, #c5a880); text-decoration: underline; font-weight: 500;">Política de Privacidade</a>
+      <span style="color: #94a3b8; margin: 0 6px;">|</span>
+      <a href="javascript:void(0);" onclick="openModal('cookies')" style="color: #cbd5e1; text-decoration: underline;">Configurar</a>
+    </span>
   </div>
 
-  <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; margin-top: 5px;">
-    <a href="javascript:void(0);" onclick="openModal('privacidade')" style="color: var(--accent); text-decoration: underline; font-size: 0.8rem; font-weight: 500;">Política de Privacidade</a>
-    <span style="color: #94a3b8;">|</span>
-    <a href="javascript:void(0);" onclick="openModal('cookies')" style="color: #cbd5e1; text-decoration: underline; font-size: 0.8rem;">Configurar Cookies</a>
-    <span style="color: #94a3b8;">|</span>
-    <button onclick="acceptCookies()" style="background: var(--accent); color: var(--primary-dark); border: none; padding: 8px 28px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: background 0.2s;">Aceitar</button>
-    <button onclick="rejectCookies()" style="background: transparent; color: #cbd5e1; border: 1px solid #64748b; padding: 8px 28px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: background 0.2s;">Recusar</button>
+  <!-- Botões de ação -->
+  <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+    <button onclick="rejectCookies()" style="
+      background: transparent;
+      color: #cbd5e1;
+      border: 1px solid #64748b;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    ">Recusar</button>
+    <button onclick="acceptCookies()" style="
+      background: var(--accent, #c5a880);
+      color: var(--primary-dark, #0b251e);
+      border: none;
+      padding: 8px 28px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    ">Aceitar</button>
   </div>
 </div>
 
@@ -628,26 +672,32 @@
   // Função para ocultar o banner e salvar a preferência
   function setCookieConsent(choice) {
     localStorage.setItem('cookieConsent', choice);
-    document.getElementById('cookie-consent-banner').style.display = 'none';
+    const banner = document.getElementById('cookie-consent-banner');
+    banner.style.opacity = '0';
+    banner.style.transform = 'translateX(-50%) translateY(20px)';
+    setTimeout(() => {
+      banner.style.display = 'none';
+    }, 500);
   }
 
   function acceptCookies() {
     setCookieConsent('accepted');
-    // Aqui você pode ativar scripts de análise (Google Analytics, etc.)
-    console.log('Cookies de análise ativados.');
+    // Ative aqui scripts de análise (Google Analytics, Meta Pixel, etc.)
+    console.log('📊 Cookies de análise ativados.');
   }
 
   function rejectCookies() {
     setCookieConsent('rejected');
-    // Aqui você pode desativar scripts de análise (se houver)
-    console.log('Cookies de análise recusados.');
+    // Desative aqui scripts de análise
+    console.log('❌ Cookies de análise recusados.');
   }
 
   // Verificar preferência salva ao carregar a página
   document.addEventListener('DOMContentLoaded', function() {
     const consent = localStorage.getItem('cookieConsent');
     if (consent === 'accepted' || consent === 'rejected') {
-      document.getElementById('cookie-consent-banner').style.display = 'none';
+      const banner = document.getElementById('cookie-consent-banner');
+      banner.style.display = 'none';
     }
   });
 </script>
