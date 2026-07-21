@@ -15,6 +15,12 @@
   <meta property="og:url" content="https://veracatarina.github.io/contato.html">
   <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/contato-whatsapp-advocacia-advogados.jpg">
   <meta property="og:image:alt" content="Contato Advocacia Vera Catarina - WhatsApp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contato | Advocacia Vera Catarina">
+  <meta name="twitter:description" content="Entre em contato com a Dra. Vera Catarina. Atendimento humanizado com 40 anos de experiência.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/contato-whatsapp-advocacia-advogados.jpg">
   <title>Contato | Advocacia Vera Catarina</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
@@ -22,8 +28,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/acessibilidade.css">
 
+  <!-- ===== Google reCAPTCHA v3 ===== -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcojV4tAAAAAHx7sMy5ig21AJ1RZjdF-ShsYY9U"></script>
+
   <style>
-    /* ===== ESTILOS (mesmos do index) ===== */
+    /* ===== ESTILOS PADRÃO ===== */
     :root {
       --primary-dark: #0b251e;
       --primary: #143d33;
@@ -31,6 +40,7 @@
       --accent: #c5a880;
       --accent-hover: #b39369;
       --danger: #991b1b;
+      --success: #16a34a;
       --text-dark: #1e293b;
       --text-light: #64748b;
       --bg-light: #f8fafc;
@@ -196,12 +206,50 @@
 
     .contact-form-box { background: white; padding: 30px; border-radius: 8px; border: 1px solid var(--border); box-shadow: var(--shadow); }
     .contact-form-box label { display: block; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; color: var(--text-dark); margin-bottom: 5px; }
-    .contact-form-box input, .contact-form-box textarea { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 4px; font-size: 0.95rem; font-family: 'Inter', sans-serif; margin-bottom: 15px; }
-    .contact-form-box input:focus, .contact-form-box textarea:focus { outline: none; border-color: var(--accent); }
-    .btn-submit { background: var(--primary-dark); color: white; padding: 12px 30px; border: none; border-radius: 4px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; width: 100%; }
+    .contact-form-box input, .contact-form-box textarea {
+      width: 100%; padding: 12px 14px;
+      border: 1px solid var(--border); border-radius: 6px;
+      font-size: 0.95rem; font-family: 'Inter', sans-serif;
+      margin-bottom: 15px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fafbfc;
+    }
+    .contact-form-box input:focus, .contact-form-box textarea:focus {
+      outline: none; border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15);
+      background: white;
+    }
+    .contact-form-box textarea { resize: vertical; min-height: 120px; }
+
+    .btn-submit {
+      background: var(--primary-dark); color: white; padding: 14px 30px;
+      border: none; border-radius: 6px; font-weight: 700; font-size: 0.95rem;
+      cursor: pointer; transition: background 0.2s, transform 0.1s;
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;
+    }
     .btn-submit:hover { background: var(--primary); }
-    .btn-whatsapp { background: #25d366; color: white; padding: 12px 30px; border: none; border-radius: 4px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; width: 100%; text-align: center; text-decoration: none; display: inline-block; }
+    .btn-submit:active { transform: scale(0.98); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .btn-whatsapp {
+      background: #25d366; color: white; padding: 14px 30px;
+      border: none; border-radius: 6px; font-weight: 700; font-size: 0.95rem;
+      cursor: pointer; transition: background 0.2s, transform 0.1s;
+      width: 100%; text-align: center; text-decoration: none; display: inline-block;
+    }
     .btn-whatsapp:hover { background: #1da851; }
+
+    #formStatus {
+      margin: 15px 0 0;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: none;
+    }
+    #formStatus.success { display: block; background: #f0fdf4; border: 1px solid #86efac; color: var(--success); }
+    #formStatus.error { display: block; background: #fef2f2; border: 1px solid #fca5a5; color: var(--danger); }
+    #formStatus.loading { display: block; background: #f1f5f9; border: 1px solid #cbd5e1; color: var(--text-light); }
 
     /* ===== BACKLINKS ===== */
     .backlinks-section { background: var(--bg-light); padding: 40px 0; border-top: 1px solid var(--border); }
@@ -213,24 +261,14 @@
     .backlink-item a:hover { color: var(--accent); }
 
     .btn-emergency-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      color: white;
-      padding: 14px 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-      z-index: 999;
+      position: fixed; bottom: 25px; right: 25px;
+      background: #25d366; color: white;
+      padding: 14px 22px; border-radius: 50px;
+      text-decoration: none; font-weight: 700; font-size: 0.9rem;
+      display: flex; align-items: center; gap: 8px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999;
       animation: pulse-green 2s infinite;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      text-transform: uppercase; letter-spacing: 0.5px;
     }
 
     footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
@@ -245,6 +283,184 @@
     .visitor-counter i { color: var(--accent); }
     .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
 
+    /* ===== TOOLBAR DE ACESSIBILIDADE ===== */
+    .accessibility-toolbar-toggle {
+      position: fixed; bottom: 70px; left: 20px; z-index: 9998;
+      background: var(--primary-dark, #0b251e); color: white;
+      border: 2px solid var(--accent, #c5a880); border-radius: 50%;
+      width: 52px; height: 52px; font-size: 1.5rem; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s, background 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .accessibility-toolbar-toggle:hover {
+      transform: scale(1.05);
+      background: var(--accent, #c5a880);
+      color: var(--primary-dark, #0b251e);
+    }
+    .accessibility-toolbar {
+      position: fixed; bottom: 180px; left: 20px; z-index: 9997;
+      background: rgba(11, 37, 30, 0.95); backdrop-filter: blur(12px);
+      border: 1px solid var(--accent, #c5a880); border-radius: 12px;
+      padding: 20px 16px; width: 220px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      display: none; flex-direction: column; gap: 12px;
+      color: #e2e8f0; font-family: 'Inter', sans-serif;
+    }
+    .accessibility-toolbar.open { display: flex; }
+    .accessibility-toolbar .toolbar-title {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--accent, #c5a880); text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 8px; margin-bottom: 4px;
+    }
+    .accessibility-toolbar .btn-group {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+    }
+    .accessibility-toolbar button {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #e2e8f0;
+      padding: 8px 6px; border-radius: 6px;
+      font-size: 0.7rem; font-weight: 600; cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase; letter-spacing: 0.3px;
+    }
+    .accessibility-toolbar button:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: var(--accent, #c5a880);
+    }
+    .accessibility-toolbar button.active {
+      background: var(--accent, #c5a880);
+      color: var(--primary-dark, #0b251e);
+      border-color: var(--accent, #c5a880);
+    }
+
+    /* ===== MODOS DE EXIBIÇÃO ===== */
+    html.dark-mode {
+      background-color: #121212;
+    }
+    html.dark-mode body {
+      background-color: #121212;
+      color: #e2e8f0;
+    }
+    html.dark-mode .contact-info-box,
+    html.dark-mode .contact-form-box,
+    html.dark-mode .backlink-item {
+      background: #1e293b;
+      border-color: #334155;
+      color: #e2e8f0;
+    }
+    html.dark-mode .contact-form-box input,
+    html.dark-mode .contact-form-box textarea {
+      background: #0f172a;
+      color: #e2e8f0;
+      border-color: #475569;
+    }
+    html.dark-mode .contact-form-box input:focus,
+    html.dark-mode .contact-form-box textarea:focus {
+      border-color: var(--accent);
+      background: #1e293b;
+    }
+    html.dark-mode .contact-info-box .item p,
+    html.dark-mode .contact-info-box .item strong {
+      color: #cbd5e1;
+    }
+    html.dark-mode .page-hero p {
+      color: #94a3b8;
+    }
+    html.dark-mode .top-bar {
+      background: #0a0a0a;
+    }
+    html.dark-mode header {
+      background: rgba(10, 10, 10, 0.98);
+    }
+
+    html.high-contrast {
+      --accent: #ffd700;
+      --accent-hover: #ffed4a;
+      --primary-dark: #000000;
+      --primary: #003366;
+      --text-dark: #000000;
+      --text-light: #1a1a1a;
+      --bg-light: #ffffff;
+      --border: #000000;
+    }
+    html.high-contrast body {
+      background: #ffffff;
+      color: #000000;
+    }
+    html.high-contrast .contact-info-box,
+    html.high-contrast .contact-form-box,
+    html.high-contrast .backlink-item {
+      border: 2px solid #000000;
+      background: #ffffff;
+    }
+    html.high-contrast .contact-form-box input,
+    html.high-contrast .contact-form-box textarea {
+      border: 2px solid #000000;
+      background: #ffffff;
+      color: #000000;
+    }
+    html.high-contrast a {
+      color: #0000cc;
+      text-decoration: underline;
+    }
+    html.high-contrast .btn-submit {
+      background: #000000;
+      color: #ffffff;
+    }
+    html.high-contrast .btn-submit:hover {
+      background: #333333;
+    }
+    html.high-contrast .top-bar {
+      background: #000000;
+    }
+    html.high-contrast header {
+      background: rgba(0, 0, 0, 0.98);
+    }
+
+    html.dyslexic-font {
+      font-family: 'OpenDyslexic', 'Inter', sans-serif;
+    }
+    html.dyslexic-font body,
+    html.dyslexic-font .container,
+    html.dyslexic-font p,
+    html.dyslexic-font h1,
+    html.dyslexic-font h2,
+    html.dyslexic-font h3,
+    html.dyslexic-font h4,
+    html.dyslexic-font li,
+    html.dyslexic-font a,
+    html.dyslexic-font span,
+    html.dyslexic-font button,
+    html.dyslexic-font input,
+    html.dyslexic-font textarea {
+      font-family: 'OpenDyslexic', 'Inter', sans-serif !important;
+      letter-spacing: 0.05em;
+      word-spacing: 0.1em;
+    }
+
+    html.reduce-motion *,
+    html.reduce-motion *::before,
+    html.reduce-motion *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    html.font-small body { font-size: 14px; }
+    html.font-medium body { font-size: 18px; }
+    html.font-large body { font-size: 22px; }
+    html.font-xlarge body { font-size: 26px; }
+    html.font-small .container,
+    html.font-medium .container,
+    html.font-large .container,
+    html.font-xlarge .container {
+      max-width: 100%;
+    }
+
     @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
     @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
@@ -257,40 +473,18 @@
       .top-contact-info { flex-direction: column; gap: 2px; }
       .menu-toggle { display: flex; }
       .nav-menu {
-        position: fixed;
-        top: 145px;
-        right: -100%;
-        background: rgba(11, 37, 30, 0.98);
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 145px);
-        gap: 25px;
-        padding: 40px 20px;
-        transition: right 0.3s ease;
-        z-index: 999;
-        border-top: 1px solid var(--accent);
-        align-items: center;
+        position: fixed; top: 145px; right: -100%;
+        background: rgba(11, 37, 30, 0.98); flex-direction: column;
+        width: 100%; height: calc(100vh - 145px); gap: 25px;
+        padding: 40px 20px; transition: right 0.3s ease; z-index: 999;
+        border-top: 1px solid var(--accent); align-items: center;
       }
       .nav-menu > li { width: 100%; text-align: center; }
       .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
       .nav-menu > li > a:hover { border-bottom: none !important; }
-      .dropdown-content {
-        position: static;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        padding-left: 20px;
-        min-width: auto;
-        display: none !important;
-      }
-      .dropdown.open .dropdown-content {
-        display: block !important;
-      }
-      .dropdown-content li a {
-        font-size: 0.9rem;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
-      }
+      .dropdown-content { position: static; background: transparent; border: none; box-shadow: none; padding-left: 20px; min-width: auto; display: none !important; }
+      .dropdown.open .dropdown-content { display: block !important; }
+      .dropdown-content li a { font-size: 0.9rem; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05) !important; }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
@@ -298,6 +492,18 @@
       .contact-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 20px; }
       footer { padding-bottom: 110px; }
+      .accessibility-toolbar {
+        width: 190px; bottom: 180px; left: 10px; padding: 15px 12px;
+      }
+      .accessibility-toolbar .btn-group {
+        grid-template-columns: 1fr 1fr; gap: 4px;
+      }
+      .accessibility-toolbar button {
+        font-size: 0.6rem; padding: 6px 4px;
+      }
+      .accessibility-toolbar-toggle {
+        width: 46px; height: 46px; font-size: 1.2rem; bottom: 70px; left: 10px;
+      }
     }
   </style>
 </head>
@@ -333,19 +539,14 @@
       </a>
       <input type="checkbox" id="menu-checkbox">
       <label for="menu-checkbox" class="menu-toggle" aria-label="Abrir menu de navegação">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </label>
 
       <ul class="nav-menu">
-        <!-- ITENS PRINCIPAIS -->
         <li><a href="index.html">Início</a></li>
         <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
         <li><a href="noticias.html">Notícias</a></li>
         <li><a href="contato.html" class="ativo">Contato</a></li>
-
-        <!-- DROPDOWN "MAIS" -->
         <li class="dropdown" onmouseenter="openDropdown()" onmouseleave="closeDropdown()">
           <a href="javascript:void(0)" onclick="toggleDropdown()" class="dropbtn">
             Mais <i class="fas fa-chevron-down" style="font-size:0.5rem; margin-left:4px;"></i>
@@ -359,8 +560,6 @@
             <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
           </ul>
         </li>
-
-        <!-- BOTÃO PLANTÃO 24h -->
         <li>
           <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav">
             <i class="fas fa-shield-halved"></i> Plantão 24h
@@ -382,17 +581,17 @@
     <section class="content-section">
       <div class="container">
 
-        <!-- ===== IMAGEM ILUSTRATIVA (REDUZIDA) ===== -->
+        <!-- ===== IMAGEM ILUSTRATIVA ===== -->
         <div style="text-align: center; margin-bottom: 40px;">
-          <img 
-            src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/contato-whatsapp-advocacia-advogados.jpg" 
-            alt="Contato Advocacia Vera Catarina - WhatsApp e atendimento jurídico em Sapucaia do Sul" 
+          <img
+            src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/contato-whatsapp-advocacia-advogados.jpg"
+            alt="Contato Advocacia Vera Catarina - WhatsApp e atendimento jurídico em Sapucaia do Sul"
             title="Fale com a Dra. Vera Catarina pelo WhatsApp | 40 anos de experiência"
             loading="lazy"
             style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
           />
           <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
-            <i class="fas fa-phone" style="color: var(--accent);"></i> 
+            <i class="fas fa-phone" style="color: var(--accent);"></i>
             Atendimento rápido e seguro — fale agora com a Dra. Vera Catarina
           </p>
         </div>
@@ -443,7 +642,7 @@
             <hr style="border: 1px solid var(--border); margin: 20px 0;">
 
             <p style="font-size: 0.9rem; color: var(--text-light);">
-              <i class="fas fa-lock" style="color: var(--accent);"></i> 
+              <i class="fas fa-lock" style="color: var(--accent);"></i>
               Todos os contatos são tratados com <strong>sigilo profissional</strong> e <strong>confidencialidade</strong>.
             </p>
           </div>
@@ -451,28 +650,34 @@
           <!-- ===== COLUNA DO FORMULÁRIO ===== -->
           <div class="contact-form-box">
             <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Envie uma Mensagem</h2>
-            <form action="mailto:dra.veracatarina@gmail.com" method="post" enctype="text/plain">
+
+            <form id="contactForm" novalidate>
               <label for="nome">Seu Nome <span style="color: var(--danger);">*</span></label>
-              <input type="text" id="nome" name="Nome" placeholder="Digite seu nome completo" required>
+              <input type="text" id="nome" name="name" placeholder="Digite seu nome completo" required autocomplete="name">
 
               <label for="telefone">Telefone / WhatsApp <span style="color: var(--danger);">*</span></label>
-              <input type="tel" id="telefone" name="Telefone" placeholder="(00) 00000-0000" required>
+              <input type="tel" id="telefone" name="phone" placeholder="(00) 00000-0000" required autocomplete="tel">
 
               <label for="email">E-mail <span style="color: var(--danger);">*</span></label>
-              <input type="email" id="email" name="E-mail" placeholder="seuemail@exemplo.com" required>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required autocomplete="email">
 
               <label for="assunto">Assunto <span style="color: var(--danger);">*</span></label>
-              <input type="text" id="assunto" name="Assunto" placeholder="Ex: Consulta sobre divórcio" required>
+              <input type="text" id="assunto" name="subject" placeholder="Ex: Consulta sobre divórcio" required>
 
               <label for="mensagem">Mensagem <span style="color: var(--danger);">*</span></label>
-              <textarea id="mensagem" name="Mensagem" rows="5" placeholder="Descreva brevemente sua situação ou dúvida" required></textarea>
+              <textarea id="mensagem" name="message" rows="5" placeholder="Descreva brevemente sua situação ou dúvida" required></textarea>
 
-              <button type="submit" class="btn-submit">
-                <i class="fas fa-paper-plane"></i> Enviar por E-mail
+              <!-- ===== RECAPTCHA V3 TOKEN ===== -->
+              <input type="hidden" id="recaptchaToken" name="recaptcha_token">
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> Enviar Mensagem
               </button>
+
+              <div id="formStatus"></div>
             </form>
 
-            <div style="text-align: center; margin-top: 15px;">
+            <div style="text-align: center; margin-top: 20px;">
               <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px;">ou</p>
               <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica." target="_blank" class="btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
@@ -491,30 +696,14 @@
           <i class="fas fa-gavel" style="color: var(--accent);"></i> Conheça nossas áreas de atuação
         </h3>
         <div class="backlinks-grid">
-          <div class="backlink-item">
-            <a href="direito-familia.html"><i class="fas fa-people-roof"></i> Direito de Família</a>
-          </div>
-          <div class="backlink-item">
-            <a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Direito Digital</a>
-          </div>
-          <div class="backlink-item">
-            <a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a>
-          </div>
-          <div class="backlink-item">
-            <a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a>
-          </div>
-          <div class="backlink-item">
-            <a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a>
-          </div>
-          <div class="backlink-item">
-            <a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a>
-          </div>
-          <div class="backlink-item">
-            <a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a>
-          </div>
-          <div class="backlink-item">
-            <a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a>
-          </div>
+          <div class="backlink-item"><a href="direito-familia.html"><i class="fas fa-people-roof"></i> Direito de Família</a></div>
+          <div class="backlink-item"><a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Direito Digital</a></div>
+          <div class="backlink-item"><a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a></div>
+          <div class="backlink-item"><a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a></div>
+          <div class="backlink-item"><a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a></div>
+          <div class="backlink-item"><a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a></div>
+          <div class="backlink-item"><a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a></div>
+          <div class="backlink-item"><a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a></div>
         </div>
       </div>
     </section>
@@ -524,149 +713,213 @@
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <h5>Dra. Vera Catarina</h5>
-          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
-          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
-        </div>
-        <div class="footer-col">
-          <h5>Links Rápidos</h5>
-          <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
-            <li><a href="noticias.html">📰 Notícias e Artigos</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="legal.html">Legal</a></li>
-            <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
-            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Áreas Específicas</h5>
-          <ul>
-            <li><a href="direito-familia.html">Direito de Família</a></li>
-            <li><a href="direito-digital.html">Direito Digital</a></li>
-            <li><a href="direito-criminal.html">Direito Criminal</a></li>
-            <li><a href="direito-trabalhista.html">Direito Trabalhista</a></li>
-            <li><a href="direito-previdenciario.html">Direito Previdenciário</a></li>
-            <li><a href="direito-consumidor.html">Direito do Consumidor</a></li>
-            <li><a href="direito-civil.html">Direito Civil e Sucessões</a></li>
-            <li><a href="direito-empresarial.html">🏢 Advocacia Empresarial</a></li>
-            <li><a href="advogado-online.html">📱 Advogado Online 24h</a></li>
-          </ul>
-        </div>
+        <div class="footer-col"><h5>Dra. Vera Catarina</h5><p style="font-size:0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p><p style="font-size:0.8rem; color:var(--accent); font-weight:600; margin-top:8px;">OAB/RS 19.315</p></div>
+        <div class="footer-col"><h5>Links Rápidos</h5><ul><li><a href="index.html">Início</a></li><li><a href="index.html#atuacao">Áreas de Atuação</a></li><li><a href="noticias.html">📰 Notícias e Artigos</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="legal.html">Legal</a></li><li><a href="sitemap.html">🗺️ Mapa do Site</a></li><li><a href="acessibilidade.html">♿ Acessibilidade</a></li></ul></div>
+        <div class="footer-col"><h5>Áreas Específicas</h5><ul><li><a href="direito-familia.html">Direito de Família</a></li><li><a href="direito-digital.html">Direito Digital</a></li><li><a href="direito-criminal.html">Direito Criminal</a></li><li><a href="direito-trabalhista.html">Direito Trabalhista</a></li><li><a href="direito-previdenciario.html">Direito Previdenciário</a></li><li><a href="direito-consumidor.html">Direito do Consumidor</a></li><li><a href="direito-civil.html">Direito Civil e Sucessões</a></li><li><a href="direito-empresarial.html">🏢 Advocacia Empresarial</a></li><li><a href="advogado-online.html">📱 Advogado Online 24h</a></li></ul></div>
       </div>
-      <div class="footer-bottom">
-        <p style="margin-bottom:12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
-        <p style="font-size:0.75rem; color:#94a3b8; display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;">
-          <span>⚡ Design & Desenvolvimento:</span>
-          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-weight:600;">💻 Fábio Wlademir</a>
-          <span style="color:rgba(255,255,255,0.2);">·</span>
-          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <span style="color:rgba(255,255,255,0.2);">·</span>
-          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
-        </p>
-        <div>
-          <div class="visitor-counter" title="Total de visualizações de página">
-            <i class="fas fa-eye"></i>
-            <span>Visitas ao portal:</span>
-            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
-          </div>
-        </div>
-      </div>
+      <div class="footer-bottom"><p style="margin-bottom:12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p><p style="font-size:0.75rem; color:#94a3b8; display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;"><span>⚡ Design & Desenvolvimento:</span><a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-weight:600;">💻 Fábio Wlademir</a></p><div><div class="visitor-counter"><i class="fas fa-eye"></i><span>Visitas ao portal:</span><img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos"></div></div></div>
     </div>
   </footer>
 
   <!-- ===== BANNER LGPD ===== -->
   <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
-    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
-      <i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i>
-      <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
-    </div>
-    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
-      <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
-      <button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
-    </div>
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;"><i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i><span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span></div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;"><button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer;">Recusar</button><button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer;">Aceitar</button></div>
   </div>
 
   <!-- ===== VLIBRAS ===== -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
 
   <!-- ===== ACESSIBILIDADE JS ===== -->
   <script src="/acessibilidade.js"></script>
 
+  <!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
+  <button class="accessibility-toolbar-toggle" onclick="toggleAccessibilityToolbar()" aria-label="Abrir ferramentas de acessibilidade">
+    ♿
+  </button>
+  <div class="accessibility-toolbar" id="accessibilityToolbar">
+    <div class="toolbar-title">Acessibilidade</div>
+    <div class="btn-group">
+      <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Escuro</button>
+      <button onclick="toggleHighContrast()" id="highContrastBtn">🔲 Contraste</button>
+      <button onclick="changeFontSize('decrease')">A-</button>
+      <button onclick="changeFontSize('reset')">A</button>
+      <button onclick="changeFontSize('increase')">A+</button>
+      <button onclick="changeFontSize('xincrease')">A++</button>
+      <button onclick="toggleDyslexicFont()" id="dyslexicBtn">📖 Dislexia</button>
+      <button onclick="toggleReducedMotion()" id="motionBtn">🎬 Reduzir</button>
+    </div>
+  </div>
+
+  <!-- ===== BOTÃO DE LEITURA POR ÁUDIO (TTS) ===== -->
+  <div style="position: fixed; bottom: 160px; left: 20px; z-index: 9998;">
+    <button id="audio-reader-btn" onclick="readPageAloud()" style="
+      background: var(--accent, #c5a880);
+      color: var(--primary-dark, #0b251e);
+      border: none;
+      border-radius: 50px;
+      padding: 10px 18px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <i class="fas fa-volume-up"></i> Ouvir Página
+    </button>
+    <button id="audio-stop-btn" onclick="stopReading()" style="
+      background: var(--danger, #991b1b);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 18px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: all 0.2s;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <i class="fas fa-stop"></i> Parar
+    </button>
+  </div>
+
   <!-- ===== SCRIPTS ===== -->
   <script>
     // ===== DROPDOWN (MOBILE) =====
-    function toggleDropdown() {
-      const dropdown = document.querySelector('.dropdown');
-      if (window.innerWidth <= 992) {
-        dropdown.classList.toggle('open');
-      }
-    }
-    function openDropdown() {
-      if (window.innerWidth > 992) {
-        document.querySelector('.dropdown-content').style.display = 'block';
-      }
-    }
-    function closeDropdown() {
-      if (window.innerWidth > 992) {
-        document.querySelector('.dropdown-content').style.display = 'none';
-      }
-    }
-    document.addEventListener('click', function(e) {
-      const dropdown = document.querySelector('.dropdown');
-      if (dropdown && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('open');
-      }
-    });
+    function toggleDropdown() { const dropdown = document.querySelector('.dropdown'); if (window.innerWidth <= 992) { dropdown.classList.toggle('open'); } }
+    function openDropdown() { if (window.innerWidth > 992) { document.querySelector('.dropdown-content').style.display = 'block'; } }
+    function closeDropdown() { if (window.innerWidth > 992) { document.querySelector('.dropdown-content').style.display = 'none'; } }
+    document.addEventListener('click', function(e) { const dropdown = document.querySelector('.dropdown'); if (dropdown && !dropdown.contains(e.target)) { dropdown.classList.remove('open'); } });
 
     // ===== LGPD COOKIES =====
-    function setCookieConsent(choice) {
-      localStorage.setItem('cookieConsent', choice);
-      const banner = document.getElementById('cookie-consent-banner');
-      banner.style.opacity = '0';
-      banner.style.transform = 'translateX(-50%) translateY(20px)';
-      setTimeout(() => { banner.style.display = 'none'; }, 500);
-    }
-    function acceptCookies() {
-      setCookieConsent('accepted');
-      console.log('📊 Cookies de análise ativados.');
-    }
-    function rejectCookies() {
-      setCookieConsent('rejected');
-      console.log('❌ Cookies de análise recusados.');
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      const consent = localStorage.getItem('cookieConsent');
-      if (consent === 'accepted' || consent === 'rejected') {
-        document.getElementById('cookie-consent-banner').style.display = 'none';
-      }
-    });
+    function setCookieConsent(choice) { localStorage.setItem('cookieConsent', choice); const banner = document.getElementById('cookie-consent-banner'); banner.style.opacity = '0'; banner.style.transform = 'translateX(-50%) translateY(20px)'; setTimeout(() => { banner.style.display = 'none'; }, 500); }
+    function acceptCookies() { setCookieConsent('accepted'); console.log('📊 Cookies ativados.'); }
+    function rejectCookies() { setCookieConsent('rejected'); console.log('❌ Cookies recusados.'); }
+    document.addEventListener('DOMContentLoaded', function() { const consent = localStorage.getItem('cookieConsent'); if (consent === 'accepted' || consent === 'rejected') { document.getElementById('cookie-consent-banner').style.display = 'none'; } });
 
     // ===== FECHAR MENU MOBILE =====
-    function closeMenu() {
-      document.getElementById('menu-checkbox').checked = false;
-    }
-    document.querySelectorAll('.nav-menu a').forEach(function(link) {
-      link.addEventListener('click', closeMenu);
-    });
+    function closeMenu() { document.getElementById('menu-checkbox').checked = false; }
+    document.querySelectorAll('.nav-menu a').forEach(function(link) { link.addEventListener('click', closeMenu); });
 
-    // ===== ARIA EXPANDED PARA MENU MOBILE =====
+    // ===== ARIA EXPANDED =====
     const menuToggle = document.querySelector('.menu-toggle');
     const menuCheckbox = document.getElementById('menu-checkbox');
-    if (menuToggle && menuCheckbox) {
-      menuCheckbox.addEventListener('change', function() {
-        menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+    if (menuToggle && menuCheckbox) { menuCheckbox.addEventListener('change', function() { menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false'); }); }
+
+    // ===== TOOLBAR DE ACESSIBILIDADE =====
+    function toggleAccessibilityToolbar() { document.getElementById('accessibilityToolbar').classList.toggle('open'); }
+    function toggleDarkMode() { document.documentElement.classList.toggle('dark-mode'); document.getElementById('darkModeBtn').classList.toggle('active'); localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode') ? 'true' : 'false'); }
+    function toggleHighContrast() { document.documentElement.classList.toggle('high-contrast'); document.getElementById('highContrastBtn').classList.toggle('active'); localStorage.setItem('highContrast', document.documentElement.classList.contains('high-contrast') ? 'true' : 'false'); }
+    function changeFontSize(action) { const sizes = ['font-small', 'font-medium', 'font-large', 'font-xlarge']; const current = sizes.find(cls => document.documentElement.classList.contains(cls)) || 'font-medium'; let index = sizes.indexOf(current); if (action === 'decrease') index = Math.max(0, index - 1); else if (action === 'increase') index = Math.min(sizes.length - 1, index + 1); else if (action === 'xincrease') index = Math.min(sizes.length - 1, index + 2); else if (action === 'reset') index = 1; document.documentElement.classList.remove(...sizes); document.documentElement.classList.add(sizes[index]); localStorage.setItem('fontSize', sizes[index]); }
+    function toggleDyslexicFont() { document.documentElement.classList.toggle('dyslexic-font'); document.getElementById('dyslexicBtn').classList.toggle('active'); localStorage.setItem('dyslexicFont', document.documentElement.classList.contains('dyslexic-font') ? 'true' : 'false'); }
+    function toggleReducedMotion() { document.documentElement.classList.toggle('reduce-motion'); document.getElementById('motionBtn').classList.toggle('active'); localStorage.setItem('reduceMotion', document.documentElement.classList.contains('reduce-motion') ? 'true' : 'false'); }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('darkMode') === 'true') { document.documentElement.classList.add('dark-mode'); document.getElementById('darkModeBtn').classList.add('active'); }
+      if (localStorage.getItem('highContrast') === 'true') { document.documentElement.classList.add('high-contrast'); document.getElementById('highContrastBtn').classList.add('active'); }
+      const fontSize = localStorage.getItem('fontSize'); if (fontSize) { document.documentElement.classList.add(fontSize); } else { document.documentElement.classList.add('font-medium'); }
+      if (localStorage.getItem('dyslexicFont') === 'true') { document.documentElement.classList.add('dyslexic-font'); document.getElementById('dyslexicBtn').classList.add('active'); }
+      if (localStorage.getItem('reduceMotion') === 'true') { document.documentElement.classList.add('reduce-motion'); document.getElementById('motionBtn').classList.add('active'); }
+    });
+
+    // ===== FORMULÁRIO DE CONTATO COM reCAPTCHA =====
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const statusDiv = document.getElementById('formStatus');
+      const FORMSPREE_URL = 'https://formspree.io/f/xdaqdprv';
+      const RECAPTCHA_SITE_KEY = '6LcojV4tAAAAAHx7sMy5ig21AJ1RZjdF-ShsYY9U';
+
+      function setStatus(message, type = 'loading') {
+        statusDiv.textContent = message;
+        statusDiv.className = type;
+        statusDiv.style.display = 'block';
+        statusDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      function resetStatus() { statusDiv.style.display = 'none'; statusDiv.className = ''; statusDiv.textContent = ''; }
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        resetStatus();
+        const nome = document.getElementById('nome').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const assunto = document.getElementById('assunto').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+        if (!nome || !telefone || !email || !assunto || !mensagem) { setStatus('❌ Preencha todos os campos.', 'error'); return; }
+        if (!email.includes('@') || !email.includes('.')) { setStatus('❌ E-mail inválido.', 'error'); return; }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        setStatus('⏳ Enviando sua mensagem...', 'loading');
+
+        try {
+          const recaptchaToken = await new Promise((resolve) => {
+            grecaptcha.ready(() => {
+              grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' }).then(resolve);
+            });
+          });
+          document.getElementById('recaptchaToken').value = recaptchaToken;
+          const formData = new FormData(form);
+          formData.append('g-recaptcha-response', recaptchaToken);
+          const response = await fetch(FORMSPREE_URL, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
+          if (response.ok) {
+            setStatus('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+            form.reset();
+            document.getElementById('recaptchaToken').value = '';
+          } else {
+            const errorData = await response.json();
+            console.error('Erro Formspree:', errorData);
+            setStatus('❌ Erro ao enviar. Tente novamente ou fale pelo WhatsApp.', 'error');
+          }
+        } catch (error) {
+          console.error('Erro na requisição:', error);
+          setStatus('❌ Falha na conexão. Verifique sua internet.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
+        }
       });
+    });
+
+    // ===== LEITURA POR ÁUDIO (TTS) =====
+    let currentUtterance = null;
+    let isReading = false;
+
+    function readPageAloud() {
+      if (isReading) { stopReading(); setTimeout(() => { readPageAloud(); }, 300); return; }
+      const mainContent = document.querySelector('main') || document.querySelector('.content-section') || document.body;
+      const clone = mainContent.cloneNode(true);
+      const removeSelectors = ['nav', 'footer', '.nav-menu', '.top-bar', '.footer-grid', '.visitor-counter', '.backlinks-section', '#cookie-consent-banner'];
+      removeSelectors.forEach(selector => { const elements = clone.querySelectorAll(selector); elements.forEach(el => el.remove()); });
+      let text = clone.textContent || '';
+      text = text.replace(/\s+/g, ' ').trim();
+      if (!text || text.length < 10) { alert('Não há conteúdo suficiente para leitura nesta página.'); return; }
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'pt-BR';
+      currentUtterance.rate = 0.9;
+      currentUtterance.pitch = 1.0;
+      currentUtterance.volume = 1;
+      const voices = window.speechSynthesis.getVoices();
+      const ptVoice = voices.find(v => v.lang === 'pt-BR' && v.name.includes('Female')) || voices.find(v => v.lang === 'pt-BR') || voices.find(v => v.lang.startsWith('pt'));
+      if (ptVoice) { currentUtterance.voice = ptVoice; }
+      currentUtterance.onstart = function() { isReading = true; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-pause"></i> Pausar'; document.getElementById('audio-reader-btn').style.background = '#f59e0b'; document.getElementById('audio-stop-btn').style.display = 'flex'; };
+      currentUtterance.onend = function() { isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; };
+      currentUtterance.onerror = function() { isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; console.warn('Erro na leitura de áudio.'); };
+      window.speechSynthesis.speak(currentUtterance);
     }
+
+    function stopReading() { if (window.speechSynthesis) { window.speechSynthesis.cancel(); } isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; }
+    if (window.speechSynthesis) { window.speechSynthesis.getVoices(); window.speechSynthesis.onvoiceschanged = function() { window.speechSynthesis.getVoices(); }; }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isReading) { stopReading(); } });
   </script>
 </body>
 </html>
