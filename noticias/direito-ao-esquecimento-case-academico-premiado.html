@@ -7,21 +7,29 @@
   <meta name="description" content="Análise do Direito ao Esquecimento no RE 1.010.606/STF (Caso Aída Curi) sob a ótica de Kelsen, Dworkin e Bobbio. Trabalho acadêmico premiado na UNISINOS por Fábio Wlademir e Carolina Willmann.">
   <meta name="keywords" content="direito ao esquecimento, STF, RE 1010606, caso Aída Curi, Kelsen, Dworkin, Bobbio, UNISINOS, teoria do direito, trabalho acadêmico, direito digital, Fábio Wlademir, Carolina Willmann">
   <meta name="robots" content="index, follow">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
+  <link rel="canonical" href="https://veracatarina.github.io/noticias/direito-ao-esquecimento-case-academico-premiado.html">
   <meta property="og:title" content="Direito ao Esquecimento: Case Acadêmico Premiado – Análise do RE 1.010.606/STF">
   <meta property="og:description" content="Trabalho interdisciplinar com Kelsen, Dworkin e Bobbio sobre o Caso Aída Curi. Nota máxima na UNISINOS com recursos interativos. Autores: Fábio Wlademir e Carolina Willmann.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://veracatarina.github.io/noticias/direito-ao-esquecimento-case-academico-premiado.html">
-
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/direito-ao-esquecimento.jpg">
+  <meta property="og:image:alt" content="Direito ao Esquecimento – Análise do RE 1.010.606/STF – Advocacia Vera Catarina">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Direito ao Esquecimento: Case Acadêmico Premiado – Análise do RE 1.010.606/STF">
+  <meta name="twitter:description" content="Trabalho interdisciplinar com Kelsen, Dworkin e Bobbio sobre o Caso Aída Curi. Nota máxima na UNISINOS.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/direito-ao-esquecimento.jpg">
   <title>Direito ao Esquecimento: Case Acadêmico Premiado | Dra. Vera Catarina</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/acessibilidade.css">
 
   <style>
-    /* ===== MESMO CSS DO SITE ===== */
+    /* ===== MESMO CSS PADRÃO (igual ao da notícia anterior) ===== */
     :root {
       --primary-dark: #0b251e;
       --primary: #143d33;
@@ -39,9 +47,8 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
-
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3, h4 { font-family: 'Cinzel', serif; }
 
     /* ===== TOP BAR ===== */
     .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
@@ -59,62 +66,117 @@
     .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
     .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
     .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
-
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
     .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
     #menu-checkbox { display: none; }
+    .nav-menu { display: flex; list-style: none; gap: 14px; align-items: center; }
+    .nav-menu > li { position: relative; list-style: none; }
+    .nav-menu > li > a { color: #e2e8f0; text-decoration: none; font-size: 0.78rem; font-weight: 600; transition: color 0.2s, border-color 0.2s; text-transform: uppercase; letter-spacing: 0.3px; padding: 4px 0; border-bottom: 2px solid transparent; display: inline-block; }
+    .nav-menu > li > a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .nav-menu > li > a.ativo { color: var(--accent); border-bottom-color: var(--accent); }
+    .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem !important; animation: pulse 2s infinite; border: none !important; border-bottom: none !important; }
+    .btn-emergency-nav:hover { background: #b91c1c; color: white !important; border-bottom: none !important; }
+    .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); min-width: 200px; border: 1px solid var(--accent); border-radius: 6px; padding: 8px 0; box-shadow: 0 8px 25px rgba(0,0,0,0.3); z-index: 1003; }
+    .dropdown-content li { display: block; margin: 0; padding: 0; }
+    .dropdown-content li a { display: block; padding: 10px 20px; color: #e2e8f0; text-decoration: none; font-size: 0.78rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: none !important; transition: background 0.2s; }
+    .dropdown-content li a:hover { background: rgba(197, 168, 128, 0.15); color: var(--accent); }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropbtn i { transition: transform 0.2s; }
+    .dropdown:hover .dropbtn i { transform: rotate(180deg); }
 
-    .nav-menu { display: flex; list-style: none; gap: 20px; align-items: center; }
-    .nav-menu a { color: #e2e8f0; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; text-transform: uppercase; }
-    .nav-menu a:hover { color: var(--accent); }
-    .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem !important; animation: pulse 2s infinite; }
-
-    /* ===== POSTAGEM ===== */
-    .post-header { background: linear-gradient(rgba(11, 37, 30, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover; color: white; padding: 70px 0 60px; text-align: center; border-bottom: 4px solid var(--accent); }
-    .post-header h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 10px; font-weight: 500; }
-    .post-header h1 span { color: var(--accent); }
-    .post-header .meta { font-size: 0.9rem; color: #cbd5e1; }
-    .post-header .meta i { color: var(--accent); margin: 0 4px; }
-
-    .post-body { padding: 60px 0; }
-    .post-body .content { max-width: 850px; margin: 0 auto; }
-    .post-body h2 { font-size: 1.8rem; color: var(--primary-dark); margin: 40px 0 15px; position: relative; padding-bottom: 10px; }
-    .post-body h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--accent); }
-    .post-body h3 { font-size: 1.3rem; color: var(--primary-dark); margin: 30px 0 10px; }
-    .post-body p { font-size: 1rem; color: var(--text-dark); margin-bottom: 18px; line-height: 1.8; }
-    .post-body ul { padding-left: 25px; margin-bottom: 18px; }
-    .post-body ul li { font-size: 1rem; color: var(--text-dark); margin-bottom: 8px; }
-
+    /* ===== ARTICLE HEADER ===== */
+    .article-header { background: var(--bg-light); padding: 30px 0 20px; border-bottom: 1px solid var(--border); }
+    .article-header .categoria { display: inline-block; background: var(--accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+    .article-header h1 { font-size: 2rem; color: var(--primary-dark); margin: 15px 0 10px; }
+    .article-header .data { color: var(--text-light); font-size: 0.9rem; }
+    .article-body { padding: 40px 0; }
+    .article-body h2 { color: var(--primary-dark); margin: 30px 0 15px; font-size: 1.6rem; }
+    .article-body h3 { color: var(--primary-dark); margin: 25px 0 10px; font-size: 1.2rem; }
+    .article-body p { margin-bottom: 15px; color: var(--text-dark); }
+    .article-body ul { list-style: none; padding: 0; margin-bottom: 20px; }
+    .article-body ul li { padding: 8px 0 8px 30px; border-bottom: 1px solid var(--border); position: relative; }
+    .article-body ul li:last-child { border-bottom: none; }
+    .article-body ul li i { color: var(--accent); position: absolute; left: 0; top: 10px; }
     .highlight-box { background: var(--bg-light); border-left: 4px solid var(--accent); padding: 20px 25px; border-radius: 4px; margin: 25px 0; }
     .highlight-box p { margin-bottom: 0; }
-
-    .btn-cta-post { background: var(--accent); color: var(--primary-dark); padding: 14px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s; margin-top: 10px; }
-    .btn-cta-post:hover { background: var(--accent-hover); }
-
-    .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
-
     .link-grid-interno { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
     .link-grid-interno a { background: var(--bg-light); padding: 12px 16px; border-radius: 6px; text-decoration: none; color: var(--primary-dark); font-weight: 500; font-size: 0.9rem; border: 1px solid var(--border); transition: all 0.2s; display: flex; align-items: center; gap: 10px; }
     .link-grid-interno a:hover { background: var(--primary-dark); color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
     .link-grid-interno a i { color: var(--accent); font-size: 1.1rem; width: 20px; text-align: center; }
-    .link-grid-interno a:hover i { color: var(--accent); }
 
-    @media (max-width: 600px) {
-      .link-grid-interno { grid-template-columns: 1fr; }
-    }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-weight: 600; margin-top: 20px; transition: color 0.2s; }
+    .back-link:hover { color: var(--accent); }
 
-    /* ===== FOOTER ===== */
+    .cta-box { background: var(--primary-dark); color: white; padding: 40px; border-radius: 8px; text-align: center; margin: 40px 0; }
+    .cta-box h3 { color: white; font-size: 1.8rem; margin-bottom: 10px; }
+    .cta-box p { color: #cbd5e1; margin-bottom: 20px; }
+    .btn-cta { background: var(--accent); color: var(--primary-dark); padding: 14px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s; }
+    .btn-cta:hover { background: var(--accent-hover); }
+
+    .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
+
     footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
     .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
     .footer-col ul { list-style: none; }
     .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a { color: #cbd5e1; text-decoration: none; }
+    .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
     .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
     .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
     .visitor-counter i { color: var(--accent); }
     .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
+
+    /* ===== TOOLBAR DE ACESSIBILIDADE ===== */
+    .accessibility-toolbar-toggle { position: fixed; bottom: 70px; left: 20px; z-index: 9998; background: var(--primary-dark, #0b251e); color: white; border: 2px solid var(--accent, #c5a880); border-radius: 50%; width: 52px; height: 52px; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s, background 0.2s; display: flex; align-items: center; justify-content: center; }
+    .accessibility-toolbar-toggle:hover { transform: scale(1.05); background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); }
+    .accessibility-toolbar { position: fixed; bottom: 180px; left: 20px; z-index: 9997; background: rgba(11, 37, 30, 0.95); backdrop-filter: blur(12px); border: 1px solid var(--accent, #c5a880); border-radius: 12px; padding: 20px 16px; width: 220px; box-shadow: 0 8px 40px rgba(0,0,0,0.5); display: none; flex-direction: column; gap: 12px; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .accessibility-toolbar.open { display: flex; }
+    .accessibility-toolbar .toolbar-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent, #c5a880); text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-bottom: 4px; }
+    .accessibility-toolbar .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .accessibility-toolbar button { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #e2e8f0; padding: 8px 6px; border-radius: 6px; font-size: 0.7rem; font-weight: 600; cursor: pointer; transition: background 0.2s, border-color 0.2s; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.3px; }
+    .accessibility-toolbar button:hover { background: rgba(255,255,255,0.15); border-color: var(--accent, #c5a880); }
+    .accessibility-toolbar button.active { background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); border-color: var(--accent, #c5a880); }
+
+    /* ===== MODOS DE EXIBIÇÃO ===== */
+    html.dark-mode { background-color: #121212; }
+    html.dark-mode body { background-color: #121212; color: #e2e8f0; }
+    html.dark-mode .area-card, html.dark-mode .service-card, html.dark-mode .testimonial-card, html.dark-mode .servico-box, html.dark-mode .sitemap-category, html.dark-mode .faq-item, html.dark-mode .contact-form, html.dark-mode .contact-info-box, html.dark-mode .contact-form-box { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+    html.dark-mode .area-card h3, html.dark-mode .area-card h3 a, html.dark-mode .servico-box h3, html.dark-mode .content-section h2, html.dark-mode .content-section h3, html.dark-mode .sitemap-category h3, html.dark-mode .sitemap-category ul li a { color: #f1f5f9; }
+    html.dark-mode .area-card ul li, html.dark-mode .sitemap-category ul li .desc { color: #cbd5e1; }
+    html.dark-mode .bg-alt { background: #0f172a; }
+    html.dark-mode .breadcrumb-container { background: #1e293b; border-color: #334155; }
+    html.dark-mode .breadcrumb-container ol li span { color: #f1f5f9; }
+    html.dark-mode .page-hero p { color: #94a3b8; }
+    html.dark-mode .top-bar { background: #0a0a0a; }
+    html.dark-mode header { background: rgba(10, 10, 10, 0.98); }
+    html.dark-mode .btn-outline { border-color: #64748b; color: #cbd5e1; }
+    html.dark-mode .btn-outline:hover { background: var(--accent); color: var(--primary-dark); }
+
+    html.high-contrast { --accent: #ffd700; --accent-hover: #ffed4a; --primary-dark: #000000; --primary: #003366; --text-dark: #000000; --text-light: #1a1a1a; --bg-light: #ffffff; --border: #000000; }
+    html.high-contrast body { background: #ffffff; color: #000000; }
+    html.high-contrast .area-card, html.high-contrast .service-card, html.high-contrast .testimonial-card, html.high-contrast .servico-box, html.high-contrast .sitemap-category { border: 2px solid #000000; background: #ffffff; }
+    html.high-contrast .area-card h3 a { color: #0000cc; }
+    html.high-contrast a { color: #0000cc; text-decoration: underline; }
+    html.high-contrast .btn-accent { background: #000000; color: #ffffff; }
+    html.high-contrast .btn-accent:hover { background: #333333; }
+    html.high-contrast .cta-box { background: #000000; color: #ffffff; }
+    html.high-contrast .cta-box h3, html.high-contrast .cta-box p { color: #ffffff; }
+    html.high-contrast .btn-cta { background: #ffffff; color: #000000; }
+    html.high-contrast .btn-cta:hover { background: #dddddd; }
+    html.high-contrast .top-bar { background: #000000; }
+    html.high-contrast header { background: rgba(0, 0, 0, 0.98); }
+
+    html.dyslexic-font { font-family: 'OpenDyslexic', 'Inter', sans-serif; }
+    html.dyslexic-font body, html.dyslexic-font .container, html.dyslexic-font p, html.dyslexic-font h1, html.dyslexic-font h2, html.dyslexic-font h3, html.dyslexic-font h4, html.dyslexic-font li, html.dyslexic-font a, html.dyslexic-font span, html.dyslexic-font button, html.dyslexic-font input, html.dyslexic-font textarea { font-family: 'OpenDyslexic', 'Inter', sans-serif !important; letter-spacing: 0.05em; word-spacing: 0.1em; }
+
+    html.reduce-motion *, html.reduce-motion *::before, html.reduce-motion *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+
+    html.font-small body { font-size: 14px; }
+    html.font-medium body { font-size: 18px; }
+    html.font-large body { font-size: 22px; }
+    html.font-xlarge body { font-size: 26px; }
+    html.font-small .container, html.font-medium .container, html.font-large .container, html.font-xlarge .container { max-width: 100%; }
 
     @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
     @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
@@ -122,17 +184,32 @@
     @media (max-width: 992px) {
       body { padding-top: 150px; }
       header { top: 70px; height: 75px; }
-      .top-bar { height: auto; padding: 8px 0; }
+      .top-bar { height: auto; padding: 8px 0; position: fixed; }
       .top-container { flex-direction: column; gap: 6px; text-align: center; }
       .top-contact-info { flex-direction: column; gap: 2px; }
       .menu-toggle { display: flex; }
-      .nav-menu { position: fixed; top: 145px; right: -100%; background: rgba(11, 37, 30, 0.98); flex-direction: column; width: 100%; height: calc(100vh - 145px); gap: 25px; padding: 40px 20px; transition: right 0.3s ease; z-index: 999; border-top: 1px solid var(--accent); }
+      .nav-menu { position: fixed; top: 145px; right: -100%; background: rgba(11, 37, 30, 0.98); flex-direction: column; width: 100%; height: calc(100vh - 145px); gap: 25px; padding: 40px 20px; transition: right 0.3s ease; z-index: 999; border-top: 1px solid var(--accent); align-items: center; }
+      .nav-menu > li { width: 100%; text-align: center; }
+      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
+      .nav-menu > li > a:hover { border-bottom: none !important; }
+      .dropdown-content { position: static; background: transparent; border: none; box-shadow: none; padding-left: 20px; min-width: auto; display: none !important; }
+      .dropdown.open .dropdown-content { display: block !important; }
+      .dropdown-content li a { font-size: 0.9rem; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05) !important; }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
       .footer-grid { grid-template-columns: 1fr; gap: 20px; }
       footer { padding-bottom: 110px; }
+      .accessibility-toolbar { width: 190px; bottom: 180px; left: 10px; padding: 15px 12px; }
+      .accessibility-toolbar .btn-group { grid-template-columns: 1fr 1fr; gap: 4px; }
+      .accessibility-toolbar button { font-size: 0.6rem; padding: 6px 4px; }
+      .accessibility-toolbar-toggle { width: 46px; height: 46px; font-size: 1.2rem; bottom: 70px; left: 10px; }
+      .article-header h1 { font-size: 1.6rem; }
+      .link-grid-interno { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .link-grid-interno { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -154,156 +231,141 @@
     </div>
   </div>
 
-  <!-- ===== BOTÃO FLUTUANTE WHATSAPP ===== -->
-  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20jurídica." class="btn-emergency-float" target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp"></i> Fale Conosco
-  </a>
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1,%20vim%20pelo%20artigo%20sobre%20Direito%20ao%20Esquecimento." class="btn-emergency-float" target="_blank"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
 
   <!-- ===== HEADER ===== -->
   <header>
     <div class="container nav-container">
-      <a href="/index.html" class="logo">
-        <span class="main-txt">Vera Catarina</span>
-        <span class="sub-txt">Advocacia Especializada</span>
-      </a>
-
-      <input type="checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
+      <a href="/index.html" class="logo"><span class="main-txt">Vera Catarina</span><span class="sub-txt">Advocacia Especializada</span></a>
+      <input type="checkbox" id="menu-checkbox"><label for="menu-checkbox" class="menu-toggle"><span></span><span></span><span></span></label>
       <ul class="nav-menu">
         <li><a href="/index.html">Início</a></li>
         <li><a href="/index.html#atuacao">Áreas de Atuação</a></li>
-        <li><a href="/noticias.html">Notícias</a></li>
+        <li><a href="/noticias.html" class="ativo">Notícias</a></li>
+        <li><a href="/index.html#servicos">Utilidades</a></li>
         <li><a href="/index.html#restrito">Canal Restrito</a></li>
-        <li><a href="/index.html#contato">Contato</a></li>
-        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plantão%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+        <li><a href="/contato.html">Contato</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li><a href="/legal.html">Legal</a></li>
+        <li><a href="/sitemap.html">🗺️ Mapa</a></li>
+        <li><a href="/acessibilidade.html">♿ Acessibilidade</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- ===== POSTAGEM ===== -->
-  <section class="post-header">
+  <!-- ===== CONTEÚDO ===== -->
+  <section class="article-header">
     <div class="container">
-      <h1>Direito ao <span>Esquecimento</span></h1>
-      <p style="font-size: clamp(1rem, 2vw, 1.2rem); color: #cbd5e1; max-width: 700px; margin: 0 auto 15px;">Case Acadêmico Premiado – Análise do RE 1.010.606/STF</p>
-      <div class="meta">
-        <i class="far fa-calendar-alt"></i> 18/07/2026 &nbsp;|&nbsp; <i class="far fa-clock"></i> 10 min de leitura &nbsp;|&nbsp; <i class="fas fa-tag"></i> Direito Digital, Teoria do Direito
-      </div>
+      <span class="categoria">💻 Direito Digital</span>
+      <h1>Direito ao Esquecimento: Case Acadêmico Premiado</h1>
+      <span class="data"><i class="far fa-calendar-alt"></i> 18 de julho de 2026</span>
     </div>
   </section>
 
-  <section class="post-body">
+  <section class="article-body">
     <div class="container">
-      <div class="content">
 
-        <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-dark);">
-          <i class="fas fa-gavel" style="color: var(--accent);"></i> 
-          Trabalho interdisciplinar com Kelsen, Dworkin e Bobbio, nota máxima na UNISINOS, QR Code interativo e homenagem de Fábio Wlademir à sua colega Carolina Willmann.
+      <!-- ===== IMAGEM ILUSTRATIVA ===== -->
+      <div style="text-align: center; margin-bottom: 30px;">
+        <img src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/direito-ao-esquecimento.jpg" alt="Direito ao Esquecimento – Análise do RE 1.010.606/STF – Advocacia Vera Catarina" title="Análise do Direito ao Esquecimento | Dra. Vera Catarina" loading="lazy" style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;" />
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
+          <i class="fas fa-gavel" style="color: var(--accent);"></i>
+          Análise interdisciplinar do RE 1.010.606/STF com Kelsen, Dworkin e Bobbio
         </p>
+      </div>
 
-        <h2>📖 Entre a Memória e a Dignidade</h2>
-        <p>
-          <strong>No primeiro semestre de 2026, os alunos do curso de direito da UNISINOS Carolina Willmann e Fábio Wlademir desenvolveram um trabalho inovador</strong> para a disciplina de <strong>Teoria do Direito</strong>, sob orientação do <strong>Prof. Dr. Leonel Severo Rocha</strong>, na <strong>UNISINOS</strong>. A proposta era analisar o julgamento do <strong>RE 1.010.606/STF (Caso Aída Curi)</strong> sob a ótica de três gigantes da teoria jurídica: <strong>Hans Kelsen, Ronald Dworkin e Norberto Bobbio</strong>.
-        </p>
+      <!-- ===== CONTEÚDO ORIGINAL ===== -->
+      <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-dark);">
+        <i class="fas fa-gavel" style="color: var(--accent);"></i>
+        Trabalho interdisciplinar com Kelsen, Dworkin e Bobbio, nota máxima na UNISINOS, QR Code interativo e homenagem de Fábio Wlademir à sua colega Carolina Willmann.
+      </p>
 
-        <div class="highlight-box">
-          <p>
-            <strong>🎯 Resultado:</strong> Uma excelente apresentação, com site completo, com textos aprofundados, recursos interativos, podcast em vídeo, apresentação em Prezi, slides oficiais (Canva), QR Code para acesso durante a apresentação e uma emocionante homenagem de Fábio Wlademir à colega <strong>Carolina Willmann</strong>.
-          </p>
-        </div>
+      <h2>📖 Entre a Memória e a Dignidade</h2>
+      <p>No primeiro semestre de 2026, os alunos do curso de direito da UNISINOS <strong>Carolina Willmann</strong> e <strong>Fábio Wlademir</strong> desenvolveram um trabalho inovador para a disciplina de <strong>Teoria do Direito</strong>, sob orientação do <strong>Prof. Dr. Leonel Severo Rocha</strong>, na <strong>UNISINOS</strong>. A proposta era analisar o julgamento do <strong>RE 1.010.606/STF (Caso Aída Curi)</strong> sob a ótica de três gigantes da teoria jurídica: <strong>Hans Kelsen, Ronald Dworkin e Norberto Bobbio</strong>.</p>
 
-        <p>
-          O trabalho foi apresentado para <strong>mais de 50 pessoas</strong>, recebeu <strong>nota máxima</strong>, aplausos e interação significativa do professor e dos colegas. A turma inteira acessou o site via <strong>QR Code em tempo real</strong>, gerando um engajamento surpreendente.
-        </p>
+      <div class="highlight-box">
+        <p><strong>🎯 Resultado:</strong> Uma excelente apresentação, com site completo, textos aprofundados, recursos interativos, podcast em vídeo, apresentação em Prezi, slides oficiais (Canva), QR Code para acesso durante a apresentação e uma emocionante homenagem de Fábio Wlademir à colega <strong>Carolina Willmann</strong>.</p>
+      </div>
 
-        <h2>⚖️ O Julgamento do RE 1.010.606/STF (Tema 786)</h2>
-        <p>
-          Em fevereiro de 2021, o Supremo Tribunal Federal concluiu que <strong>“é incompatível com a Constituição a ideia de um direito ao esquecimento, assim entendido como o poder de obstar, em razão da passagem do tempo, a divulgação de fatos ou dados verídicos e licitamente obtidos e publicados em meios de comunicação social analógicos ou digitais”</strong>.
-        </p>
-        <p>
-          O caso envolvia os familiares de <strong>Aída Curi</strong>, vítima de um crime de grande repercussão nos anos 1950 no Rio de Janeiro, que buscavam reparação pela reconstituição do caso em 2004 no programa <strong>“Linha Direta”</strong> da TV Globo, sem sua autorização.
-        </p>
-        <p>
-          Por maioria, o STF negou provimento ao recurso. A ministra <strong>Cármen Lúcia</strong> afirmou que não há como extrair do sistema jurídico brasileiro, de forma genérica e plena, o esquecimento como direito fundamental limitador da liberdade de expressão, fazendo referência ao <strong>direito à verdade histórica</strong> e à solidariedade entre gerações.
-        </p>
-        <p>
-          O ministro <strong>Ricardo Lewandowski</strong> ponderou que o direito ao esquecimento só pode ser apurado <strong>caso a caso</strong>, em uma ponderação de valores, sopesando qual dos direitos fundamentais deve prevalecer.
-        </p>
-        <p>
-          Já o ministro <strong>Edson Fachin</strong>, em voto vencido, opinou pelo reconhecimento da existência de um direito ao esquecimento no ordenamento constitucional brasileiro.
-        </p>
+      <p>O trabalho foi apresentado para <strong>mais de 50 pessoas</strong>, recebeu <strong>nota máxima</strong>, aplausos e interação significativa do professor e dos colegas. A turma inteira acessou o site via <strong>QR Code em tempo real</strong>, gerando um engajamento surpreendente.</p>
 
-        <h2>📚 A Análise Teórica: Kelsen, Dworkin e Bobbio</h2>
-        <p>
-          O trabalho propôs uma leitura interdisciplinar do julgamento a partir de três perspectivas teóricas:
-        </p>
-        <ul>
-          <li><strong>Hans Kelsen (Teoria Pura do Direito):</strong> Análise da decisão como ato de aplicação de normas, investigando a coerência interna do sistema jurídico e a hierarquia das fontes.</li>
-          <li><strong>Ronald Dworkin (Direito como Integridade):</strong> Exame da decisão à luz dos princípios constitucionais, especialmente a dignidade da pessoa humana e a liberdade de expressão, buscando a “melhor interpretação” do ordenamento.</li>
-          <li><strong>Norberto Bobbio (Teoria do Ordenamento Jurídico):</strong> Reflexão sobre a relação entre direitos fundamentais e a tensão entre liberdade de expressão e direitos da personalidade.</li>
-        </ul>
+      <h2>⚖️ O Julgamento do RE 1.010.606/STF (Tema 786)</h2>
+      <p>Em fevereiro de 2021, o Supremo Tribunal Federal concluiu que <strong>"é incompatível com a Constituição a ideia de um direito ao esquecimento, assim entendido como o poder de obstar, em razão da passagem do tempo, a divulgação de fatos ou dados verídicos e licitamente obtidos e publicados em meios de comunicação social analógicos ou digitais"</strong>.</p>
+      <p>O caso envolvia os familiares de <strong>Aída Curi</strong>, vítima de um crime de grande repercussão nos anos 1950 no Rio de Janeiro, que buscavam reparação pela reconstituição do caso em 2004 no programa <strong>"Linha Direta"</strong> da TV Globo, sem sua autorização.</p>
+      <p>Por maioria, o STF negou provimento ao recurso. A ministra <strong>Cármen Lúcia</strong> afirmou que não há como extrair do sistema jurídico brasileiro, de forma genérica e plena, o esquecimento como direito fundamental limitador da liberdade de expressão, fazendo referência ao <strong>direito à verdade histórica</strong> e à solidariedade entre gerações.</p>
+      <p>O ministro <strong>Ricardo Lewandowski</strong> ponderou que o direito ao esquecimento só pode ser apurado <strong>caso a caso</strong>, em uma ponderação de valores, sopesando qual dos direitos fundamentais deve prevalecer. Já o ministro <strong>Edson Fachin</strong>, em voto vencido, opinou pelo reconhecimento da existência de um direito ao esquecimento no ordenamento constitucional brasileiro.</p>
 
-        <h2>🌟 Diferenciais do Projeto</h2>
-        <ul>
-          <li><strong>✅ Site moderno, funcional e responsivo</strong> – acessível em qualquer dispositivo (celular, tablet, notebook).</li>
-          <li><strong>✅ QR Code gerado e distribuído</strong> – professores e colegas acessaram o conteúdo em tempo real.</li>
-          <li><strong>✅ Integração com ferramentas interativas</strong> (Podcast Notebook LM, Prezi, Google Drive, YouTube).</li>
-          <li><strong>✅ Homenagem especial à colega Carolina Willmann</strong>, destacando o direito humano ao esquecimento e a história do goleiro Barbosa (Maracanazo) – uma surpresa emocionante durante a apresentação.</li>
-          <li><strong>✅ Abordagem crítica:</strong> Propomos uma tese alternativa que reconhece o direito ao esquecimento como <strong>princípio implícito</strong>, ponderado caso a caso, em vez de negá-lo em bloco como fez a maioria do STF.</li>
-          <li><strong>✅ Declaração de uso de IA</strong> conforme portaria CNPq – transparência total.</li>
-        </ul>
+      <h2>📚 A Análise Teórica: Kelsen, Dworkin e Bobbio</h2>
+      <p>O trabalho propôs uma leitura interdisciplinar do julgamento a partir de três perspectivas teóricas:</p>
+      <ul>
+        <li><strong>Hans Kelsen (Teoria Pura do Direito):</strong> Análise da decisão como ato de aplicação de normas, investigando a coerência interna do sistema jurídico e a hierarquia das fontes.</li>
+        <li><strong>Ronald Dworkin (Direito como Integridade):</strong> Exame da decisão à luz dos princípios constitucionais, especialmente a dignidade da pessoa humana e a liberdade de expressão, buscando a "melhor interpretação" do ordenamento.</li>
+        <li><strong>Norberto Bobbio (Teoria do Ordenamento Jurídico):</strong> Reflexão sobre a relação entre direitos fundamentais e a tensão entre liberdade de expressão e direitos da personalidade.</li>
+      </ul>
 
-        <div class="highlight-box">
-          <p>
-            <strong>🎓 Surpresa na apresentação:</strong> Durante a exposição, foi revelado que Norberto Bobbio, um dos autores centrais, foi fascista na juventude, mas a humanidade e a evolução intelectual lhe deram o <strong>direito humano ao esquecimento</strong>. Esse momento gerou grande reflexão entre os presentes.
-          </p>
-        </div>
+      <h2>🌟 Diferenciais do Projeto</h2>
+      <ul>
+        <li><strong>✅ Site moderno, funcional e responsivo</strong> – acessível em qualquer dispositivo (celular, tablet, notebook).</li>
+        <li><strong>✅ QR Code gerado e distribuído</strong> – professores e colegas acessaram o conteúdo em tempo real.</li>
+        <li><strong>✅ Integração com ferramentas interativas</strong> (Podcast Notebook LM, Prezi, Google Drive, YouTube).</li>
+        <li><strong>✅ Homenagem especial à colega Carolina Willmann</strong>, destacando o direito humano ao esquecimento e a história do goleiro Barbosa (Maracanazo) – uma surpresa emocionante durante a apresentação.</li>
+        <li><strong>✅ Abordagem crítica:</strong> Propomos uma tese alternativa que reconhece o direito ao esquecimento como <strong>princípio implícito</strong>, ponderado caso a caso, em vez de negá-lo em bloco como fez a maioria do STF.</li>
+        <li><strong>✅ Declaração de uso de IA</strong> conforme portaria CNPq – transparência total.</li>
+      </ul>
 
-        <h2>🔗 Conteúdo completo do site (páginas internas)</h2>
-        <p>Abaixo, todos os links do projeto acadêmico para acesso direto aos conteúdos aprofundados:</p>
+      <div class="highlight-box">
+        <p><strong>🎓 Surpresa na apresentação:</strong> Durante a exposição, foi revelado que Norberto Bobbio, um dos autores centrais, foi fascista na juventude, mas a humanidade e a evolução intelectual lhe deram o <strong>direito humano ao esquecimento</strong>. Esse momento gerou grande reflexão entre os presentes.</p>
+      </div>
 
-        <div class="link-grid-interno">
-          <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/" target="_blank" rel="noopener">
-            <i class="fas fa-home"></i> Página inicial – Caso Aída Curi
-          </a>
-          <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/direito_ao_esquecimento_em_outros_paises.html" target="_blank" rel="noopener">
-            <i class="fas fa-globe"></i> Direito ao Esquecimento em outros países
-          </a>
-          <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/homenagem.html" target="_blank" rel="noopener">
-            <i class="fas fa-heart"></i> Homenagem a Carolina Willmann
-          </a>
-          <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/bonus.html" target="_blank" rel="noopener">
-            <i class="fas fa-plus-circle"></i> Bônus – Luhmann e Hart
-          </a>
-          <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/contrucao_jurisprudencial.html" target="_blank" rel="noopener">
-            <i class="fas fa-gavel"></i> Construção Jurisprudencial
-          </a>
-          <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/recursos_interativos.html" target="_blank" rel="noopener">
-            <i class="fas fa-podcast"></i> Recursos Interativos
-          </a>
-        </div>
+      <h2>🔗 Conteúdo completo do site (páginas internas)</h2>
+      <p>Abaixo, todos os links do projeto acadêmico para acesso direto aos conteúdos aprofundados:</p>
 
-        <h2>🏆 Resultados e Reconhecimento</h2>
-        <p>
-          <strong>Nota máxima</strong>, reconhecimento do professor, interação significativa da turma e pedidos de compartilhamento do site. O material continua disponível como referência para pesquisadores, estudantes e profissionais do Direito.
-        </p>
+      <div class="link-grid-interno">
+        <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/" target="_blank" rel="noopener"><i class="fas fa-home"></i> Página inicial – Caso Aída Curi</a>
+        <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/direito_ao_esquecimento_em_outros_paises.html" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Direito ao Esquecimento em outros países</a>
+        <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/homenagem.html" target="_blank" rel="noopener"><i class="fas fa-heart"></i> Homenagem a Carolina Willmann</a>
+        <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/bonus.html" target="_blank" rel="noopener"><i class="fas fa-plus-circle"></i> Bônus – Luhmann e Hart</a>
+        <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/contrucao_jurisprudencial.html" target="_blank" rel="noopener"><i class="fas fa-gavel"></i> Construção Jurisprudencial</a>
+        <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/recursos_interativos.html" target="_blank" rel="noopener"><i class="fas fa-podcast"></i> Recursos Interativos</a>
+      </div>
 
-        <div style="background: var(--primary-dark); color: white; padding: 35px; border-radius: 8px; text-align: center; margin: 40px 0;">
-          <h3 style="color: white; font-size: 1.5rem; margin-bottom: 10px;">Quer entender como o Direito Digital impacta sua vida?</h3>
-          <p style="color: #cbd5e1; margin-bottom: 20px;">A Dra. Vera Catarina tem 40 anos de experiência na defesa de direitos no ambiente virtual e nas relações familiares, trabalhistas e consumeristas.</p>
-          <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20artigo%20sobre%20Direito%20ao%20Esquecimento%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." class="btn-cta-post" target="_blank" style="background: var(--accent); color: var(--primary-dark);">
-            <i class="fab fa-whatsapp"></i> Fale agora com a Dra. Vera
-          </a>
-        </div>
+      <h2>🏆 Resultados e Reconhecimento</h2>
+      <p><strong>Nota máxima</strong>, reconhecimento do professor, interação significativa da turma e pedidos de compartilhamento do site. O material continua disponível como referência para pesquisadores, estudantes e profissionais do Direito.</p>
 
-        <p style="font-size: 0.85rem; color: var(--text-light); border-top: 1px solid var(--border); padding-top: 20px;">
-          <strong>Tags:</strong> Direito ao Esquecimento, STF, RE 1.010.606, Caso Aída Curi, Kelsen, Dworkin, Bobbio, UNISINOS, Teoria do Direito, Trabalho Acadêmico, Carolina Willmann, Fábio Wlademir
-        </p>
+      <div style="background: var(--primary-dark); color: white; padding: 35px; border-radius: 8px; text-align: center; margin: 40px 0;">
+        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 10px;">Quer entender como o Direito Digital impacta sua vida?</h3>
+        <p style="color: #cbd5e1; margin-bottom: 20px;">A Dra. Vera Catarina tem 40 anos de experiência na defesa de direitos no ambiente virtual e nas relações familiares, trabalhistas e consumeristas.</p>
+        <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20artigo%20sobre%20Direito%20ao%20Esquecimento%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." class="btn-cta" target="_blank" style="background: var(--accent); color: var(--primary-dark);"><i class="fab fa-whatsapp"></i> Fale agora com a Dra. Vera</a>
+      </div>
 
+      <p style="font-size: 0.85rem; color: var(--text-light); border-top: 1px solid var(--border); padding-top: 20px;">
+        <strong>Tags:</strong> Direito ao Esquecimento, STF, RE 1.010.606, Caso Aída Curi, Kelsen, Dworkin, Bobbio, UNISINOS, Teoria do Direito, Trabalho Acadêmico, Carolina Willmann, Fábio Wlademir
+      </p>
+
+      <p style="text-align:center; font-size:0.9rem; color:var(--text-light); margin-top: 20px;">
+        <a href="/noticias.html" style="color:var(--accent); font-weight:600;">← Voltar para Notícias</a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ===== BACKLINKS ===== -->
+  <section style="background: var(--bg-light); padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <h3 style="text-align: center; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px;">
+        <i class="fas fa-gavel" style="color: var(--accent);"></i> Conheça nossas áreas de atuação
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 800px; margin: 0 auto;">
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-familia.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-people-roof" style="color: var(--accent);"></i> Direito de Família</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-digital.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-laptop-code" style="color: var(--accent);"></i> Direito Digital</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-criminal.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-shield-halved" style="color: var(--accent);"></i> Direito Criminal</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-trabalhista.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-briefcase" style="color: var(--accent);"></i> Direito Trabalhista</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-consumidor.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-scale-balanced" style="color: var(--accent);"></i> Direito do Consumidor</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-empresarial.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-handshake" style="color: var(--accent);"></i> Advocacia Empresarial</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-civil.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-gavel" style="color: var(--accent);"></i> Direito Civil</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/advogado-online.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-headset" style="color: var(--accent);"></i> Advogado Online 24h</a></div>
       </div>
     </div>
   </section>
@@ -312,54 +374,115 @@
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <h5>Dra. Vera Catarina</h5>
-          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
-          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
-        </div>
-        <div class="footer-col">
-          <h5>Links Rápidos</h5>
-          <ul>
-            <li><a href="/index.html">Início</a></li>
-            <li><a href="/index.html#atuacao">Áreas de Atuação</a></li>
-            <li><a href="/noticias.html">📰 Notícias e Artigos</a></li>
-            <li><a href="/sobre.html">Sobre a Dra. Vera Catarina</a></li>
-            <li><a href="/legal.html">Legal &amp; Suporte</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Áreas Específicas</h5>
-          <ul>
-            <li><a href="/direito-familia.html">Direito de Família</a></li>
-            <li><a href="/direito-digital.html">Direito Digital</a></li>
-            <li><a href="/direito-criminal.html">Direito Criminal</a></li>
-            <li><a href="/direito-trabalhista.html">Direito Trabalhista</a></li>
-            <li><a href="/direito-previdenciario.html">Direito Previdenciário</a></li>
-            <li><a href="/direito-consumidor.html">Direito do Consumidor</a></li>
-            <li><a href="/direito-civil.html">Direito Civil e Sucessões</a></li>
-          </ul>
-        </div>
+        <div class="footer-col"><h5>Dra. Vera Catarina</h5><p style="font-size:0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p><p style="font-size:0.8rem; color:var(--accent); font-weight:600; margin-top:8px;">OAB/RS 19.315</p></div>
+        <div class="footer-col"><h5>Links Rápidos</h5><ul><li><a href="/index.html">Início</a></li><li><a href="/index.html#atuacao">Áreas de Atuação</a></li><li><a href="/noticias.html">📰 Notícias e Artigos</a></li><li><a href="/sobre.html">Sobre</a></li><li><a href="/legal.html">Legal</a></li><li><a href="/sitemap.html">🗺️ Mapa do Site</a></li></ul></div>
+        <div class="footer-col"><h5>Áreas Específicas</h5><ul><li><a href="/direito-familia.html">Direito de Família</a></li><li><a href="/direito-digital.html">Direito Digital</a></li><li><a href="/direito-criminal.html">Direito Criminal</a></li><li><a href="/direito-trabalhista.html">Direito Trabalhista</a></li><li><a href="/direito-previdenciario.html">Direito Previdenciário</a></li><li><a href="/direito-consumidor.html">Direito do Consumidor</a></li><li><a href="/direito-civil.html">Direito Civil e Sucessões</a></li><li><a href="/direito-empresarial.html">🏢 Advocacia Empresarial</a></li><li><a href="/advogado-online.html">📱 Advogado Online 24h</a></li></ul></div>
       </div>
-      <div class="footer-bottom">
-        <p style="margin-bottom: 12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO e LGPD.</p>
-        <div>
-          <div class="visitor-counter" title="Total de visualizações de página">
-            <i class="fas fa-eye"></i>
-            <span>Visitas ao portal:</span>
-            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
-          </div>
-        </div>
-      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p><div><div class="visitor-counter"><i class="fas fa-eye"></i><span>Visitas ao portal:</span><img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos"></div></div></div>
     </div>
   </footer>
 
-  <script>
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', function() {
-        document.getElementById('menu-checkbox').checked = false;
-      });
-    });
-  </script>
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;"><i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i><span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="/legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="/legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span></div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;"><button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer;">Recusar</button><button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer;">Aceitar</button></div>
+  </div>
 
+  <!-- ===== VLIBRAS ===== -->
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== ACESSIBILIDADE JS ===== -->
+  <script src="/acessibilidade.js"></script>
+
+  <!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
+  <button class="accessibility-toolbar-toggle" onclick="toggleAccessibilityToolbar()" aria-label="Abrir ferramentas de acessibilidade">♿</button>
+  <div class="accessibility-toolbar" id="accessibilityToolbar">
+    <div class="toolbar-title">Acessibilidade</div>
+    <div class="btn-group">
+      <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Escuro</button>
+      <button onclick="toggleHighContrast()" id="highContrastBtn">🔲 Contraste</button>
+      <button onclick="changeFontSize('decrease')">A-</button>
+      <button onclick="changeFontSize('reset')">A</button>
+      <button onclick="changeFontSize('increase')">A+</button>
+      <button onclick="changeFontSize('xincrease')">A++</button>
+      <button onclick="toggleDyslexicFont()" id="dyslexicBtn">📖 Dislexia</button>
+      <button onclick="toggleReducedMotion()" id="motionBtn">🎬 Reduzir</button>
+    </div>
+  </div>
+
+  <!-- ===== BOTÃO DE LEITURA POR ÁUDIO (TTS) ===== -->
+  <div style="position: fixed; bottom: 160px; left: 20px; z-index: 9998;">
+    <button id="audio-reader-btn" onclick="readPageAloud()" style="background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); border: none; border-radius: 50px; padding: 10px 18px; font-weight: 700; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.2s; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><i class="fas fa-volume-up"></i> Ouvir Página</button>
+    <button id="audio-stop-btn" onclick="stopReading()" style="background: var(--danger, #991b1b); color: white; border: none; border-radius: 50px; padding: 10px 18px; font-weight: 700; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.2s; display: none; align-items: center; gap: 8px; margin-top: 8px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><i class="fas fa-stop"></i> Parar</button>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // ===== DROPDOWN (MOBILE) =====
+    function toggleDropdown() { const dropdown = document.querySelector('.dropdown'); if (window.innerWidth <= 992) { dropdown.classList.toggle('open'); } }
+    function openDropdown() { if (window.innerWidth > 992) { document.querySelector('.dropdown-content').style.display = 'block'; } }
+    function closeDropdown() { if (window.innerWidth > 992) { document.querySelector('.dropdown-content').style.display = 'none'; } }
+    document.addEventListener('click', function(e) { const dropdown = document.querySelector('.dropdown'); if (dropdown && !dropdown.contains(e.target)) { dropdown.classList.remove('open'); } });
+
+    // ===== LGPD COOKIES =====
+    function setCookieConsent(choice) { localStorage.setItem('cookieConsent', choice); const banner = document.getElementById('cookie-consent-banner'); banner.style.opacity = '0'; banner.style.transform = 'translateX(-50%) translateY(20px)'; setTimeout(() => { banner.style.display = 'none'; }, 500); }
+    function acceptCookies() { setCookieConsent('accepted'); console.log('📊 Cookies ativados.'); }
+    function rejectCookies() { setCookieConsent('rejected'); console.log('❌ Cookies recusados.'); }
+    document.addEventListener('DOMContentLoaded', function() { const consent = localStorage.getItem('cookieConsent'); if (consent === 'accepted' || consent === 'rejected') { document.getElementById('cookie-consent-banner').style.display = 'none'; } });
+
+    // ===== FECHAR MENU MOBILE =====
+    function closeMenu() { document.getElementById('menu-checkbox').checked = false; }
+    document.querySelectorAll('.nav-menu a').forEach(function(link) { link.addEventListener('click', closeMenu); });
+
+    // ===== ARIA EXPANDED =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuCheckbox = document.getElementById('menu-checkbox');
+    if (menuToggle && menuCheckbox) { menuCheckbox.addEventListener('change', function() { menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false'); }); }
+
+    // ===== TOOLBAR DE ACESSIBILIDADE =====
+    function toggleAccessibilityToolbar() { document.getElementById('accessibilityToolbar').classList.toggle('open'); }
+    function toggleDarkMode() { document.documentElement.classList.toggle('dark-mode'); document.getElementById('darkModeBtn').classList.toggle('active'); localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode') ? 'true' : 'false'); }
+    function toggleHighContrast() { document.documentElement.classList.toggle('high-contrast'); document.getElementById('highContrastBtn').classList.toggle('active'); localStorage.setItem('highContrast', document.documentElement.classList.contains('high-contrast') ? 'true' : 'false'); }
+    function changeFontSize(action) { const sizes = ['font-small', 'font-medium', 'font-large', 'font-xlarge']; const current = sizes.find(cls => document.documentElement.classList.contains(cls)) || 'font-medium'; let index = sizes.indexOf(current); if (action === 'decrease') index = Math.max(0, index - 1); else if (action === 'increase') index = Math.min(sizes.length - 1, index + 1); else if (action === 'xincrease') index = Math.min(sizes.length - 1, index + 2); else if (action === 'reset') index = 1; document.documentElement.classList.remove(...sizes); document.documentElement.classList.add(sizes[index]); localStorage.setItem('fontSize', sizes[index]); }
+    function toggleDyslexicFont() { document.documentElement.classList.toggle('dyslexic-font'); document.getElementById('dyslexicBtn').classList.toggle('active'); localStorage.setItem('dyslexicFont', document.documentElement.classList.contains('dyslexic-font') ? 'true' : 'false'); }
+    function toggleReducedMotion() { document.documentElement.classList.toggle('reduce-motion'); document.getElementById('motionBtn').classList.toggle('active'); localStorage.setItem('reduceMotion', document.documentElement.classList.contains('reduce-motion') ? 'true' : 'false'); }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('darkMode') === 'true') { document.documentElement.classList.add('dark-mode'); document.getElementById('darkModeBtn').classList.add('active'); }
+      if (localStorage.getItem('highContrast') === 'true') { document.documentElement.classList.add('high-contrast'); document.getElementById('highContrastBtn').classList.add('active'); }
+      const fontSize = localStorage.getItem('fontSize'); if (fontSize) { document.documentElement.classList.add(fontSize); } else { document.documentElement.classList.add('font-medium'); }
+      if (localStorage.getItem('dyslexicFont') === 'true') { document.documentElement.classList.add('dyslexic-font'); document.getElementById('dyslexicBtn').classList.add('active'); }
+      if (localStorage.getItem('reduceMotion') === 'true') { document.documentElement.classList.add('reduce-motion'); document.getElementById('motionBtn').classList.add('active'); }
+    });
+
+    // ===== LEITURA POR ÁUDIO (TTS) =====
+    let currentUtterance = null; let isReading = false;
+    function readPageAloud() {
+      if (isReading) { stopReading(); setTimeout(() => { readPageAloud(); }, 300); return; }
+      const mainContent = document.querySelector('section.article-body') || document.body;
+      const clone = mainContent.cloneNode(true);
+      const removeSelectors = ['nav', 'footer', '.nav-menu', '.top-bar', '.footer-grid', '.visitor-counter', '.backlinks-section', '#cookie-consent-banner'];
+      removeSelectors.forEach(selector => { const elements = clone.querySelectorAll(selector); elements.forEach(el => el.remove()); });
+      let text = clone.textContent || '';
+      text = text.replace(/\s+/g, ' ').trim();
+      if (!text || text.length < 10) { alert('Não há conteúdo suficiente para leitura nesta página.'); return; }
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'pt-BR';
+      currentUtterance.rate = 0.9;
+      currentUtterance.pitch = 1.0;
+      currentUtterance.volume = 1;
+      const voices = window.speechSynthesis.getVoices();
+      const ptVoice = voices.find(v => v.lang === 'pt-BR' && v.name.includes('Female')) || voices.find(v => v.lang === 'pt-BR') || voices.find(v => v.lang.startsWith('pt'));
+      if (ptVoice) { currentUtterance.voice = ptVoice; }
+      currentUtterance.onstart = function() { isReading = true; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-pause"></i> Pausar'; document.getElementById('audio-reader-btn').style.background = '#f59e0b'; document.getElementById('audio-stop-btn').style.display = 'flex'; };
+      currentUtterance.onend = function() { isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; };
+      currentUtterance.onerror = function() { isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; console.warn('Erro na leitura de áudio.'); };
+      window.speechSynthesis.speak(currentUtterance);
+    }
+    function stopReading() { if (window.speechSynthesis) { window.speechSynthesis.cancel(); } isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; }
+    if (window.speechSynthesis) { window.speechSynthesis.getVoices(); window.speechSynthesis.onvoiceschanged = function() { window.speechSynthesis.getVoices(); }; }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isReading) { stopReading(); } });
+  </script>
 </body>
 </html>
