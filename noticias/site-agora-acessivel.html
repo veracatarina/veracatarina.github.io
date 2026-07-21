@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
+  <meta name="description" content="Site agora com recursos de acessibilidade: VLibras, modo escuro, alto contraste, fonte para dislexia e muito mais. Advocacia Vera Catarina - Inclusão digital.">
+  <meta name="keywords" content="acessibilidade, libras, modo escuro, alto contraste, dislexia, inclusão, advocacia vera catarina">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="canonical" href="https://veracatarina.github.io/noticias/site-agora-acessivel.html">
+  <meta property="og:title" content="Site agora com recursos de acessibilidade | Advocacia Vera Catarina">
+  <meta property="og:description" content="Conheça os recursos de acessibilidade do portal da Dra. Vera Catarina: modo escuro, alto contraste, VLibras, fonte para dislexia e muito mais.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://veracatarina.github.io/noticias/site-agora-acessivel.html">
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/acessibilidade-digital-inclusao.webp">
+  <meta property="og:image:alt" content="Site agora com recursos de acessibilidade – Advocacia Vera Catarina">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Site agora com recursos de acessibilidade | Advocacia Vera Catarina">
+  <meta name="twitter:description" content="Conheça os recursos de acessibilidade do portal da Dra. Vera Catarina: modo escuro, alto contraste, VLibras, fonte para dislexia e muito mais.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/acessibilidade-digital-inclusao.webp">
+  <title>Site agora com recursos de acessibilidade | Advocacia Vera Catarina</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/acessibilidade.css">
+
+  <style>
+    /* ===== CSS PADRÃO (mesmo das notícias anteriores) ===== */
+    :root {
+      --primary-dark: #0b251e;
+      --primary: #143d33;
+      --secondary: #0f172a;
+      --accent: #c5a880;
+      --accent-hover: #b39369;
+      --danger: #991b1b;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --bg-light: #f8fafc;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3, h4 { font-family: 'Cinzel', serif; }
+
+    /* ===== TOP BAR ===== */
+    .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
+    .top-container { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.8rem; color: #cbd5e1; }
+    .top-socials { display: flex; gap: 15px; }
+    .top-socials a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; font-size: 0.95rem; }
+    .top-socials a:hover { color: var(--accent); }
+    .top-contact-info { display: flex; gap: 15px; }
+    .top-contact-info span i { color: var(--accent); margin-right: 4px; }
+    .top-contact-info .obs-tel { font-size: 0.7rem; color: #94a3b8; font-weight: normal; margin-left: 2px; }
+
+    /* ===== HEADER ===== */
+    header { position: fixed; top: 40px; left: 0; right: 0; height: 80px; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; align-items: center; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
+    .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
+    .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
+    .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
+    #menu-checkbox { display: none; }
+    .nav-menu { display: flex; list-style: none; gap: 14px; align-items: center; }
+    .nav-menu > li { position: relative; list-style: none; }
+    .nav-menu > li > a { color: #e2e8f0; text-decoration: none; font-size: 0.78rem; font-weight: 600; transition: color 0.2s, border-color 0.2s; text-transform: uppercase; letter-spacing: 0.3px; padding: 4px 0; border-bottom: 2px solid transparent; display: inline-block; }
+    .nav-menu > li > a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .nav-menu > li > a.ativo { color: var(--accent); border-bottom-color: var(--accent); }
+    .btn-emergency-nav { background: var(--danger); color: white !important; padding: 6px 14px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem !important; animation: pulse 2s infinite; border: none !important; border-bottom: none !important; }
+    .btn-emergency-nav:hover { background: #b91c1c; color: white !important; border-bottom: none !important; }
+    .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); min-width: 200px; border: 1px solid var(--accent); border-radius: 6px; padding: 8px 0; box-shadow: 0 8px 25px rgba(0,0,0,0.3); z-index: 1003; }
+    .dropdown-content li { display: block; margin: 0; padding: 0; }
+    .dropdown-content li a { display: block; padding: 10px 20px; color: #e2e8f0; text-decoration: none; font-size: 0.78rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: none !important; transition: background 0.2s; }
+    .dropdown-content li a:hover { background: rgba(197, 168, 128, 0.15); color: var(--accent); }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropbtn i { transition: transform 0.2s; }
+    .dropdown:hover .dropbtn i { transform: rotate(180deg); }
+
+    /* ===== ARTICLE HEADER ===== */
+    .article-header { background: var(--bg-light); padding: 30px 0 20px; border-bottom: 1px solid var(--border); }
+    .article-header .categoria { display: inline-block; background: var(--accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+    .article-header h1 { font-size: 2rem; color: var(--primary-dark); margin: 15px 0 10px; }
+    .article-header .data { color: var(--text-light); font-size: 0.9rem; }
+    .article-body { padding: 40px 0; }
+    .article-body h2 { color: var(--primary-dark); margin: 30px 0 15px; font-size: 1.6rem; }
+    .article-body h3 { color: var(--primary-dark); margin: 25px 0 10px; font-size: 1.2rem; }
+    .article-body p { margin-bottom: 15px; color: var(--text-dark); }
+    .article-body ul { list-style: none; padding: 0; margin-bottom: 20px; }
+    .article-body ul li { padding: 8px 0 8px 30px; border-bottom: 1px solid var(--border); position: relative; }
+    .article-body ul li:last-child { border-bottom: none; }
+    .article-body ul li i { color: var(--accent); position: absolute; left: 0; top: 10px; }
+    .highlight-box { background: var(--bg-light); border-left: 4px solid var(--accent); padding: 20px 25px; border-radius: 4px; margin: 25px 0; }
+    .highlight-box p { margin-bottom: 0; }
+
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-weight: 600; margin-top: 20px; transition: color 0.2s; }
+    .back-link:hover { color: var(--accent); }
+
+    .cta-box { background: var(--primary-dark); color: white; padding: 40px; border-radius: 8px; text-align: center; margin: 40px 0; }
+    .cta-box h3 { color: white; font-size: 1.8rem; margin-bottom: 10px; }
+    .cta-box p { color: #cbd5e1; margin-bottom: 20px; }
+    .btn-cta { background: var(--accent); color: var(--primary-dark); padding: 14px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s; }
+    .btn-cta:hover { background: var(--accent-hover); }
+
+    .btn-emergency-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-green 2s infinite; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
+    .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
+    .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
+    .visitor-counter i { color: var(--accent); }
+    .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
+
+    /* ===== TOOLBAR DE ACESSIBILIDADE ===== */
+    .accessibility-toolbar-toggle { position: fixed; bottom: 70px; left: 20px; z-index: 9998; background: var(--primary-dark, #0b251e); color: white; border: 2px solid var(--accent, #c5a880); border-radius: 50%; width: 52px; height: 52px; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s, background 0.2s; display: flex; align-items: center; justify-content: center; }
+    .accessibility-toolbar-toggle:hover { transform: scale(1.05); background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); }
+    .accessibility-toolbar { position: fixed; bottom: 180px; left: 20px; z-index: 9997; background: rgba(11, 37, 30, 0.95); backdrop-filter: blur(12px); border: 1px solid var(--accent, #c5a880); border-radius: 12px; padding: 20px 16px; width: 220px; box-shadow: 0 8px 40px rgba(0,0,0,0.5); display: none; flex-direction: column; gap: 12px; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .accessibility-toolbar.open { display: flex; }
+    .accessibility-toolbar .toolbar-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent, #c5a880); text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-bottom: 4px; }
+    .accessibility-toolbar .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .accessibility-toolbar button { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #e2e8f0; padding: 8px 6px; border-radius: 6px; font-size: 0.7rem; font-weight: 600; cursor: pointer; transition: background 0.2s, border-color 0.2s; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.3px; }
+    .accessibility-toolbar button:hover { background: rgba(255,255,255,0.15); border-color: var(--accent, #c5a880); }
+    .accessibility-toolbar button.active { background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); border-color: var(--accent, #c5a880); }
+
+    /* ===== MODOS DE EXIBIÇÃO ===== */
+    html.dark-mode { background-color: #121212; }
+    html.dark-mode body { background-color: #121212; color: #e2e8f0; }
+    html.dark-mode .area-card, html.dark-mode .service-card, html.dark-mode .testimonial-card, html.dark-mode .servico-box, html.dark-mode .sitemap-category, html.dark-mode .faq-item, html.dark-mode .contact-form, html.dark-mode .contact-info-box, html.dark-mode .contact-form-box { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+    html.dark-mode .area-card h3, html.dark-mode .area-card h3 a, html.dark-mode .servico-box h3, html.dark-mode .content-section h2, html.dark-mode .content-section h3, html.dark-mode .sitemap-category h3, html.dark-mode .sitemap-category ul li a { color: #f1f5f9; }
+    html.dark-mode .area-card ul li, html.dark-mode .sitemap-category ul li .desc { color: #cbd5e1; }
+    html.dark-mode .bg-alt { background: #0f172a; }
+    html.dark-mode .breadcrumb-container { background: #1e293b; border-color: #334155; }
+    html.dark-mode .breadcrumb-container ol li span { color: #f1f5f9; }
+    html.dark-mode .page-hero p { color: #94a3b8; }
+    html.dark-mode .top-bar { background: #0a0a0a; }
+    html.dark-mode header { background: rgba(10, 10, 10, 0.98); }
+    html.dark-mode .btn-outline { border-color: #64748b; color: #cbd5e1; }
+    html.dark-mode .btn-outline:hover { background: var(--accent); color: var(--primary-dark); }
+
+    html.high-contrast { --accent: #ffd700; --accent-hover: #ffed4a; --primary-dark: #000000; --primary: #003366; --text-dark: #000000; --text-light: #1a1a1a; --bg-light: #ffffff; --border: #000000; }
+    html.high-contrast body { background: #ffffff; color: #000000; }
+    html.high-contrast .area-card, html.high-contrast .service-card, html.high-contrast .testimonial-card, html.high-contrast .servico-box, html.high-contrast .sitemap-category { border: 2px solid #000000; background: #ffffff; }
+    html.high-contrast .area-card h3 a { color: #0000cc; }
+    html.high-contrast a { color: #0000cc; text-decoration: underline; }
+    html.high-contrast .btn-accent { background: #000000; color: #ffffff; }
+    html.high-contrast .btn-accent:hover { background: #333333; }
+    html.high-contrast .cta-box { background: #000000; color: #ffffff; }
+    html.high-contrast .cta-box h3, html.high-contrast .cta-box p { color: #ffffff; }
+    html.high-contrast .btn-cta { background: #ffffff; color: #000000; }
+    html.high-contrast .btn-cta:hover { background: #dddddd; }
+    html.high-contrast .top-bar { background: #000000; }
+    html.high-contrast header { background: rgba(0, 0, 0, 0.98); }
+
+    html.dyslexic-font { font-family: 'OpenDyslexic', 'Inter', sans-serif; }
+    html.dyslexic-font body, html.dyslexic-font .container, html.dyslexic-font p, html.dyslexic-font h1, html.dyslexic-font h2, html.dyslexic-font h3, html.dyslexic-font h4, html.dyslexic-font li, html.dyslexic-font a, html.dyslexic-font span, html.dyslexic-font button, html.dyslexic-font input, html.dyslexic-font textarea { font-family: 'OpenDyslexic', 'Inter', sans-serif !important; letter-spacing: 0.05em; word-spacing: 0.1em; }
+
+    html.reduce-motion *, html.reduce-motion *::before, html.reduce-motion *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+
+    html.font-small body { font-size: 14px; }
+    html.font-medium body { font-size: 18px; }
+    html.font-large body { font-size: 22px; }
+    html.font-xlarge body { font-size: 26px; }
+    html.font-small .container, html.font-medium .container, html.font-large .container, html.font-xlarge .container { max-width: 100%; }
+
+    @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
+    @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+    @media (max-width: 992px) {
+      body { padding-top: 150px; }
+      header { top: 70px; height: 75px; }
+      .top-bar { height: auto; padding: 8px 0; position: fixed; }
+      .top-container { flex-direction: column; gap: 6px; text-align: center; }
+      .top-contact-info { flex-direction: column; gap: 2px; }
+      .menu-toggle { display: flex; }
+      .nav-menu { position: fixed; top: 145px; right: -100%; background: rgba(11, 37, 30, 0.98); flex-direction: column; width: 100%; height: calc(100vh - 145px); gap: 25px; padding: 40px 20px; transition: right 0.3s ease; z-index: 999; border-top: 1px solid var(--accent); align-items: center; }
+      .nav-menu > li { width: 100%; text-align: center; }
+      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
+      .nav-menu > li > a:hover { border-bottom: none !important; }
+      .dropdown-content { position: static; background: transparent; border: none; box-shadow: none; padding-left: 20px; min-width: auto; display: none !important; }
+      .dropdown.open .dropdown-content { display: block !important; }
+      .dropdown-content li a { font-size: 0.9rem; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05) !important; }
+      #menu-checkbox:checked ~ .nav-menu { right: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      footer { padding-bottom: 110px; }
+      .accessibility-toolbar { width: 190px; bottom: 180px; left: 10px; padding: 15px 12px; }
+      .accessibility-toolbar .btn-group { grid-template-columns: 1fr 1fr; gap: 4px; }
+      .accessibility-toolbar button { font-size: 0.6rem; padding: 6px 4px; }
+      .accessibility-toolbar-toggle { width: 46px; height: 46px; font-size: 1.2rem; bottom: 70px; left: 10px; }
+      .article-header h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-container">
+      <div class="top-contact-info">
+        <span><i class="fas fa-phone"></i> (51) 3450-2229 <span class="obs-tel">(Somente WhatsApp)</span></span>
+        <span><i class="fas fa-location-dot"></i> Sapucaia do Sul - RS</span>
+      </div>
+      <div class="top-socials">
+        <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/AdvocaciaVeraCatarina" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://advocaciasapucaia.blogspot.com/" target="_blank" rel="noopener" title="Blogger Institucional"><i class="fab fa-blogger"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" rel="noopener" title="Atendimento WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1,%20vim%20pelo%20artigo%20sobre%20Acessibilidade." class="btn-emergency-float" target="_blank"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container nav-container">
+      <a href="/index.html" class="logo"><span class="main-txt">Vera Catarina</span><span class="sub-txt">Advocacia Especializada</span></a>
+      <input type="checkbox" id="menu-checkbox"><label for="menu-checkbox" class="menu-toggle"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li><a href="/index.html">Início</a></li>
+        <li><a href="/index.html#atuacao">Áreas de Atuação</a></li>
+        <li><a href="/noticias.html" class="ativo">Notícias</a></li>
+        <li><a href="/index.html#servicos">Utilidades</a></li>
+        <li><a href="/index.html#restrito">Canal Restrito</a></li>
+        <li><a href="/contato.html">Contato</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li><a href="/legal.html">Legal</a></li>
+        <li><a href="/sitemap.html">🗺️ Mapa</a></li>
+        <li><a href="/acessibilidade.html">♿ Acessibilidade</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav"><i class="fas fa-shield-halved"></i> Plantão 24h</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== CONTEÚDO ===== -->
+  <section class="article-header">
+    <div class="container">
+      <span class="categoria">♿ Acessibilidade</span>
+      <h1>Site agora com recursos de acessibilidade</h1>
+      <span class="data"><i class="far fa-calendar-alt"></i> 21 de julho de 2026</span>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <!-- ===== IMAGEM ILUSTRATIVA ===== -->
+      <div style="text-align: center; margin-bottom: 30px;">
+        <img src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/acessibilidade-digital-inclusao.webp" alt="Site agora com recursos de acessibilidade – Advocacia Vera Catarina" title="Acessibilidade Digital | Dra. Vera Catarina" loading="lazy" style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;" />
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
+          <i class="fas fa-universal-access" style="color: var(--accent);"></i>
+          Inclusão digital para todos — acessibilidade é um direito de todos
+        </p>
+      </div>
+
+      <!-- ===== CONTEÚDO ===== -->
+      <p>A <strong>Advocacia Vera Catarina</strong> acaba de implementar uma série de recursos de acessibilidade em seu portal, reafirmando seu compromisso com a inclusão digital e com o direito de todas as pessoas, independentemente de suas habilidades, de acessar informações jurídicas de qualidade.</p>
+
+      <div class="highlight-box">
+        <p><i class="fas fa-heart" style="color: var(--accent); margin-right: 8px;"></i><strong>Dra. Vera Catarina</strong> é mãe da <strong>Fabrícia Elissa</strong>, uma pessoa com Síndrome de Down. Essa experiência pessoal a conecta profundamente com a causa da inclusão e a torna ainda mais sensível às necessidades de pessoas com deficiência e suas famílias.</p>
+      </div>
+
+      <p>A <strong>Lei Brasileira de Inclusão (LBI – Lei nº 13.146/2015)</strong> estabelece que todos têm direito à igualdade de oportunidades e ao pleno exercício da cidadania. Nosso site reflete esse compromisso, garantindo que pessoas com diferentes habilidades possam acessar nossos conteúdos com independência e autonomia.</p>
+
+      <h2>Recursos Disponíveis</h2>
+      <p>Nosso site oferece os seguintes recursos de acessibilidade, ativados pelo botão <strong>♿</strong> no canto inferior esquerdo da tela:</p>
+
+      <ul>
+        <li><i class="fas fa-check-circle"></i> <strong>Navegação por teclado</strong> – todas as funcionalidades acessíveis sem mouse</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Compatível com leitores de tela</strong> (NVDA, JAWS, VoiceOver)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Contraste adequado</strong> (WCAG AA)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Estrutura semântica HTML5</strong></li>
+        <li><i class="fas fa-check-circle"></i> <strong>Hierarquia clara de títulos</strong> (H1 → H2 → H3)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Imagens com texto alternativo (ALT)</strong></li>
+        <li><i class="fas fa-check-circle"></i> <strong>Links diferenciados visualmente</strong> (hover/focus)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Responsividade</strong> – compatível com celulares e tablets</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Botão "Ir para o conteúdo"</strong> (Skip to Content)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Breadcrumb</strong> (migalhas de pão) em todas as páginas</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Modo Alto Contraste</strong></li>
+        <li><i class="fas fa-check-circle"></i> <strong>Modo Escuro</strong></li>
+        <li><i class="fas fa-check-circle"></i> <strong>Aumentar e diminuir fonte</strong> (4 níveis)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Fonte para dislexia</strong> (OpenDyslexic)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>VLibras</strong> – tradutor para Libras</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Reduzir animações</strong> (prefers-reduced-motion)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Preferências do usuário salvas</strong> (localStorage)</li>
+      </ul>
+
+      <h2>Como usar os recursos de acessibilidade</h2>
+      <p>Clique no botão <strong>♿</strong> no canto inferior esquerdo da tela para abrir a <strong>Toolbar de Acessibilidade</strong>. Lá você encontrará:</p>
+      <ul>
+        <li><strong>🌙 Escuro / ☀️ Claro:</strong> Alterna entre modo claro e escuro.</li>
+        <li><strong>🔲 Contraste / 🔳 Normal:</strong> Ativa o modo de alto contraste para melhor visualização.</li>
+        <li><strong>A- / A / A+ / A++:</strong> Ajusta o tamanho da fonte em 4 níveis.</li>
+        <li><strong>📖 Fonte Dislexia:</strong> Ativa a fonte OpenDyslexic, que facilita a leitura para pessoas com dislexia.</li>
+        <li><strong>🎬 Reduzir Animações:</strong> Desativa animações e transições para pessoas com sensibilidade visual.</li>
+      </ul>
+      <p>Todas as preferências são salvas automaticamente e mantidas entre as visitas.</p>
+
+      <h2>VLibras – Tradutor para Libras</h2>
+      <p>Nosso site conta com o <strong>VLibras</strong>, um tradutor automático de conteúdo digital para a Língua Brasileira de Sinais (Libras). Basta clicar no ícone do VLibras (personagem azul) no canto inferior direito da tela para ativar a tradução dos textos em Libras.</p>
+
+      <h2>Referências de Acessibilidade</h2>
+      <ul>
+        <li><strong>WCAG 2.2:</strong> Diretrizes de Acessibilidade para Conteúdo Web (W3C)</li>
+        <li><strong>eMAG:</strong> Modelo de Acessibilidade do Governo Brasileiro</li>
+        <li><strong>Lei Brasileira de Inclusão (LBI):</strong> Lei nº 13.146/2015</li>
+      </ul>
+
+      <div class="cta-box">
+        <h3>Precisa de ajuda com a navegação?</h3>
+        <p>Nossa equipe está pronta para atendê-lo com a atenção que você merece.</p>
+        <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1,%20vim%20pela%20p%C3%A1gina%20de%20Acessibilidade%20e%20gostaria%20de%20assist%C3%AAncia." class="btn-cta" target="_blank"><i class="fab fa-whatsapp"></i> Fale conosco</a>
+      </div>
+
+      <p style="text-align:center; font-size:0.9rem; color:var(--text-light); margin-top: 20px;">
+        <a href="/noticias.html" style="color:var(--accent); font-weight:600;">← Voltar para Notícias</a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ===== BACKLINKS: ÁREAS DE ATUAÇÃO ===== -->
+  <section style="background: var(--bg-light); padding: 40px 0; border-top: 1px solid var(--border);">
+    <div class="container">
+      <h3 style="text-align: center; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px;">
+        <i class="fas fa-gavel" style="color: var(--accent);"></i> Conheça nossas áreas de atuação
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 800px; margin: 0 auto;">
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-familia.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-people-roof" style="color: var(--accent);"></i> Direito de Família</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-digital.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-laptop-code" style="color: var(--accent);"></i> Direito Digital</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-criminal.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-shield-halved" style="color: var(--accent);"></i> Direito Criminal</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-trabalhista.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-briefcase" style="color: var(--accent);"></i> Direito Trabalhista</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-consumidor.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-scale-balanced" style="color: var(--accent);"></i> Direito do Consumidor</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-empresarial.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-handshake" style="color: var(--accent);"></i> Advocacia Empresarial</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/direito-civil.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-gavel" style="color: var(--accent);"></i> Direito Civil</a></div>
+        <div style="background: white; padding: 12px 18px; border-radius: 6px; border: 1px solid var(--border); text-align: center;"><a href="/advogado-online.html" style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fas fa-headset" style="color: var(--accent);"></i> Advogado Online 24h</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BACKLINKS: NOTÍCIAS RELACIONADAS ===== -->
+  <section style="background: var(--bg-light); padding: 30px 0 40px; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <h3 style="text-align: center; font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 15px;">
+        <i class="fas fa-newspaper" style="color: var(--accent);"></i> Leia também
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; max-width: 900px; margin: 0 auto;">
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://veracatarina.github.io/noticias/site-lgpd-acessibilidade-oab.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> Site adequado à LGPD, Acessibilidade e OAB</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://veracatarina.github.io/noticias/direito-ao-esquecimento-case-academico-premiado.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> Direito ao Esquecimento – Case Premiado</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://veracatarina.github.io/noticias/como-pedir-pensao-alimenticia.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> Como pedir Pensão Alimentícia</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://veracatarina.github.io/noticias/marco-civil-internet-direitos-digitais.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> Marco Civil da Internet</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://veracatarina.github.io/noticias/perseguicao-digital-stalking-prova-pericial.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> Perseguição Digital e Stalking</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://veracatarina.github.io/noticias/lgpd-entenda-lei-geral-protecao-dados.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> LGPD: Entenda a Lei Geral de Proteção de Dados</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://veracatarina.github.io/noticias/crimes-virtuais-calunia-difamacao-injuria.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> Crimes Virtuais: Calúnia, Difamação e Injúria</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://advocaciasapucaia.blogspot.com/2025/06/proteja-se-denunciando-crimes-na.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> Proteja-se: Denunciando Crimes na Internet</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://advocaciasapucaia.blogspot.com/2026/07/direito-ao-esquecimento-analise-do-re.html" style="color: var(--text-dark); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> Direito ao Esquecimento – Análise do RE</a></div>
+        <div style="background: white; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--border);"><a href="https://veracatarina.github.io/noticias.html" style="color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chevron-right" style="color: var(--accent); font-size: 0.7rem;"></i> 📰 Ver todas as notícias</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h5>Dra. Vera Catarina</h5><p style="font-size:0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p><p style="font-size:0.8rem; color:var(--accent); font-weight:600; margin-top:8px;">OAB/RS 19.315</p></div>
+        <div class="footer-col"><h5>Links Rápidos</h5><ul><li><a href="/index.html">Início</a></li><li><a href="/index.html#atuacao">Áreas de Atuação</a></li><li><a href="/noticias.html">📰 Notícias e Artigos</a></li><li><a href="/sobre.html">Sobre</a></li><li><a href="/legal.html">Legal</a></li><li><a href="/sitemap.html">🗺️ Mapa do Site</a></li></ul></div>
+        <div class="footer-col"><h5>Áreas Específicas</h5><ul><li><a href="/direito-familia.html">Direito de Família</a></li><li><a href="/direito-digital.html">Direito Digital</a></li><li><a href="/direito-criminal.html">Direito Criminal</a></li><li><a href="/direito-trabalhista.html">Direito Trabalhista</a></li><li><a href="/direito-previdenciario.html">Direito Previdenciário</a></li><li><a href="/direito-consumidor.html">Direito do Consumidor</a></li><li><a href="/direito-civil.html">Direito Civil e Sucessões</a></li><li><a href="/direito-empresarial.html">🏢 Advocacia Empresarial</a></li><li><a href="/advogado-online.html">📱 Advogado Online 24h</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p><div><div class="visitor-counter"><i class="fas fa-eye"></i><span>Visitas ao portal:</span><img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos"></div></div></div>
+    </div>
+  </footer>
+
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;"><i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i><span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="/legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="/legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span></div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;"><button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer;">Recusar</button><button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer;">Aceitar</button></div>
+  </div>
+
+  <!-- ===== VLIBRAS ===== -->
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== ACESSIBILIDADE JS ===== -->
+  <script src="/acessibilidade.js"></script>
+
+  <!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
+  <button class="accessibility-toolbar-toggle" onclick="toggleAccessibilityToolbar()" aria-label="Abrir ferramentas de acessibilidade">♿</button>
+  <div class="accessibility-toolbar" id="accessibilityToolbar">
+    <div class="toolbar-title">Acessibilidade</div>
+    <div class="btn-group">
+      <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Escuro</button>
+      <button onclick="toggleHighContrast()" id="highContrastBtn">🔲 Contraste</button>
+      <button onclick="changeFontSize('decrease')">A-</button>
+      <button onclick="changeFontSize('reset')">A</button>
+      <button onclick="changeFontSize('increase')">A+</button>
+      <button onclick="changeFontSize('xincrease')">A++</button>
+      <button onclick="toggleDyslexicFont()" id="dyslexicBtn">📖 Dislexia</button>
+      <button onclick="toggleReducedMotion()" id="motionBtn">🎬 Reduzir</button>
+    </div>
+  </div>
+
+  <!-- ===== BOTÃO DE LEITURA POR ÁUDIO (TTS) ===== -->
+  <div style="position: fixed; bottom: 160px; left: 20px; z-index: 9998;">
+    <button id="audio-reader-btn" onclick="readPageAloud()" style="background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); border: none; border-radius: 50px; padding: 10px 18px; font-weight: 700; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.2s; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><i class="fas fa-volume-up"></i> Ouvir Página</button>
+    <button id="audio-stop-btn" onclick="stopReading()" style="background: var(--danger, #991b1b); color: white; border: none; border-radius: 50px; padding: 10px 18px; font-weight: 700; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.2s; display: none; align-items: center; gap: 8px; margin-top: 8px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><i class="fas fa-stop"></i> Parar</button>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // ===== DROPDOWN (MOBILE) =====
+    function toggleDropdown() { const dropdown = document.querySelector('.dropdown'); if (window.innerWidth <= 992) { dropdown.classList.toggle('open'); } }
+    function openDropdown() { if (window.innerWidth > 992) { document.querySelector('.dropdown-content').style.display = 'block'; } }
+    function closeDropdown() { if (window.innerWidth > 992) { document.querySelector('.dropdown-content').style.display = 'none'; } }
+    document.addEventListener('click', function(e) { const dropdown = document.querySelector('.dropdown'); if (dropdown && !dropdown.contains(e.target)) { dropdown.classList.remove('open'); } });
+
+    // ===== LGPD COOKIES =====
+    function setCookieConsent(choice) { localStorage.setItem('cookieConsent', choice); const banner = document.getElementById('cookie-consent-banner'); banner.style.opacity = '0'; banner.style.transform = 'translateX(-50%) translateY(20px)'; setTimeout(() => { banner.style.display = 'none'; }, 500); }
+    function acceptCookies() { setCookieConsent('accepted'); console.log('📊 Cookies ativados.'); }
+    function rejectCookies() { setCookieConsent('rejected'); console.log('❌ Cookies recusados.'); }
+    document.addEventListener('DOMContentLoaded', function() { const consent = localStorage.getItem('cookieConsent'); if (consent === 'accepted' || consent === 'rejected') { document.getElementById('cookie-consent-banner').style.display = 'none'; } });
+
+    // ===== FECHAR MENU MOBILE =====
+    function closeMenu() { document.getElementById('menu-checkbox').checked = false; }
+    document.querySelectorAll('.nav-menu a').forEach(function(link) { link.addEventListener('click', closeMenu); });
+
+    // ===== ARIA EXPANDED =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuCheckbox = document.getElementById('menu-checkbox');
+    if (menuToggle && menuCheckbox) { menuCheckbox.addEventListener('change', function() { menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false'); }); }
+
+    // ===== TOOLBAR DE ACESSIBILIDADE =====
+    function toggleAccessibilityToolbar() { document.getElementById('accessibilityToolbar').classList.toggle('open'); }
+    function toggleDarkMode() { document.documentElement.classList.toggle('dark-mode'); document.getElementById('darkModeBtn').classList.toggle('active'); localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode') ? 'true' : 'false'); }
+    function toggleHighContrast() { document.documentElement.classList.toggle('high-contrast'); document.getElementById('highContrastBtn').classList.toggle('active'); localStorage.setItem('highContrast', document.documentElement.classList.contains('high-contrast') ? 'true' : 'false'); }
+    function changeFontSize(action) { const sizes = ['font-small', 'font-medium', 'font-large', 'font-xlarge']; const current = sizes.find(cls => document.documentElement.classList.contains(cls)) || 'font-medium'; let index = sizes.indexOf(current); if (action === 'decrease') index = Math.max(0, index - 1); else if (action === 'increase') index = Math.min(sizes.length - 1, index + 1); else if (action === 'xincrease') index = Math.min(sizes.length - 1, index + 2); else if (action === 'reset') index = 1; document.documentElement.classList.remove(...sizes); document.documentElement.classList.add(sizes[index]); localStorage.setItem('fontSize', sizes[index]); }
+    function toggleDyslexicFont() { document.documentElement.classList.toggle('dyslexic-font'); document.getElementById('dyslexicBtn').classList.toggle('active'); localStorage.setItem('dyslexicFont', document.documentElement.classList.contains('dyslexic-font') ? 'true' : 'false'); }
+    function toggleReducedMotion() { document.documentElement.classList.toggle('reduce-motion'); document.getElementById('motionBtn').classList.toggle('active'); localStorage.setItem('reduceMotion', document.documentElement.classList.contains('reduce-motion') ? 'true' : 'false'); }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('darkMode') === 'true') { document.documentElement.classList.add('dark-mode'); document.getElementById('darkModeBtn').classList.add('active'); }
+      if (localStorage.getItem('highContrast') === 'true') { document.documentElement.classList.add('high-contrast'); document.getElementById('highContrastBtn').classList.add('active'); }
+      const fontSize = localStorage.getItem('fontSize'); if (fontSize) { document.documentElement.classList.add(fontSize); } else { document.documentElement.classList.add('font-medium'); }
+      if (localStorage.getItem('dyslexicFont') === 'true') { document.documentElement.classList.add('dyslexic-font'); document.getElementById('dyslexicBtn').classList.add('active'); }
+      if (localStorage.getItem('reduceMotion') === 'true') { document.documentElement.classList.add('reduce-motion'); document.getElementById('motionBtn').classList.add('active'); }
+    });
+
+    // ===== LEITURA POR ÁUDIO (TTS) =====
+    let currentUtterance = null; let isReading = false;
+    function readPageAloud() {
+      if (isReading) { stopReading(); setTimeout(() => { readPageAloud(); }, 300); return; }
+      const mainContent = document.querySelector('section.article-body') || document.body;
+      const clone = mainContent.cloneNode(true);
+      const removeSelectors = ['nav', 'footer', '.nav-menu', '.top-bar', '.footer-grid', '.visitor-counter', '.backlinks-section', '#cookie-consent-banner'];
+      removeSelectors.forEach(selector => { const elements = clone.querySelectorAll(selector); elements.forEach(el => el.remove()); });
+      let text = clone.textContent || '';
+      text = text.replace(/\s+/g, ' ').trim();
+      if (!text || text.length < 10) { alert('Não há conteúdo suficiente para leitura nesta página.'); return; }
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'pt-BR';
+      currentUtterance.rate = 0.9;
+      currentUtterance.pitch = 1.0;
+      currentUtterance.volume = 1;
+      const voices = window.speechSynthesis.getVoices();
+      const ptVoice = voices.find(v => v.lang === 'pt-BR' && v.name.includes('Female')) || voices.find(v => v.lang === 'pt-BR') || voices.find(v => v.lang.startsWith('pt'));
+      if (ptVoice) { currentUtterance.voice = ptVoice; }
+      currentUtterance.onstart = function() { isReading = true; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-pause"></i> Pausar'; document.getElementById('audio-reader-btn').style.background = '#f59e0b'; document.getElementById('audio-stop-btn').style.display = 'flex'; };
+      currentUtterance.onend = function() { isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; };
+      currentUtterance.onerror = function() { isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; console.warn('Erro na leitura de áudio.'); };
+      window.speechSynthesis.speak(currentUtterance);
+    }
+    function stopReading() { if (window.speechSynthesis) { window.speechSynthesis.cancel(); } isReading = false; document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)'; document.getElementById('audio-stop-btn').style.display = 'none'; }
+    if (window.speechSynthesis) { window.speechSynthesis.getVoices(); window.speechSynthesis.onvoiceschanged = function() { window.speechSynthesis.getVoices(); }; }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isReading) { stopReading(); } });
+  </script>
+</body>
+</html>
