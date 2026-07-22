@@ -618,6 +618,45 @@
   </div>
 </div>
 
+<!-- ===== BOTÕES DE LEITURA POR ÁUDIO (TTS) ===== -->
+<div style="position: fixed; bottom: 160px; left: 20px; z-index: 9998;">
+  <button id="audio-reader-btn" onclick="readPageAloud()" style="
+    background: var(--accent, #c5a880);
+    color: var(--primary-dark, #0b251e);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 18px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <i class="fas fa-volume-up"></i> Ouvir Página
+  </button>
+  <button id="audio-stop-btn" onclick="stopReading()" style="
+    background: var(--danger, #991b1b);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 18px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <i class="fas fa-stop"></i> Parar
+  </button>
+</div>
+
 <!-- ===== VLIBRAS ===== -->
 <div vw class="enabled">
   <div vw-access-button class="active"></div>
@@ -656,8 +695,107 @@
     link.addEventListener('click', closeMenu);
   });
 
-  // ===== TOOLBAR DE ACESSIBILIDADE (se existir) =====
-  // Se você tiver um arquivo acessibilidade.js, ele já cuida disso.
+  // ===== LEITURA POR ÁUDIO (TTS) =====
+  let currentUtterance = null;
+  let isReading = false;
+
+  function readPageAloud() {
+    if (isReading) {
+      stopReading();
+      setTimeout(() => { readPageAloud(); }, 300);
+      return;
+    }
+
+    // Pega o conteúdo principal da página (exclui menus, rodapé, etc.)
+    const mainContent = document.querySelector('.error-section') || document.querySelector('main') || document.body;
+    const clone = mainContent.cloneNode(true);
+    
+    // Remove elementos que não devem ser lidos
+    const removeSelectors = ['nav', 'footer', '.nav-menu', '.top-bar', '.footer-grid', '.visitor-counter', '#cookie-consent-banner', '.backlinks-section'];
+    removeSelectors.forEach(selector => {
+      const elements = clone.querySelectorAll(selector);
+      elements.forEach(el => el.remove());
+    });
+
+    let text = clone.textContent || '';
+    text = text.replace(/\s+/g, ' ').trim();
+
+    if (!text || text.length < 10) {
+      alert('Não há conteúdo suficiente para leitura nesta página.');
+      return;
+    }
+
+    // Cancela qualquer leitura anterior
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+
+    currentUtterance = new SpeechSynthesisUtterance(text);
+    currentUtterance.lang = 'pt-BR';
+    currentUtterance.rate = 0.9;
+    currentUtterance.pitch = 1.0;
+    currentUtterance.volume = 1;
+
+    // Tenta usar uma voz feminina em português
+    const voices = window.speechSynthesis.getVoices();
+    const ptVoice = voices.find(v => v.lang === 'pt-BR' && v.name.includes('Female')) || voices.find(v => v.lang === 'pt-BR') || voices.find(v => v.lang.startsWith('pt'));
+    if (ptVoice) {
+      currentUtterance.voice = ptVoice;
+    }
+
+    currentUtterance.onstart = function() {
+      isReading = true;
+      const readerBtn = document.getElementById('audio-reader-btn');
+      readerBtn.innerHTML = '<i class="fas fa-pause"></i> Pausar';
+      readerBtn.style.background = '#f59e0b';
+      document.getElementById('audio-stop-btn').style.display = 'flex';
+    };
+
+    currentUtterance.onend = function() {
+      isReading = false;
+      const readerBtn = document.getElementById('audio-reader-btn');
+      readerBtn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página';
+      readerBtn.style.background = 'var(--accent, #c5a880)';
+      document.getElementById('audio-stop-btn').style.display = 'none';
+    };
+
+    currentUtterance.onerror = function() {
+      isReading = false;
+      const readerBtn = document.getElementById('audio-reader-btn');
+      readerBtn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página';
+      readerBtn.style.background = 'var(--accent, #c5a880)';
+      document.getElementById('audio-stop-btn').style.display = 'none';
+      console.warn('Erro na leitura de áudio.');
+    };
+
+    window.speechSynthesis.speak(currentUtterance);
+  }
+
+  function stopReading() {
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+    isReading = false;
+    const readerBtn = document.getElementById('audio-reader-btn');
+    readerBtn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página';
+    readerBtn.style.background = 'var(--accent, #c5a880)';
+    document.getElementById('audio-stop-btn').style.display = 'none';
+  }
+
+  // Carrega vozes disponíveis (para garantir que funcionem)
+  if (window.speechSynthesis) {
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = function() {
+      window.speechSynthesis.getVoices();
+    };
+  }
+
+  // Para interromper com a tecla ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && isReading) {
+      stopReading();
+    }
+  });
 </script>
 
 </body>
