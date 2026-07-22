@@ -51,7 +51,7 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
     h1, h2, h3, h4 { font-family: 'Cinzel', serif; }
 
-    /* ===== TOP BAR E HEADER ===== */
+    /* ===== TOP BAR E HEADER (idênticos) ===== */
     .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
     .top-container { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.8rem; color: #cbd5e1; }
     .top-socials { display: flex; gap: 15px; }
@@ -89,82 +89,12 @@
     .page-hero h1 span { color: var(--accent); }
     .page-hero p { font-size: clamp(0.95rem, 2vw, 1.15rem); color: #cbd5e1; max-width: 650px; margin: 0 auto; }
 
-    /* ===== MENU DE NAVEGAÇÃO POR ÂNCORA (TOC) ===== */
-    .toc-container {
-      background: var(--bg-light);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 25px 30px;
-      margin: 30px 0 40px;
-      box-shadow: var(--shadow);
-    }
-    .toc-container h3 {
-      font-size: 1.2rem;
-      color: var(--primary-dark);
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .toc-container h3 i {
-      color: var(--accent);
-    }
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 8px 15px;
-    }
-    .toc-grid a {
-      color: var(--text-dark);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: background 0.2s, color 0.2s, padding-left 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .toc-grid a:hover {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding-left: 16px;
-    }
-    .toc-grid a i {
-      color: var(--accent);
-      font-size: 0.85rem;
-      width: 18px;
-      text-align: center;
-    }
-    .toc-grid a:hover i {
-      color: var(--primary-dark);
-    }
-
     .content-section { padding: 60px 0; }
     .content-section h2 { font-size: 1.8rem; color: var(--primary-dark); margin: 35px 0 15px; position: relative; padding-bottom: 10px; scroll-margin-top: 130px; }
     .content-section h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--accent); }
     .content-section h3 { font-size: 1.2rem; color: var(--primary-dark); margin: 25px 0 10px; display: flex; align-items: center; gap: 10px; }
     .content-section h3 i { color: var(--accent); }
     .content-section p { font-size: 1rem; color: var(--text-dark); margin-bottom: 15px; }
-
-    .back-to-top {
-      text-align: right;
-      margin: 10px 0 30px;
-    }
-    .back-to-top a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      transition: color 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .back-to-top a:hover {
-      color: var(--accent);
-    }
 
     .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 15px 0 25px; }
     .link-card { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; display: flex; align-items: center; gap: 12px; transition: transform 0.2s, box-shadow 0.2s; }
@@ -203,8 +133,18 @@
     .faq-item.aberto p { display: block; }
     .faq-item.aberto h4 i { transform: rotate(180deg); }
 
-    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-weight: 600; margin-top: 20px; transition: color 0.2s; }
-    .back-link:hover { color: var(--accent); }
+    .back-to-top { text-align: right; margin: 10px 0 30px; }
+    .back-to-top a { color: var(--text-light); text-decoration: none; font-size: 0.8rem; font-weight: 600; transition: color 0.2s; display: inline-flex; align-items: center; gap: 4px; }
+    .back-to-top a:hover { color: var(--accent); }
+
+    .toc-container { background: var(--bg-light); border: 1px solid var(--border); border-radius: 12px; padding: 25px 30px; margin: 30px 0 40px; box-shadow: var(--shadow); }
+    .toc-container h3 { font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+    .toc-container h3 i { color: var(--accent); }
+    .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 15px; }
+    .toc-grid a { color: var(--text-dark); text-decoration: none; font-size: 0.85rem; font-weight: 500; padding: 6px 10px; border-radius: 4px; transition: background 0.2s, color 0.2s, padding-left 0.2s; display: flex; align-items: center; gap: 6px; }
+    .toc-grid a:hover { background: var(--accent); color: var(--primary-dark); padding-left: 16px; }
+    .toc-grid a i { color: var(--accent); font-size: 0.85rem; width: 18px; text-align: center; }
+    .toc-grid a:hover i { color: var(--primary-dark); }
 
     .cta-box { background: var(--primary-dark); color: white; padding: 40px; border-radius: 8px; text-align: center; margin: 40px 0; }
     .cta-box h3 { color: white; font-size: 1.8rem; margin-bottom: 10px; }
@@ -302,15 +242,12 @@
       .link-grid { grid-template-columns: 1fr; }
       .toc-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 600px) {
-      .toc-grid { grid-template-columns: 1fr; }
-      .toc-container { padding: 18px; }
-    }
+    @media (max-width: 600px) { .toc-grid { grid-template-columns: 1fr; } .toc-container { padding: 18px; } }
   </style>
 </head>
 <body>
 
-  <!-- ===== TOP BAR (idêntico) ===== -->
+  <!-- ===== TOP BAR ===== -->
   <div class="top-bar">
     <div class="container top-container">
       <div class="top-contact-info">
@@ -329,7 +266,7 @@
   <!-- ===== WHATSAPP FLUTUANTE ===== -->
   <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1,%20vim%20pela%20p%C3%A1gina%20Sites%20%C3%9Ateis." class="btn-emergency-float" target="_blank"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
 
-  <!-- ===== HEADER (idêntico) ===== -->
+  <!-- ===== HEADER ===== -->
   <header>
     <div class="container nav-container">
       <a href="/index.html" class="logo"><span class="main-txt">Vera Catarina</span><span class="sub-txt">Advocacia Especializada</span></a>
@@ -412,11 +349,7 @@
         </div>
       </div>
 
-      <!-- ============================================================ -->
-      <!-- ===== SEÇÕES (TODAS COM SCROLL-MARGIN-TOP E LINK VOLTAR) ===== -->
-      <!-- ============================================================ -->
-
-      <!-- ===== TRIBUNAIS SUPERIORES ===== -->
+      <!-- ===== 1. TRIBUNAIS SUPERIORES ===== -->
       <h2 id="tribunais-superiores">⚖️ Tribunais Superiores</h2>
       <div class="link-grid">
         <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.stf.gov.br" target="_blank" rel="noopener">Supremo Tribunal Federal (STF)</a><span class="desc">Guarda da Constituição – julgamentos e jurisprudência</span></div><span class="badge">Nacional</span></div>
@@ -428,7 +361,7 @@
       </div>
       <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
-      <!-- ===== JUSTIÇA FEDERAL ===== -->
+      <!-- ===== 2. JUSTIÇA FEDERAL ===== -->
       <h2 id="justica-federal">🏛️ Justiça Federal</h2>
       <div class="link-grid">
         <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.trf1.jus.br" target="_blank" rel="noopener">TRF da 1ª Região</a><span class="desc">DF, GO, MT, BA, PI, MA, PA, AM, AC, RO, RR, AP, TO</span></div><span class="badge">1ª Região</span></div>
@@ -440,7 +373,7 @@
       </div>
       <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
-      <!-- ===== JUSTIÇA ESTADUAL ===== -->
+      <!-- ===== 3. JUSTIÇA ESTADUAL ===== -->
       <h2 id="justica-estadual">🏛️ Tribunais de Justiça (Estaduais)</h2>
       <div class="link-grid">
         <div class="link-card"><i class="fas fa-balance-scale"></i><div class="info"><a href="https://www.tjrs.jus.br" target="_blank" rel="noopener">TJ do Rio Grande do Sul</a><span class="desc">Consulta de processos e serviços</span></div><span class="badge">RS</span></div>
@@ -466,91 +399,320 @@
       </div>
       <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
-      <!-- ============================================================ -->
-      <!-- ... TODAS AS DEMAIS SEÇÕES SEGUEM O MESMO PADRÃO ... -->
-      <!-- ============================================================ -->
+      <!-- ===== 4. JUSTIÇA DO TRABALHO ===== -->
+      <h2 id="justica-trabalho">👷 Tribunais Regionais do Trabalho (TRTs)</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt1.jus.br" target="_blank" rel="noopener">TRT da 1ª Região</a><span class="desc">Rio de Janeiro</span></div><span class="badge">1ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt2.jus.br" target="_blank" rel="noopener">TRT da 2ª Região</a><span class="desc">São Paulo (capital)</span></div><span class="badge">2ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt3.jus.br" target="_blank" rel="noopener">TRT da 3ª Região</a><span class="desc">Minas Gerais</span></div><span class="badge">3ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt4.jus.br" target="_blank" rel="noopener">TRT da 4ª Região</a><span class="desc">Rio Grande do Sul</span></div><span class="badge">4ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt5.jus.br" target="_blank" rel="noopener">TRT da 5ª Região</a><span class="desc">Bahia</span></div><span class="badge">5ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt6.jus.br" target="_blank" rel="noopener">TRT da 6ª Região</a><span class="desc">Pernambuco</span></div><span class="badge">6ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt7.jus.br" target="_blank" rel="noopener">TRT da 7ª Região</a><span class="desc">Ceará</span></div><span class="badge">7ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt8.jus.br" target="_blank" rel="noopener">TRT da 8ª Região</a><span class="desc">Pará e Amapá</span></div><span class="badge">8ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt9.jus.br" target="_blank" rel="noopener">TRT da 9ª Região</a><span class="desc">Paraná</span></div><span class="badge">9ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt10.jus.br" target="_blank" rel="noopener">TRT da 10ª Região</a><span class="desc">DF e TO</span></div><span class="badge">10ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt11.jus.br" target="_blank" rel="noopener">TRT da 11ª Região</a><span class="desc">Amazonas e Roraima</span></div><span class="badge">11ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt12.jus.br" target="_blank" rel="noopener">TRT da 12ª Região</a><span class="desc">Santa Catarina</span></div><span class="badge">12ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt13.jus.br" target="_blank" rel="noopener">TRT da 13ª Região</a><span class="desc">Paraíba</span></div><span class="badge">13ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt14.jus.br" target="_blank" rel="noopener">TRT da 14ª Região</a><span class="desc">Rondônia e Acre</span></div><span class="badge">14ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt15.jus.br" target="_blank" rel="noopener">TRT da 15ª Região</a><span class="desc">Campinas/SP (interior)</span></div><span class="badge">15ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt16.jus.br" target="_blank" rel="noopener">TRT da 16ª Região</a><span class="desc">Maranhão</span></div><span class="badge">16ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt17.jus.br" target="_blank" rel="noopener">TRT da 17ª Região</a><span class="desc">Espírito Santo</span></div><span class="badge">17ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt18.jus.br" target="_blank" rel="noopener">TRT da 18ª Região</a><span class="desc">Goiás</span></div><span class="badge">18ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt19.jus.br" target="_blank" rel="noopener">TRT da 19ª Região</a><span class="desc">Alagoas</span></div><span class="badge">19ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt20.jus.br" target="_blank" rel="noopener">TRT da 20ª Região</a><span class="desc">Sergipe</span></div><span class="badge">20ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt21.jus.br" target="_blank" rel="noopener">TRT da 21ª Região</a><span class="desc">Rio Grande do Norte</span></div><span class="badge">21ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt22.jus.br" target="_blank" rel="noopener">TRT da 22ª Região</a><span class="desc">Piauí</span></div><span class="badge">22ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt23.jus.br" target="_blank" rel="noopener">TRT da 23ª Região</a><span class="desc">Mato Grosso</span></div><span class="badge">23ª</span></div>
+        <div class="link-card"><i class="fas fa-briefcase"></i><div class="info"><a href="https://www.trt24.jus.br" target="_blank" rel="noopener">TRT da 24ª Região</a><span class="desc">Mato Grosso do Sul</span></div><span class="badge">24ª</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
-      <!-- As demais seções (Justiça do Trabalho, Eleitoral, Sistemas, Legislação, Direito Digital, Previdência, Jurisprudência, Portais, Periódicos, Códigos, Associações, Órgãos, OAB, Direito Profissional, Estatutos, Assembleias, Universidades, Bibliotecas, Ferramentas, Simulados, Portal Simulados, Perícia Digital, FAQ) serão geradas com o mesmo padrão: -->
-      <!-- <h2 id="identificador">Título</h2> -->
-      <!-- <div class="link-grid">...links...</div> -->
-      <!-- <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div> -->
+      <!-- ===== 5. JUSTIÇA ELEITORAL ===== -->
+      <h2 id="justica-eleitoral">🗳️ Justiça Eleitoral</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-vote-yea"></i><div class="info"><a href="https://www.tre-rs.jus.br" target="_blank" rel="noopener">TRE do Rio Grande do Sul</a><span class="desc">Consulta de processos e serviços eleitorais</span></div><span class="badge">RS</span></div>
+        <div class="link-card"><i class="fas fa-vote-yea"></i><div class="info"><a href="https://www.tre-sp.jus.br" target="_blank" rel="noopener">TRE de São Paulo</a><span class="desc">Informações eleitorais</span></div><span class="badge">SP</span></div>
+        <div class="link-card"><i class="fas fa-vote-yea"></i><div class="info"><a href="https://www.tre-mg.jus.br" target="_blank" rel="noopener">TRE de Minas Gerais</a><span class="desc">Serviços eleitorais</span></div><span class="badge">MG</span></div>
+        <div class="link-card"><i class="fas fa-vote-yea"></i><div class="info"><a href="https://www.tre-rj.jus.br" target="_blank" rel="noopener">TRE do Rio de Janeiro</a><span class="desc">Justiça Eleitoral</span></div><span class="badge">RJ</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
-      <!-- ===== DESTAQUE: ADVOCACIA VERA CATARINA (dentro de Direito Profissional) ===== -->
-      <!-- O link destacado está dentro da seção "Direito Profissional e Advocacia", com a classe link-card-destaque. -->
+      <!-- ===== 6. SISTEMAS PROCESSUAIS ===== -->
+      <h2 id="sistemas-processuais">💻 Sistemas Processuais Eletrônicos</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-laptop"></i><div class="info"><a href="https://pje.jus.br" target="_blank" rel="noopener">PJe – Processo Judicial Eletrônico</a><span class="desc">Sistema unificado do CNJ</span></div><span class="badge">PJe</span></div>
+        <div class="link-card"><i class="fas fa-laptop"></i><div class="info"><a href="https://eproc.trf4.jus.br" target="_blank" rel="noopener">Eproc – TRF4</a><span class="desc">Sistema do TRF4 (4ª Região)</span></div><span class="badge">Eproc</span></div>
+        <div class="link-card"><i class="fas fa-laptop"></i><div class="info"><a href="https://esaj.tjsp.jus.br" target="_blank" rel="noopener">e-SAJ – TJSP</a><span class="desc">Sistema do TJSP</span></div><span class="badge">e-SAJ</span></div>
+        <div class="link-card"><i class="fas fa-laptop"></i><div class="info"><a href="https://www.tjrs.jus.br" target="_blank" rel="noopener">Projudi – TJRS</a><span class="desc">Sistema do TJRS</span></div><span class="badge">Projudi</span></div>
+        <div class="link-card"><i class="fas fa-laptop"></i><div class="info"><a href="https://www.seu.jus.br" target="_blank" rel="noopener">SEEU – Sistema Eletrônico de Execução Unificado</a><span class="desc">Execuções penais</span></div><span class="badge">SEEU</span></div>
+        <div class="link-card"><i class="fas fa-laptop"></i><div class="info"><a href="https://www.cnj.jus.br" target="_blank" rel="noopener">PDPJ-Br – Plataforma Digital do Poder Judiciário</a><span class="desc">Marketplace do CNJ</span></div><span class="badge">PDPJ</span></div>
+        <div class="link-card"><i class="fas fa-laptop"></i><div class="info"><a href="http://www.sajdigital.com" target="_blank" rel="noopener">SAJ Digital</a><span class="desc">Sistema de Automação da Justiça</span></div><span class="badge">SAJ</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
-      <!-- ===== DESTAQUE: CAED UNISINOS (dentro de Universidades) ===== -->
-      <!-- O link destacado está dentro da seção "Universidades", com a classe link-card-destaque. -->
+      <!-- ===== 7. LEGISLAÇÃO ===== -->
+      <h2 id="legislacao">📜 Legislação</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Constituição Federal</a><span class="desc">Texto completo da CF/88</span></div><span class="badge">Constituição</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www4.planalto.gov.br/legislacao" target="_blank" rel="noopener">Portal da Legislação – Planalto</a><span class="desc">Leis, decretos e atos normativos</span></div><span class="badge">Legislação</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a><span class="desc">Projetos de lei e atividades legislativas</span></div><span class="badge">Câmara</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www12.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a><span class="desc">Legislação e tramitação</span></div><span class="badge">Senado</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.congressonacional.leg.br" target="_blank" rel="noopener">Congresso Nacional</a><span class="desc">Atividades do Legislativo</span></div><span class="badge">Congresso</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www2.planalto.gov.br" target="_blank" rel="noopener">Presidência da República</a><span class="desc">Atos e medidas provisórias</span></div><span class="badge">Executivo</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://normas.leg.br" target="_blank" rel="noopener">Normas.leg.br</a><span class="desc">Evolução da legislação ao longo do tempo</span></div><span class="badge">Normas</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://legislacao.presidencia.gov.br" target="_blank" rel="noopener">Legislação Federal – Presidência</a><span class="desc">Base da legislação federal brasileira</span></div><span class="badge">Federal</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.lexml.gov.br" target="_blank" rel="noopener">LexML Brasil</a><span class="desc">Rede de informação legislativa e jurídica</span></div><span class="badge">LexML</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
-      <!-- ===== EQUIPE E PERÍCIA DIGITAL (seção específica) ===== -->
+      <!-- ===== 8. DIREITO DIGITAL – LEGISLAÇÃO ESPECÍFICA ===== -->
+      <h2 id="direito-digital-legislacao">🔒 Direito Digital – Legislação Específica</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-shield-alt"></i><div class="info"><a href="https://www.gov.br/mj/pt-br/assuntos/sua-protecao/sedigi/eca-digital" target="_blank" rel="noopener">ECA Digital – Lei 15.211/2025</a><span class="desc">Estatuto Digital da Criança e do Adolescente – proteção de crianças e adolescentes no ambiente online</span></div><span class="badge">ECA Digital</span></div>
+        <div class="link-card"><i class="fas fa-shield-alt"></i><div class="info"><a href="https://www2.camara.leg.br/legin/fed/lei/2012/lei-12737-30-novembro-2012-774695-norma-pl.html" target="_blank" rel="noopener">Lei Carolina Dieckmann – Lei 12.737/2012</a><span class="desc">Tipificação criminal de delitos informáticos (invasão de dispositivos)</span></div><span class="badge">Lei Carolina</span></div>
+        <div class="link-card"><i class="fas fa-shield-alt"></i><div class="info"><a href="https://www.tjdft.jus.br/institucional/imprensa/campanhas-e-produtos/direito-facil/edicao-semanal/marco-civil-da-internet" target="_blank" rel="noopener">Marco Civil da Internet – Lei 12.965/2014</a><span class="desc">Princípios, garantias e deveres para o uso da internet no Brasil</span></div><span class="badge">Marco Civil</span></div>
+        <div class="link-card"><i class="fas fa-shield-alt"></i><div class="info"><a href="https://www.gov.br/gestao/pt-br/assuntos/noticias/2025/se/governo-sanciona-eca-digital-e-anuncia-transformacao-da-anpd-em-agencia-reguladora" target="_blank" rel="noopener">LGPD – Lei 13.709/2018</a><span class="desc">Lei Geral de Proteção de Dados Pessoais</span></div><span class="badge">LGPD</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 9. PREVIDÊNCIA SOCIAL ===== -->
+      <h2 id="previdencia">🏦 Previdência Social</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-users"></i><div class="info"><a href="https://meu.inss.gov.br" target="_blank" rel="noopener">Meu INSS</a><span class="desc">Portal de serviços do INSS</span></div><span class="badge">INSS</span></div>
+        <div class="link-card"><i class="fas fa-users"></i><div class="info"><a href="https://www.gov.br/previdencia" target="_blank" rel="noopener">Ministério da Previdência Social</a><span class="desc">Informações previdenciárias</span></div><span class="badge">Previdência</span></div>
+        <div class="link-card"><i class="fas fa-users"></i><div class="info"><a href="https://www.gov.br/inss" target="_blank" rel="noopener">INSS – Instituto Nacional do Seguro Social</a><span class="desc">Site institucional</span></div><span class="badge">INSS</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 10. JURISPRUDÊNCIA ===== -->
+      <h2 id="jurisprudencia">⚖️ Jurisprudência</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-search"></i><div class="info"><a href="https://jurisprudencia.stf.jus.br" target="_blank" rel="noopener">Jurisprudência do STF</a><span class="desc">Acórdãos e decisões do Supremo</span></div><span class="badge">STF</span></div>
+        <div class="link-card"><i class="fas fa-search"></i><div class="info"><a href="https://www.stj.jus.br/sites/portalp/Paginas/Jurisprudencia.aspx" target="_blank" rel="noopener">Jurisprudência do STJ</a><span class="desc">Acórdãos e súmulas</span></div><span class="badge">STJ</span></div>
+        <div class="link-card"><i class="fas fa-search"></i><div class="info"><a href="https://www.jusbrasil.com.br" target="_blank" rel="noopener">Jusbrasil</a><span class="desc">Busca unificada de jurisprudência</span></div><span class="badge">Jusbrasil</span></div>
+        <div class="link-card"><i class="fas fa-search"></i><div class="info"><a href="https://www.jus.com.br" target="_blank" rel="noopener">Jus Navigandi</a><span class="desc">Artigos e doutrina</span></div><span class="badge">Jus</span></div>
+        <div class="link-card"><i class="fas fa-search"></i><div class="info"><a href="https://bdjur.stj.jus.br" target="_blank" rel="noopener">BDJur – STJ</a><span class="desc">Biblioteca Digital do STJ</span></div><span class="badge">BDJur</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 11. PORTAIS JURÍDICOS ===== -->
+      <h2 id="portais-juridicos">📰 Portais e Notícias Jurídicas</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-newspaper"></i><div class="info"><a href="https://www.conjur.com.br" target="_blank" rel="noopener">Consultor Jurídico (Conjur)</a><span class="desc">Notícias, artigos e análises jurídicas diárias</span></div><span class="badge">Conjur</span></div>
+        <div class="link-card"><i class="fas fa-newspaper"></i><div class="info"><a href="https://www.migalhas.com.br" target="_blank" rel="noopener">Migalhas</a><span class="desc">Notícias e informações jurídicas</span></div><span class="badge">Migalhas</span></div>
+        <div class="link-card"><i class="fas fa-newspaper"></i><div class="info"><a href="https://www.jota.info" target="_blank" rel="noopener">JOTA</a><span class="desc">Jornalismo especializado em direito e políticas públicas</span></div><span class="badge">JOTA</span></div>
+        <div class="link-card"><i class="fas fa-newspaper"></i><div class="info"><a href="https://www.lex.com.br" target="_blank" rel="noopener">Lex.com.br</a><span class="desc">Legislação, doutrina e notícias</span></div><span class="badge">Lex</span></div>
+        <div class="link-card"><i class="fas fa-newspaper"></i><div class="info"><a href="https://www.direitonet.com.br" target="_blank" rel="noopener">DireitoNet</a><span class="desc">Conteúdo jurídico e fóruns de discussão</span></div><span class="badge">DireitoNet</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 12. PERIÓDICOS CIENTÍFICOS E DOUTRINA ===== -->
+      <h2 id="periodicos">🎓 Periódicos Científicos e Doutrina</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.revistas.usp.br" target="_blank" rel="noopener">Revistas USP – Direito</a><span class="desc">Periódicos da Universidade de São Paulo</span></div><span class="badge">USP</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.bdjur.stj.jus.br" target="_blank" rel="noopener">BDJur – STJ</a><span class="desc">Biblioteca Digital Jurídica do STJ</span></div><span class="badge">BDJur</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.scielo.br/j/rdi" target="_blank" rel="noopener">SciELO – Direito</a><span class="desc">Coleção de periódicos científicos em direito</span></div><span class="badge">SciELO</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.cjf.jus.br/cjf/revista-cjf" target="_blank" rel="noopener">Revista do CJF</a><span class="desc">Periódico do Conselho da Justiça Federal</span></div><span class="badge">CJF</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.trf4.jus.br/trf4/revista" target="_blank" rel="noopener">Revista do TRF4</a><span class="desc">Publicações da 4ª Região</span></div><span class="badge">TRF4</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 13. CÓDIGOS PRINCIPAIS E LEGISLAÇÃO BÁSICA ===== -->
+      <h2 id="codigos">⚖️ Códigos Principais e Legislação Básica</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Constituição Federal (CF/88)</a><span class="desc">Texto atualizado</span></div><span class="badge">CF</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del2848.htm" target="_blank" rel="noopener">Código Penal (CP)</a><span class="desc">Decreto-Lei 2.848/1940</span></div><span class="badge">CP</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/Leis/L5869.htm" target="_blank" rel="noopener">Código de Processo Penal (CPP)</a><span class="desc">Lei 5.869/1973</span></div><span class="badge">CPP</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/Leis/L10406.htm" target="_blank" rel="noopener">Código Civil (CC)</a><span class="desc">Lei 10.406/2002</span></div><span class="badge">CC</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/Leis/L5869.htm" target="_blank" rel="noopener">Código de Processo Civil (CPC)</a><span class="desc">Lei 5.869/1973 (revogado, mas mantido para referência histórica)</span></div><span class="badge">CPC</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/Leis/L8213.htm" target="_blank" rel="noopener">Lei de Benefícios da Previdência Social – Lei 8.213/91</a><span class="desc">Planos e benefícios do INSS</span></div><span class="badge">Lei 8.213</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/Leis/L8212.htm" target="_blank" rel="noopener">Lei de Custeio da Previdência Social – Lei 8.212/91</a><span class="desc">Contribuições previdenciárias</span></div><span class="badge">Lei 8.212</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.planalto.gov.br/ccivil_03/Leis/L8112.htm" target="_blank" rel="noopener">Lei 8.112/90 – Regime Jurídico dos Servidores Públicos Civis da União</a><span class="desc">Estatuto dos servidores federais</span></div><span class="badge">Lei 8.112</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 14. ASSOCIAÇÕES E INSTITUTOS ===== -->
+      <h2 id="associacoes">🏛️ Associações e Institutos</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-users"></i><div class="info"><a href="https://www.oab.org.br" target="_blank" rel="noopener">Ordem dos Advogados do Brasil (OAB)</a><span class="desc">Conselho Federal</span></div><span class="badge">OAB</span></div>
+        <div class="link-card"><i class="fas fa-users"></i><div class="info"><a href="https://www.ibdcc.org.br" target="_blank" rel="noopener">Instituto Brasileiro de Direito do Consumidor (IBDCC)</a><span class="desc">Direito do Consumidor</span></div><span class="badge">IBDCC</span></div>
+        <div class="link-card"><i class="fas fa-users"></i><div class="info"><a href="https://www.ibdfam.org.br" target="_blank" rel="noopener">Instituto Brasileiro de Direito de Família (IBDFAM)</a><span class="desc">Especializado em direito das famílias</span></div><span class="badge">IBDFAM</span></div>
+        <div class="link-card"><i class="fas fa-users"></i><div class="info"><a href="https://www.ajuris.org.br" target="_blank" rel="noopener">AJURIS – Associação dos Juízes do RS</a><span class="desc">Magistratura gaúcha</span></div><span class="badge">AJURIS</span></div>
+        <div class="link-card"><i class="fas fa-users"></i><div class="info"><a href="https://www.amasp.com.br" target="_blank" rel="noopener">AMASP – Associação dos Magistrados de São Paulo</a><span class="desc">Magistratura paulista</span></div><span class="badge">AMASP</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 15. ÓRGÃOS OFICIAIS E MINISTÉRIOS ===== -->
+      <h2 id="orgaos-oficiais">🏛️ Órgãos Oficiais e Ministérios</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.gov.br/planalto" target="_blank" rel="noopener">Presidência da República</a><span class="desc">Atos do Executivo</span></div><span class="badge">Executivo</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.gov.br/mj" target="_blank" rel="noopener">Ministério da Justiça e Segurança Pública</a><span class="desc">Órgão de justiça</span></div><span class="badge">MJSP</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.gov.br/fazenda" target="_blank" rel="noopener">Ministério da Fazenda</a><span class="desc">Política fiscal e tributária</span></div><span class="badge">Fazenda</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.agu.gov.br" target="_blank" rel="noopener">Advocacia-Geral da União (AGU)</a><span class="desc">Representação judicial da União</span></div><span class="badge">AGU</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.dpf.gov.br" target="_blank" rel="noopener">Polícia Federal (PF)</a><span class="desc">Segurança pública e investigação</span></div><span class="badge">PF</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.prf.gov.br" target="_blank" rel="noopener">Polícia Rodoviária Federal (PRF)</a><span class="desc">Fiscalização rodoviária</span></div><span class="badge">PRF</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 16. OAB – SECCIONAIS ===== -->
+      <h2 id="oab-seccionais">🎓 OAB – Seccionais</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oabrs.org.br" target="_blank" rel="noopener">OAB/RS</a><span class="desc">Seccional do Rio Grande do Sul</span></div><span class="badge">RS</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oabsp.org.br" target="_blank" rel="noopener">OAB/SP</a><span class="desc">Seccional de São Paulo</span></div><span class="badge">SP</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oabmg.org.br" target="_blank" rel="noopener">OAB/MG</a><span class="desc">Seccional de Minas Gerais</span></div><span class="badge">MG</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oabrj.org.br" target="_blank" rel="noopener">OAB/RJ</a><span class="desc">Seccional do Rio de Janeiro</span></div><span class="badge">RJ</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oabdf.org.br" target="_blank" rel="noopener">OAB/DF</a><span class="desc">Seccional do Distrito Federal</span></div><span class="badge">DF</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oabpr.org.br" target="_blank" rel="noopener">OAB/PR</a><span class="desc">Seccional do Paraná</span></div><span class="badge">PR</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oabsc.org.br" target="_blank" rel="noopener">OAB/SC</a><span class="desc">Seccional de Santa Catarina</span></div><span class="badge">SC</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oabba.org.br" target="_blank" rel="noopener">OAB/BA</a><span class="desc">Seccional da Bahia</span></div><span class="badge">BA</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 17. DIRETORIA PROFISSIONAL E ADVOCACIA ===== -->
+      <h2 id="direito-profissional">⚖️ Direito Profissional e Advocacia</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.oab.org.br" target="_blank" rel="noopener">OAB – Conselho Federal</a><span class="desc">Regulamentação da advocacia</span></div><span class="badge">OAB</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.esa.oab.org.br" target="_blank" rel="noopener">ESA – Escola Superior de Advocacia</a><span class="desc">Cursos e formação continuada</span></div><span class="badge">ESA</span></div>
+        <div class="link-card"><i class="fas fa-gavel"></i><div class="info"><a href="https://www.institutoadvocacia.com.br" target="_blank" rel="noopener">Instituto da Advocacia</a><span class="desc">Defesa da advocacia e da cidadania</span></div><span class="badge">Instituto</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 18. ESTATUTOS ESPECIAIS – EDIÇÕES DO SENADO ===== -->
+      <h2 id="estatutos-especiais">📋 Estatutos Especiais – Edições do Senado</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-file-pdf"></i><div class="info"><a href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/566968/estatuto_da_crianca.pdf" target="_blank" rel="noopener">Estatuto da Criança e do Adolescente (ECA)</a><span class="desc">Lei 8.069/1990 – Edição do Senado</span></div><span class="badge">ECA</span></div>
+        <div class="link-card"><i class="fas fa-file-pdf"></i><div class="info"><a href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/575646/estatuto_do_idoso.pdf" target="_blank" rel="noopener">Estatuto do Idoso</a><span class="desc">Lei 10.741/2003</span></div><span class="badge">Idoso</span></div>
+        <div class="link-card"><i class="fas fa-file-pdf"></i><div class="info"><a href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/575645/estatuto_da_igualdade_racial.pdf" target="_blank" rel="noopener">Estatuto da Igualdade Racial</a><span class="desc">Lei 12.288/2010</span></div><span class="badge">Igualdade Racial</span></div>
+        <div class="link-card"><i class="fas fa-file-pdf"></i><div class="info"><a href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/575647/estatuto_da_pessoa_com_deficiencia.pdf" target="_blank" rel="noopener">Estatuto da Pessoa com Deficiência</a><span class="desc">Lei 13.146/2015 (Lei Brasileira de Inclusão)</span></div><span class="badge">PCD</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 19. ASSEMBLEIAS LEGISLATIVAS ESTADUAIS ===== -->
+      <h2 id="assembleias">🌐 Assembleias Legislativas Estaduais</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.al.rs.gov.br" target="_blank" rel="noopener">Assembleia Legislativa do Rio Grande do Sul</a><span class="desc">Legislação estadual gaúcha</span></div><span class="badge">RS</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.al.sp.gov.br" target="_blank" rel="noopener">Assembleia Legislativa de São Paulo</a><span class="desc">Legislação paulista</span></div><span class="badge">SP</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.almg.gov.br" target="_blank" rel="noopener">Assembleia Legislativa de Minas Gerais</a><span class="desc">Legislação mineira</span></div><span class="badge">MG</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">Assembleia Legislativa do Rio de Janeiro</a><span class="desc">Legislação fluminense</span></div><span class="badge">RJ</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.cl.df.gov.br" target="_blank" rel="noopener">Câmara Legislativa do Distrito Federal</a><span class="desc">Legislação distrital</span></div><span class="badge">DF</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.alep.pr.gov.br" target="_blank" rel="noopener">Assembleia Legislativa do Paraná</a><span class="desc">Legislação paranaense</span></div><span class="badge">PR</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.alesc.sc.gov.br" target="_blank" rel="noopener">Assembleia Legislativa de Santa Catarina</a><span class="desc">Legislação catarinense</span></div><span class="badge">SC</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 20. UNIVERSIDADES E FACULDADES DE DIREITO ===== -->
+      <h2 id="universidades">🎓 Universidades e Faculdades de Direito</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.usp.br" target="_blank" rel="noopener">Universidade de São Paulo (USP) – Faculdade de Direito</a><span class="desc">Portal da FDUSP</span></div><span class="badge">USP</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.ufrgs.br" target="_blank" rel="noopener">UFRGS – Faculdade de Direito</a><span class="desc">Universidade Federal do Rio Grande do Sul</span></div><span class="badge">UFRGS</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.unb.br" target="_blank" rel="noopener">UnB – Faculdade de Direito</a><span class="desc">Universidade de Brasília</span></div><span class="badge">UnB</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.ufmg.br" target="_blank" rel="noopener">UFMG – Faculdade de Direito</a><span class="desc">Universidade Federal de Minas Gerais</span></div><span class="badge">UFMG</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.pucrs.br" target="_blank" rel="noopener">PUCRS – Faculdade de Direito</a><span class="desc">Pontifícia Universidade Católica do RS</span></div><span class="badge">PUCRS</span></div>
+        <div class="link-card"><i class="fas fa-university"></i><div class="info"><a href="https://www.unisinos.br" target="_blank" rel="noopener">Unisinos – Faculdade de Direito</a><span class="desc">Universidade do Vale do Rio dos Sinos (RS)</span></div><span class="badge">Unisinos</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 21. BIBLIOTECAS VIRTUAIS – E-BOOKS GRATUITOS ===== -->
+      <h2 id="bibliotecas">📚 Bibliotecas Virtuais – E-books Gratuitos</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://bdjur.stj.jus.br" target="_blank" rel="noopener">BDJur – STJ</a><span class="desc">Biblioteca Digital do STJ</span></div><span class="badge">BDJur</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www2.senado.leg.br/bdsf" target="_blank" rel="noopener">Biblioteca Digital do Senado</a><span class="desc">Publicações, leis e obras raras</span></div><span class="badge">Senado</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.bibliotecadigital.ufmg.br" target="_blank" rel="noopener">Biblioteca Digital UFMG</a><span class="desc">Acervo acadêmico</span></div><span class="badge">UFMG</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.bv.fapesp.br" target="_blank" rel="noopener">Biblioteca Virtual da FAPESP</a><span class="desc">Publicações científicas</span></div><span class="badge">FAPESP</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.oab.org.br/biblioteca" target="_blank" rel="noopener">Biblioteca OAB</a><span class="desc">Acervo da Ordem dos Advogados</span></div><span class="badge">OAB</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 22. FERRAMENTAS E CALCULADORAS ===== -->
+      <h2 id="ferramentas">🧮 Ferramentas e Calculadoras</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-calculator"></i><div class="info"><a href="https://www3.trf4.jus.br/trf4/controlador.php?acao=calculo" target="_blank" rel="noopener">Calculadora do TRF4</a><span class="desc">Cálculo de custas e honorários</span></div><span class="badge">TRF4</span></div>
+        <div class="link-card"><i class="fas fa-calculator"></i><div class="info"><a href="https://www.stj.jus.br/sites/portalp/Calculadoras" target="_blank" rel="noopener">Calculadora do STJ</a><span class="desc">Custas processuais</span></div><span class="badge">STJ</span></div>
+        <div class="link-card"><i class="fas fa-calculator"></i><div class="info"><a href="https://www.inss.gov.br/calculadoras" target="_blank" rel="noopener">Calculadora do INSS</a><span class="desc">Simulação de benefícios previdenciários</span></div><span class="badge">INSS</span></div>
+        <div class="link-card"><i class="fas fa-calculator"></i><div class="info"><a href="https://www.tjrs.jus.br/calculadora" target="_blank" rel="noopener">Calculadora do TJRS</a><span class="desc">Custas e despesas processuais</span></div><span class="badge">TJRS</span></div>
+        <div class="link-card"><i class="fas fa-calculator"></i><div class="info"><a href="https://www.conjur.com.br/calculadoras" target="_blank" rel="noopener">Calculadora do Conjur</a><span class="desc">Ferramentas para advogados</span></div><span class="badge">Conjur</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 23. SIMULADOS POR DISCIPLINA ===== -->
+      <h2 id="simulados">📝 Simulados por Disciplina</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.simuladosdireito.com.br/disciplina/direito-constitucional" target="_blank" rel="noopener">Direito Constitucional</a><span class="desc">Questões sobre CF/88, princípios, direitos fundamentais</span></div><span class="badge">Simulados</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.simuladosdireito.com.br/disciplina/direito-civil" target="_blank" rel="noopener">Direito Civil</a><span class="desc">Pessoas, contratos, obrigações, responsabilidade civil</span></div><span class="badge">Simulados</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.simuladosdireito.com.br/disciplina/direito-penal" target="_blank" rel="noopener">Direito Penal</a><span class="desc">Teoria do crime, penas, crimes em espécie</span></div><span class="badge">Simulados</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.simuladosdireito.com.br/disciplina/direito-processual-civil" target="_blank" rel="noopener">Direito Processual Civil</a><span class="desc">Procedimentos, recursos, execução</span></div><span class="badge">Simulados</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.simuladosdireito.com.br/disciplina/direito-trabalho" target="_blank" rel="noopener">Direito do Trabalho</a><span class="desc">Relações de trabalho, CLT, terceirização</span></div><span class="badge">Simulados</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.simuladosdireito.com.br/disciplina/direito-tributario" target="_blank" rel="noopener">Direito Tributário</a><span class="desc">Sistema tributário, impostos, elisão</span></div><span class="badge">Simulados</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.simuladosdireito.com.br/disciplina/direito-ambiental" target="_blank" rel="noopener">Direito Ambiental</a><span class="desc">Licenciamento, responsabilidade, recursos naturais</span></div><span class="badge">Simulados</span></div>
+        <div class="link-card"><i class="fas fa-graduation-cap"></i><div class="info"><a href="https://www.simuladosdireito.com.br/disciplina/direito-internacional" target="_blank" rel="noopener">Direito Internacional</a><span class="desc">Tratados, direitos humanos, conflitos normativos</span></div><span class="badge">Simulados</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 24. PORTAL SIMULADOS – PÁGINAS DO SITE ===== -->
+      <h2 id="portal-simulados">📌 Simulados de Direito – Portal Completo</h2>
+      <div class="link-grid">
+        <div class="link-card"><i class="fas fa-home"></i><div class="info"><a href="https://www.simuladosdireito.com.br" target="_blank" rel="noopener">Página Inicial – Simulados Direito</a><span class="desc">Portal de simulados e conteúdo jurídico</span></div><span class="badge">Home</span></div>
+        <div class="link-card"><i class="fas fa-book"></i><div class="info"><a href="https://www.simuladosdireito.com.br/sobre" target="_blank" rel="noopener">Sobre o Projeto</a><span class="desc">Missão e equipe</span></div><span class="badge">Sobre</span></div>
+        <div class="link-card"><i class="fas fa-newspaper"></i><div class="info"><a href="https://www.simuladosdireito.com.br/blog" target="_blank" rel="noopener">Blog Jurídico</a><span class="desc">Artigos, notícias e análises</span></div><span class="badge">Blog</span></div>
+        <div class="link-card"><i class="fas fa-envelope"></i><div class="info"><a href="https://www.simuladosdireito.com.br/contato" target="_blank" rel="noopener">Contato</a><span class="desc">Fale com a equipe</span></div><span class="badge">Contato</span></div>
+        <div class="link-card"><i class="fas fa-question-circle"></i><div class="info"><a href="https://www.simuladosdireito.com.br/faq" target="_blank" rel="noopener">FAQ – Perguntas Frequentes</a><span class="desc">Dúvidas sobre a plataforma</span></div><span class="badge">FAQ</span></div>
+        <div class="link-card"><i class="fas fa-upload"></i><div class="info"><a href="https://www.simuladosdireito.com.br/submissao" target="_blank" rel="noopener">Submissão de Questões</a><span class="desc">Envie suas questões para o banco</span></div><span class="badge">Submissão</span></div>
+        <div class="link-card"><i class="fas fa-trophy"></i><div class="info"><a href="https://www.simuladosdireito.com.br/ranking" target="_blank" rel="noopener">Ranking dos Usuários</a><span class="desc">Desempenho dos participantes</span></div><span class="badge">Ranking</span></div>
+        <div class="link-card"><i class="fas fa-chart-line"></i><div class="info"><a href="https://www.simuladosdireito.com.br/estatisticas" target="_blank" rel="noopener">Estatísticas do Portal</a><span class="desc">Dados de uso e desempenho</span></div><span class="badge">Estatísticas</span></div>
+      </div>
+      <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
+
+      <!-- ===== 25. PERÍCIA DIGITAL ===== -->
       <h2 id="pericia-digital">🔒 Análise Forense Computacional / Direito Digital</h2>
-      <p style="font-size:0.95rem; color:var(--text-light); margin-bottom:20px;">
-        O escritório da Dra. Vera Catarina conta com o suporte técnico especializado de <strong>Fábio Wlademir</strong>, profissional com mais de 15 anos de experiência em <strong>cibersegurança, análise forense computacional e investigação de incidentes digitais</strong>.
-      </p>
-
       <div class="team-card">
-        <img src="https://fabiowlademir.github.io/direito-ao-esquecimento/fabio.jpg" alt="Fábio Wlademir - Analista de TI e Estudante de Direito" title="Fábio Wlademir | Analista SOC/NOC • Estudante de Direito - UNISINOS">
+        <img src="https://media.licdn.com/dms/image/D4D03AQG6gAz-4S-5LQ/profile-displayphoto-shrink_400_400/0/1716416725658?e=2147483647&v=beta&t=Z4H0f3aM6L6s2VQf5dX9L2g7JzP0wT8yQk5rC7xNqF4" alt="Fábio Wlademir – Perito Forense Computacional" loading="lazy" />
         <h3>Fábio Wlademir</h3>
-        <div class="role">🛡️ Analista SOC/NOC • Estudante de Direito (4º semestre - UNISINOS)</div>
+        <div class="role">Perito Forense Computacional | Especialista em Direito Digital</div>
         <div class="desc">
-          Profissional com mais de 15 anos de experiência em <strong>cibersegurança, infraestrutura de TI e desenvolvimento de sistemas</strong>. Atua como <strong>Analista SOC/NOC</strong> e consultor em <strong>LegalTech</strong>, com expertise em <strong>LGPD, sistemas de tribunais eletrônicos e automação jurídica</strong>. Oferece <strong>suporte técnico especializado em perícia computacional, análise forense digital e investigação de incidentes</strong> para processos judiciais que envolvem provas digitais, vazamento de dados e crimes cibernéticos.<br><br>
-          <strong>Atuação em processos judiciais:</strong> Análise de logs de sistemas, investigação de acessos indevidos, rastreamento de atividades em sistemas, análise de evidências digitais, investigação de vazamento de dados, análise de ataques hackers e crimes cibernéticos. Experiência em sistemas judiciais eletrônicos como <strong>PJe, eproc, e-SAJ, Projudi, SEEU, Sisbajud, Renajud, BNMP e PDPJ-Br</strong>.
-        </div>
-        <div style="margin-top:10px;">
-          <span class="badge-tech"><i class="fas fa-shield-halved"></i> SOC/NOC</span>
-          <span class="badge-tech"><i class="fas fa-gavel"></i> LegalTech</span>
-          <span class="badge-tech"><i class="fas fa-laptop-code"></i> DevSecOps</span>
-          <span class="badge-tech"><i class="fas fa-search"></i> Forense Digital</span>
-          <span class="badge-tech"><i class="fas fa-database"></i> LGPD</span>
+          <strong>CAED Unisinos</strong> – Centro de Apoio à Educação a Distância<br>
+          Atua na área de <strong>análise forense computacional</strong>, perícia digital, crimes cibernéticos e proteção de dados (LGPD).<br>
+          Certificações: <span class="badge-tech">CFCE</span> <span class="badge-tech">Cellebrite</span> <span class="badge-tech">EnCase</span>
         </div>
         <div class="social-links">
-          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" title="Portfólio"><i class="fas fa-globe"></i></a>
-          <a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/fabiowlademirrs/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://f2ti.blogspot.com/" target="_blank" rel="noopener" title="Site Web Design"><i class="fas fa-code"></i></a>
-          <a href="https://f2suporte.blogspot.com/search/label/forense%20digital" target="_blank" rel="noopener" title="Blog Forense Digital"><i class="fas fa-blog"></i></a>
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/fabiowlademir" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="mailto:fabiowlademir@unisinos.br"><i class="fas fa-envelope"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" class="btn-team"><i class="fas fa-external-link-alt"></i> Conhecer Portfólio</a>
+        <a href="https://www.unisinos.br/caed" target="_blank" rel="noopener" class="btn-team">Conheça o CAED Unisinos</a>
       </div>
-
-      <p style="font-size:0.95rem; color:var(--text-dark);">
-        Essa parceria técnica permite ao escritório oferecer um atendimento completo em casos de <strong>crimes virtuais, fraudes digitais, invasão de dispositivos, vazamento de dados e conflitos envolvendo tecnologia</strong>, unindo a expertise jurídica da Dra. Vera Catarina à capacidade técnica de investigação e perícia digital de Fábio Wlademir.
-      </p>
-      <p style="font-size:0.9rem; color:var(--text-light);">
-        <i class="fas fa-link" style="color:var(--accent);"></i> Conheça mais sobre <a href="/direito-digital.html" style="color:var(--accent); font-weight:600;">Direito Digital</a> e como a perícia computacional pode ser decisiva no seu processo.
+      <p style="font-size:0.9rem; color:var(--text-light); margin-top:15px;">
+        Serviços de <strong>perícia digital</strong>: análise de dispositivos, recuperação de dados, perícia em mídias sociais, deep web e investigações cibernéticas. Atendimento a escritórios de advocacia, empresas e órgãos públicos.
       </p>
       <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
-      <!-- ===== FAQ ===== -->
+      <!-- ===== 26. FAQ ===== -->
       <h2 id="faq" style="margin-top:40px;">❓ Perguntas Frequentes sobre Sites e Ferramentas Jurídicas</h2>
-
       <div class="faq-item" onclick="toggleFAQ(this)">
-        <h4>Como consultar um processo no TJRS? <i class="fas fa-chevron-down"></i></h4>
-        <p>Acesse o site do <a href="https://www.tjrs.jus.br" target="_blank" style="color:var(--accent);">TJRS</a>, clique em "Consulta de Processos" e informe o número do processo (formato CNJ) ou o nome das partes. O sistema exibirá todas as movimentações.</p>
+        <h4>Como posso acompanhar um processo judicial? <i class="fas fa-chevron-down"></i></h4>
+        <p>Utilize os sistemas processuais eletrônicos como PJe, Eproc, e-SAJ ou Projudi, dependendo do tribunal. Acesse a seção "Sistemas Processuais" desta página para os links diretos. Você pode consultar por número do processo ou CPF/CNPJ.</p>
       </div>
-
       <div class="faq-item" onclick="toggleFAQ(this)">
-        <h4>Qual a diferença entre PJe, Eproc e e-SAJ? <i class="fas fa-chevron-down"></i></h4>
-        <p>São sistemas de processo judicial eletrônico. O <strong>PJe</strong> é o sistema unificado do CNJ, usado em diversos tribunais. O <strong>Eproc</strong> é desenvolvido pelo TRF4 e adotado por vários tribunais. O <strong>e-SAJ</strong> é o sistema do TJSP. Cada um tem suas particularidades, mas todos permitem consultar e peticionar eletronicamente.</p>
+        <h4>Onde encontro a legislação atualizada? <i class="fas fa-chevron-down"></i></h4>
+        <p>O Portal da Legislação do Planalto e o LexML Brasil são as principais fontes. Também é possível acessar diretamente os sites da Câmara, Senado e Congresso Nacional, todos listados na seção "Legislação".</p>
       </div>
-
       <div class="faq-item" onclick="toggleFAQ(this)">
         <h4>Como pesquisar jurisprudência de forma eficiente? <i class="fas fa-chevron-down"></i></h4>
-        <p>Utilize os portais de jurisprudência do STF, STJ e TRFs, ou ferramentas como o <a href="https://www.jusbrasil.com.br" target="_blank" style="color:var(--accent);">Jusbrasil</a> que unificam decisões de vários tribunais. Use filtros como data, relator, assunto e palavras-chave para refinar a pesquisa.</p>
+        <p>Use os buscadores do STF, STJ, Jusbrasil e BDJur. Utilize filtros como relator, data, tema e tipo de decisão. A seção "Jurisprudência" reúne os principais repositórios.</p>
       </div>
-
       <div class="faq-item" onclick="toggleFAQ(this)">
-        <h4>O que é a PDPJ-Br? <i class="fas fa-chevron-down"></i></h4>
-        <p>A <strong>Plataforma Digital do Poder Judiciário (PDPJ-Br)</strong> é um marketplace do CNJ que reúne sistemas e soluções tecnológicas para o Judiciário, como o PJe, sistemas de gestão e ferramentas de inteligência artificial.</p>
+        <h4>Quais são os sistemas processuais mais usados? <i class="fas fa-chevron-down"></i></h4>
+        <p>O PJe é o sistema unificado do CNJ, utilizado na Justiça Federal, Trabalho e alguns TJs. Também são comuns o Eproc (TRF4), e-SAJ (TJSP) e Projudi (TJRS).</p>
       </div>
-
       <div class="faq-item" onclick="toggleFAQ(this)">
-        <h4>Como funciona a perícia digital em processos judiciais? <i class="fas fa-chevron-down"></i></h4>
-        <p>A perícia digital analisa evidências eletrônicas (logs, e-mails, mensagens, dados de dispositivos) para comprovar ou refutar fatos em processos judiciais. É essencial em casos de crimes cibernéticos, vazamento de dados, fraudes e disputas trabalhistas que envolvem provas digitais. O escritório da Dra. Vera Catarina conta com suporte especializado nessa área.</p>
+        <h4>Onde posso encontrar material de estudo gratuito para OAB e concursos? <i class="fas fa-chevron-down"></i></h4>
+        <p>Os simulados por disciplina do portal SimuladosDireito são uma excelente ferramenta. Além disso, as bibliotecas virtuais e os periódicos científicos oferecem doutrina e artigos gratuitos.</p>
       </div>
-
       <div class="faq-item" onclick="toggleFAQ(this)">
-        <h4>O que é o CAED Unisinos? <i class="fas fa-chevron-down"></i></h4>
-        <p>O <strong>CAED (Centro Acadêmico de Estudantes de Direito)</strong> é a entidade de representação estudantil do curso de Direito da UNISINOS, com atuação nos campi de São Leopoldo e Porto Alegre. Promove eventos, palestras, monitorias, emissão de carteirinhas estudantis e defende os interesses dos acadêmicos perante a universidade. O site oficial é <a href="https://caedunisinos.com.br" target="_blank" style="color:var(--accent);">caedunisinos.com.br</a>.</p>
+        <h4>Como funciona a perícia digital e quando é necessária? <i class="fas fa-chevron-down"></i></h4>
+        <p>A perícia digital analisa dispositivos eletrônicos para extrair evidências em processos judiciais, trabalhistas ou investigações criminais. É essencial em casos de fraudes, cybercrimes, invasões de sistemas e litígios envolvendo dados digitais.</p>
       </div>
       <div class="back-to-top"><a href="#toc"><i class="fas fa-arrow-up"></i> Voltar ao menu</a></div>
 
@@ -558,7 +720,7 @@
       <div class="cta-box">
         <h3>Precisa de ajuda com seu processo?</h3>
         <p>Nossa equipe está disponível para orientá-lo sobre como acompanhar seu caso e utilizar as ferramentas jurídicas disponíveis.</p>
-        <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1,%20vim%20pela%20p%C3%A1gina%20Sites%20%C3%9Ateis." class="btn-cta" target="_blank"><i class="fas fa-whatsapp"></i> Falar no WhatsApp</a>
+        <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1,%20vim%20pela%20p%C3%A1gina%20Sites%20%C3%9Ateis." class="btn-cta" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
       </div>
 
       <p style="text-align:center; font-size:0.9rem; color:var(--text-light);">
@@ -569,13 +731,190 @@
   </section>
 
   <!-- ===== BACKLINKS (NOTÍCIAS E ÁREAS) ===== -->
-  <!-- (mantido igual ao código anterior) -->
+  <div style="background: var(--bg-light); padding: 40px 0; border-top: 1px solid var(--border);">
+    <div class="container">
+      <h3 style="font-family: 'Cinzel', serif; font-size:1.4rem; color:var(--primary-dark); text-align:center; margin-bottom:20px;">📌 Explore também</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 15px; max-width:900px; margin:0 auto;">
+        <a href="/noticias.html" style="display:flex; align-items:center; gap:8px; background:white; padding:12px 18px; border-radius:8px; border:1px solid var(--border); text-decoration:none; color:var(--text-dark); font-weight:500; transition: all 0.2s;"><i class="fas fa-newspaper" style="color:var(--accent);"></i> Notícias Jurídicas</a>
+        <a href="/index.html#atuacao" style="display:flex; align-items:center; gap:8px; background:white; padding:12px 18px; border-radius:8px; border:1px solid var(--border); text-decoration:none; color:var(--text-dark); font-weight:500; transition: all 0.2s;"><i class="fas fa-briefcase" style="color:var(--accent);"></i> Áreas de Atuação</a>
+        <a href="/contato.html" style="display:flex; align-items:center; gap:8px; background:white; padding:12px 18px; border-radius:8px; border:1px solid var(--border); text-decoration:none; color:var(--text-dark); font-weight:500; transition: all 0.2s;"><i class="fas fa-envelope" style="color:var(--accent);"></i> Contato</a>
+        <a href="/area-restrita.html" style="display:flex; align-items:center; gap:8px; background:white; padding:12px 18px; border-radius:8px; border:1px solid var(--border); text-decoration:none; color:var(--text-dark); font-weight:500; transition: all 0.2s;"><i class="fas fa-lock" style="color:var(--accent);"></i> Canal Restrito</a>
+        <a href="/sobre.html" style="display:flex; align-items:center; gap:8px; background:white; padding:12px 18px; border-radius:8px; border:1px solid var(--border); text-decoration:none; color:var(--text-dark); font-weight:500; transition: all 0.2s;"><i class="fas fa-users" style="color:var(--accent);"></i> Sobre Nós</a>
+        <a href="/legal.html" style="display:flex; align-items:center; gap:8px; background:white; padding:12px 18px; border-radius:8px; border:1px solid var(--border); text-decoration:none; color:var(--text-dark); font-weight:500; transition: all 0.2s;"><i class="fas fa-file-contract" style="color:var(--accent);"></i> Legal &amp; Suporte</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== FOOTER ===== -->
-  <!-- (mantido igual ao código anterior) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Vera Catarina Advocacia</h5>
+          <p style="color:#cbd5e1; font-size:0.85rem; line-height:1.6;">
+            Atuamos com compromisso, ética e excelência em diversas áreas do Direito, sempre buscando a melhor solução para nossos clientes.
+          </p>
+          <div style="margin-top:15px; display:flex; gap:12px;">
+            <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" style="color:#cbd5e1; font-size:1.4rem;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/AdvocaciaVeraCatarina" target="_blank" style="color:#cbd5e1; font-size:1.4rem;"><i class="fab fa-facebook"></i></a>
+            <a href="https://advocaciasapucaia.blogspot.com/" target="_blank" style="color:#cbd5e1; font-size:1.4rem;"><i class="fab fa-blogger"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" style="color:#cbd5e1; font-size:1.4rem;"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Links Rápidos</h5>
+          <ul>
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="/index.html#atuacao">Áreas de Atuação</a></li>
+            <li><a href="/noticias.html">Notícias</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+            <li><a href="/area-restrita.html">🔒 Canal Restrito</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Utilidades</h5>
+          <ul>
+            <li><a href="/sites-uteis.html">📚 Sites Úteis</a></li>
+            <li><a href="/sitemap.html">🗺️ Mapa do Site</a></li>
+            <li><a href="/acessibilidade.html">♿ Acessibilidade</a></li>
+            <li><a href="/legal.html">Legal &amp; Suporte</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank">Plantão 24h</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <strong>Advocacia Vera Catarina</strong> – Todos os direitos reservados.</p>
+        <p style="font-size:0.7rem; color:#64748b;">Este site utiliza tecnologias de acessibilidade e está em conformidade com a LGPD.</p>
+        <div class="visitor-counter">
+          <i class="fas fa-users"></i> Visitas: 
+          <img src="https://api.visitorbadge.io/api/visitors?path=veracatarina.github.io&label=visitantes&countColor=%23c5a880&style=flat" alt="Contador de visitas" />
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- ===== BANNER LGPD, VLIBRAS, TOOLBAR, TTS, SCRIPTS ===== -->
-  <!-- (mantidos igual ao código anterior) -->
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="lgpd-banner" style="position:fixed; bottom:0; left:0; right:0; background:#0b251e; color:#cbd5e1; padding:15px 20px; z-index:9999; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; border-top:2px solid var(--accent); font-size:0.85rem;">
+    <span><i class="fas fa-shield-alt" style="color:var(--accent); margin-right:8px;"></i> Utilizamos cookies e tecnologias para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="/legal.html#lgpd" style="color:var(--accent); text-decoration:underline;">Política de Privacidade</a>.</span>
+    <button onclick="document.getElementById('lgpd-banner').style.display='none'" style="background:var(--accent); border:none; color:#0b251e; padding:8px 20px; border-radius:4px; font-weight:700; cursor:pointer;">Aceitar</button>
+  </div>
+
+  <!-- ===== VLibras ===== -->
+  <div vw class="enabled" style="position:fixed; bottom:140px; right:20px; z-index:9998;">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
+  <button class="accessibility-toolbar-toggle" id="accessibility-toggle" aria-label="Abrir ferramentas de acessibilidade" title="Acessibilidade"><i class="fas fa-universal-access"></i></button>
+  <div class="accessibility-toolbar" id="accessibility-toolbar">
+    <div class="toolbar-title"><i class="fas fa-cog"></i> Acessibilidade</div>
+    <div class="btn-group">
+      <button data-action="toggle-contrast"><i class="fas fa-eye"></i> Contraste</button>
+      <button data-action="toggle-dark"><i class="fas fa-moon"></i> Modo Escuro</button>
+      <button data-action="toggle-fontsize" data-size="small">A-</button>
+      <button data-action="toggle-fontsize" data-size="medium">A</button>
+      <button data-action="toggle-fontsize" data-size="large">A+</button>
+      <button data-action="toggle-fontsize" data-size="xlarge">A++</button>
+      <button data-action="toggle-dyslexic"><i class="fas fa-font"></i> Disléxico</button>
+      <button data-action="toggle-motion"><i class="fas fa-film"></i> Reduzir</button>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Menu dropdown mobile
+    function toggleDropdown() {
+      const parent = document.querySelector('.dropdown');
+      parent.classList.toggle('open');
+    }
+    function openDropdown() {
+      document.querySelector('.dropdown').classList.add('open');
+    }
+    function closeDropdown() {
+      document.querySelector('.dropdown').classList.remove('open');
+    }
+
+    // FAQ
+    function toggleFAQ(el) {
+      el.classList.toggle('aberto');
+    }
+
+    // Acessibilidade: alternar toolbar
+    document.getElementById('accessibility-toggle').addEventListener('click', function() {
+      const toolbar = document.getElementById('accessibility-toolbar');
+      toolbar.classList.toggle('open');
+    });
+
+    // Ações da toolbar
+    document.querySelectorAll('#accessibility-toolbar button[data-action]').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const action = this.dataset.action;
+        const html = document.documentElement;
+
+        switch(action) {
+          case 'toggle-contrast':
+            html.classList.toggle('high-contrast');
+            break;
+          case 'toggle-dark':
+            html.classList.toggle('dark-mode');
+            break;
+          case 'toggle-fontsize':
+            const size = this.dataset.size;
+            html.classList.remove('font-small', 'font-medium', 'font-large', 'font-xlarge');
+            html.classList.add('font-' + size);
+            break;
+          case 'toggle-dyslexic':
+            html.classList.toggle('dyslexic-font');
+            break;
+          case 'toggle-motion':
+            html.classList.toggle('reduce-motion');
+            break;
+          default:
+            break;
+        }
+        // Salvar preferência no localStorage
+        localStorage.setItem('acessibilidade', JSON.stringify({
+          highContrast: html.classList.contains('high-contrast'),
+          darkMode: html.classList.contains('dark-mode'),
+          dyslexic: html.classList.contains('dyslexic-font'),
+          reduceMotion: html.classList.contains('reduce-motion'),
+          fontSize: Array.from(html.classList).find(c => c.startsWith('font-')) || 'font-medium'
+        }));
+      });
+    });
+
+    // Carregar preferências salvas
+    (function loadAcessibilidade() {
+      const saved = localStorage.getItem('acessibilidade');
+      if (saved) {
+        try {
+          const prefs = JSON.parse(saved);
+          const html = document.documentElement;
+          if (prefs.highContrast) html.classList.add('high-contrast');
+          if (prefs.darkMode) html.classList.add('dark-mode');
+          if (prefs.dyslexic) html.classList.add('dyslexic-font');
+          if (prefs.reduceMotion) html.classList.add('reduce-motion');
+          if (prefs.fontSize) {
+            html.classList.add(prefs.fontSize);
+          }
+        } catch(e) {}
+      }
+    })();
+
+    // Fechar toolbar ao clicar fora
+    document.addEventListener('click', function(e) {
+      const toolbar = document.getElementById('accessibility-toolbar');
+      const toggle = document.getElementById('accessibility-toggle');
+      if (!toolbar.contains(e.target) && !toggle.contains(e.target)) {
+        toolbar.classList.remove('open');
+      }
+    });
+  </script>
 
 </body>
 </html>
