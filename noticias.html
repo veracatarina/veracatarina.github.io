@@ -855,7 +855,7 @@
       </div>
     </section>
 
-    <!-- ===== IMAGEM ILUSTRATIVA (REUTILIZANDO A EXISTENTE) ===== -->
+    <!-- ===== IMAGEM ILUSTRATIVA ===== -->
     <div style="text-align: center; padding: 30px 20px 10px; background: var(--bg-light);">
       <div style="max-width: 500px; margin: 0 auto;">
         <img
@@ -901,6 +901,7 @@
         <button class="filtro-btn" data-categoria="direito-trabalhista">📋 Direito Trabalhista</button>
         <button class="filtro-btn" data-categoria="direito-consumidor">🛒 Direito do Consumidor</button>
         <button class="filtro-btn" data-categoria="direitos-cidadao">📜 Direitos do Cidadão</button>
+        <button class="filtro-btn" data-categoria="infancia">👶 Infância e Juventude</button>
       </div>
     </div>
 
@@ -1036,41 +1037,15 @@
     </div>
   </div>
 
-  <!-- ===== BOTÃO DE LEITURA POR ÁUDIO (TTS) ===== -->
-  <div style="position: fixed; bottom: 160px; left: 20px; z-index: 9998;">
-    <button id="audio-reader-btn" onclick="readPageAloud()" style="
-      background: var(--accent, #c5a880);
-      color: var(--primary-dark, #0b251e);
-      border: none;
-      border-radius: 50px;
-      padding: 10px 18px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <!-- ===== BOTÕES DE COMANDOS DE VOZ E LEITURA POR ÁUDIO ===== -->
+  <div style="position: fixed; bottom: 160px; left: 20px; z-index: 9998; display: flex; flex-direction: column; gap: 8px;">
+    <button id="voice-command-btn" onclick="toggleVoiceRecognition()" style="background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); border: none; border-radius: 50px; padding: 10px 18px; font-weight: 700; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.2s; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <i class="fas fa-microphone"></i> Comandos de Voz
+    </button>
+    <button id="audio-reader-btn" onclick="readPageAloud()" style="background: var(--accent, #c5a880); color: var(--primary-dark, #0b251e); border: none; border-radius: 50px; padding: 10px 18px; font-weight: 700; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.2s; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
       <i class="fas fa-volume-up"></i> Ouvir Página
     </button>
-    <button id="audio-stop-btn" onclick="stopReading()" style="
-      background: var(--danger, #991b1b);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      padding: 10px 18px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      transition: all 0.2s;
-      display: none;
-      align-items: center;
-      gap: 8px;
-      margin-top: 8px;
-    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <button id="audio-stop-btn" onclick="stopReading()" style="background: var(--danger, #991b1b); color: white; border: none; border-radius: 50px; padding: 10px 18px; font-weight: 700; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.2s; display: none; align-items: center; gap: 8px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
       <i class="fas fa-stop"></i> Parar
     </button>
   </div>
@@ -1211,15 +1186,7 @@
 
     // ===== POSTS (dados das notícias) =====
     const posts = [
-      // ===== ARTIGOS DO SITE =====
-        {
-        titulo: "Site agora com recursos de acessibilidade",
-        link: "https://veracatarina.github.io/noticias/site-agora-acessivel.html",
-        resumo: "Conheça os recursos de acessibilidade do portal da Dra. Vera Catarina: modo escuro, alto contraste, VLibras, fonte para dislexia e muito mais.",
-        data: "21/07/2026",
-        categoria: "direito-digital",
-        categoriaLabel: "Direito Digital"
-      },
+      // ===== ARTIGOS DO SITE (já existentes) =====
       {
         titulo: "Site adequado à LGPD, Acessibilidade e OAB",
         link: "https://veracatarina.github.io/noticias/site-lgpd-acessibilidade-oab.html",
@@ -1243,6 +1210,14 @@
         data: "15/07/2026",
         categoria: "direito-familia",
         categoriaLabel: "Direito de Família"
+      },
+      {
+        titulo: "Site agora com recursos de acessibilidade",
+        link: "https://veracatarina.github.io/noticias/site-agora-acessivel.html",
+        resumo: "Conheça os recursos de acessibilidade do portal da Dra. Vera Catarina: modo escuro, alto contraste, VLibras, fonte para dislexia e muito mais.",
+        data: "19/07/2026",
+        categoria: "direito-digital",
+        categoriaLabel: "Direito Digital"
       },
       {
         titulo: "LGPD: Entenda a Lei Geral de Proteção de Dados e sua Importância para a Segurança Online",
@@ -1276,7 +1251,7 @@
         categoria: "direito-digital",
         categoriaLabel: "Direito Digital"
       },
-      // ===== ARTIGOS DO BLOGGER =====
+      // ===== ARTIGOS DO BLOGGER (já existentes) =====
       {
         titulo: "Proteja-se: Denunciando Crimes na Internet com o Auxílio de um Advogado Especializado",
         link: "https://advocaciasapucaia.blogspot.com/2025/06/proteja-se-denunciando-crimes-na.html",
@@ -1380,6 +1355,80 @@
         data: "15/07/2026",
         categoria: "direito-familia",
         categoriaLabel: "Direito de Família"
+      },
+      // ===== NOVAS POSTAGENS – SÉRIE ECA / ECA DIGITAL =====
+      {
+        titulo: "Proteção integral: Conheça o ECA e o novo ECA Digital – Seus direitos garantidos, dentro e fora da internet",
+        link: "https://veracatarina.github.io/noticias/protecao-integral-eca-eca-digital.html",
+        resumo: "O Estatuto da Criança e do Adolescente (ECA) e o ECA Digital (Lei 15.211/2025) garantem proteção integral a crianças e adolescentes, dentro e fora da internet. Conheça seus direitos.",
+        data: "24/07/2026", // ← HOJE
+        categoria: "infancia",
+        categoriaLabel: "Infância e Juventude",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/protecao-integral-eca-eca-digital-direitos-garantidos.png"
+      },
+      // PRÓXIMAS POSTAGENS (datas futuras)
+      {
+        titulo: "ECA: O que diz a lei que protege crianças e adolescentes em todas as situações",
+        link: "https://veracatarina.github.io/noticias/eca-direitos-basicos-protecao.html",
+        resumo: "O ECA assegura vida, saúde, educação, convivência familiar e proteção contra violência. Saiba como a lei se aplica em guarda, pensão, adoção e medidas protetivas.",
+        data: "25/07/2026",
+        categoria: "infancia",
+        categoriaLabel: "Infância e Juventude",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/lei-eca-protecao-criancas-adolescentes-situacoes.png"
+      },
+      {
+        titulo: "ECA Digital: Como a nova lei protege crianças e adolescentes na internet",
+        link: "https://veracatarina.github.io/noticias/eca-digital-crimes-virtuais-protecao.html",
+        resumo: "O ECA Digital define regras para redes sociais, jogos e aplicativos, protegendo menores contra assédio, exposição indevida e crimes virtuais. Saiba mais.",
+        data: "26/07/2026",
+        categoria: "infancia",
+        categoriaLabel: "Infância e Juventude",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/lei-eca-digital-protecao-criancas-adolescentes-internet.png"
+      },
+      {
+        titulo: "LGPD e ECA Digital: A privacidade de crianças e adolescentes tem regras próprias e mais rigorosas",
+        link: "https://veracatarina.github.io/noticias/lgpd-eca-digital-privacidade.html",
+        resumo: "A LGPD e o ECA Digital estabelecem regras rigorosas para a coleta e uso de dados de menores. Famílias têm direito a exigir exclusão e reparação.",
+        data: "27/07/2026",
+        categoria: "infancia",
+        categoriaLabel: "Infância e Juventude",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/lgpd-eca-digital-privacidade-criancas-adolescentes.png"
+      },
+      {
+        titulo: "Crimes contra crianças e adolescentes: O que a lei prevê e como agir em qualquer ambiente",
+        link: "https://veracatarina.github.io/noticias/crimes-contra-criancas-adolescentes.html",
+        resumo: "Violência, abuso, exploração, assédio virtual e negligência são crimes graves. Conheça as medidas protetivas e como buscar justiça.",
+        data: "28/07/2026",
+        categoria: "infancia",
+        categoriaLabel: "Infância e Juventude",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/crimes-contra-criancas-adolescentes-responsabilidade-defesa.png"
+      },
+      {
+        titulo: "ECA nas relações familiares: Guarda, convivência e pensão sempre com foco no desenvolvimento saudável",
+        link: "https://veracatarina.github.io/noticias/eca-relacoes-familiares-guarda-pensao.html",
+        resumo: "Em disputas de guarda, visitas e pensão, o ECA exige que o interesse superior da criança seja prioridade. Saiba como a lei protege o vínculo familiar.",
+        data: "29/07/2026",
+        categoria: "infancia",
+        categoriaLabel: "Infância e Juventude",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/eca-relacoes-familiares-guarda-convivencia-pensao.png"
+      },
+      {
+        titulo: "Situações urgentes envolvendo crianças e adolescentes: Conte com atendimento imediato",
+        link: "https://veracatarina.github.io/noticias/atendimento-24h-urgente-criancas.html",
+        resumo: "Violações de direitos de menores exigem providências rápidas. Conte com atendimento online 24h por WhatsApp para medidas protetivas e remoção de conteúdo.",
+        data: "30/07/2026",
+        categoria: "infancia",
+        categoriaLabel: "Infância e Juventude",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/atendimento-24h-urgente-criancas-adolescentes.png"
+      },
+      {
+        titulo: "Marco Legal da Primeira Infância: Proteção integrada para os primeiros anos de vida – de 0 a 6 anos",
+        link: "https://veracatarina.github.io/noticias/marco-legal-primeira-infancia.html",
+        resumo: "A Lei 13.257/2016 estabelece políticas integradas para crianças de 0 a 6 anos, ampliando a proteção do ECA e garantindo desenvolvimento pleno.",
+        data: "31/07/2026",
+        categoria: "infancia",
+        categoriaLabel: "Infância e Juventude",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/marco-legal-primeira-infancia-lei-13257-2016-0-6-anos.png"
       }
     ];
 
@@ -1402,8 +1451,14 @@
       let html = '';
       postsFiltrados.forEach(post => {
         const msgWpp = encodeURIComponent(`Olá Dra. Vera, li o artigo "${post.titulo}" no site e gostaria de saber mais sobre o assunto.`);
+        // Imagem: se existir a propriedade 'imagem' no post, usa ela; senão usa a imagem padrão
+        const imgSrc = post.imagem || 'https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias-juridicas-artigos-advocacia.jpg';
+        const imgAlt = post.titulo + ' - Advocacia Vera Catarina';
         html += `
           <div class="card-noticia" data-categoria="${post.categoria}">
+            <div style="overflow:hidden; height:180px; background:var(--bg-light);">
+              <img src="${imgSrc}" alt="${imgAlt}" title="${post.titulo}" loading="lazy" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+            </div>
             <div class="card-header">
               <span class="categoria">${post.categoriaLabel}</span>
               <span class="data"><i class="far fa-calendar-alt"></i> ${post.data}</span>
@@ -1435,10 +1490,89 @@
     // ===== INICIALIZA =====
     renderizarPosts('todos');
 
-    // ===== LEITURA POR ÁUDIO (TTS) =====
+    // ===== COMANDOS DE VOZ E LEITURA POR ÁUDIO (TTS) =====
     let currentUtterance = null;
     let isReading = false;
+    let recognition = null;
+    let isListening = false;
 
+    // --- Comandos de Voz ---
+    function toggleVoiceRecognition() {
+      const btn = document.getElementById('voice-command-btn');
+      if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+        alert('Seu navegador não suporta reconhecimento de voz. Use Chrome, Edge ou Safari.');
+        return;
+      }
+      if (isListening) { stopVoiceRecognition(); return; }
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SpeechRecognition();
+      recognition.lang = 'pt-BR';
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.onstart = function() {
+        isListening = true;
+        btn.innerHTML = '<i class="fas fa-microphone-slash"></i> Ouvindo...';
+        btn.style.background = '#f59e0b';
+        btn.style.color = '#0b251e';
+      };
+      recognition.onerror = function(event) {
+        console.error('Erro:', event.error);
+        stopVoiceRecognition();
+        if (event.error === 'not-allowed') {
+          alert('Permita o acesso ao microfone no seu navegador para usar comandos de voz.');
+        }
+      };
+      recognition.onend = function() { stopVoiceRecognition(); };
+      recognition.onresult = function(event) {
+        const transcript = event.results[0][0].transcript.toLowerCase().trim();
+        console.log('Comando dito:', transcript);
+        processVoiceCommand(transcript);
+        stopVoiceRecognition();
+      };
+      recognition.start();
+    }
+
+    function stopVoiceRecognition() {
+      if (recognition) { recognition.stop(); }
+      isListening = false;
+      const btn = document.getElementById('voice-command-btn');
+      btn.innerHTML = '<i class="fas fa-microphone"></i> Comandos de Voz';
+      btn.style.background = 'var(--accent, #c5a880)';
+      btn.style.color = 'var(--primary-dark, #0b251e)';
+    }
+
+    function processVoiceCommand(command) {
+      const commands = [
+        { keywords: ['início', 'home', 'página inicial'], action: () => window.location.href = '/' },
+        { keywords: ['notícias', 'artigos', 'blog'], action: () => window.location.href = '/noticias.html' },
+        { keywords: ['contato', 'falar', 'atendimento'], action: () => window.location.href = '/contato.html' },
+        { keywords: ['áreas', 'atuacao', 'especialidades'], action: () => document.querySelector('#atuacao')?.scrollIntoView({ behavior: 'smooth' }) || window.location.href = '/#atuacao' },
+        { keywords: ['fale conosco', 'whatsapp', 'zap'], action: () => window.open('https://api.whatsapp.com/send?phone=555134502229', '_blank') },
+        { keywords: ['aumentar fonte', 'maior'], action: () => changeFontSize('increase') },
+        { keywords: ['diminuir fonte', 'menor'], action: () => changeFontSize('decrease') },
+        { keywords: ['fonte normal', 'resetar fonte'], action: () => changeFontSize('reset') },
+        { keywords: ['modo escuro', 'noturno'], action: () => toggleDarkMode() },
+        { keywords: ['alto contraste', 'contraste'], action: () => toggleHighContrast() },
+        { keywords: ['voltar', 'retornar'], action: () => window.history.back() },
+        { keywords: ['ler página', 'ouvir', 'leitura'], action: () => readPageAloud() },
+        { keywords: ['parar', 'pausar leitura'], action: () => stopReading() },
+      ];
+      let matched = false;
+      for (let cmd of commands) {
+        if (cmd.keywords.some(kw => command.includes(kw))) {
+          cmd.action();
+          matched = true;
+          break;
+        }
+      }
+      if (!matched) {
+        const utterance = new SpeechSynthesisUtterance('Comando não reconhecido. Tente novamente.');
+        utterance.lang = 'pt-BR';
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    // --- Leitura de Página (TTS) ---
     function readPageAloud() {
       if (isReading) {
         stopReading();
