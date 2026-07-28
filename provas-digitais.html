@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
+  <meta name="description" content="Provas Digitais e Perícia Forense em Sapucaia do Sul. Coleta, preservação e análise de evidências digitais em processos judiciais. 40 anos de experiência + suporte técnico especializado.">
+  <meta name="keywords" content="provas digitais, perícia forense, computação forense, evidências digitais, cadeia de custódia, laudo pericial, análise forense, direito digital, Fábio Wlademir, livros provas digitais">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="canonical" href="https://veracatarina.github.io/provas-digitais.html">
+  <meta property="og:title" content="Provas Digitais e Perícia Forense | Dra. Vera Catarina - Advocacia Especializada">
+  <meta property="og:description" content="Coleta, preservação e análise de evidências digitais em processos judiciais. Atendimento em Sapucaia do Sul com 40 anos de experiência e suporte técnico especializado.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://veracatarina.github.io/provas-digitais.html">
+  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/provas-digitais-pericia-forense-computacional-advocacia.jpg">
+  <meta property="og:image:alt" content="Provas Digitais e Perícia Forense – Coleta, preservação e análise de evidências digitais em processos judiciais – Advocacia Vera Catarina em Sapucaia do Sul">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Provas Digitais e Perícia Forense | Dra. Vera Catarina - Advocacia Especializada">
+  <meta name="twitter:description" content="Coleta, preservação e análise de evidências digitais em processos judiciais. Atendimento em Sapucaia do Sul com 40 anos de experiência e suporte técnico especializado.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/provas-digitais-pericia-forense-computacional-advocacia.jpg">
+  <title>Provas Digitais e Perícia Forense | Evidências Eletrônicas em Processos Judiciais</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/acessibilidade.css">
+
+  <style>
+    /* ===== ESTILOS PADRÃO (mesmos das demais páginas) ===== */
+    :root {
+      --primary-dark: #0b251e;
+      --primary: #143d33;
+      --secondary: #0f172a;
+      --accent: #c5a880;
+      --accent-hover: #b39369;
+      --danger: #991b1b;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --bg-light: #f8fafc;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
+
+    /* ===== TOP BAR ===== */
+    .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
+    .top-container { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.8rem; color: #cbd5e1; }
+    .top-socials { display: flex; gap: 15px; }
+    .top-socials a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; font-size: 0.95rem; }
+    .top-socials a:hover { color: var(--accent); }
+    .top-contact-info { display: flex; gap: 15px; }
+    .top-contact-info span i { color: var(--accent); margin-right: 4px; }
+    .top-contact-info .obs-tel { font-size: 0.7rem; color: #94a3b8; font-weight: normal; margin-left: 2px; }
+
+    /* ===== HEADER ===== */
+    header { position: fixed; top: 40px; left: 0; right: 0; height: 80px; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; align-items: center; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
+    .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
+    .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
+
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
+    .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
+    #menu-checkbox { display: none; }
+
+    /* ===== NAVEGAÇÃO PRINCIPAL ===== */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 14px;
+      align-items: center;
+    }
+    .nav-menu > li {
+      position: relative;
+      list-style: none;
+    }
+    .nav-menu > li > a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: color 0.2s, border-color 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      display: inline-block;
+    }
+    .nav-menu > li > a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .nav-menu > li > a.ativo {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .btn-emergency-nav {
+      background: var(--danger);
+      color: white !important;
+      padding: 6px 14px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem !important;
+      animation: pulse 2s infinite;
+      border: none !important;
+      border-bottom: none !important;
+    }
+    .btn-emergency-nav:hover {
+      background: #b91c1c;
+      color: white !important;
+      border-bottom: none !important;
+    }
+
+    /* ===== DROPDOWN ===== */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(11, 37, 30, 0.98);
+      backdrop-filter: blur(10px);
+      min-width: 200px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 8px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      z-index: 1003;
+    }
+    .dropdown-content li {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 20px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border-bottom: none !important;
+      transition: background 0.2s;
+    }
+    .dropdown-content li a:hover {
+      background: rgba(197, 168, 128, 0.15);
+      color: var(--accent);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn i {
+      transition: transform 0.2s;
+    }
+    .dropdown:hover .dropbtn i {
+      transform: rotate(180deg);
+    }
+
+    /* ===== HERO ===== */
+    .page-hero {
+      background: linear-gradient(rgba(11, 37, 30, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover;
+      color: white;
+      padding: 70px 0 60px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .page-hero h1 span { color: var(--accent); }
+    .page-hero p {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ===== CONTEÚDO ===== */
+    .content-section { padding: 60px 0; }
+    .content-section h2 { font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 15px; position: relative; padding-bottom: 10px; }
+    .content-section h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--accent); }
+    .content-section p { font-size: 1rem; color: var(--text-dark); margin-bottom: 20px; }
+    .content-section ul { list-style: none; padding: 0; }
+    .content-section ul li { padding: 10px 0 10px 30px; border-bottom: 1px solid var(--border); position: relative; font-size: 0.95rem; }
+    .content-section ul li:last-child { border-bottom: none; }
+    .content-section ul li i { position: absolute; left: 0; top: 12px; color: var(--accent); font-size: 1rem; }
+
+    .grid-servicos-detalhados {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 30px 0;
+    }
+    .servico-box {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .servico-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+    .servico-box h3 {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+    .servico-box p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 0;
+    }
+
+    /* ===== EQUIPE ===== */
+    .team-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin: 30px 0;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .team-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      margin-bottom: 15px;
+    }
+    .team-card h3 {
+      font-size: 1.3rem;
+      color: var(--primary-dark);
+      margin-bottom: 5px;
+    }
+    .team-card .role {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .team-card .desc {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .team-card .badge-tech {
+      display: inline-block;
+      background: rgba(197,168,128,0.15);
+      color: var(--primary-dark);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin: 4px;
+    }
+    .team-card .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .team-card .social-links a {
+      color: var(--text-light);
+      font-size: 1.3rem;
+      transition: color 0.2s;
+    }
+    .team-card .social-links a:hover {
+      color: var(--accent);
+    }
+    .team-card .btn-team {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--primary-dark);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .team-card .btn-team:hover {
+      background: var(--primary);
+    }
+
+    /* ===== LIVROS ===== */
+    .livros-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
+    }
+    .livro-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .livro-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .livro-card .capa {
+      width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      background: var(--bg-light);
+    }
+    .livro-card h4 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+    .livro-card .subtitulo {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .livro-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      margin-bottom: 12px;
+      flex: 1;
+    }
+    .livro-card .btn-livro {
+      display: inline-block;
+      background: var(--primary-dark);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transition: background 0.2s;
+      text-align: center;
+    }
+    .livro-card .btn-livro:hover {
+      background: var(--primary);
+    }
+    .livro-card .status {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      padding: 2px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .status-publicado {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .status-em-andamento {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 15px 0;
+    }
+    .faq-item h3 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item h3 i {
+      color: var(--accent);
+      transition: transform 0.3s;
+    }
+    .faq-item p {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      margin: 8px 0 0;
+      display: none;
+    }
+    .faq-item.aberto p { display: block; }
+    .faq-item.aberto h3 i { transform: rotate(180deg); }
+
+    /* ===== BACKLINKS ===== */
+    .backlinks-section {
+      background: var(--bg-light);
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .backlinks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .backlink-item {
+      background: white;
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .backlink-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+    .backlink-item a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .backlink-item a i { color: var(--accent); font-size: 1.1rem; }
+    .backlink-item a:hover { color: var(--accent); }
+
+    /* ===== CTA ===== */
+    .cta-box {
+      background: var(--primary-dark);
+      color: white;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta-box h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .cta-box p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+    .btn-cta {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 14px 40px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s;
+    }
+    .btn-cta:hover { background: var(--accent-hover); }
+
+    .btn-emergency-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      animation: pulse-green 2s infinite;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
+    .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
+    .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
+    .visitor-counter i { color: var(--accent); }
+    .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
+
+    @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
+    @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media (max-width: 992px) {
+      body { padding-top: 150px; }
+      header { top: 70px; height: 75px; }
+      .top-bar { height: auto; padding: 8px 0; position: fixed; }
+      .top-container { flex-direction: column; gap: 6px; text-align: center; }
+      .top-contact-info { flex-direction: column; gap: 2px; }
+      .menu-toggle { display: flex; }
+      .nav-menu {
+        position: fixed;
+        top: 145px;
+        right: -100%;
+        background: rgba(11, 37, 30, 0.98);
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 145px);
+        gap: 25px;
+        padding: 40px 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        border-top: 1px solid var(--accent);
+        align-items: center;
+      }
+      .nav-menu > li { width: 100%; text-align: center; }
+      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
+      .nav-menu > li > a:hover { border-bottom: none !important; }
+      .dropdown-content {
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        min-width: auto;
+        display: none !important;
+      }
+      .dropdown.open .dropdown-content {
+        display: block !important;
+      }
+      .dropdown-content li a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+      }
+      #menu-checkbox:checked ~ .nav-menu { right: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+      .grid-servicos-detalhados { grid-template-columns: 1fr; }
+      .livros-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      footer { padding-bottom: 110px; }
+    }
+    @media (max-width: 600px) {
+      .livros-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-container">
+      <div class="top-contact-info">
+        <span><i class="fas fa-phone"></i> (51) 3450-2229 <span class="obs-tel">(Somente WhatsApp)</span></span>
+        <span><i class="fas fa-location-dot"></i> Sapucaia do Sul - RS</span>
+      </div>
+      <div class="top-socials">
+        <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/AdvocaciaVeraCatarina" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://advocaciasapucaia.blogspot.com/" target="_blank" rel="noopener" title="Blogger Institucional"><i class="fab fa-blogger"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" rel="noopener" title="Atendimento WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20sobre%20Provas%20Digitais." class="btn-emergency-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> Fale Conosco
+  </a>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="main-txt">Vera Catarina</span>
+        <span class="sub-txt">Advocacia Especializada</span>
+      </a>
+      <input type="checkbox" id="menu-checkbox">
+      <label for="menu-checkbox" class="menu-toggle" aria-label="Abrir menu de navegação">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-menu">
+        <!-- ITENS PRINCIPAIS -->
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="contato.html">Contato</a></li>
+
+        <!-- DROPDOWN "MAIS" -->
+        <li class="dropdown" onmouseenter="openDropdown()" onmouseleave="closeDropdown()">
+          <a href="javascript:void(0)" onclick="toggleDropdown()" class="dropbtn">
+            Mais <i class="fas fa-chevron-down" style="font-size:0.5rem; margin-left:4px;"></i>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="index.html#servicos">Utilidades</a></li>
+            <li><a href="index.html#restrito">Canal Restrito</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html">Legal &amp; Suporte</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
+          </ul>
+        </li>
+
+        <!-- BOTÃO PLANTÃO 24h -->
+        <li>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav">
+            <i class="fas fa-shield-halved"></i> Plantão 24h
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Provas Digitais e Perícia Forense em <span>Sapucaia do Sul</span></h1>
+        <p>Coleta, preservação e análise de evidências digitais em processos judiciais. Unimos a experiência jurídica da Dra. Vera Catarina ao conhecimento técnico especializado em computação forense.</p>
+      </div>
+    </section>
+
+    <!-- ===== IMAGEM ILUSTRATIVA ===== -->
+    <div style="text-align: center; padding: 30px 20px 10px; background: var(--bg-light);">
+      <div style="max-width: 500px; margin: 0 auto;">
+        <img
+          src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/provas-digitais-pericia-forense-computacional-advocacia.jpg"
+          alt="Provas Digitais e Perícia Forense – Coleta, preservação e análise de evidências digitais em processos judiciais – Advocacia Vera Catarina em Sapucaia do Sul"
+          title="Perícia digital e provas eletrônicas – Fundamentos da computação forense | Dra. Vera Catarina"
+          loading="lazy"
+          style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
+        />
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
+          <i class="fas fa-microchip" style="color: var(--accent);"></i>
+          Perícia digital e análise forense computacional — a tecnologia a serviço da justiça
+        </p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <div class="container">
+
+        <h2>O que são Provas Digitais?</h2>
+        <p>As <strong>provas digitais</strong> são evidências obtidas a partir de dispositivos eletrônicos, sistemas computacionais e ambientes virtuais. Em um mundo cada vez mais conectado, mensagens de WhatsApp, e-mails, fotografias, vídeos, registros de acesso, logs de sistemas, dados de geolocalização e metadados tornaram-se elementos fundamentais em processos judiciais, administrativos e investigações criminais.</p>
+        <p>A correta <strong>coleta, preservação, análise e documentação</strong> dessas evidências é essencial para garantir sua validade jurídica e a integridade da cadeia de custódia. O escritório da Dra. Vera Catarina oferece suporte técnico especializado nessa área, unindo o conhecimento jurídico à expertise em computação forense.</p>
+
+        <h2>Serviços Especializados em Provas Digitais</h2>
+        <p>A Dra. Vera Catarina, com 40 anos de experiência, e o suporte técnico de Fábio Wlademir, especialista em cibersegurança e análise forense, oferecem um atendimento completo para casos que envolvem evidências digitais.</p>
+
+        <div class="grid-servicos-detalhados">
+          <div class="servico-box">
+            <h3>🔍 Coleta e Preservação de Evidências</h3>
+            <p>Orientação sobre a <strong>coleta adequada</strong> de evidências digitais, desde prints de tela até a aquisição forense de dispositivos. Garantia da <strong>cadeia de custódia</strong> e da integridade dos dados.</p>
+          </div>
+          <div class="servico-box">
+            <h3>🛡️ Análise Forense Computacional</h3>
+            <p>Investigação técnica aprofundada em <strong>computadores, smartphones, servidores e dispositivos móveis</strong>. Análise de logs, acessos indevidos, vazamento de dados e crimes cibernéticos.</p>
+          </div>
+          <div class="servico-box">
+            <h3>📋 Laudos Técnicos e Pareceres</h3>
+            <p>Elaboração de <strong>laudos periciais</strong> e pareceres técnicos com fundamentação metodológica e científica, prontos para apresentação em juízo.</p>
+          </div>
+          <div class="servico-box">
+            <h3>⚖️ Assistência em Audiências</h3>
+            <p>Suporte técnico em audiências para <strong>esclarecimento de evidências digitais</strong>, validação de provas e contrarrazões a laudos contrários.</p>
+          </div>
+          <div class="servico-box">
+            <h3>🔎 Investigação OSINT</h3>
+            <p>Coleta e correlação de <strong>informações públicas</strong> (fontes abertas) para localização de pessoas, análise de perfis, due diligence e prevenção de fraudes.</p>
+          </div>
+          <div class="servico-box">
+            <h3>📱 Perícia em Smartphones</h3>
+            <p>Aquisição e análise forense de <strong>dispositivos móveis</strong> (Android e iOS), incluindo aplicativos de mensagens, mídias sociais, geolocalização e metadados.</p>
+          </div>
+        </div>
+
+        <h2>⚡ Suporte Especializado em Perícia Digital</h2>
+        <p>O escritório da Dra. Vera Catarina conta com o suporte técnico especializado de <strong>Fábio Wlademir</strong>, profissional com mais de 15 anos de experiência em <strong>cibersegurança, análise forense computacional e investigação de incidentes digitais</strong>.</p>
+
+        <div class="team-card">
+          <img src="https://fabiowlademir.github.io/direito-ao-esquecimento/fabio.jpg" alt="Fábio Wlademir - Analista de TI e Estudante de Direito" title="Fábio Wlademir | Analista SOC/NOC • Estudante de Direito - UNISINOS">
+          <h3>Fábio Wlademir</h3>
+          <div class="role">🛡️ Analista SOC/NOC • Estudante de Direito (4º semestre - UNISINOS)</div>
+          <div class="desc">
+            Profissional com mais de 15 anos de experiência em <strong>cibersegurança, infraestrutura de TI e desenvolvimento de sistemas</strong>. Atua como <strong>Analista SOC/NOC</strong> e consultor em <strong>LegalTech</strong>, com expertise em <strong>LGPD, sistemas de tribunais eletrônicos e automação jurídica</strong>. Oferece <strong>suporte técnico especializado em perícia computacional, análise forense digital e investigação de incidentes</strong> para processos judiciais que envolvem provas digitais, vazamento de dados e crimes cibernéticos.<br><br>
+            <strong>Atuação em processos judiciais:</strong> Análise de logs de sistemas, investigação de acessos indevidos, rastreamento de atividades em sistemas, análise de evidências digitais, investigação de vazamento de dados, análise de ataques hackers e crimes cibernéticos. Experiência em sistemas judiciais eletrônicos como <strong>PJe, eproc, e-SAJ, Projudi, SEEU, Sisbajud, Renajud, BNMP e PDPJ-Br</strong>.
+          </div>
+          <div style="margin-top:10px;">
+            <span class="badge-tech"><i class="fas fa-shield-halved"></i> SOC/NOC</span>
+            <span class="badge-tech"><i class="fas fa-gavel"></i> LegalTech</span>
+            <span class="badge-tech"><i class="fas fa-laptop-code"></i> DevSecOps</span>
+            <span class="badge-tech"><i class="fas fa-search"></i> Forense Digital</span>
+            <span class="badge-tech"><i class="fas fa-database"></i> LGPD</span>
+          </div>
+          <div class="social-links">
+            <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" title="Portfólio"><i class="fas fa-globe"></i></a>
+            <a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/fabiowlademirrs/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://f2ti.blogspot.com/" target="_blank" rel="noopener" title="Site Web Design"><i class="fas fa-code"></i></a>
+            <a href="https://f2suporte.blogspot.com/search/label/forense%20digital" target="_blank" rel="noopener" title="Blog Forense Digital"><i class="fas fa-blog"></i></a>
+          </div>
+          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" class="btn-team"><i class="fas fa-external-link-alt"></i> Conhecer Portfólio</a>
+        </div>
+
+        <!-- ===== COLEÇÃO DE LIVROS ===== -->
+        <h2 style="margin-top: 50px;">📚 Coleção "Provas Digitais na Prática"</h2>
+        <p style="font-size:0.95rem; color:var(--text-light); margin-bottom:20px;">O Fábio Wlademir é autor da coleção <strong>"Provas Digitais na Prática"</strong>, uma série de livros que abordam desde os fundamentos da computação forense até técnicas avançadas de investigação digital, inteligência em fontes abertas (OSINT) e perícia em dispositivos móveis. A coleção é referência para cidadãos, advogados, educadores e vítimas de crimes digitais.</p>
+
+        <div class="livros-grid">
+
+          <!-- Volume 1 -->
+          <div class="livro-card">
+            <img class="capa" src="https://storage.googleapis.com/images.uiclap.com/capa/ua188450.jpg" alt="Capa do livro Provas Digitais na Prática - Volume 1" loading="lazy">
+            <span class="status status-publicado">✅ Publicado</span>
+            <h4>Volume 1 — Fundamentos das Provas Digitais</h4>
+            <div class="subtitulo">Combate a Crimes na Internet e Inclusão Digital</div>
+            <p>Guia para cidadãos, advogados, educadores e vítimas. Apresenta os fundamentos das provas digitais, abordando computação forense e Direito Digital de forma acessível.</p>
+            <a href="https://loja.uiclap.com/titulo/ua188450/" target="_blank" rel="noopener" class="btn-livro"><i class="fas fa-shopping-cart"></i> Adquirir</a>
+          </div>
+
+          <!-- Volume 2 -->
+          <div class="livro-card">
+            <img class="capa" src="https://storage.googleapis.com/images.uiclap.com/capa/ua188476.jpg" alt="Capa do livro Provas Digitais na Prática - Volume 2" loading="lazy">
+            <span class="status status-publicado">✅ Publicado</span>
+            <h4>Volume 2 — Análise Forense Computacional</h4>
+            <div class="subtitulo">Apoio ao Direito Digital</div>
+            <p>Aprofunda técnicas de computação forense aplicadas à investigação de incidentes e à produção de provas digitais, com métodos de aquisição, preservação e análise.</p>
+            <a href="https://loja.uiclap.com/titulo/ua188476/" target="_blank" rel="noopener" class="btn-livro"><i class="fas fa-shopping-cart"></i> Adquirir</a>
+          </div>
+
+          <!-- Volume 3 -->
+          <div class="livro-card">
+            <span class="status status-em-andamento">📝 Em andamento</span>
+            <h4>Volume 3 — OSINT e Inteligência em Fontes Abertas</h4>
+            <div class="subtitulo">Coleta e correlação de informações públicas</div>
+            <p>Apresenta os fundamentos da Inteligência em Fontes Abertas (OSINT), demonstrando como coletar, validar e correlacionar informações públicas para investigações e produção de provas digitais.</p>
+          </div>
+
+          <!-- Volume 4 -->
+          <div class="livro-card">
+            <span class="status status-em-andamento">📝 Em andamento</span>
+            <h4>Volume 4 — Perícia em Smartphones</h4>
+            <div class="subtitulo">Android • iPhone • Aplicativos de Mensagens</div>
+            <p>Aborda a aquisição, preservação e análise forense de smartphones, explorando sistemas Android e iOS, aplicativos de mensagens, mídias sociais, geolocalização e metadados.</p>
+          </div>
+
+          <!-- Volume 5 -->
+          <div class="livro-card">
+            <span class="status status-em-andamento">📝 Em andamento</span>
+            <h4>Volume 5 — Imagens, Áudios, Vídeos e Deepfakes</h4>
+            <div class="subtitulo">Autenticação e identificação de manipulações</div>
+            <p>Estuda técnicas de autenticação de arquivos multimídia, análise de metadados, identificação de manipulações, reconhecimento de deepfakes e uso de IA na verificação de autenticidade.</p>
+          </div>
+
+          <!-- Volume 6 -->
+          <div class="livro-card">
+            <span class="status status-em-andamento">📝 Em andamento</span>
+            <h4>Volume 6 — Perícia em Documentos Digitais</h4>
+            <div class="subtitulo">PDF • Assinaturas Eletrônicas • Metadados • Blockchain</div>
+            <p>Analisa documentos eletrônicos sob a perspectiva pericial, abordando assinaturas eletrônicas, certificados digitais, carimbos de tempo, metadados e blockchain aplicada à preservação de evidências.</p>
+          </div>
+
+          <!-- Volume 7 -->
+          <div class="livro-card">
+            <span class="status status-em-andamento">📝 Em andamento</span>
+            <h4>Volume 7 — Investigação Digital Avançada</h4>
+            <div class="subtitulo">Google Dorks • Shodan • Maltego • FOCA</div>
+            <p>Explora técnicas avançadas de investigação em ambientes digitais utilizando mecanismos de busca especializados, análise de infraestrutura e ferramentas de inteligência cibernética.</p>
+          </div>
+
+          <!-- Volume 8 -->
+          <div class="livro-card">
+            <span class="status status-em-andamento">📝 Em andamento</span>
+            <h4>Volume 8 — Inteligência Artificial Aplicada</h4>
+            <div class="subtitulo">IA na computação forense</div>
+            <p>Apresenta aplicações da Inteligência Artificial na automação da análise forense, classificação de evidências, reconhecimento de padrões, detecção de fraudes e deepfakes.</p>
+          </div>
+
+          <!-- Volume 9 -->
+          <div class="livro-card">
+            <span class="status status-em-andamento">📝 Em andamento</span>
+            <h4>Volume 9 — Laboratório Prático</h4>
+            <div class="subtitulo">Exercícios e estudos de caso</div>
+            <p>Reúne exercícios, estudos de caso, laboratórios guiados e desafios práticos para aplicação dos conhecimentos apresentados nos volumes anteriores.</p>
+          </div>
+
+          <!-- Volume 10 -->
+          <div class="livro-card">
+            <span class="status status-em-andamento">📝 Em andamento</span>
+            <h4>Volume 10 — Casos Reais Comentados</h4>
+            <div class="subtitulo">Estudos de caso em computação forense e Direito Digital</div>
+            <p>Apresenta casos reais ou anonimizados envolvendo provas digitais, análise forense, crimes cibernéticos, responsabilidade civil, cadeia de custódia e produção de prova técnica.</p>
+          </div>
+
+        </div>
+
+        <!-- ===== FAQ ===== -->
+        <h2 style="margin-top: 50px;">Perguntas Frequentes sobre Provas Digitais</h2>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <h3>Um print de tela de WhatsApp serve como prova em um processo? <i class="fas fa-chevron-down"></i></h3>
+          <p>Sim, mas com ressalvas. O print isolado pode ser contestado. Para ter validade jurídica plena, é recomendável que a prova seja acompanhada de outros elementos, como certidão de autenticidade, ata notarial (feita em cartório) ou, em casos mais complexos, uma perícia digital que ateste a integridade e a autenticidade da conversa.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <h3>O que é cadeia de custódia e por que ela é importante? <i class="fas fa-chevron-down"></i></h3>
+          <p>A <strong>cadeia de custódia</strong> é o registro documental de todos os passos pelos quais uma evidência digital passou desde sua coleta até sua apresentação em juízo. Ela é fundamental para garantir que a prova não foi adulterada, preservando sua integridade e autenticidade. Uma cadeia de custódia bem documentada é essencial para que a prova seja aceita pelo juiz.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <h3>Como contratar uma perícia digital para meu processo? <i class="fas fa-chevron-down"></i></h3>
+          <p>Entre em contato com o escritório da Dra. Vera Catarina pelo WhatsApp ou e-mail. Apresentaremos uma proposta personalizada para o seu caso, com análise técnica detalhada e cronograma de entrega do laudo pericial.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <h3>O que é OSINT e como pode ajudar em uma investigação? <i class="fas fa-chevron-down"></i></h3>
+          <p><strong>OSINT (Open Source Intelligence)</strong> é a inteligência obtida a partir de fontes públicas, como redes sociais, sites, registros públicos e bases de dados abertas. Pode ser utilizada para localizar pessoas, identificar perfis falsos, verificar antecedentes, realizar due diligence e produzir provas em investigações civis e criminais.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <h3>Qual a diferença entre perícia digital e análise de dados? <i class="fas fa-chevron-down"></i></h3>
+          <p>A <strong>perícia digital</strong> segue metodologia científica e rigorosa, com foco na preservação da cadeia de custódia e na produção de laudos com validade jurídica. A <strong>análise de dados</strong> é um processo mais amplo, que pode incluir desde a coleta de informações até a correlação de dados para inteligência, mas sem necessariamente seguir os protocolos periciais.</p>
+        </div>
+
+        <!-- ===== CTA ===== -->
+        <div class="cta-box">
+          <h3>Precisa de orientação sobre provas digitais?</h3>
+          <p>Conte com a experiência jurídica da Dra. Vera Catarina e o suporte técnico especializado em perícia digital para garantir a validade das suas evidências eletrônicas.</p>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pela%20p%C3%A1gina%20de%20Provas%20Digitais%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." class="btn-cta" target="_blank">
+            <i class="fab fa-whatsapp"></i> Fale agora no WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== BACKLINKS ===== -->
+    <section class="backlinks-section">
+      <div class="container">
+        <h3 style="text-align: center; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px;">
+          <i class="fas fa-gavel" style="color: var(--accent);"></i> Conheça nossas áreas de atuação
+        </h3>
+        <div class="backlinks-grid">
+          <div class="backlink-item"><a href="direito-familia.html"><i class="fas fa-people-roof"></i> Direito de Família</a></div>
+          <div class="backlink-item"><a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Direito Digital</a></div>
+          <div class="backlink-item"><a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a></div>
+          <div class="backlink-item"><a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a></div>
+          <div class="backlink-item"><a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a></div>
+          <div class="backlink-item"><a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a></div>
+          <div class="backlink-item"><a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a></div>
+          <div class="backlink-item"><a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Dra. Vera Catarina</h5>
+          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
+          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
+        </div>
+        <div class="footer-col">
+          <h5>Links Rápidos</h5>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
+            <li><a href="noticias.html">📰 Notícias e Artigos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="legal.html">Legal</a></li>
+            <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
+            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Áreas Específicas</h5>
+          <ul>
+            <li><a href="direito-familia.html">Direito de Família</a></li>
+            <li><a href="direito-digital.html">Direito Digital</a></li>
+            <li><a href="direito-criminal.html">Direito Criminal</a></li>
+            <li><a href="direito-trabalhista.html">Direito Trabalhista</a></li>
+            <li><a href="direito-previdenciario.html">Direito Previdenciário</a></li>
+            <li><a href="direito-consumidor.html">Direito do Consumidor</a></li>
+            <li><a href="direito-civil.html">Direito Civil e Sucessões</a></li>
+            <li><a href="direito-empresarial.html">🏢 Advocacia Empresarial</a></li>
+            <li><a href="advogado-online.html">📱 Advogado Online 24h</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="margin-bottom:12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
+        <p style="font-size:0.75rem; color:#94a3b8; display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;">
+          <span>⚡ Design & Desenvolvimento:</span>
+          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-weight:600;">💻 Fábio Wlademir</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <span style="color:rgba(255,255,255,0.2);">·</span>
+          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
+        </p>
+        <div>
+          <div class="visitor-counter" title="Total de visualizações de página">
+            <i class="fas fa-eye"></i>
+            <span>Visitas ao portal:</span>
+            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BANNER LGPD ===== -->
+  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
+      <i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i>
+      <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+      <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
+      <button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
+    </div>
+  </div>
+
+  <!-- ===== VLIBRAS ===== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <!-- ===== ACESSIBILIDADE JS ===== -->
+  <script src="/acessibilidade.js"></script>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // ===== DROPDOWN (MOBILE) =====
+    function toggleDropdown() {
+      const dropdown = document.querySelector('.dropdown');
+      if (window.innerWidth <= 992) {
+        dropdown.classList.toggle('open');
+      }
+    }
+    function openDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'block';
+      }
+    }
+    function closeDropdown() {
+      if (window.innerWidth > 992) {
+        document.querySelector('.dropdown-content').style.display = 'none';
+      }
+    }
+    document.addEventListener('click', function(e) {
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+
+    // ===== LGPD COOKIES =====
+    function setCookieConsent(choice) {
+      localStorage.setItem('cookieConsent', choice);
+      const banner = document.getElementById('cookie-consent-banner');
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateX(-50%) translateY(20px)';
+      setTimeout(() => { banner.style.display = 'none'; }, 500);
+    }
+    function acceptCookies() {
+      setCookieConsent('accepted');
+      console.log('📊 Cookies de análise ativados.');
+    }
+    function rejectCookies() {
+      setCookieConsent('rejected');
+      console.log('❌ Cookies de análise recusados.');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent === 'accepted' || consent === 'rejected') {
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+      }
+    });
+
+    // ===== FECHAR MENU MOBILE =====
+    function closeMenu() {
+      document.getElementById('menu-checkbox').checked = false;
+    }
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ===== ARIA EXPANDED PARA MENU MOBILE =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuCheckbox = document.getElementById('menu-checkbox');
+    if (menuToggle && menuCheckbox) {
+      menuCheckbox.addEventListener('change', function() {
+        menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+      });
+    }
+
+    // ===== FAQ TOGGLE =====
+    function toggleFAQ(el) {
+      el.classList.toggle('aberto');
+    }
+  </script>
+</body>
+</html>
