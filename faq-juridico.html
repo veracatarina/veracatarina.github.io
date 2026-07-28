@@ -1089,165 +1089,167 @@
     </div>
   </div>
 
-  <!-- ===== SCRIPTS ===== -->
-  <script>
-    // ===== DROPDOWN (MOBILE) =====
-    function toggleDropdown() {
-      const dropdown = document.querySelector('.dropdown');
-      if (window.innerWidth <= 992) {
-        dropdown.classList.toggle('open');
-      }
+ <!-- ===== SCRIPTS ===== -->
+<script>
+  // ===== DROPDOWN (MOBILE) =====
+  function toggleDropdown() {
+    const dropdown = document.querySelector('.dropdown');
+    if (window.innerWidth <= 992) {
+      dropdown.classList.toggle('open');
     }
-    function openDropdown() {
-      if (window.innerWidth > 992) {
-        document.querySelector('.dropdown-content').style.display = 'block';
-      }
+  }
+  function openDropdown() {
+    if (window.innerWidth > 992) {
+      document.querySelector('.dropdown-content').style.display = 'block';
     }
-    function closeDropdown() {
-      if (window.innerWidth > 992) {
-        document.querySelector('.dropdown-content').style.display = 'none';
-      }
+  }
+  function closeDropdown() {
+    if (window.innerWidth > 992) {
+      document.querySelector('.dropdown-content').style.display = 'none';
     }
-    document.addEventListener('click', function(e) {
-      const dropdown = document.querySelector('.dropdown');
-      if (dropdown && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('open');
-      }
-    });
+  }
+  document.addEventListener('click', function(e) {
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
 
-    // ===== LGPD COOKIES =====
-    function setCookieConsent(choice) {
-      localStorage.setItem('cookieConsent', choice);
-      const banner = document.getElementById('cookie-consent-banner');
-      banner.style.opacity = '0';
-      banner.style.transform = 'translateX(-50%) translateY(20px)';
-      setTimeout(() => { banner.style.display = 'none'; }, 500);
+  // ===== LGPD COOKIES =====
+  function setCookieConsent(choice) {
+    localStorage.setItem('cookieConsent', choice);
+    const banner = document.getElementById('cookie-consent-banner');
+    banner.style.opacity = '0';
+    banner.style.transform = 'translateX(-50%) translateY(20px)';
+    setTimeout(() => { banner.style.display = 'none'; }, 500);
+  }
+  function acceptCookies() {
+    setCookieConsent('accepted');
+    console.log('📊 Cookies de análise ativados.');
+  }
+  function rejectCookies() {
+    setCookieConsent('rejected');
+    console.log('❌ Cookies de análise recusados.');
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent === 'accepted' || consent === 'rejected') {
+      document.getElementById('cookie-consent-banner').style.display = 'none';
     }
-    function acceptCookies() {
-      setCookieConsent('accepted');
-      console.log('📊 Cookies de análise ativados.');
-    }
-    function rejectCookies() {
-      setCookieConsent('rejected');
-      console.log('❌ Cookies de análise recusados.');
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      const consent = localStorage.getItem('cookieConsent');
-      if (consent === 'accepted' || consent === 'rejected') {
-        document.getElementById('cookie-consent-banner').style.display = 'none';
-      }
-    });
+  });
 
-    // ===== FECHAR MENU MOBILE =====
-    function closeMenu() {
-      document.getElementById('menu-checkbox').checked = false;
-    }
-    document.querySelectorAll('.nav-menu a').forEach(function(link) {
-      link.addEventListener('click', closeMenu);
-    });
+  // ===== FECHAR MENU MOBILE =====
+  function closeMenu() {
+    document.getElementById('menu-checkbox').checked = false;
+  }
+  document.querySelectorAll('.nav-menu a').forEach(function(link) {
+    link.addEventListener('click', closeMenu);
+  });
 
-    // ===== ARIA EXPANDED =====
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuCheckbox = document.getElementById('menu-checkbox');
-    if (menuToggle && menuCheckbox) {
-      menuCheckbox.addEventListener('change', function() {
-        menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+  // ===== ARIA EXPANDED =====
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuCheckbox = document.getElementById('menu-checkbox');
+  if (menuToggle && menuCheckbox) {
+    menuCheckbox.addEventListener('change', function() {
+      menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+    });
+  }
+
+  // ===== FAQ TOGGLE (CORRIGIDO) =====
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      this.classList.toggle('aberto');
+    });
+  });
+
+  // ===== FILTROS =====
+  document.querySelectorAll('.filtro-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filtro-btn').forEach(function(b) {
+        b.classList.remove('ativo');
       });
-    }
+      this.classList.add('ativo');
 
-    // ===== FAQ TOGGLE =====
-    function toggleFaq(el) {
-      el.classList.toggle('aberto');
-    }
+      const categoria = this.dataset.categoria;
+      const categorias = document.querySelectorAll('.faq-categoria');
 
-    // ===== FILTROS =====
-    document.querySelectorAll('.filtro-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.filtro-btn').forEach(function(b) {
-          b.classList.remove('ativo');
-        });
-        this.classList.add('ativo');
-
-        const categoria = this.dataset.categoria;
-        const categorias = document.querySelectorAll('.faq-categoria');
-
-        categorias.forEach(function(cat) {
-          if (categoria === 'todos' || cat.dataset.categoria === categoria) {
-            cat.style.display = 'block';
-          } else {
-            cat.style.display = 'none';
-          }
-        });
+      categorias.forEach(function(cat) {
+        if (categoria === 'todos' || cat.dataset.categoria === categoria) {
+          cat.style.display = 'block';
+        } else {
+          cat.style.display = 'none';
+        }
       });
     });
+  });
 
-    // ===== TOOLBAR DE ACESSIBILIDADE =====
-    function toggleAccessibilityToolbar() {
-      document.getElementById('accessibilityToolbar').classList.toggle('open');
+  // ===== TOOLBAR DE ACESSIBILIDADE =====
+  function toggleAccessibilityToolbar() {
+    document.getElementById('accessibilityToolbar').classList.toggle('open');
+  }
+
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark-mode');
+    document.getElementById('darkModeBtn').classList.toggle('active');
+    localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode') ? 'true' : 'false');
+  }
+
+  function toggleHighContrast() {
+    document.documentElement.classList.toggle('high-contrast');
+    document.getElementById('highContrastBtn').classList.toggle('active');
+    localStorage.setItem('highContrast', document.documentElement.classList.contains('high-contrast') ? 'true' : 'false');
+  }
+
+  function changeFontSize(action) {
+    const sizes = ['font-small', 'font-medium', 'font-large', 'font-xlarge'];
+    const current = sizes.find(cls => document.documentElement.classList.contains(cls)) || 'font-medium';
+    let index = sizes.indexOf(current);
+    if (action === 'decrease') index = Math.max(0, index - 1);
+    else if (action === 'increase') index = Math.min(sizes.length - 1, index + 1);
+    else if (action === 'xincrease') index = Math.min(sizes.length - 1, index + 2);
+    else if (action === 'reset') index = 1;
+    document.documentElement.classList.remove(...sizes);
+    document.documentElement.classList.add(sizes[index]);
+    localStorage.setItem('fontSize', sizes[index]);
+  }
+
+  function toggleDyslexicFont() {
+    document.documentElement.classList.toggle('dyslexic-font');
+    document.getElementById('dyslexicBtn').classList.toggle('active');
+    localStorage.setItem('dyslexicFont', document.documentElement.classList.contains('dyslexic-font') ? 'true' : 'false');
+  }
+
+  function toggleReducedMotion() {
+    document.documentElement.classList.toggle('reduce-motion');
+    document.getElementById('motionBtn').classList.toggle('active');
+    localStorage.setItem('reduceMotion', document.documentElement.classList.contains('reduce-motion') ? 'true' : 'false');
+  }
+
+  // Carregar preferências salvas
+  document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.documentElement.classList.add('dark-mode');
+      document.getElementById('darkModeBtn').classList.add('active');
     }
-
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark-mode');
-      document.getElementById('darkModeBtn').classList.toggle('active');
-      localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode') ? 'true' : 'false');
+    if (localStorage.getItem('highContrast') === 'true') {
+      document.documentElement.classList.add('high-contrast');
+      document.getElementById('highContrastBtn').classList.add('active');
     }
-
-    function toggleHighContrast() {
-      document.documentElement.classList.toggle('high-contrast');
-      document.getElementById('highContrastBtn').classList.toggle('active');
-      localStorage.setItem('highContrast', document.documentElement.classList.contains('high-contrast') ? 'true' : 'false');
+    const fontSize = localStorage.getItem('fontSize');
+    if (fontSize) {
+      document.documentElement.classList.add(fontSize);
+    } else {
+      document.documentElement.classList.add('font-medium');
     }
-
-    function changeFontSize(action) {
-      const sizes = ['font-small', 'font-medium', 'font-large', 'font-xlarge'];
-      const current = sizes.find(cls => document.documentElement.classList.contains(cls)) || 'font-medium';
-      let index = sizes.indexOf(current);
-      if (action === 'decrease') index = Math.max(0, index - 1);
-      else if (action === 'increase') index = Math.min(sizes.length - 1, index + 1);
-      else if (action === 'xincrease') index = Math.min(sizes.length - 1, index + 2);
-      else if (action === 'reset') index = 1;
-      document.documentElement.classList.remove(...sizes);
-      document.documentElement.classList.add(sizes[index]);
-      localStorage.setItem('fontSize', sizes[index]);
+    if (localStorage.getItem('dyslexicFont') === 'true') {
+      document.documentElement.classList.add('dyslexic-font');
+      document.getElementById('dyslexicBtn').classList.add('active');
     }
-
-    function toggleDyslexicFont() {
-      document.documentElement.classList.toggle('dyslexic-font');
-      document.getElementById('dyslexicBtn').classList.toggle('active');
-      localStorage.setItem('dyslexicFont', document.documentElement.classList.contains('dyslexic-font') ? 'true' : 'false');
+    if (localStorage.getItem('reduceMotion') === 'true') {
+      document.documentElement.classList.add('reduce-motion');
+      document.getElementById('motionBtn').classList.add('active');
     }
-
-    function toggleReducedMotion() {
-      document.documentElement.classList.toggle('reduce-motion');
-      document.getElementById('motionBtn').classList.toggle('active');
-      localStorage.setItem('reduceMotion', document.documentElement.classList.contains('reduce-motion') ? 'true' : 'false');
-    }
-
-    // Carregar preferências salvas
-    document.addEventListener('DOMContentLoaded', function() {
-      if (localStorage.getItem('darkMode') === 'true') {
-        document.documentElement.classList.add('dark-mode');
-        document.getElementById('darkModeBtn').classList.add('active');
-      }
-      if (localStorage.getItem('highContrast') === 'true') {
-        document.documentElement.classList.add('high-contrast');
-        document.getElementById('highContrastBtn').classList.add('active');
-      }
-      const fontSize = localStorage.getItem('fontSize');
-      if (fontSize) {
-        document.documentElement.classList.add(fontSize);
-      } else {
-        document.documentElement.classList.add('font-medium');
-      }
-      if (localStorage.getItem('dyslexicFont') === 'true') {
-        document.documentElement.classList.add('dyslexic-font');
-        document.getElementById('dyslexicBtn').classList.add('active');
-      }
-      if (localStorage.getItem('reduceMotion') === 'true') {
-        document.documentElement.classList.add('reduce-motion');
-        document.getElementById('motionBtn').classList.add('active');
-      }
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
