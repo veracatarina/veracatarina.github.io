@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
-  <meta name="description" content="Perguntas Frequentes sobre Direito de Família, Criminal, Trabalhista, Digital, Consumidor e mais. Tire suas dúvidas com a Dra. Vera Catarina.">
-  <meta name="keywords" content="perguntas frequentes, FAQ jurídico, dúvidas sobre direito, advogada sapucaia, direito de família, direito criminal, direito trabalhista, direito digital">
+  <meta name="description" content="Perguntas Frequentes sobre Direito: Família, Criminal, Trabalhista, Digital, Consumidor, Previdenciário, Infância, Civil, Empresarial, Correspondente, Leis e Tecnologia. Tire suas dúvidas com a Dra. Vera Catarina.">
+  <meta name="keywords" content="perguntas frequentes, FAQ jurídico, dúvidas sobre direito, advogada sapucaia, direito de família, direito criminal, direito trabalhista, direito digital, correspondente jurídico, lei felca, eca digital, provas digitais">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="canonical" href="https://veracatarina.github.io/faq-juridico.html">
@@ -47,7 +47,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
 
     /* ===== TOP BAR ===== */
@@ -206,13 +206,8 @@
       height: 3px;
       background: var(--accent);
     }
-    .content-section p {
-      font-size: 1rem;
-      color: var(--text-dark);
-      margin-bottom: 20px;
-    }
+    .content-section p { font-size: 1rem; color: var(--text-dark); margin-bottom: 20px; }
 
-    /* ===== CATEGORIAS DE FILTRO ===== */
     .filtro-faq {
       display: flex;
       flex-wrap: wrap;
@@ -243,7 +238,6 @@
       border-color: var(--accent);
     }
 
-    /* ===== FAQ ACORDEÃO ===== */
     .faq-categoria {
       margin-bottom: 30px;
     }
@@ -257,17 +251,13 @@
       border-bottom: 2px solid var(--accent);
       padding-bottom: 8px;
     }
-    .faq-categoria h3 i {
-      color: var(--accent);
-    }
+    .faq-categoria h3 i { color: var(--accent); }
 
     .faq-item {
       border-bottom: 1px solid var(--border);
       padding: 15px 0;
     }
-    .faq-item:last-child {
-      border-bottom: none;
-    }
+    .faq-item:last-child { border-bottom: none; }
     .faq-item h4 {
       font-size: 1.05rem;
       color: var(--primary-dark);
@@ -292,20 +282,47 @@
       line-height: 1.7;
       padding-right: 20px;
     }
-    .faq-item.aberto .resposta {
-      display: block;
-    }
-    .faq-item.aberto h4 i {
-      transform: rotate(180deg);
-    }
+    .faq-item.aberto .resposta { display: block; }
+    .faq-item.aberto h4 i { transform: rotate(180deg); }
     .faq-item .resposta a {
       color: var(--accent);
       font-weight: 600;
       text-decoration: none;
     }
-    .faq-item .resposta a:hover {
-      text-decoration: underline;
+    .faq-item .resposta a:hover { text-decoration: underline; }
+
+    .cta-inline {
+      background: var(--bg-light);
+      border-left: 4px solid var(--accent);
+      padding: 20px 25px;
+      margin: 20px 0;
+      border-radius: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
     }
+    .cta-inline p {
+      margin: 0;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .cta-inline .btn-cta-small {
+      background: var(--primary-dark);
+      color: white;
+      padding: 10px 25px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .cta-inline .btn-cta-small:hover { background: var(--primary); }
 
     /* ===== BACKLINKS ===== */
     .backlinks-section {
@@ -400,6 +417,89 @@
       letter-spacing: 0.5px;
     }
 
+    /* ===== ACCESSIBILITY TOOLBAR ===== */
+    .accessibility-toolbar-toggle {
+      position: fixed;
+      bottom: 70px;
+      left: 20px;
+      z-index: 9998;
+      background: var(--primary-dark, #0b251e);
+      color: white;
+      border: 2px solid var(--accent, #c5a880);
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.2s, background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .accessibility-toolbar-toggle:hover {
+      transform: scale(1.05);
+      background: var(--accent, #c5a880);
+      color: var(--primary-dark, #0b251e);
+    }
+    .accessibility-toolbar {
+      position: fixed;
+      bottom: 180px;
+      left: 20px;
+      z-index: 9997;
+      background: rgba(11, 37, 30, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--accent, #c5a880);
+      border-radius: 12px;
+      padding: 20px 16px;
+      width: 220px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+    }
+    .accessibility-toolbar.open { display: flex; }
+    .accessibility-toolbar .toolbar-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent, #c5a880);
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 8px;
+      margin-bottom: 4px;
+    }
+    .accessibility-toolbar .btn-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .accessibility-toolbar button {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #e2e8f0;
+      padding: 8px 6px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .accessibility-toolbar button:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: var(--accent, #c5a880);
+    }
+    .accessibility-toolbar button.active {
+      background: var(--accent, #c5a880);
+      color: var(--primary-dark, #0b251e);
+      border-color: var(--accent, #c5a880);
+    }
+
     footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
     .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
@@ -450,14 +550,8 @@
         min-width: auto;
         display: none !important;
       }
-      .dropdown.open .dropdown-content {
-        display: block !important;
-      }
-      .dropdown-content li a {
-        font-size: 0.9rem;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
-      }
+      .dropdown.open .dropdown-content { display: block !important; }
+      .dropdown-content li a { font-size: 0.9rem; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05) !important; }
       #menu-checkbox:checked ~ .nav-menu { right: 0; }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
@@ -466,6 +560,16 @@
       footer { padding-bottom: 110px; }
       .filtro-faq { gap: 6px; }
       .filtro-faq button { font-size: 0.7rem; padding: 6px 14px; }
+      .cta-inline { flex-direction: column; align-items: stretch; text-align: center; }
+      .accessibility-toolbar {
+        width: 190px;
+        bottom: 180px;
+        left: 10px;
+        padding: 15px 12px;
+      }
+      .accessibility-toolbar .btn-group { grid-template-columns: 1fr 1fr; gap: 4px; }
+      .accessibility-toolbar button { font-size: 0.6rem; padding: 6px 4px; }
+      .accessibility-toolbar-toggle { width: 46px; height: 46px; font-size: 1.2rem; bottom: 70px; left: 10px; }
     }
     @media (max-width: 600px) {
       .faq-item h4 { font-size: 0.95rem; }
@@ -540,7 +644,7 @@
     <section class="page-hero">
       <div class="container">
         <h1>Perguntas Frequentes <span>(FAQ)</span></h1>
-        <p>Tire suas dúvidas sobre Direito de Família, Criminal, Trabalhista, Digital, Consumidor e muito mais. Respostas claras e objetivas da Dra. Vera Catarina.</p>
+        <p>Tire suas dúvidas sobre Direito de Família, Criminal, Trabalhista, Digital, Consumidor, Previdenciário, Infância e muito mais. Respostas claras e objetivas da Dra. Vera Catarina.</p>
       </div>
     </section>
 
@@ -565,10 +669,10 @@
       <div class="container">
 
         <p style="font-size:1.05rem; color:var(--text-dark); margin-bottom:25px;">
-          Se você tem dúvidas sobre direitos, processos judiciais ou como agir em determinadas situações, você está no lugar certo. Selecione a categoria abaixo ou role a página para encontrar respostas para as perguntas mais frequentes.
+          Esta é a <strong>maior central de perguntas e respostas sobre Direito</strong> do site da Dra. Vera Catarina. Selecione a categoria abaixo ou role a página para encontrar respostas para as perguntas mais frequentes. Se não encontrar o que procura, <a href="#contato" style="color:var(--accent); font-weight:600;">fale diretamente conosco</a>.
         </p>
 
-        <!-- ===== FILTROS POR CATEGORIA ===== -->
+        <!-- ===== FILTROS ===== -->
         <div class="filtro-faq" id="filtrosFaq">
           <button class="filtro-btn ativo" data-categoria="todos">📌 Todas</button>
           <button class="filtro-btn" data-categoria="familia">👨‍👩‍👧‍👦 Família</button>
@@ -578,113 +682,130 @@
           <button class="filtro-btn" data-categoria="consumidor">🛒 Consumidor</button>
           <button class="filtro-btn" data-categoria="previdenciario">📜 Previdenciário</button>
           <button class="filtro-btn" data-categoria="infancia">👶 Infância</button>
+          <button class="filtro-btn" data-categoria="civil">🏛️ Civil</button>
+          <button class="filtro-btn" data-categoria="empresarial">🏢 Empresarial</button>
+          <button class="filtro-btn" data-categoria="correspondente">📌 Correspondente</button>
+          <button class="filtro-btn" data-categoria="leis">📜 Leis</button>
+          <button class="filtro-btn" data-categoria="tecnologia">🤖 Tecnologia</button>
         </div>
 
-        <!-- ===== FAQ POR CATEGORIA ===== -->
+        <!-- ===== FAQ ===== -->
         <div id="faqContainer">
 
-          <!-- ===== CATEGORIA: FAMÍLIA ===== -->
+          <!-- ===== CATEGORIA: DIREITO DE FAMÍLIA ===== -->
           <div class="faq-categoria" data-categoria="familia">
             <h3><i class="fas fa-people-roof"></i> Direito de Família</h3>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Qual a diferença entre divórcio consensual e litigioso? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">No <strong>divórcio consensual</strong>, ambas as partes concordam com todos os termos (partilha, guarda, pensão) e podem resolver em cartório, sem precisar de ação judicial. É mais rápido e barato. No <strong>divórcio litigioso</strong>, há conflito sobre um ou mais pontos, e o processo tramita na Vara de Família, com decisão de um juiz.</div>
-            </div>
+            <div class="faq-item"><h4>Qual a diferença entre divórcio consensual e litigioso? <i class="fas fa-chevron-down"></i></h4><div class="resposta">No <strong>divórcio consensual</strong>, ambas as partes concordam com todos os termos (partilha, guarda, pensão) e podem resolver em cartório, sem precisar de ação judicial. É mais rápido e barato. No <strong>divórcio litigioso</strong>, há conflito sobre um ou mais pontos, e o processo tramita na Vara de Família, com decisão de um juiz. <a href="direito-familia.html">Saiba mais sobre Direito de Família</a></div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Como funciona a guarda compartilhada? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">A guarda compartilhada significa que <strong>ambos os pais compartilham as responsabilidades e decisões</strong> sobre a vida do filho (escola, saúde, lazer). A residência da criança pode ser de um dos pais, mas as decisões são tomadas em conjunto. Não significa que a criança mora metade do tempo com cada um.</div>
-            </div>
+            <div class="faq-item"><h4>Como funciona a guarda compartilhada? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A guarda compartilhada significa que <strong>ambos os pais compartilham as responsabilidades e decisões</strong> sobre a vida do filho (escola, saúde, lazer). A residência da criança pode ser de um dos pais, mas as decisões são tomadas em conjunto. Não significa que a criança mora metade do tempo com cada um.</div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Quem tem direito à pensão alimentícia? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Têm direito à pensão os <strong>filhos (menores ou maiores incapazes)</strong>, os <strong>cônjuges ou companheiros</strong> que comprovem necessidade, e os <strong>ascendentes (pais, avós)</strong> em situação de vulnerabilidade. O valor é calculado com base na necessidade do beneficiário e na possibilidade financeira do pagador.</div>
-            </div>
+            <div class="faq-item"><h4>Quem tem direito à pensão alimentícia? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Têm direito à pensão os <strong>filhos (menores ou maiores incapazes)</strong>, os <strong>cônjuges ou companheiros</strong> que comprovem necessidade, e os <strong>ascendentes (pais, avós)</strong> em situação de vulnerabilidade. O valor é calculado com base na necessidade do beneficiário e na possibilidade financeira do pagador.</div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que é alienação parental e como provar? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Alienação parental é a interferência na formação psicológica da criança para que ela repudie um dos pais. Pode ser provada por meio de <strong>testemunhas, mensagens de texto, relatórios psicológicos</strong> e outros meios de prova. A lei prevê medidas como advertência, multa e até a inversão da guarda.</div>
+            <div class="faq-item"><h4>O que é alienação parental e como provar? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Alienação parental é a interferência na formação psicológica da criança para que ela repudie um dos pais. Pode ser provada por meio de <strong>testemunhas, mensagens de texto, relatórios psicológicos</strong> e outros meios de prova. A lei prevê medidas como advertência, multa e até a inversão da guarda.</div></div>
+
+            <div class="faq-item"><h4>Quanto tempo dura um processo de divórcio? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Um divórcio consensual pode ser concluído em <strong>dias ou semanas</strong> em cartório. Já um divórcio litigioso pode levar <strong>meses ou até anos</strong>, dependendo da complexidade do caso e da carga de trabalho da Vara de Família.</div></div>
+
+            <div class="faq-item"><h4>O que é união estável e como reconhecê-la? <i class="fas fa-chevron-down"></i></h4><div class="resposta">União estável é a convivência pública, contínua e duradoura entre duas pessoas, com o objetivo de constituir família. Pode ser reconhecida por <strong>escritura pública em cartório</strong> ou por ação judicial. Os direitos são similares ao casamento.</div></div>
+
+            <div class="faq-item"><h4>Como pedir a revisão de pensão alimentícia? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A pensão pode ser revista quando há <strong>alteração na situação financeira</strong> de quem paga ou de quem recebe (ex: aumento de salário, perda de emprego, novas necessidades). O pedido é feito judicialmente, com comprovação documental.</div></div>
+
+            <div class="faq-item"><h4>O que é inventário e quando é obrigatório? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Inventário é o procedimento legal para transferir os bens de uma pessoa falecida para seus herdeiros. É obrigatório sempre que houver bens (imóveis, veículos, investimentos) em nome do falecido.</div></div>
+
+            <div class="faq-item"><h4>Como funciona a usucapião? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Usucapião é a forma de adquirir a propriedade de um imóvel pela posse prolongada e ininterrupta. Os prazos variam de 5 a 15 anos, dependendo do tipo. <a href="direito-civil.html">Saiba mais sobre Direito Civil</a></div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline">
+              <p>📌 <strong>Precisa de orientação sobre Direito de Família?</strong> Conte com 40 anos de experiência.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20de%20Fam%C3%ADlia%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
             </div>
           </div>
 
-          <!-- ===== CATEGORIA: CRIMINAL ===== -->
+          <!-- ===== CATEGORIA: DIREITO CRIMINAL ===== -->
           <div class="faq-categoria" data-categoria="criminal">
             <h3><i class="fas fa-shield-halved"></i> Direito Criminal</h3>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que fazer se for preso em flagrante? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Mantenha a calma e exerça seu direito de permanecer em silêncio. Solicite imediatamente a presença de um advogado. A Dra. Vera Catarina atende 24h para casos de prisão. <a href="direito-criminal.html">Saiba mais sobre Direito Criminal</a>.</div>
-            </div>
+            <div class="faq-item"><h4>O que fazer se for preso em flagrante? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Mantenha a calma e exerça seu direito de permanecer em silêncio. Solicite imediatamente a presença de um advogado. A Dra. Vera Catarina atende 24h para casos de prisão. <a href="direito-criminal.html">Saiba mais sobre Direito Criminal</a></div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que é Habeas Corpus e quando pode ser usado? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Habeas Corpus é uma ação judicial para proteger o direito de locomoção. Pode ser usado quando há <strong>prisão ilegal, abuso de autoridade ou excesso de prazo</strong> na prisão preventiva.</div>
-            </div>
+            <div class="faq-item"><h4>O que é Habeas Corpus e quando pode ser usado? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Habeas Corpus é uma ação judicial para proteger o direito de locomoção. Pode ser usado quando há <strong>prisão ilegal, abuso de autoridade ou excesso de prazo</strong> na prisão preventiva.</div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Como funciona a Lei Maria da Penha? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">A Lei Maria da Penha (11.340/2006) protege mulheres vítimas de violência doméstica. Prevê <strong>medidas protetivas de urgência</strong>, como afastamento do agressor e proibição de contato. Atuamos tanto na defesa de vítimas quanto na defesa de acusados.</div>
+            <div class="faq-item"><h4>Como funciona a Lei Maria da Penha? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A Lei Maria da Penha (11.340/2006) protege mulheres vítimas de violência doméstica. Prevê <strong>medidas protetivas de urgência</strong>, como afastamento do agressor e proibição de contato. Atuamos tanto na defesa de vítimas quanto na defesa de acusados.</div></div>
+
+            <div class="faq-item"><h4>O que é tráfico de drogas e como funciona a defesa? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O tráfico de drogas é crime previsto na Lei 11.343/2006. A defesa pode envolver <strong>nulidades processuais, análise probatória</strong> e questionamento da autoria. Cada caso exige análise detalhada.</div></div>
+
+            <div class="faq-item"><h4>O que fazer em caso de acusação de crime de trânsito? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Crimes de trânsito (ex: embriaguez, lesão corporal) exigem defesa técnica especializada. É importante <strong>não assinar nada sem orientação</strong> e buscar um advogado criminalista imediatamente.</div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline" style="border-left-color: var(--danger);">
+              <p>🚨 <strong>Urgente? Precisando de assistência criminal agora?</strong> Plantão 24h disponível.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Preciso%20de%20assist%C3%AAncia%20criminal%20imediata." target="_blank" class="btn-cta-small" style="background:var(--danger);"><i class="fas fa-shield-halved"></i> Plantão 24h</a>
             </div>
           </div>
 
-          <!-- ===== CATEGORIA: TRABALHISTA ===== -->
+          <!-- ===== CATEGORIA: DIREITO TRABALHISTA ===== -->
           <div class="faq-categoria" data-categoria="trabalhista">
             <h3><i class="fas fa-briefcase"></i> Direito Trabalhista</h3>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que fazer se fui demitido por justa causa injustamente? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Procure imediatamente uma advogada trabalhista. É possível ingressar com ação para <strong>reverter a justa causa</strong> e cobrar todas as verbas rescisórias, como aviso prévio, FGTS, multa de 40% e férias proporcionais. <a href="direito-trabalhista.html">Saiba mais sobre Direito Trabalhista</a>.</div>
-            </div>
+            <div class="faq-item"><h4>O que fazer se fui demitido por justa causa injustamente? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Procure imediatamente uma advogada trabalhista. É possível ingressar com ação para <strong>reverter a justa causa</strong> e cobrar todas as verbas rescisórias, como aviso prévio, FGTS, multa de 40% e férias proporcionais. <a href="direito-trabalhista.html">Saiba mais sobre Direito Trabalhista</a></div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que caracteriza assédio moral no trabalho? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Condutas abusivas, humilhantes ou constrangedoras repetidas durante a jornada de trabalho, como gritos, insultos, isolamento ou exigências excessivas. A vítima pode pedir <strong>indenização por danos morais</strong>.</div>
-            </div>
+            <div class="faq-item"><h4>O que caracteriza assédio moral no trabalho? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Condutas abusivas, humilhantes ou constrangedoras repetidas durante a jornada de trabalho, como gritos, insultos, isolamento ou exigências excessivas. A vítima pode pedir <strong>indenização por danos morais</strong>.</div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Como funciona o adicional de insalubridade? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">O adicional de insalubridade é devido ao trabalhador que exerce atividades em condições prejudiciais à saúde. O valor varia entre <strong>10%, 20% e 40%</strong> do salário mínimo, dependendo do grau de insalubridade.</div>
+            <div class="faq-item"><h4>Como funciona o adicional de insalubridade? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O adicional de insalubridade é devido ao trabalhador que exerce atividades em condições prejudiciais à saúde. O valor varia entre <strong>10%, 20% e 40%</strong> do salário mínimo, dependendo do grau de insalubridade.</div></div>
+
+            <div class="faq-item"><h4>O que é rescisão indireta? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Rescisão indireta ocorre quando o empregador comete falta grave, permitindo que o empregado <strong>peça a rescisão do contrato como se fosse sem justa causa</strong>, com direito a todas as verbas rescisórias.</div></div>
+
+            <div class="faq-item"><h4>Como calcular verbas rescisórias? <i class="fas fa-chevron-down"></i></h4><div class="resposta">As verbas incluem <strong>saldo de salário, aviso prévio, férias proporcionais + 1/3, 13º salário proporcional, FGTS + multa de 40%</strong>. O cálculo varia conforme o tipo de rescisão. Consulte um advogado para simulação precisa.</div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline">
+              <p>📋 <strong>Teve seus direitos trabalhistas violados?</strong> Garanta o que é seu por lei.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Trabalhista%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
             </div>
           </div>
 
-          <!-- ===== CATEGORIA: DIGITAL ===== -->
+          <!-- ===== CATEGORIA: DIREITO DIGITAL ===== -->
           <div class="faq-categoria" data-categoria="digital">
             <h3><i class="fas fa-laptop-code"></i> Direito Digital</h3>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que fazer se eu for vítima de calúnia ou difamação na internet? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Reúna todas as provas (prints, links, datas) e procure imediatamente uma advogada especializada. A Dra. Vera Catarina pode ingressar com <strong>ação criminal e pedir indenização por danos morais</strong>, além de solicitar a remoção do conteúdo ofensivo. <a href="direito-digital.html">Saiba mais sobre Direito Digital</a>.</div>
-            </div>
+            <div class="faq-item"><h4>O que fazer se eu for vítima de calúnia ou difamação na internet? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Reúna todas as provas (prints, links, datas) e procure imediatamente uma advogada especializada. A Dra. Vera Catarina pode ingressar com <strong>ação criminal e pedir indenização por danos morais</strong>, além de solicitar a remoção do conteúdo ofensivo. <a href="direito-digital.html">Saiba mais sobre Direito Digital</a></div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Como funciona a remoção de conteúdo ofensivo? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">É possível solicitar a remoção extrajudicialmente (notificação extrajudicial à plataforma) ou judicialmente (com decisão liminar). A atuação rápida é fundamental para minimizar os danos.</div>
-            </div>
+            <div class="faq-item"><h4>Como funciona a remoção de conteúdo ofensivo? <i class="fas fa-chevron-down"></i></h4><div class="resposta">É possível solicitar a remoção extrajudicialmente (notificação extrajudicial à plataforma) ou judicialmente (com decisão liminar). A atuação rápida é fundamental para minimizar os danos.</div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que caracteriza danos morais digitais? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Qualquer ação que cause sofrimento, humilhação ou prejuízo à imagem no ambiente virtual, como <strong>vazamento de dados íntimos, exposição indevida, ofensas graves ou invasão de privacidade</strong>.</div>
+            <div class="faq-item"><h4>O que caracteriza danos morais digitais? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Qualquer ação que cause sofrimento, humilhação ou prejuízo à imagem no ambiente virtual, como <strong>vazamento de dados íntimos, exposição indevida, ofensas graves ou invasão de privacidade</strong>.</div></div>
+
+            <div class="faq-item"><h4>Cai no golpe do Pix? O que fazer para recuperar o dinheiro? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O <strong>golpe do Pix</strong> é uma das maiores causas de ações contra bancos. A jurisprudência do STJ divide-se: se o golpe ocorreu por engenharia social fora do banco (ex: venda falsa), o banco pode não ser responsabilizado. Mas se houve múltiplas transferências em valores altos e incompatíveis com seu perfil em poucos minutos, os tribunais têm condenado os bancos por <strong>falha no monitoramento de segurança</strong>. A Dra. Vera Catarina pode analisar seu caso. <a href="direito-digital.html">Saiba mais sobre Direito Digital</a></div></div>
+
+            <div class="faq-item"><h4>O que é a Lei Felca (ECA Digital) e como me afeta? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>Lei Felca (Lei 15.211/2025)</strong>, conhecida como ECA Digital, entrou em vigor em março de 2026. Ela proíbe a autodeclaração de idade em redes sociais, jogos e apostas, exigindo <strong>verificação documental rígida (como CPF)</strong> e controle parental obrigatório para menores de 16 anos. Escritórios de advocacia e plataformas digitais estão buscando assessoria para se adequar. <a href="infancia-e-juventude.html">Saiba mais sobre Infância e Juventude</a></div></div>
+
+            <div class="faq-item"><h4>O que é a Lei Carolina Dieckmann? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>Lei Carolina Dieckmann (12.737/2012)</strong> tipificou como crime a invasão de dispositivos informáticos (hackeamento). Ela prevê pena de reclusão de 1 a 4 anos para quem invade computadores, celulares ou sistemas para obter dados não autorizados.</div></div>
+
+            <div class="faq-item"><h4>WhatsApp hackeado: como agir juridicamente? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Se seu WhatsApp for hackeado, além de notificar a plataforma, é importante <strong>registrar boletim de ocorrência</strong> e buscar orientação jurídica para responsabilizar o invasor, especialmente se houve vazamento de dados íntimos ou prejuízo financeiro. A perícia digital pode ser necessária para rastrear o ataque.</div></div>
+
+            <div class="faq-item"><h4>O que é prova digital e como preservá-la? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Prova digital é qualquer evidência eletrônica (prints, e-mails, logs, metadados). Para preservá-la, é essencial <strong>documentar a cadeia de custódia</strong>, não alterar os arquivos e, em casos complexos, contratar uma perícia digital. <a href="provas-digitais.html">Saiba mais sobre Provas Digitais</a></div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline" style="border-left-color: #25d366;">
+              <p>💻 <strong>Vítima de crime virtual ou golpe financeiro?</strong> Conte com suporte jurídico e perícia digital.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Digital%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
             </div>
           </div>
 
-          <!-- ===== CATEGORIA: CONSUMIDOR ===== -->
+          <!-- ===== CATEGORIA: DIREITO DO CONSUMIDOR ===== -->
           <div class="faq-categoria" data-categoria="consumidor">
             <h3><i class="fas fa-scale-balanced"></i> Direito do Consumidor</h3>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Como posso excluir meu nome do SPC/SERASA? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">É possível solicitar a exclusão administrativamente junto ao banco ou órgão de proteção ao crédito. Se a negativação for indevida, é possível ingressar com <strong>ação judicial para exclusão e indenização por danos morais</strong>. <a href="direito-consumidor.html">Saiba mais sobre Direito do Consumidor</a>.</div>
-            </div>
+            <div class="faq-item"><h4>Como posso excluir meu nome do SPC/SERASA? <i class="fas fa-chevron-down"></i></h4><div class="resposta">É possível solicitar a exclusão administrativamente junto ao banco ou órgão de proteção ao crédito. Se a negativação for indevida, é possível ingressar com <strong>ação judicial para exclusão e indenização por danos morais</strong>. <a href="direito-consumidor.html">Saiba mais sobre Direito do Consumidor</a></div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que são juros abusivos? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Juros abusivos são taxas excessivamente altas, acima da média de mercado. É possível pedir a <strong>revisão do contrato</strong> e a restituição dos valores pagos a mais.</div>
-            </div>
+            <div class="faq-item"><h4>O que são juros abusivos? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Juros abusivos são taxas excessivamente altas, acima da média de mercado. É possível pedir a <strong>revisão do contrato</strong> e a restituição dos valores pagos a mais.</div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Como comprovar erro médico? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">É necessário reunir <strong>prontuários, exames, receitas e pareceres</strong> de outros profissionais. A perícia médica é fundamental para comprovar a negligência, imprudência ou imperícia.</div>
+            <div class="faq-item"><h4>Como comprovar erro médico? <i class="fas fa-chevron-down"></i></h4><div class="resposta">É necessário reunir <strong>prontuários, exames, receitas e pareceres</strong> de outros profissionais. A perícia médica é fundamental para comprovar a negligência, imprudência ou imperícia.</div></div>
+
+            <div class="faq-item"><h4>O que é o golpe do chip (Sim Swap) e como processar a operadora? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O <strong>golpe do chip</strong> ocorre quando criminosos clonam seu número de celular para acessar contas bancárias. As operadoras podem ser responsabilizadas se não adotarem medidas de segurança. É possível processá-las por <strong>falha na prestação de serviço</strong>.</div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline">
+              <p>🛒 <strong>Seus direitos como consumidor foram violados?</strong> Conte com 40 anos de experiência.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Consumidor%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
             </div>
           </div>
 
@@ -692,56 +813,156 @@
           <div class="faq-categoria" data-categoria="previdenciario">
             <h3><i class="fas fa-users-rays"></i> Direito Previdenciário</h3>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Quem tem direito à aposentadoria por tempo de contribuição? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Homens com 35 anos de contribuição e mulheres com 30 anos de contribuição. É necessário cumprir a idade mínima e o tempo de carência exigidos pela reforma da previdência. <a href="direito-previdenciario.html">Saiba mais sobre Direito Previdenciário</a>.</div>
-            </div>
+            <div class="faq-item"><h4>Quem tem direito à aposentadoria por tempo de contribuição? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Homens com 35 anos de contribuição e mulheres com 30 anos de contribuição. É necessário cumprir a idade mínima e o tempo de carência exigidos pela reforma da previdência. <a href="direito-previdenciario.html">Saiba mais sobre Direito Previdenciário</a></div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que é o LOAS/BPC? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">É o Benefício de Prestação Continuada, pago a <strong>idosos com 65 anos ou mais</strong> e a pessoas com deficiência de baixa renda. O valor é de um salário mínimo mensal.</div>
-            </div>
+            <div class="faq-item"><h4>O que é o LOAS/BPC? <i class="fas fa-chevron-down"></i></h4><div class="resposta">É o Benefício de Prestação Continuada, pago a <strong>idosos com 65 anos ou mais</strong> e a pessoas com deficiência de baixa renda. O valor é de um salário mínimo mensal.</div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Como calcular o valor da aposentadoria? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">O cálculo é complexo e depende do <strong>tempo de contribuição, da média salarial e da idade</strong>. A Dra. Vera Catarina faz a análise completa do seu histórico para garantir o melhor benefício.</div>
+            <div class="faq-item"><h4>Como calcular o valor da aposentadoria? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O cálculo é complexo e depende do <strong>tempo de contribuição, da média salarial e da idade</strong>. A Dra. Vera Catarina faz a análise completa do seu histórico para garantir o melhor benefício.</div></div>
+
+            <div class="faq-item"><h4>Meu auxílio-doença foi negado pelo INSS. O que fazer? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Cabe <strong>recurso administrativo</strong> ao INSS ou, se negado novamente, <strong>ação judicial</strong>. A documentação médica completa é essencial. <a href="direito-previdenciario.html">Saiba mais sobre Direito Previdenciário</a></div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline">
+              <p>📜 <strong>Dúvidas sobre aposentadoria ou benefícios do INSS?</strong> Simule seu caso agora.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Previdenci%C3%A1rio%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
             </div>
           </div>
 
-          <!-- ===== CATEGORIA: INFÂNCIA ===== -->
+          <!-- ===== CATEGORIA: INFÂNCIA E JUVENTUDE ===== -->
           <div class="faq-categoria" data-categoria="infancia">
             <h3><i class="fas fa-shield-halved"></i> Infância e Juventude</h3>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que é o ECA Digital e como ele protege crianças e adolescentes? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">O ECA Digital (Lei 15.211/2025) é uma atualização do Estatuto da Criança e do Adolescente para o ambiente online. Ele exige que <strong>plataformas digitais adotem medidas</strong> para proteger menores contra assédio, exposição indevida e crimes virtuais. <a href="infancia-e-juventude.html">Saiba mais sobre Infância e Juventude</a>.</div>
-            </div>
+            <div class="faq-item"><h4>O que é o ECA Digital e como ele protege crianças e adolescentes? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O ECA Digital (Lei 15.211/2025) é uma atualização do Estatuto da Criança e do Adolescente para o ambiente online. Ele exige que <strong>plataformas digitais adotem medidas</strong> para proteger menores contra assédio, exposição indevida e crimes virtuais. <a href="infancia-e-juventude.html">Saiba mais sobre Infância e Juventude</a></div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>O que fazer se meu filho for vítima de cyberbullying? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Reúna provas (prints, links) e comunique imediatamente a plataforma. Em seguida, <strong>procure orientação jurídica</strong> para responsabilizar os agressores e remover o conteúdo.</div>
-            </div>
+            <div class="faq-item"><h4>O que fazer se meu filho for vítima de cyberbullying? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Reúna provas (prints, links) e comunique imediatamente a plataforma. Em seguida, <strong>procure orientação jurídica</strong> para responsabilizar os agressores e remover o conteúdo.</div></div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <h4>Quando devo acionar o Conselho Tutelar? <i class="fas fa-chevron-down"></i></h4>
-              <div class="resposta">Sempre que houver <strong>suspeita ou confirmação de violação dos direitos</strong> de crianças ou adolescentes, como negligência, violência, abuso sexual ou falta de acesso à educação e saúde.</div>
+            <div class="faq-item"><h4>Quando devo acionar o Conselho Tutelar? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Sempre que houver <strong>suspeita ou confirmação de violação dos direitos</strong> de crianças ou adolescentes, como negligência, violência, abuso sexual ou falta de acesso à educação e saúde.</div></div>
+
+            <div class="faq-item"><h4>O que é o caso Henry Borel e qual sua relevância jurídica? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O <strong>caso Henry Borel</strong> (menino de 4 anos que faleceu em 2021) evidenciou a importância de uma atuação rigorosa do Ministério Público e do Judiciário em casos de violência contra menores. O caso gerou amplo debate sobre <strong>proteção de crianças em situação de vulnerabilidade</strong> e sobre a cadeia de custódia de provas periciais.</div></div>
+
+            <div class="faq-item"><h4>O que é o Marco Legal da Primeira Infância? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>Lei 13.257/2016</strong> estabelece políticas integradas para crianças de 0 a 6 anos, ampliando a proteção do ECA e garantindo desenvolvimento pleno, com foco em saúde, educação e proteção social. <a href="noticias/marco-legal-primeira-infancia.html">Leia nosso artigo completo</a></div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline" style="border-left-color: #ff6b6b;">
+              <p>👶 <strong>Proteja a infância! Precisa de orientação sobre direitos de crianças e adolescentes?</strong></p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Inf%C3%A2ncia%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
+            </div>
+          </div>
+
+          <!-- ===== CATEGORIA: DIREITO CIVIL ===== -->
+          <div class="faq-categoria" data-categoria="civil">
+            <h3><i class="fas fa-gavel"></i> Direito Civil e Sucessões</h3>
+
+            <div class="faq-item"><h4>O que é inventário e como funciona? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Inventário é o processo de partilha dos bens de uma pessoa falecida. Pode ser <strong>judicial ou extrajudicial (em cartório)</strong> quando todos os herdeiros são maiores e capazes e há consenso. <a href="direito-civil.html">Saiba mais sobre Direito Civil</a></div></div>
+
+            <div class="faq-item"><h4>Como funciona a usucapião? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Usucapião é a forma de adquirir a propriedade de um imóvel pela posse prolongada e ininterrupta. Os prazos variam de 5 a 15 anos, dependendo do tipo.</div></div>
+
+            <div class="faq-item"><h4>O que é responsabilidade civil? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A responsabilidade civil é a obrigação de reparar danos causados a terceiros. Pode ser <strong>contratual</strong> (descumprimento de contrato) ou <strong>extracontratual</strong> (atos ilícitos, acidentes, erros médicos).</div></div>
+
+            <div class="faq-item"><h4>Como cobrar judicialmente um devedor? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A cobrança judicial pode ser feita por meio de <strong>execução de título</strong> (se houver cheque, duplicata ou nota promissória) ou <strong>ação de cobrança</strong> (conhecimento). Analisamos cada caso para definir a estratégia mais rápida e eficaz.</div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline">
+              <p>🏛️ <strong>Dúvidas sobre inventário, usucapião ou contratos?</strong> Proteja seu patrimônio.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Civil%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
+            </div>
+          </div>
+
+          <!-- ===== CATEGORIA: ADVOCACIA EMPRESARIAL ===== -->
+          <div class="faq-categoria" data-categoria="empresarial">
+            <h3><i class="fas fa-handshake"></i> Advocacia Empresarial</h3>
+
+            <div class="faq-item"><h4>O que é compliance LGPD e por que minha empresa precisa? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Compliance é o conjunto de medidas para garantir que a empresa atue em conformidade com leis e regulamentos. A <strong>LGPD</strong> exige que empresas tratem dados pessoais com segurança e transparência. A não conformidade pode gerar multas pesadas e danos à reputação. <a href="direito-empresarial.html">Saiba mais sobre Advocacia Empresarial</a></div></div>
+
+            <div class="faq-item"><h4>Como reduzir o passivo trabalhista da minha empresa? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A redução do passivo trabalhista envolve uma combinação de boas práticas: revisão de contratos de trabalho, correção de verbas rescisórias, negociação de acordos coletivos e, quando necessário, defesa técnica em juízo para reverter condenações indevidas.</div></div>
+
+            <div class="faq-item"><h4>O que é Holding Familiar e quais as vantagens? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A Holding Familiar é uma empresa criada para administrar o patrimônio da família. Ela facilita a <strong>sucessão empresarial</strong>, reduz a carga tributária (ITCMD) e evita conflitos entre herdeiros.</div></div>
+
+            <div class="faq-item"><h4>Como contratar um advogado correspondente para minha empresa? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A Dra. Vera Catarina atua como <strong>correspondente jurídica</strong> em Sapucaia do Sul, Vale dos Sinos, Porto Alegre e região metropolitana, realizando diligências, audiências e atos processuais para escritórios de todo o Brasil. <a href="apoio-juridico-diligencias.html">Saiba mais sobre Correspondente Jurídico</a></div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline">
+              <p>🏢 <strong>Proteja sua empresa com assessoria jurídica especializada.</strong></p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Empresarial%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
+            </div>
+          </div>
+
+          <!-- ===== CATEGORIA: CORRESPONDENTE JURÍDICO ===== -->
+          <div class="faq-categoria" data-categoria="correspondente">
+            <h3><i class="fas fa-people-arrows"></i> Correspondente Jurídico</h3>
+
+            <div class="faq-item"><h4>O que é um correspondente jurídico e quando contratar um? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Um <strong>correspondente jurídico</strong> é um advogado que atua em uma determinada localidade realizando atos processuais (audiências, diligências, protocolos) para escritórios de outras cidades ou estados. Você deve contratar um correspondente jurídico quando precisa de <strong>atuação presencial em uma comarca onde seu escritório não tem sede</strong>, evitando deslocamentos e custos operacionais.</div></div>
+
+            <div class="faq-item"><h4>Em quais cidades a Dra. Vera Catarina atua como correspondente? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A Dra. Vera Catarina atua como <strong>correspondente jurídica</strong> em toda a região do <strong>Vale dos Sinos</strong> e <strong>Região Metropolitana de Porto Alegre</strong>, incluindo: Sapucaia do Sul, Esteio, Canoas, São Leopoldo, Gravataí, Cachoeirinha, Sapiranga, Alvorada, Porto Alegre, além do interior do Rio Grande do Sul e atendimento online para todo o Brasil. <a href="apoio-juridico-diligencias.html">Saiba mais sobre Correspondente Jurídico</a></div></div>
+
+            <div class="faq-item"><h4>Quais tipos de atos processuais vocês realizam como correspondente? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Realizamos <strong>audiências</strong> (cíveis, trabalhistas, criminais e previdenciárias), <strong>diligências externas e internas</strong>, <strong>protocolos</strong>, <strong>distribuição de ações</strong>, <strong>retirada de alvarás e certidões</strong>, <strong>despachos em órgãos públicos</strong> e demais atividades de apoio jurídico.</div></div>
+
+            <div class="faq-item"><h4>Quais áreas do Direito vocês atendem como correspondente? <i class="fas fa-chevron-down"></i></h4><div class="resposta">Atendemos em todas as áreas: <strong>Cível, Trabalhista, Criminal, Família, Consumidor, Previdenciário, Digital e Empresarial</strong>. A Dra. Vera Catarina tem 40 anos de experiência e está habilitada a realizar atos em qualquer uma dessas especialidades.</div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline" style="border-left-color: #8B0000;">
+              <p>📌 <strong>Precisa de um correspondente jurídico em Sapucaia do Sul ou Porto Alegre?</strong> Atendemos todo o Vale dos Sinos.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Correspondente%20e%20gostaria%20de%20contratar%20seus%20servi%C3%A7os." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Solicitar Correspondente</a>
+            </div>
+          </div>
+
+          <!-- ===== CATEGORIA: LEIS E JURISPRUDÊNCIA ===== -->
+          <div class="faq-categoria" data-categoria="leis">
+            <h3><i class="fas fa-book"></i> Leis e Jurisprudência</h3>
+
+            <div class="faq-item"><h4>O que mudou com a Lei Felca (ECA Digital)? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>Lei Felca (Lei 15.211/2025)</strong>, em vigor desde março de 2026, proíbe a autodeclaração de idade em redes sociais, jogos e apostas, exigindo <strong>verificação documental rígida (CPF)</strong> e controle parental obrigatório para menores de 16 anos. Plataformas e startups buscam assessoria para compliance. <a href="infancia-e-juventude.html">Saiba mais sobre ECA Digital</a></div></div>
+
+            <div class="faq-item"><h4>O que é a Lei Carolina Dieckmann? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>Lei Carolina Dieckmann (12.737/2012)</strong> tipificou como crime a invasão de dispositivos informáticos (hackeamento), com pena de reclusão de 1 a 4 anos. É uma das principais leis de proteção contra crimes cibernéticos.</div></div>
+
+            <div class="faq-item"><h4>O que diz a nova Lei de Licitações (Lei 14.133/2021) e suas alterações de 2026? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>Nova Lei de Licitações</strong> modernizou as regras para contratações públicas, com foco em transparência, eficiência e sustentabilidade. Em 2026, houve ajustes relacionados à <strong>Estratégia Nacional de Saúde</strong>, impactando contratos na área da saúde.</div></div>
+
+            <div class="faq-item"><h4>O que é o Marco Civil da Internet? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O <strong>Marco Civil da Internet (Lei 12.965/2014)</strong> estabelece princípios, garantias e deveres para o uso da internet no Brasil, incluindo <strong>neutralidade de rede, proteção da privacidade e responsabilidade das plataformas</strong>. <a href="noticias/marco-civil-internet-direitos-digitais.html">Leia nosso artigo completo</a></div></div>
+
+            <div class="faq-item"><h4>O que é a Lei do Bem e como afeta empresas de tecnologia? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>Lei do Bem (Lei 11.196/2005)</strong> concede incentivos fiscais para empresas que investem em inovação tecnológica. Em 2026, novas exigências de governança e rastreabilidade foram incluídas, gerando alta demanda por assessoria de compliance.</div></div>
+
+            <div class="faq-item"><h4>O que é a responsabilidade de plataformas por IA segundo o STF? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O STF definiu que as plataformas <strong>respondem sem ordem judicial</strong> em caso de "falha sistêmica" em crimes graves ou se ignorarem notificações extrajudiciais. Isso amplia a responsabilidade das big techs por conteúdos gerados por inteligência artificial.</div></div>
+
+            <div class="faq-item"><h4>O que é o Tema 1.260 do STF sobre dupla responsabilidade? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O STF validou no <strong>Tema 1.260</strong> a independência de instâncias, permitindo que uma mesma conduta seja punida tanto na esfera de improbidade administrativa quanto na criminal eleitoral, sem violar o princípio do <em>non bis in idem</em>.</div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline">
+              <p>📜 <strong>Dúvidas sobre leis e jurisprudência?</strong> Conte com uma análise técnica da Dra. Vera Catarina.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Leis%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
+            </div>
+          </div>
+
+          <!-- ===== CATEGORIA: TECNOLOGIA E INOVAÇÃO ===== -->
+          <div class="faq-categoria" data-categoria="tecnologia">
+            <h3><i class="fas fa-robot"></i> Tecnologia e Inovação Jurídica</h3>
+
+            <div class="faq-item"><h4>O que é Jurimetria e como pode ajudar em um processo? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>Jurimetria</strong> é a aplicação de estatística e análise de dados para prever decisões judiciais, identificar tendências e embasar estratégias processuais. É uma ferramenta poderosa para aumentar as chances de sucesso.</div></div>
+
+            <div class="faq-item"><h4>O que é Legal Design? <i class="fas fa-chevron-down"></i></h4><div class="resposta">O <strong>Legal Design</strong> é a aplicação de design thinking e linguagem visual para tornar documentos jurídicos mais claros, acessíveis e compreensíveis para o cliente. É uma tendência que melhora a experiência do usuário e a transparência.</div></div>
+
+            <div class="faq-item"><h4>O que é compliance digital e por que é importante? <i class="fas fa-chevron-down"></i></h4><div class="resposta"><strong>Compliance digital</strong> é a adequação de empresas às normas de segurança cibernética, proteção de dados e boas práticas digitais. Com a LGPD e a Lei Felca, tornou-se essencial para evitar multas e danos à reputação.</div></div>
+
+            <div class="faq-item"><h4>O que é IA Generativa e como ela impacta o Direito? <i class="fas fa-chevron-down"></i></h4><div class="resposta">A <strong>IA Generativa</strong> (como o ChatGPT) tem sido usada para automação de peças e análise de contratos. No entanto, julgados recentes (TJ/SP e TJ/PR) têm <strong>multado advogados que citaram jurisprudências falsas geradas por IA</strong>, destacando a importância de verificar a veracidade das fontes.</div></div>
+
+            <!-- CTA INLINE -->
+            <div class="cta-inline">
+              <p>🤖 <strong>Tecnologia e Direito caminham juntos.</strong> Conte com a Dra. Vera Catarina para inovar em sua estratégia.</p>
+              <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20Tecnologia%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" class="btn-cta-small"><i class="fab fa-whatsapp"></i> Falar agora</a>
             </div>
           </div>
 
         </div><!-- /faqContainer -->
 
-        <!-- ===== CTA ===== -->
+        <!-- ===== CTA FINAL ===== -->
         <div class="cta-box">
           <h3>Não encontrou sua pergunta?</h3>
-          <p>Entre em contato conosco. A Dra. Vera Catarina está pronta para esclarecer suas dúvidas com atendimento personalizado.</p>
-          <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." class="btn-cta" target="_blank">
-            <i class="fab fa-whatsapp"></i> Fale agora no WhatsApp
+          <p>A Dra. Vera Catarina está pronta para esclarecer suas dúvidas com atendimento personalizado. Entre em contato agora.</p>
+          <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20FAQ%20e%20n%C3%A3o%20encontrei%20minha%20pergunta." class="btn-cta" target="_blank">
+            <i class="fab fa-whatsapp"></i> Fale agora com a Dra. Vera Catarina
           </a>
+          <p style="margin-top:15px; font-size:0.85rem; color:#94a3b8;">
+            <i class="fas fa-lock"></i> Atendimento sigiloso e com 40 anos de experiência.
+          </p>
         </div>
-
-        <p style="text-align:center; font-size:0.9rem; color:var(--text-light);">
-          <a href="index.html" style="color:var(--accent); font-weight:600;">← Voltar para a página inicial</a>
-        </p>
 
       </div>
     </section>
@@ -761,6 +982,10 @@
           <div class="backlink-item"><a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a></div>
           <div class="backlink-item"><a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a></div>
           <div class="backlink-item"><a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a></div>
+          <div class="backlink-item"><a href="infancia-e-juventude.html"><i class="fas fa-shield-halved"></i> Infância e Juventude</a></div>
+          <div class="backlink-item"><a href="provas-digitais.html"><i class="fas fa-microchip"></i> Provas Digitais</a></div>
+          <div class="backlink-item"><a href="apoio-juridico-diligencias.html"><i class="fas fa-handshake"></i> Correspondente Jurídico</a></div>
+          <div class="backlink-item"><a href="direito-previdenciario.html"><i class="fas fa-users-rays"></i> Direito Previdenciário</a></div>
         </div>
       </div>
     </section>
@@ -847,6 +1072,22 @@
 
   <!-- ===== ACESSIBILIDADE JS ===== -->
   <script src="/acessibilidade.js"></script>
+
+  <!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
+  <button class="accessibility-toolbar-toggle" onclick="toggleAccessibilityToolbar()" aria-label="Abrir ferramentas de acessibilidade">♿</button>
+  <div class="accessibility-toolbar" id="accessibilityToolbar">
+    <div class="toolbar-title">Acessibilidade</div>
+    <div class="btn-group">
+      <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Escuro</button>
+      <button onclick="toggleHighContrast()" id="highContrastBtn">🔲 Contraste</button>
+      <button onclick="changeFontSize('decrease')">A-</button>
+      <button onclick="changeFontSize('reset')">A</button>
+      <button onclick="changeFontSize('increase')">A+</button>
+      <button onclick="changeFontSize('xincrease')">A++</button>
+      <button onclick="toggleDyslexicFont()" id="dyslexicBtn">📖 Dislexia</button>
+      <button onclick="toggleReducedMotion()" id="motionBtn">🎬 Reduzir</button>
+    </div>
+  </div>
 
   <!-- ===== SCRIPTS ===== -->
   <script>
@@ -938,6 +1179,74 @@
           }
         });
       });
+    });
+
+    // ===== TOOLBAR DE ACESSIBILIDADE =====
+    function toggleAccessibilityToolbar() {
+      document.getElementById('accessibilityToolbar').classList.toggle('open');
+    }
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark-mode');
+      document.getElementById('darkModeBtn').classList.toggle('active');
+      localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode') ? 'true' : 'false');
+    }
+
+    function toggleHighContrast() {
+      document.documentElement.classList.toggle('high-contrast');
+      document.getElementById('highContrastBtn').classList.toggle('active');
+      localStorage.setItem('highContrast', document.documentElement.classList.contains('high-contrast') ? 'true' : 'false');
+    }
+
+    function changeFontSize(action) {
+      const sizes = ['font-small', 'font-medium', 'font-large', 'font-xlarge'];
+      const current = sizes.find(cls => document.documentElement.classList.contains(cls)) || 'font-medium';
+      let index = sizes.indexOf(current);
+      if (action === 'decrease') index = Math.max(0, index - 1);
+      else if (action === 'increase') index = Math.min(sizes.length - 1, index + 1);
+      else if (action === 'xincrease') index = Math.min(sizes.length - 1, index + 2);
+      else if (action === 'reset') index = 1;
+      document.documentElement.classList.remove(...sizes);
+      document.documentElement.classList.add(sizes[index]);
+      localStorage.setItem('fontSize', sizes[index]);
+    }
+
+    function toggleDyslexicFont() {
+      document.documentElement.classList.toggle('dyslexic-font');
+      document.getElementById('dyslexicBtn').classList.toggle('active');
+      localStorage.setItem('dyslexicFont', document.documentElement.classList.contains('dyslexic-font') ? 'true' : 'false');
+    }
+
+    function toggleReducedMotion() {
+      document.documentElement.classList.toggle('reduce-motion');
+      document.getElementById('motionBtn').classList.toggle('active');
+      localStorage.setItem('reduceMotion', document.documentElement.classList.contains('reduce-motion') ? 'true' : 'false');
+    }
+
+    // Carregar preferências salvas
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.documentElement.classList.add('dark-mode');
+        document.getElementById('darkModeBtn').classList.add('active');
+      }
+      if (localStorage.getItem('highContrast') === 'true') {
+        document.documentElement.classList.add('high-contrast');
+        document.getElementById('highContrastBtn').classList.add('active');
+      }
+      const fontSize = localStorage.getItem('fontSize');
+      if (fontSize) {
+        document.documentElement.classList.add(fontSize);
+      } else {
+        document.documentElement.classList.add('font-medium');
+      }
+      if (localStorage.getItem('dyslexicFont') === 'true') {
+        document.documentElement.classList.add('dyslexic-font');
+        document.getElementById('dyslexicBtn').classList.add('active');
+      }
+      if (localStorage.getItem('reduceMotion') === 'true') {
+        document.documentElement.classList.add('reduce-motion');
+        document.getElementById('motionBtn').classList.add('active');
+      }
     });
   </script>
 </body>
