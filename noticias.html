@@ -1318,19 +1318,25 @@
         });
       }
 
-      // 4. Ordena: destaques primeiro, depois por data e horário
-      postsFiltrados.sort((a, b) => {
-        if (a.destaque && !b.destaque) return -1;
-        if (!a.destaque && b.destaque) return 1;
-        
-        const dataA = parseDate(a.data);
-        const dataB = parseDate(b.data);
-        if (dataA.getTime() !== dataB.getTime()) {
-          return dataB - dataA;
-        }
-        // Se mesma data, ordena por horário
-        return (a.horario || '00:00').localeCompare(b.horario || '00:00');
-      });
+     // 4. Ordena: destaques primeiro, depois por data, horário e ordem
+postsFiltrados.sort((a, b) => {
+  if (a.destaque && !b.destaque) return -1;
+  if (!a.destaque && b.destaque) return 1;
+  
+  const dataA = parseDate(a.data);
+  const dataB = parseDate(b.data);
+  if (dataA.getTime() !== dataB.getTime()) {
+    return dataB - dataA;
+  }
+  // Se mesma data, ordena por horário
+  const horarioA = a.horario || '00:00';
+  const horarioB = b.horario || '00:00';
+  if (horarioA !== horarioB) {
+    return horarioA.localeCompare(horarioB);
+  }
+  // Se mesmo horário, ordena por 'ordem' (padrão 0)
+  return (a.ordem || 0) - (b.ordem || 0);
+});
 
       // 5. Verifica se há resultados
       if (postsFiltrados.length === 0) {
