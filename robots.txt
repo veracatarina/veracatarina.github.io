@@ -1,6 +1,6 @@
 # Permite que todos os robôs de busca rastreiem todo o site
 User-agent: *
-Disallow:
+Allow: /
 
 # Caminho para o sitemap
-Sitemap: https://veracatarina.github.io/sitemap.xml
+Sitemap: https://veracatarina.adv.br/sitemap.xml
