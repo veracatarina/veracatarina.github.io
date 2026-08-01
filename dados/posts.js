@@ -324,16 +324,7 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/eca-relacoes-familiares-guarda-convivencia-pensao.png",
     destaque: false
   },
-    {
-    titulo: "Golpe do PIX: o que fazer juridicamente para recuperar seu dinheiro",
-    link: "https://veracatarina.github.io/noticias/golpe-do-pix-como-recuperar-dinheiro.html",
-    resumo: "Vítima de golpe do PIX? Saiba quais medidas judiciais tomar, como pedir indenização ao banco e como agir imediatamente para tentar recuperar o valor perdido. Atendimento online 24h.",
-    data: "03/08/2026",
-    categoria: "direito-digital",
-    categoriaLabel: "Direito Digital",
-    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-como-recuperar-dinheiro-advocacia-vera-catarina.jpg",
-    destaque: true
-  },
+
   // ==========================================================
   //  NOVAS POSTAGENS (COM HORÁRIO)
   // ==========================================================
@@ -359,6 +350,17 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-spc-serasa-guia-advocacia-vera-catarina.jpg",
   destaque: false
 },
+      {
+    titulo: "Golpe do PIX: o que fazer juridicamente para recuperar seu dinheiro",
+    link: "https://veracatarina.github.io/noticias/golpe-do-pix-como-recuperar-dinheiro.html",
+    resumo: "Vítima de golpe do PIX? Saiba quais medidas judiciais tomar, como pedir indenização ao banco e como agir imediatamente para tentar recuperar o valor perdido. Atendimento online 24h.",
+    data: "03/08/2026",
+    horario: "09:00",    
+    categoria: "direito-digital",
+    categoriaLabel: "Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-como-recuperar-dinheiro-advocacia-vera-catarina.jpg",
+    destaque: true
+  },
   {
   titulo: "Assédio moral no trabalho: como provar e pedir indenização",
   link: "https://veracatarina.github.io/noticias/assedio-moral-trabalho-provar.html",
