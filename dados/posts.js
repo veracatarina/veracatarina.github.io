@@ -324,17 +324,7 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/eca-relacoes-familiares-guarda-convivencia-pensao.png",
     destaque: false
   },
-  {
-    titulo: "Situações urgentes envolvendo crianças e adolescentes: Conte com atendimento imediato",
-    link: "https://veracatarina.github.io/noticias/atendimento-24h-urgente-criancas.html",
-    resumo: "Violações de direitos de menores exigem providências rápidas. Conte com atendimento online 24h por WhatsApp para medidas protetivas e remoção de conteúdo.",
-    data: "02/08/2026",
-    categoria: "infancia",
-    categoriaLabel: "Infância e Juventude",
-    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/atendimento-24h-urgente-criancas-adolescentes.png",
-    destaque: false
-  },
-  {
+    {
     titulo: "Golpe do PIX: o que fazer juridicamente para recuperar seu dinheiro",
     link: "https://veracatarina.github.io/noticias/golpe-do-pix-como-recuperar-dinheiro.html",
     resumo: "Vítima de golpe do PIX? Saiba quais medidas judiciais tomar, como pedir indenização ao banco e como agir imediatamente para tentar recuperar o valor perdido. Atendimento online 24h.",
@@ -347,6 +337,39 @@ const posts = [
   // ==========================================================
   //  NOVAS POSTAGENS (COM HORÁRIO)
   // ==========================================================
+ {
+    titulo: "Situações urgentes envolvendo crianças e adolescentes: Conte com atendimento imediato",
+    link: "https://veracatarina.github.io/noticias/atendimento-24h-urgente-criancas.html",
+    resumo: "Violações de direitos de menores exigem providências rápidas. Conte com atendimento online 24h por WhatsApp para medidas protetivas e remoção de conteúdo.",
+    data: "02/08/2026",
+    horario: "19:00",
+    categoria: "infancia",
+    categoriaLabel: "Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/atendimento-24h-urgente-criancas-adolescentes.png",
+    destaque: false
+  },
+  {
+  titulo: "Como limpar o nome no SPC e SERASA mesmo com dívidas: guia completo 2026",
+  link: "https://veracatarina.github.io/noticias/limpar-nome-spc-serasa-guia.html",
+  resumo: "Seu nome está negativado? Saiba como limpar o nome no SPC e SERASA, quais são seus direitos como consumidor e como pedir indenização por danos morais.",
+  data: "02/08/2026",
+  horario: "14:00",
+  categoria: "direito-consumidor",
+  categoriaLabel: "🛒 Direito do Consumidor",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-spc-serasa-guia-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Assédio moral no trabalho: como provar e pedir indenização",
+  link: "https://veracatarina.github.io/noticias/assedio-moral-trabalho-provar.html",
+  resumo: "Você sofre assédio moral no trabalho? Saiba como provar, quais são seus direitos e como pedir indenização por danos morais. Atendimento online 24h.",
+  data: "03/08/2026",
+  horario: "14:00",
+  categoria: "direito-trabalhista",
+  categoriaLabel: "📋 Direito Trabalhista",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-trabalho-provar-advocacia-vera-catarina.jpg",
+  destaque: false
+},
   {
     titulo: "WhatsApp hackeado: como agir e quais medidas judiciais tomar",
     link: "https://veracatarina.github.io/noticias/whatsapp-hackeado-como-agir.html",
