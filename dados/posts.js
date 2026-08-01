@@ -374,6 +374,7 @@ const posts = [
     link: "https://veracatarina.github.io/noticias/execucao-de-alimentos-guia-credor.html",
     resumo: "O devedor de pensão alimentícia não pagou? Saiba como dar entrada na execução de alimentos, quais os ritos disponíveis (prisão ou penhora) e como funciona a cumulação de execuções no STJ.",
     data: "05/08/2026",
+    horario: "09:00",
     categoria: "direito-familia",
     categoriaLabel: "Direito de Família",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/execucao-de-alimentos-guia-credor-advocacia-vera-catarina.jpg",
