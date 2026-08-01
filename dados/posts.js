@@ -379,7 +379,18 @@ const posts = [
     categoriaLabel: "Direito de Família",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/execucao-de-alimentos-guia-credor-advocacia-vera-catarina.jpg",
     destaque: false
-  }
+  },
+  {
+  titulo: "Como solicitar aposentadoria por tempo de contribuição: guia completo 2026",
+  link: "https://veracatarina.github.io/noticias/aposentadoria-tempo-contribuicao-guia.html",
+  resumo: "Como solicitar aposentadoria por tempo de contribuição em 2026? Guia completo com requisitos, documentos, cálculo e orientação jurídica. Atendimento online 24h.",
+  data: "05/08/2026",
+  horario: "14:00",
+  categoria: "direito-previdenciario",
+  categoriaLabel: "📜 Direito Previdenciário",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-tempo-contribuicao-guia-advocacia-vera-catarina.jpg",
+  destaque: false
+}
 ];
 
 // ==========================================================
