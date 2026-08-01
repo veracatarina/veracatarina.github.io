@@ -764,6 +764,13 @@
         <button class="filtro-btn" data-categoria="direito-consumidor">🛒 Direito do Consumidor</button>
         <button class="filtro-btn" data-categoria="direitos-cidadao">📜 Direitos do Cidadão</button>
         <button class="filtro-btn" data-categoria="infancia">👶 Infância e Juventude</button>
+        <!-- ===== NOVOS FILTROS ===== -->
+        <button class="filtro-btn" data-categoria="direito-previdenciario">📜 Direito Previdenciário</button>
+        <button class="filtro-btn" data-categoria="direito-empresarial">🏢 Advocacia Empresarial</button>
+        <button class="filtro-btn" data-categoria="direito-civil">🏛️ Direito Civil</button>
+        <button class="filtro-btn" data-categoria="provas-digitais">💻 Provas Digitais</button>
+        <button class="filtro-btn" data-categoria="correspondente">📌 Correspondente</button>
+        <button class="filtro-btn" data-categoria="institucional">🎉 Institucional</button>
       </div>
     </div>
 
@@ -794,6 +801,7 @@
           <div class="backlink-item"><a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a></div>
           <div class="backlink-item"><a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a></div>
           <div class="backlink-item"><a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a></div>
+          <div class="backlink-item"><a href="direito-previdenciario.html"><i class="fas fa-users-rays"></i> Direito Previdenciário</a></div>
           <div class="backlink-item"><a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a></div>
           <div class="backlink-item"><a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a></div>
           <div class="backlink-item"><a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a></div>
@@ -1222,16 +1230,31 @@
         categoria: "direito-digital",
         categoriaLabel: "Direito Digital",
         imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-como-recuperar-dinheiro-advocacia-vera-catarina.jpg",
-        destaque: true  // <--- DESTAQUE: aparece no topo
+        destaque: true
       },
+      // ==========================================================
+      //  NOVAS POSTAGENS (COM HORÁRIO)
+      // ==========================================================
       {
         titulo: "WhatsApp hackeado: como agir e quais medidas judiciais tomar",
         link: "https://veracatarina.github.io/noticias/whatsapp-hackeado-como-agir.html",
         resumo: "Seu WhatsApp foi hackeado? Saiba quais medidas imediatas tomar, como registrar boletim de ocorrência, quais ações judiciais cabíveis e como proteger seus dados. Atendimento online 24h.",
         data: "04/08/2026",
+        horario: "08:00",
         categoria: "direito-digital",
-        categoriaLabel: "Direito Digital",
+        categoriaLabel: "💻 Direito Digital",
         imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-como-agir-advocacia-vera-catarina.jpg",
+        destaque: false
+      },
+      {
+        titulo: "🎉 Feliz Aniversário, Dra. Vera Catarina! 40 anos de dedicação à Justiça e à Educação",
+        link: "https://veracatarina.github.io/noticias/feliz-aniversario-dra-vera-catarina.html",
+        resumo: "Hoje é um dia especial! Celebramos o aniversário da Dra. Vera Catarina, uma vida dedicada à Justiça e à Educação. Conheça sua história, sua família e os livros de seu filho Fábio Wlademir.",
+        data: "04/08/2026",
+        horario: "13:00",
+        categoria: "institucional",
+        categoriaLabel: "🎉 Institucional",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/feliz-aniversario-dra-vera-catarina-familia.jpg",
         destaque: false
       },
       {
@@ -1244,29 +1267,6 @@
         imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/execucao-de-alimentos-guia-credor-advocacia-vera-catarina.jpg",
         destaque: false
       }
-      // ==========================================================
-  //  NOVAS POSTAGENS
-  // ==========================================================
-  {
-    titulo: "WhatsApp hackeado: como agir e quais medidas judiciais tomar",
-    link: "https://veracatarina.github.io/noticias/whatsapp-hackeado-como-agir.html",
-    resumo: "Seu WhatsApp foi hackeado? Saiba quais medidas imediatas tomar, como registrar boletim de ocorrência, quais ações judiciais cabíveis e como proteger seus dados. Atendimento online 24h.",
-    data: "04/08/2026",
-    horario: "08:00",
-    categoria: "direito-digital",
-    categoriaLabel: "💻 Direito Digital",
-    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-como-agir-advocacia-vera-catarina.jpg"
-  },
-  {
-    titulo: "🎉 Feliz Aniversário, Dra. Vera Catarina! 40 anos de dedicação à Justiça e à Educação",
-    link: "https://veracatarina.github.io/noticias/feliz-aniversario-dra-vera-catarina.html",
-    resumo: "Hoje é um dia especial! Celebramos o aniversário da Dra. Vera Catarina, uma vida dedicada à Justiça e à Educação. Conheça sua história, sua família e os livros de seu filho Fábio Wlademir.",
-    data: "04/08/2026",
-    horario: "13:00",
-    categoria: "institucional",
-    categoriaLabel: "🎉 Institucional",
-    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/feliz-aniversario-dra-vera-catarina-familia.jpg"
-  }
     ];
 
     // ==========================================================
@@ -1281,16 +1281,10 @@
     //  FUNÇÕES AUXILIARES
     // ==========================================================
 
-    // Converte "dd/mm/aaaa" para Date
     function parseDate(str) {
       if (!str) return new Date(0);
       const partes = str.split('/');
       return new Date(partes[2], partes[1] - 1, partes[0]);
-    }
-
-    // Formata data para exibição (dd/mm/aaaa)
-    function formatarData(data) {
-      return data;
     }
 
     // ==========================================================
@@ -1324,11 +1318,18 @@
         });
       }
 
-      // 4. Ordena: destaques primeiro, depois por data (mais recentes primeiro)
+      // 4. Ordena: destaques primeiro, depois por data e horário
       postsFiltrados.sort((a, b) => {
         if (a.destaque && !b.destaque) return -1;
         if (!a.destaque && b.destaque) return 1;
-        return parseDate(b.data) - parseDate(a.data);
+        
+        const dataA = parseDate(a.data);
+        const dataB = parseDate(b.data);
+        if (dataA.getTime() !== dataB.getTime()) {
+          return dataB - dataA;
+        }
+        // Se mesma data, ordena por horário
+        return (a.horario || '00:00').localeCompare(b.horario || '00:00');
       });
 
       // 5. Verifica se há resultados
@@ -1386,7 +1387,6 @@
       let pagHtml = '';
       pagHtml += `<button onclick="irParaPagina(${paginaAtual - 1})" ${paginaAtual <= 1 ? 'disabled' : ''}><i class="fas fa-chevron-left"></i> Anterior</button>`;
 
-      // Exibe no máximo 7 páginas
       let inicioPaginas = Math.max(1, paginaAtual - 3);
       let fimPaginas = Math.min(totalPaginas, paginaAtual + 3);
       if (fimPaginas - inicioPaginas < 5) {
