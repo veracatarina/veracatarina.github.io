@@ -427,6 +427,39 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/execucao-de-alimentos-defesa-advocacia-vera-catarina.jpg",
   destaque: false
 },
+  {
+  titulo: "Fraudes bancárias online: como se proteger e pedir indenização",
+  link: "https://veracatarina.github.io/noticias/fraudes-bancarias-indenizacao.html",
+  resumo: "Vítima de fraude bancária online? Saiba como se proteger, quais são seus direitos, como pedir indenização ao banco e quais medidas judiciais tomar.",
+  data: "06/08/2026",
+  horario: "14:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/fraudes-bancarias-indenizacao-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Guarda compartilhada: como funciona na prática e quais os direitos dos pais",
+  link: "https://veracatarina.github.io/noticias/guarda-compartilhada-direitos.html",
+  resumo: "A guarda compartilhada é a regra no Brasil. Entenda como funciona na prática, quais os direitos e deveres dos pais e como ela beneficia os filhos.",
+  data: "07/08/2026",
+  horario: "09:00",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-compartilhada-direitos-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "O que fazer se seu filho for vítima de cyberbullying ou exposição indevida",
+  link: "https://veracatarina.github.io/noticias/cyberbullying-infantil-o-que-fazer.html",
+  resumo: "Seu filho sofreu cyberbullying ou teve imagens expostas? Saiba como agir, quais medidas legais tomar e como proteger seus direitos com base no ECA Digital.",
+  data: "07/08/2026",
+  horario: "14:00",
+  categoria: "infancia",
+  categoriaLabel: "👶 Infância e Juventude",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/cyberbullying-infantil-o-que-fazer-advocacia-vera-catarina.jpg",
+  destaque: false
+}
 ];
 
 // ==========================================================
