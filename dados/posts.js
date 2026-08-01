@@ -4,6 +4,42 @@
 //  Carregado por: noticias.html e arquivo.html
 // ==========================================================
 
+// ==========================================================
+//  TEMPLATE PARA NOVAS POSTAGENS (COPIAR E COLAR)
+//  Remova os comentários /* e */ quando for usar
+//  ==========================================================
+/*
+{
+  titulo: "Título da postagem",
+  link: "https://veracatarina.github.io/noticias/slug-da-postagem.html",
+  resumo: "Resumo da postagem...",
+  data: "DD/MM/AAAA",
+  horario: "HH:MM",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/nome-da-imagem.jpg",
+  destaque: false
+},
+{
+  titulo: "Outro título",
+  link: "https://veracatarina.github.io/noticias/outro-slug.html",
+  resumo: "Outro resumo...",
+  data: "DD/MM/AAAA",
+  horario: "HH:MM",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/outra-imagem.jpg",
+  destaque: false
+}
+*/
+// ==========================================================
+//  CATEGORIAS DISPONÍVEIS:
+//  direito-digital, direito-criminal, direito-familia,
+//  direito-trabalhista, direito-consumidor, direitos-cidadao,
+//  infancia, direito-previdenciario, direito-empresarial,
+//  direito-civil, provas-digitais, correspondente, institucional
+// ==========================================================
+
 const posts = [
   // ===== ARTIGOS DO SITE =====
   {
@@ -344,3 +380,39 @@ const posts = [
     destaque: false
   }
 ];
+
+// ==========================================================
+//  TEMPLATE PARA NOVAS POSTAGENS (COPIAR E COLAR)
+//  Remova os comentários /* e */ quando for usar
+// ==========================================================
+/*
+{
+  titulo: "Título da postagem",
+  link: "https://veracatarina.github.io/noticias/slug-da-postagem.html",
+  resumo: "Resumo da postagem...",
+  data: "DD/MM/AAAA",
+  horario: "HH:MM",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/nome-da-imagem.jpg",
+  destaque: false
+},
+{
+  titulo: "Outro título",
+  link: "https://veracatarina.github.io/noticias/outro-slug.html",
+  resumo: "Outro resumo...",
+  data: "DD/MM/AAAA",
+  horario: "HH:MM",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/outra-imagem.jpg",
+  destaque: false
+}
+*/
+// ==========================================================
+//  CATEGORIAS DISPONÍVEIS:
+//  direito-digital, direito-criminal, direito-familia,
+//  direito-trabalhista, direito-consumidor, direitos-cidadao,
+//  infancia, direito-previdenciario, direito-empresarial,
+//  direito-civil, provas-digitais, correspondente, institucional
+// ==========================================================
