@@ -3,164 +3,320 @@
 
   <!-- ===== PÁGINAS PRINCIPAIS ===== -->
   <url>
-    <loc>https://veracatarina.github.io/</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/sobre.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://veracatarina.github.io/legal.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://veracatarina.github.io/contato.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/sobre.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/depoimentos.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/contato.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/noticias.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/legal.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/sitemap.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/blog.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/sitemap.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/acessibilidade.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/acessibilidade.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/advogado-online.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://veracatarina.github.io/direito-empresarial.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://veracatarina.github.io/blog.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/depoimentos.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/advogado-online.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/direito-empresarial.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/area-restrita.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/acompanhar-processos.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/solicitar-andamento.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/pesquisa.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/sites-uteis.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/faq-juridico.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/infancia-e-juventude.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/provas-digitais.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/apoio-juridico-diligencias.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- ===== ÁREAS DE ATUAÇÃO ===== -->
   <url>
-    <loc>https://veracatarina.github.io/direito-familia.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/direito-familia.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/direito-digital.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/direito-digital.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/direito-criminal.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/direito-criminal.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/direito-trabalhista.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/direito-trabalhista.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/direito-previdenciario.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/direito-previdenciario.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/direito-consumidor.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/direito-consumidor.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/direito-civil.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/direito-civil.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
-  <!-- ===== NOTÍCIAS (8 artigos) ===== -->
+  <!-- ===== NOTÍCIAS ===== -->
   <url>
-    <loc>https://veracatarina.github.io/noticias/site-agora-acessivel.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/noticias/site-agora-acessivel.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/noticias/site-lgpd-acessibilidade-oab.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/noticias/site-lgpd-acessibilidade-oab.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/noticias/direito-ao-esquecimento-case-academico-premiado.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/noticias/direito-ao-esquecimento-case-academico-premiado.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/noticias/como-pedir-pensao-alimenticia.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/noticias/como-pedir-pensao-alimenticia.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/noticias/lgpd-entenda-lei-geral-protecao-dados.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/noticias/lgpd-entenda-lei-geral-protecao-dados.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/noticias/crimes-virtuais-calunia-difamacao-injuria.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/noticias/crimes-virtuais-calunia-difamacao-injuria.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/noticias/marco-civil-internet-direitos-digitais.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/noticias/marco-civil-internet-direitos-digitais.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://veracatarina.github.io/noticias/perseguicao-digital-stalking-prova-pericial.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://veracatarina.adv.br/noticias/perseguicao-digital-stalking-prova-pericial.html</loc>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/fraudes-bancarias-indenizacao.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/assedio-moral-trabalho-provar.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/golpe-do-pix-como-recuperar-dinheiro.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/atendimento-24h-urgente-criancas.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/crimes-contra-criancas-adolescentes.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/eca-digital-crimes-virtuais-protecao.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/eca-direitos-basicos-protecao.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/eca-relacoes-familiares-guarda-pensao.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/execucao-de-alimentos-defesa.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/execucao-de-alimentos-guia-credor.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/feliz-aniversario-dra-vera-catarina.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/lgpd-eca-digital-privacidade.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/limpar-nome-spc-serasa-guia.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/marco-legal-primeira-infancia.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/protecao-integral-eca-eca-digital.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/whatsapp-hackeado-como-agir.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/aposentadoria-tempo-contribuicao-guia.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
 
 </urlset>
