@@ -333,7 +333,7 @@ const posts = [
     link: "https://veracatarina.github.io/noticias/atendimento-24h-urgente-criancas.html",
     resumo: "Violações de direitos de menores exigem providências rápidas. Conte com atendimento online 24h por WhatsApp para medidas protetivas e remoção de conteúdo.",
     data: "02/08/2026",
-    horario: "19:00",
+    horario: "08:00",
     categoria: "infancia",
     categoriaLabel: "Infância e Juventude",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/atendimento-24h-urgente-criancas-adolescentes.png",
@@ -349,13 +349,13 @@ const posts = [
   categoriaLabel: "🛒 Direito do Consumidor",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-spc-serasa-guia-advocacia-vera-catarina.jpg",
   destaque: false
-},
-      {
+  },
+  {
     titulo: "Golpe do PIX: o que fazer juridicamente para recuperar seu dinheiro",
     link: "https://veracatarina.github.io/noticias/golpe-do-pix-como-recuperar-dinheiro.html",
     resumo: "Vítima de golpe do PIX? Saiba quais medidas judiciais tomar, como pedir indenização ao banco e como agir imediatamente para tentar recuperar o valor perdido. Atendimento online 24h.",
     data: "03/08/2026",
-    horario: "09:00",    
+    horario: "08:00",    
     categoria: "direito-digital",
     categoriaLabel: "Direito Digital",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-como-recuperar-dinheiro-advocacia-vera-catarina.jpg",
@@ -415,7 +415,18 @@ const posts = [
   categoriaLabel: "📜 Direito Previdenciário",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-tempo-contribuicao-guia-advocacia-vera-catarina.jpg",
   destaque: false
-}
+},
+  {
+  titulo: "Execução de alimentos: defesa do executado – quais são seus direitos",
+  link: "https://veracatarina.github.io/noticias/execucao-de-alimentos-defesa.html",
+  resumo: "Foi citado em uma execução de alimentos? Saiba quais são seus direitos, como se defender, quais os prazos e como evitar a prisão civil.",
+  data: "06/08/2026",
+  horario: "09:00",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/execucao-de-alimentos-defesa-advocacia-vera-catarina.jpg",
+  destaque: false
+},
 ];
 
 // ==========================================================
