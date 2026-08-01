@@ -721,6 +721,13 @@
         <button class="filtro-btn" data-categoria="direito-consumidor">🛒 Direito do Consumidor</button>
         <button class="filtro-btn" data-categoria="direitos-cidadao">📜 Direitos do Cidadão</button>
         <button class="filtro-btn" data-categoria="infancia">👶 Infância e Juventude</button>
+        <!-- ===== NOVOS FILTROS ===== -->
+        <button class="filtro-btn" data-categoria="direito-previdenciario">📜 Direito Previdenciário</button>
+        <button class="filtro-btn" data-categoria="direito-empresarial">🏢 Advocacia Empresarial</button>
+        <button class="filtro-btn" data-categoria="direito-civil">🏛️ Direito Civil</button>
+        <button class="filtro-btn" data-categoria="provas-digitais">💻 Provas Digitais</button>
+        <button class="filtro-btn" data-categoria="correspondente">📌 Correspondente</button>
+        <button class="filtro-btn" data-categoria="institucional">🎉 Institucional</button>
       </div>
     </div>
 
@@ -751,6 +758,7 @@
           <div class="backlink-item"><a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal</a></div>
           <div class="backlink-item"><a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista</a></div>
           <div class="backlink-item"><a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor</a></div>
+          <div class="backlink-item"><a href="direito-previdenciario.html"><i class="fas fa-users-rays"></i> Direito Previdenciário</a></div>
           <div class="backlink-item"><a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial</a></div>
           <div class="backlink-item"><a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil</a></div>
           <div class="backlink-item"><a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h</a></div>
@@ -1154,14 +1162,29 @@
         imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-como-recuperar-dinheiro-advocacia-vera-catarina.jpg",
         futura: true
       },
+      // ==========================================================
+      //  NOVAS POSTAGENS (COM HORÁRIO)
+      // ==========================================================
       {
         titulo: "WhatsApp hackeado: como agir e quais medidas judiciais tomar",
         link: "https://veracatarina.github.io/noticias/whatsapp-hackeado-como-agir.html",
         resumo: "Seu WhatsApp foi hackeado? Saiba quais medidas imediatas tomar, como registrar boletim de ocorrência, quais ações judiciais cabíveis e como proteger seus dados. Atendimento online 24h.",
         data: "04/08/2026",
+        horario: "08:00",
         categoria: "direito-digital",
-        categoriaLabel: "Direito Digital",
+        categoriaLabel: "💻 Direito Digital",
         imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-como-agir-advocacia-vera-catarina.jpg",
+        futura: true
+      },
+      {
+        titulo: "🎉 Feliz Aniversário, Dra. Vera Catarina! 40 anos de dedicação à Justiça e à Educação",
+        link: "https://veracatarina.github.io/noticias/feliz-aniversario-dra-vera-catarina.html",
+        resumo: "Hoje é um dia especial! Celebramos o aniversário da Dra. Vera Catarina, uma vida dedicada à Justiça e à Educação. Conheça sua história, sua família e os livros de seu filho Fábio Wlademir.",
+        data: "04/08/2026",
+        horario: "13:00",
+        categoria: "institucional",
+        categoriaLabel: "🎉 Institucional",
+        imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/feliz-aniversario-dra-vera-catarina-familia.jpg",
         futura: true
       },
       {
@@ -1177,7 +1200,8 @@
     ];
 
     // ==========================================================
-    //  CONFIGURAÇÕES DE PAGINAÇÃO    // ==========================================================
+    //  CONFIGURAÇÕES DE PAGINAÇÃO
+    // ==========================================================
     const POSTS_POR_PAGINA = 18;
     let paginaAtual = 1;
     let categoriaAtual = 'todos';
@@ -1216,8 +1240,15 @@
         });
       }
 
-      // 3. Ordena por data (mais recentes primeiro)
-      postsFiltrados.sort((a, b) => parseDate(b.data) - parseDate(a.data));
+      // 3. Ordena por data e horário (mais recentes primeiro)
+      postsFiltrados.sort((a, b) => {
+        const dataA = parseDate(a.data);
+        const dataB = parseDate(b.data);
+        if (dataA.getTime() !== dataB.getTime()) {
+          return dataB - dataA;
+        }
+        return (a.horario || '00:00').localeCompare(b.horario || '00:00');
+      });
 
       // 4. Verifica se há resultados
       if (postsFiltrados.length === 0) {
