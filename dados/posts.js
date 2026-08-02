@@ -450,9 +450,9 @@ const posts = [
   destaque: false
 },
   {
-  titulo: "O que fazer se seu filho for vítima de cyberbullying ou exposição indevida",
-  link: "http://veracatarina.adv.br/noticias/cyberbullying-infantil-o-que-fazer-sapucaia.html",
-  resumo: "Seu filho sofreu cyberbullying ou teve imagens expostas? Saiba como agir, quais medidas legais tomar e como proteger seus direitos com base no ECA Digital.",
+  titulo: "O que fazer se seu filho for vítima de cyberbullying ou exposição indevida em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/cyberbullying-infantil-o-que-fazer-sapucaia.html",
+  resumo: "Seu filho sofreu cyberbullying ou teve imagens expostas indevidamente em Sapucaia do Sul? Saiba como agir, quais medidas legais tomar e como proteger seus direitos com base no ECA Digital. Atendimento em Sapucaia do Sul, Canoas, São Leopoldo, Esteio e Porto Alegre.",
   data: "07/08/2026",
   horario: "14:00",
   categoria: "infancia",
