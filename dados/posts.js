@@ -580,6 +580,17 @@ const posts = [
   categoriaLabel: "🛒 Direito do Consumidor",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/erro-medico-sapucaia-do-sul-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como funciona a guarda compartilhada em Esteio: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/guarda-compartilhada-esteio.html",
+  resumo: "Como funciona a guarda compartilhada em Esteio? Entenda os direitos dos pais, como funciona na prática e como ela beneficia os filhos. Atendimento em Esteio e região.",
+  data: "15/08/2026",
+  horario: "09:00",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-compartilhada-esteio-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
