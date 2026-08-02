@@ -547,6 +547,17 @@ const posts = [
   categoriaLabel: "💻 Direito Digital",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/fraudes-bancarias-porto-alegre-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como solicitar aposentadoria em São Leopoldo: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/aposentadoria-sao-leopoldo.html",
+  resumo: "Como solicitar aposentadoria em São Leopoldo em 2026? Guia completo com requisitos, documentos, cálculo e orientação jurídica. Atendimento em São Leopoldo e região.",
+  data: "13/08/2026",
+  horario: "14:00",
+  categoria: "direito-previdenciario",
+  categoriaLabel: "📜 Direito Previdenciário",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-sao-leopoldo-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
