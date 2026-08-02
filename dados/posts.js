@@ -459,6 +459,17 @@ const posts = [
   categoriaLabel: "👶 Infância e Juventude",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/cyberbullying-infantil-o-que-fazer-sapucaia-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como recuperar dinheiro de golpe do Pix em Sapucaia do Sul: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/golpe-do-pix-sapucaia-do-sul.html",
+  resumo: "Vítima de golpe do Pix em Sapucaia do Sul? Saiba quais medidas judiciais tomar, como pedir indenização ao banco e como agir imediatamente para recuperar o valor perdido. Atendimento em Sapucaia do Sul, Canoas, São Leopoldo, Esteio e Porto Alegre.",
+  data: "10/08/2026",
+  horario: "09:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
