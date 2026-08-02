@@ -558,6 +558,17 @@ const posts = [
   categoriaLabel: "📜 Direito Previdenciário",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-sao-leopoldo-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Assédio moral no trabalho em Canoas: como provar e pedir indenização",
+  link: "https://veracatarina.adv.br/noticias/assedio-moral-canoas.html",
+  resumo: "Você sofre assédio moral no trabalho em Canoas? Saiba como provar, quais são seus direitos, como pedir indenização por danos morais e como agir legalmente. Atendimento em Canoas e região.",
+  data: "14/08/2026",
+  horario: "09:00",
+  categoria: "direito-trabalhista",
+  categoriaLabel: "📋 Direito Trabalhista",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-canoas-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
