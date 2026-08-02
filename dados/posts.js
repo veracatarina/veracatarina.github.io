@@ -461,6 +461,17 @@ const posts = [
   destaque: false
 },
   {
+  titulo: "Como limpar o nome no SPC em Sapucaia do Sul: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/limpar-nome-spc-sapucaia-do-sul.html",
+  resumo: "Seu nome está negativado em Sapucaia do Sul? Saiba como limpar o nome no SPC, quais são seus direitos como consumidor e como pedir indenização por danos morais. Atendimento em Sapucaia do Sul e região.",
+  data: "08/08/2026",
+  horario: "09:00",
+  categoria: "direito-consumidor",
+  categoriaLabel: "🛒 Direito do Consumidor",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-spc-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
   titulo: "Como recuperar dinheiro de golpe do Pix em Sapucaia do Sul: guia completo 2026",
   link: "https://veracatarina.adv.br/noticias/golpe-do-pix-sapucaia-do-sul.html",
   resumo: "Vítima de golpe do Pix em Sapucaia do Sul? Saiba quais medidas judiciais tomar, como pedir indenização ao banco e como agir imediatamente para recuperar o valor perdido. Atendimento em Sapucaia do Sul, Canoas, São Leopoldo, Esteio e Porto Alegre.",
