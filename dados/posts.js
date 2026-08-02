@@ -481,6 +481,39 @@ const posts = [
   categoriaLabel: "💻 Direito Digital",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-sapucaia-do-sul-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como pedir pensão alimentícia em Esteio: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/pensao-alimenticia-esteio.html",
+  resumo: "Como pedir pensão alimentícia em Esteio? Entenda quem tem direito, quais documentos reunir, como calcular o valor e quando procurar uma advogada especializada em Esteio e região.",
+  data: "10/08/2026",
+  horario: "14:00",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pensao-alimenticia-esteio-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Advogado criminal em Canoas: o que fazer em caso de prisão",
+  link: "https://veracatarina.adv.br/noticias/advogado-criminal-canoas-prisao.html",
+  resumo: "Preso em flagrante em Canoas? Saiba quais são seus direitos, como funciona o Habeas Corpus, a audiência de custódia e como contratar um advogado criminal em Canoas e região.",
+  data: "11/08/2026",
+  horario: "09:00",
+  categoria: "direito-criminal",
+  categoriaLabel: "⚖️ Direito Criminal",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/advogado-criminal-canoas-prisao-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Como limpar o nome em São Leopoldo: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/limpar-nome-sao-leopoldo.html",
+  resumo: "Seu nome está negativado em São Leopoldo? Saiba como limpar o nome no SPC e SERASA, quais são seus direitos como consumidor e como pedir indenização por danos morais em São Leopoldo.",
+  data: "11/08/2026",
+  horario: "14:00",
+  categoria: "direito-consumidor",
+  categoriaLabel: "🛒 Direito do Consumidor",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-sao-leopoldo-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
