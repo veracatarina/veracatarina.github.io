@@ -514,6 +514,17 @@ const posts = [
   categoriaLabel: "🛒 Direito do Consumidor",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-sao-leopoldo-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como pedir guarda dos filhos em Gravataí: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/guarda-dos-filhos-gravatai.html",
+  resumo: "Como pedir guarda dos filhos em Gravataí? Entenda os tipos de guarda, como funciona o processo judicial, quais os direitos dos pais e como garantir o bem-estar das crianças. Atendimento em Gravataí e região.",
+  data: "12/08/2026",
+  horario: "09:00",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-dos-filhos-gravatai-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
