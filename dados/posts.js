@@ -525,6 +525,17 @@ const posts = [
   categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-dos-filhos-gravatai-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como fazer inventário em Cachoeirinha: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/inventario-cachoeirinha.html",
+  resumo: "Como fazer inventário em Cachoeirinha? Entenda como funciona, quais os prazos, documentos necessários e quando contratar um advogado especializado. Atendimento em Cachoeirinha e região.",
+  data: "12/08/2026",
+  horario: "14:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/inventario-cachoeirinha-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
