@@ -536,6 +536,17 @@ const posts = [
   categoriaLabel: "🏛️ Direito Civil",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/inventario-cachoeirinha-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Advogado para fraudes bancárias em Porto Alegre: como agir e pedir indenização",
+  link: "https://veracatarina.adv.br/noticias/fraudes-bancarias-porto-alegre.html",
+  resumo: "Vítima de fraude bancária em Porto Alegre? Saiba como agir, quais medidas judiciais tomar, como pedir indenização ao banco e proteger seus direitos. Atendimento em Porto Alegre e região.",
+  data: "13/08/2026",
+  horario: "09:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/fraudes-bancarias-porto-alegre-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
