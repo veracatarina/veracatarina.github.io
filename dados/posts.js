@@ -569,6 +569,17 @@ const posts = [
   categoriaLabel: "📋 Direito Trabalhista",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-canoas-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como pedir indenização por erro médico em Sapucaia do Sul: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/erro-medico-sapucaia-do-sul.html",
+  resumo: "Vítima de erro médico em Sapucaia do Sul? Saiba como pedir indenização, quais documentos reunir, como comprovar o erro e quais são seus direitos como paciente. Atendimento em Sapucaia do Sul e região.",
+  data: "14/08/2026",
+  horario: "14:00",
+  categoria: "direito-consumidor",
+  categoriaLabel: "🛒 Direito do Consumidor",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/erro-medico-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
