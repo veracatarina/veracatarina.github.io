@@ -457,7 +457,7 @@ const posts = [
   horario: "14:00",
   categoria: "infancia",
   categoriaLabel: "👶 Infância e Juventude",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/cyberbullying-infantil-o-que-fazer-advocacia-vera-catarina.jpg",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/cyberbullying-infantil-o-que-fazer-sapucaia-advocacia-vera-catarina.jpg",
   destaque: false
 }
 ];
