@@ -723,6 +723,17 @@ const posts = [
   categoriaLabel: "🛒 Direito do Consumidor",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divida-indevida-canoas-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Advogado para divórcio consensual em São Leopoldo: como escolher",
+  link: "https://veracatarina.adv.br/noticias/divorcio-consensual-sao-leopoldo.html",
+  resumo: "Precisa de um advogado para divórcio consensual em São Leopoldo? Saiba como escolher, quais os custos, documentos necessários e como funciona o processo. Atendimento em São Leopoldo e região.",
+  data: "24/08/2026",
+  horario: "14:00",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divorcio-consensual-sao-leopoldo-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
