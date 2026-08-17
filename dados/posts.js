@@ -679,6 +679,17 @@ const posts = [
   categoriaLabel: "💻 Direito Digital",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/recuperar-dinheiro-golpe-pix-canoas-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como solicitar aposentadoria em Gravataí: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/aposentadoria-gravatai.html",
+  resumo: "Saiba como solicitar aposentadoria em Gravataí: quais os tipos de aposentadoria, requisitos, documentos necessários, como calcular o valor e como funciona o processo no INSS. Atendimento em Gravataí e região.",
+  data: "21/08/2026",
+  horario: "09:00",
+  categoria: "direito-previdenciario",
+  categoriaLabel: "📜 Direito Previdenciário",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-gravatai-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
