@@ -713,6 +713,17 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/usucapiao-cachoeirinha-advocacia-vera-catarina.jpg",
   destaque: false
 },
+  {
+  titulo: "Empresa cobrando dívida indevida em Canoas? Saiba como agir",
+  link: "https://veracatarina.adv.br/noticias/divida-indevida-canoas.html",
+  resumo: "Recebeu cobrança indevida em Canoas? Saiba como identificar, o que fazer, seus direitos, como pedir indenização por danos morais e como agir legalmente. Atendimento em Canoas e região.",
+  data: "24/08/2026",
+  horario: "09:00",
+  categoria: "direito-consumidor",
+  categoriaLabel: "🛒 Direito do Consumidor",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divida-indevida-canoas-advocacia-vera-catarina.jpg",
+  destaque: false
+}
 ];
 
 // ==========================================================
