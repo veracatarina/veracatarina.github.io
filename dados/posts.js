@@ -745,8 +745,19 @@ const posts = [
   categoriaLabel: "📋 Direito Trabalhista",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/direitos-trabalhador-esteio-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como pedir revisão de aposentadoria em Porto Alegre: guia completo",
+  link: "https://veracatarina.adv.br/noticias/revisao-aposentadoria-porto-alegre.html",
+  resumo: "Seu benefício está menor do que deveria? Saiba como pedir revisão de aposentadoria em Porto Alegre, quais os tipos de revisão, documentos necessários e como aumentar seu benefício. Atendimento em Porto Alegre e região.",
+  data: "25/08/2026",
+  horario: "14:00",
+  categoria: "direito-previdenciario",
+  categoriaLabel: "📜 Direito Previdenciário",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/revisao-aposentadoria-porto-alegre-advocacia-vera-catarina.jpg",
+  destaque: false
 }
-];
+  ];
 
 // ==========================================================
 //  TEMPLATE PARA NOVAS POSTAGENS (COPIAR E COLAR)
