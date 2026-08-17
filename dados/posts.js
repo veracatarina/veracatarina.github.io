@@ -734,6 +734,17 @@ const posts = [
   categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divorcio-consensual-sao-leopoldo-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Quais são os direitos do trabalhador em Esteio: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/direitos-trabalhador-esteio.html",
+  resumo: "Conheça os direitos do trabalhador em Esteio: FGTS, férias, 13º salário, horas extras, rescisão, assédio moral e muito mais. Atendimento em Esteio e região.",
+  data: "25/08/2026",
+  horario: "09:00",
+  categoria: "direito-trabalhista",
+  categoriaLabel: "📋 Direito Trabalhista",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/direitos-trabalhador-esteio-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
