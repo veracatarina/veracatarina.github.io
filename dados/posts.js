@@ -668,6 +668,17 @@ const posts = [
   categoriaLabel: "🏛️ Direito Civil",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/inventario-esteio-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como recuperar dinheiro de golpe do PIX em Canoas",
+  link: "https://veracatarina.adv.br/noticias/recuperar-dinheiro-golpe-pix-canoas.html",
+  resumo: "Vítima de golpe do PIX em Canoas? Saiba como recuperar seu dinheiro, quais medidas tomar imediatamente, como acionar o banco e como pedir indenização. Atendimento em Canoas e região.",
+  data: "20/08/2026",
+  horario: "14:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/recuperar-dinheiro-golpe-pix-canoas-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
