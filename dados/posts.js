@@ -636,6 +636,17 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pensao-alimenticia-canoas-advocacia-vera-catarina.jpg",
   destaque: false
 },
+  {
+  titulo: "Como limpar o nome em Gravataí: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/limpar-nome-gravatai.html",
+  resumo: "Saiba como limpar o nome em Gravataí: quais são seus direitos, como negociar dívidas, como funciona a negativação e como pedir indenização por danos morais. Atendimento em Gravataí e região.",
+  data: "19/08/2026",
+  horario: "09:00",
+  categoria: "direito-consumidor",
+  categoriaLabel: "🛒 Direito do Consumidor",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-gravatai-advocacia-vera-catarina.jpg",
+  destaque: false
+}
 ];
 
 // ==========================================================
