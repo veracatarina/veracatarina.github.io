@@ -603,6 +603,17 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/fraudes-bancarias-online-indenizacao-advocacia-vera-catarina.jpg",
   destaque: false
 },
+  {
+  titulo: "Como coletar e preservar provas digitais",
+  link: "https://veracatarina.adv.br/noticias/provas-digitais-como-coletar.html",
+  resumo: "Aprenda como coletar e preservar provas digitais corretamente para usar em ações judiciais. Guia completo com prints, e-mails, perícia e tudo que a lei exige. Atendimento em Sapucaia do Sul e região.",
+  data: "17/08/2026",
+  horario: "14:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/provas-digitais-como-coletar-advocacia-vera-catarina.jpg",
+  destaque: false
+},
 {
   titulo: "Vazamento de dados: como pedir indenização",
   link: "https://veracatarina.adv.br/noticias/vazamento-dados-indenizacao.html",
