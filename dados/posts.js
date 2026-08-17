@@ -701,7 +701,18 @@ const posts = [
   categoriaLabel: "📋 Direito Trabalhista",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-sao-leopoldo-advocacia-vera-catarina.jpg",
   destaque: false
-}
+},
+  {
+  titulo: "Como funciona a usucapião em Cachoeirinha: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/usucapiao-cachoeirinha.html",
+  resumo: "Saiba como funciona a usucapião em Cachoeirinha: requisitos, prazos, documentos necessários, tipos de usucapião e como dar entrada no processo. Atendimento em Cachoeirinha e região.",
+  data: "22/08/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/usucapiao-cachoeirinha-advocacia-vera-catarina.jpg",
+  destaque: false
+},
 ];
 
 // ==========================================================
