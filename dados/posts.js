@@ -690,6 +690,17 @@ const posts = [
   categoriaLabel: "📜 Direito Previdenciário",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-gravatai-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Assédio moral no trabalho em São Leopoldo: como provar e pedir indenização",
+  link: "https://veracatarina.adv.br/noticias/assedio-moral-sao-leopoldo.html",
+  resumo: "Vítima de assédio moral no trabalho em São Leopoldo? Saiba como provar, quais são seus direitos, como pedir indenização por danos morais e como agir legalmente. Atendimento em São Leopoldo e região.",
+  data: "21/08/2026",
+  horario: "14:00",
+  categoria: "direito-trabalhista",
+  categoriaLabel: "📋 Direito Trabalhista",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-sao-leopoldo-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
