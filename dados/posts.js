@@ -657,6 +657,17 @@ const posts = [
   categoriaLabel: "⚖️ Direito Criminal",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/advogado-criminal-sao-leopoldo-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Como fazer inventário em Esteio: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/inventario-esteio.html",
+  resumo: "Saiba como fazer inventário em Esteio: quais os tipos de inventário, documentos necessários, prazos, custos e como funciona a partilha de bens. Atendimento em Esteio e região.",
+  data: "20/08/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/inventario-esteio-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
