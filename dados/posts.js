@@ -591,6 +591,28 @@ const posts = [
   categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-compartilhada-esteio-advocacia-vera-catarina.jpg",
   destaque: false
+},
+{
+  titulo: "Fraudes bancárias online: como pedir indenização",
+  link: "https://veracatarina.adv.br/noticias/fraudes-bancarias-online-indenizacao.html",
+  resumo: "Vítima de fraude bancária online? Saiba como pedir indenização ao banco, quais documentos reunir, como comprovar o erro e quais são seus direitos como consumidor. Atendimento em Sapucaia do Sul e região.",
+  data: "17/08/2026",
+  horario: "09:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/fraudes-bancarias-online-indenizacao-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+{
+  titulo: "Vazamento de dados: como pedir indenização",
+  link: "https://veracatarina.adv.br/noticias/vazamento-dados-indenizacao.html",
+  resumo: "Teve seus dados vazados? Saiba como pedir indenização por danos morais e materiais com base na LGPD. Guia completo com direitos, provas e como agir. Atendimento em Sapucaia do Sul e região.",
+  data: "18/08/2026",
+  horario: "09:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/vazamento-dados-indenizacao-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
