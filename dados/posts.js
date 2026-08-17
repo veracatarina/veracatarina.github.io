@@ -646,6 +646,17 @@ const posts = [
   categoriaLabel: "🛒 Direito do Consumidor",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-gravatai-advocacia-vera-catarina.jpg",
   destaque: false
+},
+{
+  titulo: "Advogado criminal em São Leopoldo: como escolher o melhor",
+  link: "https://veracatarina.adv.br/noticias/advogado-criminal-sao-leopoldo.html",
+  resumo: "Precisa de um advogado criminal em São Leopoldo? Saiba como escolher o melhor profissional para sua defesa, quais critérios avaliar e como funciona a atuação criminal. Atendimento em São Leopoldo e região.",
+  data: "19/08/2026",
+  horario: "14:00",
+  categoria: "direito-criminal",
+  categoriaLabel: "⚖️ Direito Criminal",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/advogado-criminal-sao-leopoldo-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
