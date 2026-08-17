@@ -625,9 +625,6 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/vazamento-dados-indenizacao-advocacia-vera-catarina.jpg",
   destaque: false
 },
-  // ==========================================================
-//  NOVAS POSTAGENS (18/08 - 14:00)
-// ==========================================================
 {
   titulo: "Como pedir pensão alimentícia em Canoas: guia completo 2026",
   link: "https://veracatarina.adv.br/noticias/pensao-alimenticia-canoas.html",
@@ -638,7 +635,7 @@ const posts = [
   categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pensao-alimenticia-canoas-advocacia-vera-catarina.jpg",
   destaque: false
-}
+},
 ];
 
 // ==========================================================
