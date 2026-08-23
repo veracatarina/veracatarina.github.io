@@ -929,6 +929,17 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-internacional-pessoa-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
   destaque: false
 },
+  {
+  titulo: "Dia Nacional da Pessoa com Deficiência Visual: acessibilidade e direitos em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-visual-sapucaia-do-sul.html",
+  resumo: "Dia Nacional da Pessoa com Deficiência Visual (13/12): saiba quais são os direitos, acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "13/12/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-visual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+}
 ];
 
 // ==========================================================
