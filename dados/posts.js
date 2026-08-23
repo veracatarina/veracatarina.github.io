@@ -886,6 +886,17 @@ const posts = [
     destaque: false
   },
   {
+  titulo: "25 anos de Teoria do Direito na Unisinos: evento gratuito abre inscrições em setembro",
+  link: "https://veracatarina.adv.br/noticias/encontro-25-anos-teoria-direito-unisinos.html",
+  resumo: "Participe gratuitamente do Encontro de 25 anos do Grupo de Pesquisa Teoria do Direito da Unisinos. Evento em 22 de setembro de 2026, em São Leopoldo. Inscrições abertas.",
+  data: "30/08/2026",
+  horario: "09:00",
+  categoria: "institucional",
+  categoriaLabel: "🎓 Acadêmico",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/encontro-25-anos-teoria-direito-unisinos.jpg",
+  destaque: false
+},
+  {
     titulo: "ECA Digital: quais são os direitos de crianças e adolescentes na internet?",
     link: "https://veracatarina.adv.br/noticias/eca-digital-direitos-criancas.html",
     resumo: "Saiba quais são os direitos de crianças e adolescentes na internet com base no ECA Digital: proteção de dados, remoção de conteúdo, responsabilidade das plataformas e muito mais.",
