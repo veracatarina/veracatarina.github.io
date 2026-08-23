@@ -1,6 +1,5 @@
 /* ============================================================
-   ACESSIBILIDADE GLOBAL – Advocacia Vera Catarina
-   Versão completa com toolbar, LGPD, comandos de voz e áudio
+   ACESSIBILIDADE GLOBAL - VERSÃO CLEAN
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,22 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const parts = path.split('/').filter(p => p !== '' && p !== 'index.html');
     const container = document.querySelector('.breadcrumb-container');
     if (!container) return;
-
     const ol = container.querySelector('ol') || document.createElement('ol');
     ol.innerHTML = '';
-
     const homeLi = document.createElement('li');
     const homeLink = document.createElement('a');
     homeLink.href = '/';
     homeLink.textContent = '🏠 Início';
     homeLi.appendChild(homeLink);
     ol.appendChild(homeLi);
-
-    if (parts.length === 0) {
-      container.style.display = 'none';
-      return;
-    }
-
+    if (parts.length === 0) { container.style.display = 'none'; return; }
     const pageNames = {
       'noticias': 'Notícias',
       'direito-familia': 'Direito de Família',
@@ -65,23 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
       'sitemap': 'Mapa do Site',
       'acessibilidade': 'Acessibilidade'
     };
-
     let currentPath = '';
     const total = parts.length;
-
     parts.forEach((part, index) => {
       const isLast = index === total - 1;
       const cleanPart = part.replace('.html', '');
       const name = pageNames[cleanPart] || cleanPart.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-
-      // Tratamento especial para artigos dentro de /noticias/
       if (cleanPart.startsWith('protecao-integral') || cleanPart.startsWith('eca-') || cleanPart.startsWith('lgpd-') || cleanPart.startsWith('crimes-') || cleanPart.startsWith('atendimento-') || cleanPart.startsWith('marco-')) {
         currentPath = '/noticias/' + cleanPart + '.html';
       } else {
         currentPath = '/' + parts.slice(0, index + 1).join('/');
         if (isLast && currentPath.indexOf('.') === -1) currentPath += '.html';
       }
-
       const li = document.createElement('li');
       if (!isLast) {
         const a = document.createElement('a');
@@ -96,17 +83,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       ol.appendChild(li);
     });
-
     container.prepend(ol);
     container.style.display = 'block';
   }
 
-  const breadcrumbHTML = `
-    <nav class="breadcrumb-container" aria-label="Breadcrumb" style="display:none;">
-      <ol></ol>
-    </nav>
-  `;
-
+  const breadcrumbHTML =
+    '<nav class="breadcrumb-container" aria-label="Breadcrumb" style="display:none;"><ol></ol></nav>';
   const hero = document.querySelector('.page-hero');
   if (hero) {
     hero.insertAdjacentHTML('afterend', breadcrumbHTML);
@@ -122,200 +104,400 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(generateBreadcrumb, 50);
 
   // ==========================================================
-  // 3. TOOLBAR DE ACESSIBILIDADE
+  // 3. BOTÃO ÚNICO + PAINEL DE ACESSIBILIDADE
   // ==========================================================
 
-  // 3a. Criar botão toggle
+  // 3a. Remover elementos antigos (toolbar e botões de voz/áudio soltos)
+  const oldToolbar = document.querySelector('.accessibility-toolbar');
+  if (oldToolbar) oldToolbar.remove();
+  const oldToggle = document.querySelector('.accessibility-toolbar-toggle');
+  if (oldToggle) oldToggle.remove();
+  const oldVoiceContainer = document.querySelector('.voice-audio-buttons');
+  if (oldVoiceContainer) oldVoiceContainer.remove();
+
+  // 3b. Criar botão toggle único
   const toggleBtn = document.createElement('button');
-  toggleBtn.className = 'accessibility-toolbar-toggle';
-  toggleBtn.setAttribute('aria-label', 'Abrir ferramentas de acessibilidade');
+  toggleBtn.id = 'accessibility-toggle';
+  toggleBtn.setAttribute('aria-label', 'Abrir menu de acessibilidade');
   toggleBtn.setAttribute('aria-expanded', 'false');
   toggleBtn.innerHTML = '♿';
   document.body.appendChild(toggleBtn);
 
-  // 3b. Criar toolbar
-  const toolbar = document.createElement('div');
-  toolbar.className = 'accessibility-toolbar';
-  toolbar.setAttribute('role', 'dialog');
-  toolbar.setAttribute('aria-label', 'Ferramentas de acessibilidade');
-  toolbar.innerHTML = `
-    <div class="toolbar-title">♿ Acessibilidade</div>
-    <div class="btn-group">
-      <button data-theme="dark" title="Modo escuro">🌙 Escuro</button>
-      <button data-theme="light" title="Modo claro">☀️ Claro</button>
-      <button data-contrast="high" title="Alto contraste">🔲 Contraste</button>
-      <button data-contrast="normal" title="Contraste normal">🔳 Normal</button>
-      <button data-font="small" title="Fonte pequena">A-</button>
-      <button data-font="medium" title="Fonte média">A</button>
-      <button data-font="large" title="Fonte grande">A+</button>
-      <button data-font="xlarge" title="Fonte extra grande">A++</button>
-      <button data-dyslexic="toggle" class="btn-full" title="Fonte para dislexia">📖 Fonte Dislexia</button>
-      <button data-motion="toggle" class="btn-full" title="Reduzir animações">🎬 Reduzir Animações</button>
+  // 3c. Criar painel
+  const panel = document.createElement('div');
+  panel.id = 'accessibility-panel';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-label', 'Ferramentas de acessibilidade');
+  panel.innerHTML = `
+    <div class="panel-title">
+      <span>♿ Acessibilidade</span>
+      <button class="panel-close" id="panel-close-btn" aria-label="Fechar painel">✕</button>
     </div>
+    <div class="btn-row">
+      <button id="audio-btn" data-action="audio"><span class="icon">🔊</span> Ouvir</button>
+      <button id="voice-btn" data-action="voice"><span class="icon">🎤</span> Voz</button>
+    </div>
+    <div class="btn-row three">
+      <button data-action="font-decrease">A-</button>
+      <button data-action="font-reset">A</button>
+      <button data-action="font-increase">A+</button>
+    </div>
+    <div class="btn-row">
+      <button id="contrast-btn" data-action="contrast"><span class="icon">🔲</span> Contraste</button>
+      <button id="dyslexic-btn" data-action="dyslexic"><span class="icon">📖</span> Dislexia</button>
+    </div>
+    <div class="btn-row">
+      <button id="theme-btn" data-action="theme"><span class="icon">🌙</span> Escuro</button>
+      <button id="motion-btn" data-action="motion"><span class="icon">🎬</span> Animação</button>
+    </div>
+    <div id="accessibility-status">Nenhuma opção ativa</div>
   `;
-  document.body.appendChild(toolbar);
+  document.body.appendChild(panel);
 
-  // 3c. Funções para alternar modos
-  function toggleTheme(theme) {
+  // 3d. Criar indicador de voz ativa
+  const voiceIndicator = document.createElement('div');
+  voiceIndicator.id = 'voice-indicator';
+  voiceIndicator.innerHTML = '<span class="dot"></span> Comando de voz ativo';
+  document.body.appendChild(voiceIndicator);
+
+  // ==========================================================
+  // 4. FUNÇÕES DE ACESSIBILIDADE
+  // ==========================================================
+
+  // Estado do painel
+  let panelOpen = false;
+
+  // Funções de tema, contraste, fonte, dislexia, movimento
+  function toggleTheme() {
     const html = document.documentElement;
-    html.classList.remove('dark-mode');
-    if (theme === 'dark') {
-      html.classList.add('dark-mode');
-    }
-    localStorage.setItem('accessibility-theme', theme);
+    html.classList.toggle('dark-mode');
+    const isDark = html.classList.contains('dark-mode');
+    localStorage.setItem('accessibility-theme', isDark ? 'dark' : 'light');
+    updateUI();
   }
 
-  function toggleContrast(mode) {
+  function toggleContrast() {
     const html = document.documentElement;
-    html.classList.remove('high-contrast');
-    if (mode === 'high') {
-      html.classList.add('high-contrast');
-    }
-    localStorage.setItem('accessibility-contrast', mode);
+    html.classList.toggle('high-contrast');
+    localStorage.setItem('accessibility-contrast', html.classList.contains('high-contrast') ? 'high' : 'normal');
+    updateUI();
   }
 
-  function toggleFontSize(size) {
+  function changeFontSize(action) {
     const html = document.documentElement;
-    html.classList.remove('font-small', 'font-medium', 'font-large', 'font-xlarge');
-    if (size !== 'medium') {
-      html.classList.add('font-' + size);
-    }
-    localStorage.setItem('accessibility-font-size', size);
+    const sizes = ['font-small', 'font-medium', 'font-large', 'font-xlarge'];
+    const current = sizes.find(cls => html.classList.contains(cls)) || 'font-medium';
+    let idx = sizes.indexOf(current);
+    if (action === 'decrease') idx = Math.max(0, idx - 1);
+    else if (action === 'increase') idx = Math.min(sizes.length - 1, idx + 1);
+    else if (action === 'reset') idx = 1;
+    html.classList.remove(...sizes);
+    html.classList.add(sizes[idx]);
+    localStorage.setItem('accessibility-font-size', sizes[idx]);
+    updateUI();
   }
 
   function toggleDyslexic() {
     const html = document.documentElement;
     html.classList.toggle('dyslexic-font');
-    const enabled = html.classList.contains('dyslexic-font');
-    localStorage.setItem('accessibility-dyslexic', enabled ? 'true' : 'false');
-    updateButtonStates();
+    localStorage.setItem('accessibility-dyslexic', html.classList.contains('dyslexic-font') ? 'true' : 'false');
+    updateUI();
   }
 
   function toggleMotion() {
     const html = document.documentElement;
     html.classList.toggle('reduce-motion');
-    const enabled = html.classList.contains('reduce-motion');
-    localStorage.setItem('accessibility-motion', enabled ? 'true' : 'false');
-    updateButtonStates();
+    localStorage.setItem('accessibility-motion', html.classList.contains('reduce-motion') ? 'true' : 'false');
+    updateUI();
   }
 
-  // 3d. Atualizar estado visual dos botões
-  function updateButtonStates() {
-    const html = document.documentElement;
-    const btns = toolbar.querySelectorAll('button');
+  // ==========================================================
+  // 5. ÁUDIO (TTS)
+  // ==========================================================
 
-    btns.forEach(btn => {
-      btn.classList.remove('active');
-      const theme = btn.dataset.theme;
-      const contrast = btn.dataset.contrast;
-      const font = btn.dataset.font;
+  let isReading = false;
+  let currentUtterance = null;
 
-      if (theme) {
-        if ((theme === 'dark' && html.classList.contains('dark-mode')) ||
-            (theme === 'light' && !html.classList.contains('dark-mode'))) {
-          btn.classList.add('active');
-        }
-      }
-      if (contrast) {
-        if ((contrast === 'high' && html.classList.contains('high-contrast')) ||
-            (contrast === 'normal' && !html.classList.contains('high-contrast'))) {
-          btn.classList.add('active');
-        }
-      }
-      if (font) {
-        if (html.classList.contains('font-' + font)) {
-          btn.classList.add('active');
-        }
-        if (font === 'medium' && !html.classList.contains('font-small') &&
-            !html.classList.contains('font-large') && !html.classList.contains('font-xlarge')) {
-          btn.classList.add('active');
-        }
-      }
-      if (btn.dataset.dyslexic === 'toggle') {
-        if (html.classList.contains('dyslexic-font')) btn.classList.add('active');
-      }
-      if (btn.dataset.motion === 'toggle') {
-        if (html.classList.contains('reduce-motion')) btn.classList.add('active');
-      }
+  function toggleAudio() {
+    if (isReading) { stopAudio(); return; }
+    startAudio();
+  }
+
+  function startAudio() {
+    const mainContent = document.querySelector('main') || document.querySelector('.container') || document.body;
+    const clone = mainContent.cloneNode(true);
+    const removeSelectors = ['nav', 'footer', '.nav-menu', '.top-bar', '.footer-grid', '.visitor-counter', '#cookie-consent-banner', '#accessibility-panel', '#accessibility-toggle', '#voice-indicator'];
+    removeSelectors.forEach(sel => {
+      clone.querySelectorAll(sel).forEach(el => el.remove());
     });
+    let text = clone.textContent || '';
+    text = text.replace(/\s+/g, ' ').trim();
+    if (!text || text.length < 10) {
+      updateStatus('Não há conteúdo suficiente para leitura.');
+      return;
+    }
+    currentUtterance = new SpeechSynthesisUtterance(text);
+    currentUtterance.lang = 'pt-BR';
+    currentUtterance.rate = 0.9;
+    currentUtterance.pitch = 1;
+    const voices = window.speechSynthesis.getVoices();
+    const ptVoice = voices.find(v => v.lang === 'pt-BR' && v.name.includes('Female')) || voices.find(v => v.lang === 'pt-BR');
+    if (ptVoice) currentUtterance.voice = ptVoice;
+    currentUtterance.onstart = function() {
+      isReading = true;
+      document.getElementById('audio-btn').classList.add('active');
+      document.getElementById('audio-btn').innerHTML = '<span class="icon">⏹️</span> Parar';
+      updateStatus('🔊 Lendo página...');
+    };
+    currentUtterance.onend = function() { stopAudio(); };
+    currentUtterance.onerror = function() { stopAudio(); updateStatus('Erro na leitura.'); };
+    window.speechSynthesis.speak(currentUtterance);
   }
 
-  // 3e. Eventos da toolbar
-  toolbar.addEventListener('click', function(e) {
-    const btn = e.target.closest('button');
-    if (!btn) return;
+  function stopAudio() {
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    isReading = false;
+    const btn = document.getElementById('audio-btn');
+    if (btn) {
+      btn.classList.remove('active');
+      btn.innerHTML = '<span class="icon">🔊</span> Ouvir';
+    }
+    updateStatus('Leitura interrompida.');
+    setTimeout(() => { if (!document.querySelector('#accessibility-panel .active')) updateStatus('Nenhuma opção ativa'); }, 3000);
+  }
 
-    const theme = btn.dataset.theme;
-    const contrast = btn.dataset.contrast;
-    const font = btn.dataset.font;
-    const dyslexic = btn.dataset.dyslexic;
-    const motion = btn.dataset.motion;
+  // ==========================================================
+  // 6. COMANDOS DE VOZ
+  // ==========================================================
 
-    if (theme) toggleTheme(theme);
-    else if (contrast) toggleContrast(contrast);
-    else if (font) toggleFontSize(font);
-    else if (dyslexic) toggleDyslexic();
-    else if (motion) toggleMotion();
+  let isListening = false;
+  let recognition = null;
 
-    updateButtonStates();
+  function toggleVoice() {
+    if (isListening) { stopVoice(); return; }
+    startVoice();
+  }
+
+  function startVoice() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      updateStatus('❌ Voz não suportada neste navegador.');
+      return;
+    }
+    recognition = new SpeechRecognition();
+    recognition.lang = 'pt-BR';
+    recognition.continuous = true;
+    recognition.interimResults = false;
+
+    recognition.onresult = function(event) {
+      const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
+      updateStatus('🗣️ "' + transcript + '"');
+      processVoiceCommand(transcript);
+    };
+
+    recognition.onerror = function(event) {
+      if (event.error === 'not-allowed') {
+        updateStatus('❌ Permissão negada.');
+        stopVoice();
+        return;
+      }
+      if (isListening) {
+        try { recognition.start(); } catch (e) {}
+      }
+    };
+
+    recognition.onend = function() {
+      if (isListening) {
+        try { recognition.start(); } catch (e) {}
+      }
+    };
+
+    try { recognition.start(); } catch (e) {}
+    isListening = true;
+    document.getElementById('voice-btn').classList.add('active');
+    document.getElementById('voice-btn').innerHTML = '<span class="icon">⏹️</span> Voz';
+    document.getElementById('voice-indicator').style.display = 'flex';
+    updateStatus('🎤 Ouvindo... Fale um comando.');
+  }
+
+  function stopVoice() {
+    if (recognition) {
+      try { recognition.stop(); } catch (e) {}
+      recognition = null;
+    }
+    isListening = false;
+    document.getElementById('voice-btn').classList.remove('active');
+    document.getElementById('voice-btn').innerHTML = '<span class="icon">🎤</span> Voz';
+    document.getElementById('voice-indicator').style.display = 'none';
+    updateStatus('Comando de voz desativado.');
+    setTimeout(() => { if (!document.querySelector('#accessibility-panel .active')) updateStatus('Nenhuma opção ativa'); }, 3000);
+  }
+
+  function processVoiceCommand(command) {
+    // Navegação
+    const navMap = [
+      { words: ['início', 'home', 'página inicial'], url: '/' },
+      { words: ['notícias', 'artigos', 'blog'], url: '/noticias.html' },
+      { words: ['contato', 'falar'], url: '/contato.html' },
+      { words: ['áreas', 'atuação', 'especialidades'], url: '/areas-de-atuacao.html' },
+      { words: ['sobre', 'advogada'], url: '/sobre.html' },
+      { words: ['mapa', 'sitemap'], url: '/sitemap.html' },
+      { words: ['acessibilidade'], url: '/acessibilidade.html' }
+    ];
+    for (let item of navMap) {
+      if (item.words.some(w => command.includes(w))) {
+        window.location.href = item.url;
+        updateStatus('🔗 Navegando para ' + item.url);
+        return;
+      }
+    }
+
+    // Comandos especiais
+    if (command.includes('voltar')) { history.back(); updateStatus('🔙 Voltando'); return; }
+    if (command.includes('subir') || command.includes('topo')) { window.scrollTo({ top: 0, behavior: 'smooth' }); updateStatus('⬆️ Topo'); return; }
+    if (command.includes('descer') || command.includes('baixo')) { window.scrollBy({ top: 300, behavior: 'smooth' }); updateStatus('⬇️ Descendo'); return; }
+
+    // Ações de acessibilidade
+    if (command.includes('contraste') || command.includes('alto contraste')) { toggleContrast(); return; }
+    if (command.includes('dislexia')) { toggleDyslexic(); return; }
+    if (command.includes('modo escuro') || command.includes('escuro')) { toggleTheme(); return; }
+    if (command.includes('modo claro') || command.includes('claro')) { if (document.documentElement.classList.contains('dark-mode')) toggleTheme(); return; }
+    if (command.includes('aumentar fonte') || command.includes('maior')) { changeFontSize('increase'); return; }
+    if (command.includes('diminuir fonte') || command.includes('menor')) { changeFontSize('decrease'); return; }
+    if (command.includes('fonte padrão')) { changeFontSize('reset'); return; }
+    if (command.includes('ouvir') || command.includes('ler')) { toggleAudio(); return; }
+    if (command.includes('parar') && isReading) { stopAudio(); return; }
+    if (command.includes('ajuda') || command.includes('comandos')) {
+      updateStatus('💡 Comandos: Início, Notícias, Contato, Áreas, Voltar, Subir, Descer, Contraste, Dislexia, Escuro/Claro, Aumentar/diminuir fonte, Ouvir, Parar.');
+      return;
+    }
+    updateStatus('❓ Comando não reconhecido: "' + command + '"');
+  }
+
+  // ==========================================================
+  // 7. ATUALIZAR INTERFACE (estado dos botões)
+  // ==========================================================
+
+  function updateUI() {
+    const html = document.documentElement;
+    const isDark = html.classList.contains('dark-mode');
+    const isHighContrast = html.classList.contains('high-contrast');
+    const isDyslexic = html.classList.contains('dyslexic-font');
+    const isReducedMotion = html.classList.contains('reduce-motion');
+
+    const themeBtn = document.getElementById('theme-btn');
+    if (themeBtn) {
+      themeBtn.classList.toggle('active', isDark);
+      themeBtn.innerHTML = isDark ? '<span class="icon">☀️</span> Claro' : '<span class="icon">🌙</span> Escuro';
+    }
+
+    const contrastBtn = document.getElementById('contrast-btn');
+    if (contrastBtn) contrastBtn.classList.toggle('active', isHighContrast);
+
+    const dyslexicBtn = document.getElementById('dyslexic-btn');
+    if (dyslexicBtn) dyslexicBtn.classList.toggle('active', isDyslexic);
+
+    const motionBtn = document.getElementById('motion-btn');
+    if (motionBtn) motionBtn.classList.toggle('active', isReducedMotion);
+
+    // Contar opções ativas
+    const activeCount = [isDark, isHighContrast, isDyslexic, isReducedMotion].filter(Boolean).length;
+    const statusEl = document.getElementById('accessibility-status');
+    if (statusEl && !statusEl.textContent.includes('Lendo') && !statusEl.textContent.includes('Ouvindo') && !statusEl.textContent.includes('Comando')) {
+      statusEl.textContent = activeCount > 0 ? activeCount + ' opção(ões) ativa(s)' : 'Nenhuma opção ativa';
+    }
+  }
+
+  function updateStatus(msg) {
+    const statusEl = document.getElementById('accessibility-status');
+    if (statusEl) statusEl.textContent = msg;
+    clearTimeout(window.statusTimeout);
+    window.statusTimeout = setTimeout(() => {
+      if (statusEl && !statusEl.textContent.includes('Lendo') && !statusEl.textContent.includes('Ouvindo') && !statusEl.textContent.includes('Comando')) {
+        const active = document.querySelectorAll('#accessibility-panel .active').length;
+        statusEl.textContent = active > 0 ? active + ' opção(ões) ativa(s)' : 'Nenhuma opção ativa';
+      }
+    }, 5000);
+  }
+
+  // ==========================================================
+  // 8. EVENTOS DOS BOTÕES
+  // ==========================================================
+
+  // Toggle do painel
+  toggleBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    panelOpen = !panelOpen;
+    panel.classList.toggle('open', panelOpen);
+    this.setAttribute('aria-expanded', panelOpen);
   });
 
-  // 3f. Toggle da toolbar
-  toggleBtn.addEventListener('click', function() {
-    const isOpen = toolbar.classList.toggle('open');
-    this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  // Fechar painel com botão X
+  document.getElementById('panel-close-btn').addEventListener('click', function() {
+    panel.classList.remove('open');
+    panelOpen = false;
+    toggleBtn.setAttribute('aria-expanded', 'false');
   });
 
-  // Fechar toolbar ao clicar fora
+  // Fechar ao clicar fora
   document.addEventListener('click', function(e) {
-    if (!toolbar.contains(e.target) && e.target !== toggleBtn) {
-      toolbar.classList.remove('open');
+    if (panelOpen && !panel.contains(e.target) && e.target !== toggleBtn) {
+      panel.classList.remove('open');
+      panelOpen = false;
       toggleBtn.setAttribute('aria-expanded', 'false');
     }
   });
 
-  // 3g. Carregar preferências salvas
+  // Eventos dos botões do painel (delegação)
+  panel.addEventListener('click', function(e) {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const action = btn.dataset.action;
+    if (!action) return;
+
+    // Evita fechar painel ao clicar em botões
+    e.stopPropagation();
+
+    switch (action) {
+      case 'audio': toggleAudio(); break;
+      case 'voice': toggleVoice(); break;
+      case 'font-decrease': changeFontSize('decrease'); break;
+      case 'font-reset': changeFontSize('reset'); break;
+      case 'font-increase': changeFontSize('increase'); break;
+      case 'contrast': toggleContrast(); break;
+      case 'dyslexic': toggleDyslexic(); break;
+      case 'theme': toggleTheme(); break;
+      case 'motion': toggleMotion(); break;
+      default: break;
+    }
+    updateUI();
+  });
+
+  // ==========================================================
+  // 9. CARREGAR PREFERÊNCIAS SALVAS
+  // ==========================================================
+
   function loadPreferences() {
     const theme = localStorage.getItem('accessibility-theme') || 'light';
     const contrast = localStorage.getItem('accessibility-contrast') || 'normal';
-    const fontSize = localStorage.getItem('accessibility-font-size') || 'medium';
+    const fontSize = localStorage.getItem('accessibility-font-size') || 'font-medium';
     const dyslexic = localStorage.getItem('accessibility-dyslexic') === 'true';
     const motion = localStorage.getItem('accessibility-motion') === 'true';
 
-    if (theme === 'dark') document.documentElement.classList.add('dark-mode');
-    if (contrast === 'high') document.documentElement.classList.add('high-contrast');
-    if (fontSize !== 'medium') document.documentElement.classList.add('font-' + fontSize);
-    if (dyslexic) document.documentElement.classList.add('dyslexic-font');
-    if (motion) document.documentElement.classList.add('reduce-motion');
+    const html = document.documentElement;
+    if (theme === 'dark') html.classList.add('dark-mode');
+    if (contrast === 'high') html.classList.add('high-contrast');
+    if (fontSize !== 'font-medium') html.classList.add(fontSize);
+    if (dyslexic) html.classList.add('dyslexic-font');
+    if (motion) html.classList.add('reduce-motion');
 
-    updateButtonStates();
+    updateUI();
   }
 
   loadPreferences();
 
   // ==========================================================
-  // 4. ARIA LABELS DINÂMICOS
-  // ==========================================================
-
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === 'index.html' && href === '#')) {
-      link.setAttribute('aria-current', 'page');
-    }
-  });
-
-  const menuToggle = document.querySelector('.menu-toggle');
-  if (menuToggle) {
-    menuToggle.setAttribute('aria-label', 'Abrir menu de navegação');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    document.getElementById('menu-checkbox')?.addEventListener('change', function() {
-      menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
-    });
-  }
-
-  // ==========================================================
-  // 5. BANNER LGPD
+  // 10. BANNER LGPD
   // ==========================================================
 
   function criarBannerLGPD() {
@@ -356,151 +538,29 @@ document.addEventListener('DOMContentLoaded', function() {
   criarBannerLGPD();
 
   // ==========================================================
-  // 6. BOTÕES DE VOZ E ÁUDIO (COM ESPAÇAMENTO AJUSTADO)
+  // 11. ARIA LABELS DINÂMICOS
   // ==========================================================
 
-  function criarBotoesVoz() {
-    if (document.querySelector('.voice-audio-buttons')) return;
-
-    const container = document.createElement('div');
-    container.className = 'voice-audio-buttons';
-    // ALTERAÇÃO: bottom aumentado para 170px e gap para 12px
-    container.style.cssText = 'position:fixed; bottom:170px; left:20px; z-index:9998; display:flex; flex-direction:column; gap:12px;';
-    container.innerHTML = `
-      <button id="voice-btn" class="voice-btn" style="background:#c5a880; color:#0b251e; border:none; border-radius:50px; padding:10px 18px; font-weight:700; font-size:0.8rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:flex; align-items:center; gap:8px; font-family:Inter,sans-serif;">
-        <i class="fas fa-microphone"></i> Comandos de Voz
-      </button>
-      <button id="audio-reader-btn" style="background:#c5a880; color:#0b251e; border:none; border-radius:50px; padding:10px 18px; font-weight:700; font-size:0.8rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:flex; align-items:center; gap:8px; font-family:Inter,sans-serif;">
-        <i class="fas fa-volume-up"></i> Ouvir Página
-      </button>
-      <button id="audio-stop-btn" style="background:#991b1b; color:white; border:none; border-radius:50px; padding:10px 18px; font-weight:700; font-size:0.8rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:none; align-items:center; gap:8px; font-family:Inter,sans-serif;">
-        <i class="fas fa-stop"></i> Parar
-      </button>
-      <p id="voice-status" style="font-size:0.75rem; color:#64748b; margin-top:4px; text-align:center; display:none;">Clique no microfone e fale um comando.</p>
-    `;
-    document.body.appendChild(container);
-
-    // ===== LEITURA POR ÁUDIO (TTS) =====
-    let currentUtterance = null;
-    let isReading = false;
-
-    window.readPageAloud = function() {
-      if (isReading) { window.stopReading(); setTimeout(() => window.readPageAloud(), 300); return; }
-      const main = document.querySelector('main') || document.querySelector('.article-body') || document.body;
-      const clone = main.cloneNode(true);
-      const remove = ['nav', 'footer', '.nav-menu', '.top-bar', '.footer-grid', '.visitor-counter', '.backlinks-section', '#cookie-consent-banner', '.voice-audio-buttons'];
-      remove.forEach(sel => { clone.querySelectorAll(sel).forEach(el => el.remove()); });
-      let text = clone.textContent || '';
-      text = text.replace(/\s+/g, ' ').trim();
-      if (!text || text.length < 10) { alert('Não há conteúdo suficiente para leitura.'); return; }
-      currentUtterance = new SpeechSynthesisUtterance(text);
-      currentUtterance.lang = 'pt-BR';
-      currentUtterance.rate = 0.9;
-      currentUtterance.pitch = 1.0;
-      currentUtterance.volume = 1;
-      const voices = window.speechSynthesis.getVoices();
-      const ptVoice = voices.find(v => v.lang === 'pt-BR' && v.name.includes('Female')) || voices.find(v => v.lang === 'pt-BR') || voices.find(v => v.lang.startsWith('pt'));
-      if (ptVoice) currentUtterance.voice = ptVoice;
-      currentUtterance.onstart = function() {
-        isReading = true;
-        const btn = document.getElementById('audio-reader-btn');
-        if (btn) { btn.innerHTML = '<i class="fas fa-pause"></i> Pausar'; btn.style.background = '#f59e0b'; }
-        document.getElementById('audio-stop-btn').style.display = 'flex';
-      };
-      currentUtterance.onend = function() {
-        isReading = false;
-        const btn = document.getElementById('audio-reader-btn');
-        if (btn) { btn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; btn.style.background = '#c5a880'; }
-        document.getElementById('audio-stop-btn').style.display = 'none';
-      };
-      currentUtterance.onerror = function() {
-        isReading = false;
-        const btn = document.getElementById('audio-reader-btn');
-        if (btn) { btn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; btn.style.background = '#c5a880'; }
-        document.getElementById('audio-stop-btn').style.display = 'none';
-      };
-      window.speechSynthesis.speak(currentUtterance);
-    };
-
-    window.stopReading = function() {
-      if (window.speechSynthesis) window.speechSynthesis.cancel();
-      isReading = false;
-      const btn = document.getElementById('audio-reader-btn');
-      if (btn) { btn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; btn.style.background = '#c5a880'; }
-      document.getElementById('audio-stop-btn').style.display = 'none';
-    };
-
-    document.getElementById('audio-reader-btn').addEventListener('click', window.readPageAloud);
-    document.getElementById('audio-stop-btn').addEventListener('click', window.stopReading);
-
-    // ===== COMANDOS DE VOZ =====
-    const voiceBtn = document.getElementById('voice-btn');
-    const statusEl = document.getElementById('voice-status');
-    let isListening = false;
-    let recognition = null;
-
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      if (statusEl) { statusEl.textContent = '❌ Seu navegador não suporta reconhecimento de voz.'; statusEl.style.display = 'block'; }
-      if (voiceBtn) { voiceBtn.disabled = true; voiceBtn.style.opacity = '0.5'; }
-      return;
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === 'index.html' && href === '#')) {
+      link.setAttribute('aria-current', 'page');
     }
+  });
 
-    recognition = new SpeechRecognition();
-    recognition.lang = 'pt-BR';
-    recognition.continuous = false;
-    recognition.interimResults = false;
-
-    recognition.onresult = function(event) {
-      const command = event.results[0][0].transcript.toLowerCase().trim();
-      if (statusEl) { statusEl.textContent = '🗣️ Comando: "' + command + '"'; statusEl.style.display = 'block'; setTimeout(() => { if (!isListening) statusEl.style.display = 'none'; }, 3000); }
-      console.log('Comando:', command);
-
-      const cmds = [
-        { words: ['início', 'home', 'página inicial'], action: () => window.location.href = '/' },
-        { words: ['notícias', 'artigos', 'blog'], action: () => window.location.href = '/noticias.html' },
-        { words: ['contato', 'falar'], action: () => window.location.href = '/contato.html' },
-        { words: ['voltar'], action: () => history.back() },
-        { words: ['fale conosco', 'whatsapp', 'zap'], action: () => window.open('https://api.whatsapp.com/send?phone=555134502229', '_blank') },
-        { words: ['modo escuro', 'escuro'], action: () => { document.documentElement.classList.toggle('dark-mode'); } },
-        { words: ['alto contraste', 'contraste'], action: () => { document.documentElement.classList.toggle('high-contrast'); } },
-        { words: ['aumentar fonte', 'maior'], action: () => { document.documentElement.classList.remove('font-small','font-medium','font-large','font-xlarge'); document.documentElement.classList.add('font-large'); } },
-        { words: ['diminuir fonte', 'menor'], action: () => { document.documentElement.classList.remove('font-small','font-medium','font-large','font-xlarge'); document.documentElement.classList.add('font-small'); } },
-        { words: ['fonte padrão'], action: () => { document.documentElement.classList.remove('font-small','font-medium','font-large','font-xlarge'); } },
-        { words: ['fonte dislexia', 'dislexia'], action: () => { document.documentElement.classList.toggle('dyslexic-font'); } },
-        { words: ['ler página', 'ouvir'], action: () => window.readPageAloud() },
-        { words: ['parar', 'pausar'], action: () => window.stopReading() },
-        { words: ['ajuda', 'comandos'], action: () => { if (statusEl) { statusEl.textContent = '💡 Comandos: Início, Notícias, Contato, Voltar, Fale conosco, Modo escuro, Alto contraste, Aumentar fonte, Diminuir fonte, Fonte padrão, Fonte dislexia, Ler página, Parar.'; statusEl.style.display = 'block'; setTimeout(() => { if (!isListening) statusEl.style.display = 'none'; }, 6000); } } }
-      ];
-
-      let found = false;
-      for (let c of cmds) {
-        if (c.words.some(w => command.includes(w))) { c.action(); found = true; break; }
-      }
-      if (!found && statusEl) { statusEl.textContent = '❓ Comando não reconhecido. Diga "ajuda".'; statusEl.style.display = 'block'; setTimeout(() => { if (!isListening) statusEl.style.display = 'none'; }, 3000); }
-
-      if (isListening) setTimeout(() => { try { recognition.start(); } catch(e) {} }, 500);
-    };
-
-    recognition.onend = function() { if (isListening) { try { recognition.start(); } catch(e) {} } };
-    recognition.onerror = function(event) {
-      if (event.error === 'not-allowed') { if (statusEl) { statusEl.textContent = '❌ Permissão negada.'; statusEl.style.display = 'block'; } isListening = false; if (voiceBtn) { voiceBtn.classList.remove('listening'); voiceBtn.innerHTML = '<i class="fas fa-microphone"></i> Comandos de Voz'; } return; }
-      if (isListening) setTimeout(() => { try { recognition.start(); } catch(e) {} }, 500);
-    };
-
-    voiceBtn.addEventListener('click', function() {
-      if (isListening) {
-        isListening = false; recognition.stop(); voiceBtn.classList.remove('listening'); voiceBtn.innerHTML = '<i class="fas fa-microphone"></i> Comandos de Voz';
-        if (statusEl) { statusEl.textContent = '⏸️ Pausado.'; statusEl.style.display = 'block'; setTimeout(() => { if (!isListening) statusEl.style.display = 'none'; }, 2000); }
-      } else {
-        isListening = true; voiceBtn.classList.add('listening'); voiceBtn.innerHTML = '<i class="fas fa-stop"></i> Parar Escuta';
-        if (statusEl) { statusEl.textContent = '🎤 Ouvindo... Fale um comando.'; statusEl.style.display = 'block'; }
-        try { recognition.start(); } catch(e) {}
-      }
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (menuToggle) {
+    menuToggle.setAttribute('aria-label', 'Abrir menu de navegação');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.getElementById('menu-checkbox')?.addEventListener('change', function() {
+      menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
     });
   }
 
-  criarBotoesVoz();
+  // ==========================================================
+  // 12. INICIALIZAÇÃO
+  // ==========================================================
 
-  console.log('♿ Recursos de acessibilidade globais carregados com sucesso!');
+  console.log('♿ Acessibilidade global (versão clean) carregada com sucesso!');
 });
