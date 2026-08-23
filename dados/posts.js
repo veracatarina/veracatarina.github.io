@@ -861,7 +861,7 @@ const posts = [
   },
 
   // ==========================================================
-  //  BLOCO 9: POSTAGENS PENDENTES (29/08 a 01/09)
+  //  BLOCO 9: POSTAGENS PENDENTES (29/08 a 10/09)
   // ==========================================================
   {
   titulo: "Como funciona a usucapião em Sapucaia do Sul: guia completo 2026",
@@ -929,6 +929,17 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/provas-digitais-preservar-advocacia-vera-catarina.jpg",
     destaque: false
   },
+  {
+  titulo: "O que é Teoria do Direito e por que ela é importante para a sociedade?",
+  link: "https://veracatarina.adv.br/noticias/o-que-e-teoria-do-direito-importancia-sociedade.html",
+  resumo: "Entenda o que é a Teoria do Direito, sua importância para a sociedade e como ela fundamenta a formação jurídica e a justiça no Brasil.",
+  data: "05/09/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🎓 Acadêmico",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/o-que-e-teoria-do-direito-importancia-sociedade.jpg",
+  destaque: false
+},
 
   // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
