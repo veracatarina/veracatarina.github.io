@@ -1,169 +1,186 @@
 /* ========================================================== */
-/*  BOTÕES DE COMPARTILHAMENTO FLUTUANTES - GLOBAL            */
+/*  BOTÃO ÚNICO DE COMPARTILHAMENTO - CANTO SUPERIOR DIREITO  */
+/*  CARREGADO GLOBALMENTE VIA REDIRECT.JS                     */
 /* ========================================================== */
 
-/* ===== BOTÕES PRINCIPAIS ===== */
-.share-buttons {
+/* ===== BOTÃO PRINCIPAL ===== */
+.share-main-btn {
   position: fixed;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+  top: 100px;
+  right: 20px;
   z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 10px 8px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(197, 168, 128, 0.2);
-}
-
-.share-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  color: white;
-  position: relative;
-  text-decoration: none;
-}
-
-.share-btn:hover {
-  transform: scale(1.12);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.share-btn .tooltip {
-  position: absolute;
-  right: 52px;
-  background: #1e293b;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.share-btn:hover .tooltip {
-  opacity: 1;
-}
-
-/* ===== CORES DOS BOTÕES ===== */
-.share-btn-whatsapp { background: #25D366; }
-.share-btn-facebook { background: #1877F2; }
-.share-btn-linkedin { background: #0A66C2; }
-.share-btn-twitter { background: #000000; }
-.share-btn-telegram { background: #26A5E4; }
-.share-btn-email { background: #EA4335; }
-.share-btn-copy { background: #64748B; }
-.share-btn-copy.copied { background: #22c55e; }
-
-/* ===== BOTÕES INSTAGRAM ===== */
-.share-btn-instagram-feed {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-.share-btn-instagram-story {
-  background: linear-gradient(45deg, #f56040 0%, #fd1d1d 50%, #f56040 100%);
-}
-.share-btn-instagram-bio {
-  background: #405DE6;
-}
-
-/* ===== TOGGLE MOBILE ===== */
-.share-toggle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid #c5a880;
   background: #0b251e;
   color: white;
+  border: 2px solid #c5a880;
+  border-radius: 50px;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
   cursor: pointer;
-  font-size: 1.2rem;
-  display: none;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  position: fixed;
-  bottom: 150px;
-  right: 15px;
-  z-index: 9998;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.share-toggle:hover {
+.share-main-btn:hover {
   background: #c5a880;
   color: #0b251e;
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
 }
 
-.share-buttons.hidden {
-  display: none;
+.share-main-btn i {
+  font-size: 1.1rem;
+}
+
+/* ===== CONTAINER DO MENU ===== */
+.share-popup-container {
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.share-popup-container.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/* ===== MENU DE COMPARTILHAMENTO ===== */
+.share-popup {
+  background: rgba(11, 37, 30, 0.97);
+  backdrop-filter: blur(12px);
+  border: 1px solid #c5a880;
+  border-radius: 12px;
+  padding: 12px 8px;
+  min-width: 190px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.share-popup .share-btn {
+  width: 100%;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+.share-popup .share-btn:hover {
+  background: rgba(197, 168, 128, 0.15);
+  color: #c5a880;
+}
+
+.share-popup .share-btn i {
+  width: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.share-popup .share-btn .label {
+  flex: 1;
+}
+
+.share-popup .divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 4px 8px;
+}
+
+/* ===== CORES DOS ÍCONES ===== */
+.share-popup .share-btn .fa-whatsapp { color: #25D366; }
+.share-popup .share-btn .fa-facebook-f { color: #1877F2; }
+.share-popup .share-btn .fa-linkedin-in { color: #0A66C2; }
+.share-popup .share-btn .fa-x-twitter { color: #ffffff; }
+.share-popup .share-btn .fa-telegram-plane { color: #26A5E4; }
+.share-popup .share-btn .fa-envelope { color: #EA4335; }
+.share-popup .share-btn .fa-instagram { color: #E4405F; }
+.share-popup .share-btn .fa-circle { color: #F56040; }
+.share-popup .share-btn .fa-link { color: #94a3b8; }
+.share-popup .share-btn .fa-link.copied { color: #22c55e; }
+
+/* ===== TRIÂNGULO INDICADOR ===== */
+.share-popup::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(11, 37, 30, 0.97);
 }
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 992px) {
-  .share-buttons {
-    position: fixed;
-    bottom: 90px;
-    top: auto;
+  .share-main-btn {
+    top: 75px;
     right: 15px;
-    transform: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+  
+  .share-popup-container {
+    top: 120px;
+    right: 15px;
+  }
+  
+  .share-popup {
+    min-width: 170px;
+    padding: 10px 6px;
+  }
+  
+  .share-popup .share-btn {
     padding: 8px 12px;
-    gap: 6px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(197, 168, 128, 0.2);
-    max-width: 90vw;
-    width: auto;
-  }
-
-  .share-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
-  }
-
-  .share-btn .tooltip {
-    display: none;
-  }
-
-  .share-toggle {
-    display: flex;
-  }
-
-  .share-buttons.hidden {
-    display: none;
+    font-size: 0.72rem;
   }
 }
 
 @media (max-width: 600px) {
-  .share-buttons {
-    bottom: 80px;
+  .share-main-btn {
+    top: 70px;
     right: 10px;
-    padding: 6px 10px;
-    gap: 4px;
+    padding: 6px 12px;
+    font-size: 0.7rem;
   }
-
-  .share-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.8rem;
+  
+  .share-popup-container {
+    top: 110px;
+    right: 10px;
+  }
+  
+  .share-popup {
+    min-width: 155px;
+    padding: 8px 4px;
+  }
+  
+  .share-popup .share-btn {
+    padding: 6px 10px;
+    font-size: 0.68rem;
   }
 }
