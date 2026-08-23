@@ -950,6 +950,17 @@ const posts = [
   categoriaLabel: "🏛️ Direito Civil",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-sindrome-down-sapucaia-do-sul-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Dia Mundial de Conscientização do Autismo: direitos e LOAS em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-autismo-sapucaia-do-sul.html",
+  resumo: "Dia Mundial de Conscientização do Autismo (02/04): saiba quais são os direitos da pessoa com Transtorno do Espectro Autista (TEA), como solicitar o LOAS/BPC em Sapucaia do Sul e como a Dra. Vera Catarina pode ajudar.",
+  data: "02/04/2027",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-autismo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
