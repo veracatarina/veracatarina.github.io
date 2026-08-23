@@ -714,7 +714,7 @@ const posts = [
 },
 
   // ==========================================================
-  //  BLOCO 7: POSTAGENS 24/08 a 26/08 (COM AJUSTES)
+  //  BLOCO 7: POSTAGENS 24/08 a 26/08
   // ==========================================================
   {
     titulo: "Empresa cobrando dívida indevida em Canoas? Saiba como agir",
@@ -804,10 +804,17 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/advogado-criminal-cachoeirinha-advocacia-vera-catarina.jpg",
     destaque: false
   },
-  // ==========================================================
-  //  BLOCO 8: POSTAGENS 27/08 a 28/08
-  //  (WhatsApp hackeado e Correspondente movidos para evitar flood)
-  // ==========================================================
+  {
+    titulo: "O que fazer se seu WhatsApp for hackeado em Canoas: guia completo",
+    link: "https://veracatarina.adv.br/noticias/whatsapp-hackeado-canoas.html",
+    resumo: "Seu WhatsApp foi hackeado em Canoas? Saiba o que fazer imediatamente, como recuperar sua conta, como evitar golpes e quais medidas legais tomar. Atendimento em Canoas e região.",
+    data: "26/08/2026",
+    horario: "14:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-canoas-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
     titulo: "Como pedir indenização por erro médico em São Leopoldo",
     link: "https://veracatarina.adv.br/noticias/erro-medico-sao-leopoldo.html",
@@ -831,25 +838,25 @@ const posts = [
     destaque: false
   },
   {
-    titulo: "O que fazer se seu WhatsApp for hackeado em Canoas: guia completo",
-    link: "https://veracatarina.adv.br/noticias/whatsapp-hackeado-canoas.html",
-    resumo: "Seu WhatsApp foi hackeado em Canoas? Saiba o que fazer imediatamente, como recuperar sua conta, como evitar golpes e quais medidas legais tomar. Atendimento em Canoas e região.",
-    data: "28/08/2026",
-    horario: "09:00",
-    categoria: "direito-digital",
-    categoriaLabel: "💻 Direito Digital",
-    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-canoas-advocacia-vera-catarina.jpg",
-    destaque: false
-  },
-  {
     titulo: "Correspondente jurídico em Sapucaia do Sul: serviços e vantagens",
     link: "https://veracatarina.adv.br/noticias/correspondente-juridico-sapucaia-do-sul.html",
     resumo: "Conheça os serviços e vantagens de contratar um correspondente jurídico em Sapucaia do Sul. Atendimento B2B para advogados e escritórios com 40 anos de experiência.",
     data: "28/08/2026",
-    horario: "14:00",
+    horario: "09:00",
     categoria: "correspondente",
     categoriaLabel: "🤝 Correspondente Jurídico",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/correspondente-juridico-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como funciona a guarda compartilhada em Esteio: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/guarda-compartilhada-esteio.html",
+    resumo: "Saiba como funciona a guarda compartilhada em Esteio: direitos e deveres dos pais, como é definida a guarda, documentos necessários e como pedir. Atendimento em Esteio e região.",
+    data: "28/08/2026",
+    horario: "14:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-compartilhada-esteio-advocacia-vera-catarina.jpg",
     destaque: false
   },
 
@@ -857,22 +864,11 @@ const posts = [
   //  BLOCO 9: POSTAGENS PENDENTES (29/08 a 01/09)
   // ==========================================================
   {
-    titulo: "Como funciona a guarda compartilhada em Esteio: guia completo 2026",
-    link: "https://veracatarina.adv.br/noticias/guarda-compartilhada-esteio.html",
-    resumo: "Saiba como funciona a guarda compartilhada em Esteio: direitos e deveres dos pais, como é definida a guarda, documentos necessários e como pedir. Atendimento em Esteio e região.",
-    data: "29/08/2026",
-    horario: "09:00",
-    categoria: "direito-familia",
-    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
-    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-compartilhada-esteio-advocacia-vera-catarina.jpg",
-    destaque: false
-  },
-  {
     titulo: "Como pedir pensão alimentícia em Cachoeirinha: guia completo 2026",
     link: "https://veracatarina.adv.br/noticias/pensao-alimenticia-cachoeirinha.html",
     resumo: "Saiba como pedir pensão alimentícia em Cachoeirinha: quem tem direito, como calcular o valor, documentos necessários e como funciona a execução. Atendimento em Cachoeirinha e região.",
-    data: "31/08/2026",
-    horario: "09:00",
+    data: "29/08/2026",
+    horario: "14:00",
     categoria: "direito-familia",
     categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pensao-alimenticia-cachoeirinha-advocacia-vera-catarina.jpg",
@@ -883,7 +879,7 @@ const posts = [
     link: "https://veracatarina.adv.br/noticias/eca-digital-direitos-criancas.html",
     resumo: "Saiba quais são os direitos de crianças e adolescentes na internet com base no ECA Digital: proteção de dados, remoção de conteúdo, responsabilidade das plataformas e muito mais.",
     data: "31/08/2026",
-    horario: "14:00",
+    horario: "09:00",
     categoria: "infancia",
     categoriaLabel: "👶 Infância e Juventude",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/eca-digital-direitos-criancas-advocacia-vera-catarina.jpg",
@@ -893,8 +889,8 @@ const posts = [
     titulo: "Contrato empresarial: quais cuidados uma empresa deve tomar antes de assinar?",
     link: "https://veracatarina.adv.br/noticias/contrato-empresarial-cuidados.html",
     resumo: "Saiba quais cuidados uma empresa deve tomar antes de assinar um contrato: cláusulas essenciais, riscos, negociação e como evitar problemas jurídicos. Atendimento em toda a região.",
-    data: "01/09/2026",
-    horario: "09:00",
+    data: "31/08/2026",
+    horario: "14:00",
     categoria: "direito-empresarial",
     categoriaLabel: "🏢 Direito Empresarial",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/contrato-empresarial-cuidados-advocacia-vera-catarina.jpg",
@@ -905,7 +901,7 @@ const posts = [
     link: "https://veracatarina.adv.br/noticias/provas-digitais-preservar.html",
     resumo: "Aprenda como preservar provas digitais para uso em processos judiciais: mensagens, áudios, imagens, documentos e tudo que a lei exige para validade da prova.",
     data: "01/09/2026",
-    horario: "14:00",
+    horario: "09:00",
     categoria: "provas-digitais",
     categoriaLabel: "🔐 Provas Digitais",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/provas-digitais-preservar-advocacia-vera-catarina.jpg",
