@@ -940,6 +940,17 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/o-que-e-teoria-do-direito-importancia-sociedade.jpg",
   destaque: false
 },
+  {
+  titulo: "Teoria do Direito: qual sua importância na formação jurídica?",
+  link: "https://veracatarina.adv.br/noticias/teoria-do-direito-importancia-formacao-juridica.html",
+  resumo: "Entenda a importância da Teoria do Direito na formação de profissionais do Direito e como ela contribui para uma prática jurídica crítica, ética e fundamentada.",
+  data: "05/09/2026",
+  horario: "14:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🎓 Acadêmico",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/teoria-do-direito-importancia-formacao-juridica.jpg",
+  destaque: false
+},
 
   // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
