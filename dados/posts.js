@@ -864,6 +864,17 @@ const posts = [
   //  BLOCO 9: POSTAGENS PENDENTES (29/08 a 01/09)
   // ==========================================================
   {
+  titulo: "Como funciona a usucapião em Sapucaia do Sul: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/usucapiao-sapucaia-do-sul-guia-completo.html",
+  resumo: "Saiba como funciona a usucapião em Sapucaia do Sul: requisitos, prazos, tipos de usucapião, documentos necessários e como dar entrada no processo. Atendimento da Dra. Vera Catarina.",
+  data: "29/08/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/usucapiao-sapucaia-do-sul-guia-completo-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
     titulo: "Como pedir pensão alimentícia em Cachoeirinha: guia completo 2026",
     link: "https://veracatarina.adv.br/noticias/pensao-alimenticia-cachoeirinha.html",
     resumo: "Saiba como pedir pensão alimentícia em Cachoeirinha: quem tem direito, como calcular o valor, documentos necessários e como funciona a execução. Atendimento em Cachoeirinha e região.",
