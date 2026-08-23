@@ -739,6 +739,17 @@ const posts = [
     destaque: false
   },
   {
+  titulo: "O que é capacitismo? Entenda e saiba como combater em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/capacitismo-o-que-e-sapucaia-do-sul.html",
+  resumo: "O que é capacitismo? Entenda essa forma de discriminação contra pessoas com deficiência, como ela se manifesta, o que a lei diz e como combater em Sapucaia do Sul. Atendimento da Dra. Vera Catarina.",
+  data: "24/08/2026",
+  horario: "17:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/capacitismo-o-que-e-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
     titulo: "Quais são os direitos do trabalhador em Esteio: guia completo 2026",
     link: "https://veracatarina.adv.br/noticias/direitos-trabalhador-esteio.html",
     resumo: "Conheça os direitos do trabalhador em Esteio: FGTS, férias, 13º salário, horas extras, rescisão, assédio moral e muito mais. Atendimento em Esteio e região.",
