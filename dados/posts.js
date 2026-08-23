@@ -701,6 +701,17 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/usucapiao-cachoeirinha-advocacia-vera-catarina.jpg",
     destaque: false
   },
+  {
+  titulo: "Semana Nacional da Pessoa com Deficiência em Sapucaia do Sul: direitos, inclusão e acessibilidade",
+  link: "https://veracatarina.adv.br/noticias/semana-nacional-pessoa-deficiencia-sapucaia-do-sul.html",
+  resumo: "Saiba quais são os direitos das pessoas com deficiência em Sapucaia do Sul durante a Semana Nacional (21 a 28/08). Conheça a LBI, acessibilidade e como a Dra. Vera Catarina pode ajudar.",
+  data: "23/08/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/semana-nacional-pessoa-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
 
   // ==========================================================
   //  BLOCO 7: NOVAS POSTAGENS (24/08 a 26/08)
