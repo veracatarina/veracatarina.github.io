@@ -972,6 +972,17 @@ const posts = [
   categoriaLabel: "🏛️ Direito Civil",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-intelectual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Dia Nacional da Libras: a língua que conecta e inclui em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-nacional-libras-sapucaia-do-sul.html",
+  resumo: "Dia Nacional da Libras (24/04): saiba a importância da Língua Brasileira de Sinais para a inclusão em Sapucaia do Sul, os direitos da comunidade surda e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "24/04/2027",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-libras-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
