@@ -738,6 +738,17 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divorcio-consensual-sao-leopoldo-advocacia-vera-catarina.jpg",
     destaque: false
   },
+{
+  titulo: "O que é um correspondente jurídico e quando contratar?",
+  link: "https://veracatarina.adv.br/noticias/correspondente-juridico-o-que-e.html",
+  resumo: "Saiba o que é um correspondente jurídico, quando contratar, quais serviços oferece e como ele pode otimizar sua atuação em Sapucaia do Sul e região. Atendimento B2B para advogados e escritórios.",
+  data: "24/08/2026",
+  horario: "15:30",
+  categoria: "correspondente",
+  categoriaLabel: "🤝 Correspondente Jurídico",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/correspondente-juridico-o-que-e-advocacia-vera-catarina.jpg",
+  destaque: false
+},
   {
   titulo: "O que é capacitismo? Entenda e saiba como combater em Sapucaia do Sul",
   link: "https://veracatarina.adv.br/noticias/capacitismo-o-que-e-sapucaia-do-sul.html",
