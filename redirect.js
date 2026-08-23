@@ -1,6 +1,6 @@
 // ============================================================
 //  REDIRECIONAMENTO PARA O NOVO DOMÍNIO
-//  + BOTÕES DE COMPARTILHAMENTO GLOBAIS
+//  + BOTÃO ÚNICO DE COMPARTILHAMENTO (GLOBAL)
 //  Domínio: veracatarina.adv.br
 // ============================================================
 
@@ -10,23 +10,20 @@
 (function() {
     'use strict';
     
-    // CONFIGURAÇÃO
     const TARGET_DOMAIN = 'veracatarina.adv.br';
     const TARGET_PROTOCOL = 'https:';
     
-    // DOMÍNIOS QUE DEVEM SER REDIRECIONADOS
     const OLD_DOMAINS = [
         'veracatarina.github.io',
         'www.veracatarina.github.io',
         'veracatarina.github.com',
         'www.veracatarina.github.com',
-        'www.' + TARGET_DOMAIN  // Redireciona www para sem www
+        'www.' + TARGET_DOMAIN
     ];
     
     const currentHost = window.location.hostname;
     const currentProtocol = window.location.protocol;
     
-    // VERIFICA SE PRECISA REDIRECIONAR
     const needsRedirect = (
         OLD_DOMAINS.includes(currentHost) ||
         (currentHost === TARGET_DOMAIN && currentProtocol !== TARGET_PROTOCOL) ||
@@ -50,7 +47,7 @@
 
 
 // ============================================================
-// PARTE 2: BOTÕES DE COMPARTILHAMENTO GLOBAIS
+// PARTE 2: BOTÃO ÚNICO DE COMPARTILHAMENTO (GLOBAL)
 // ============================================================
 (function() {
     'use strict';
@@ -103,65 +100,82 @@
     // ============================================================
     // COMPARTILHAMENTO NAS REDES SOCIAIS
     // ============================================================
-
-    // WhatsApp
     window.shareOnWhatsApp = function() {
         const { title, description, url } = getShareData();
         const text = `📢 ${title}\n\n${truncateText(description, 200)}\n\n🔗 ${url}`;
         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'width=600,height=500');
     };
 
-    // Facebook
     window.shareOnFacebook = function() {
         const { url } = getShareData();
         window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank', 'width=600,height=500');
     };
 
-    // LinkedIn
     window.shareOnLinkedIn = function() {
         const { url } = getShareData();
         window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'width=600,height=500');
     };
 
-    // Twitter/X
     window.shareOnTwitter = function() {
         const { title, url } = getShareData();
         const text = `📢 ${truncateText(title, 60)}\n\n🔗 ${url}\n\n#Advocacia #Direito #SapucaiaDoSul`;
         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank', 'width=600,height=500');
     };
 
-    // Telegram
     window.shareOnTelegram = function() {
         const { title, description, url } = getShareData();
         const text = `📢 ${title}\n\n${truncateText(description, 150)}\n\n🔗 ${url}`;
         window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank', 'width=600,height=500');
     };
 
-    // E-mail
     window.shareOnEmail = function() {
         const { title, description, url } = getShareData();
-        const subject = encodeURIComponent(title);
-        const body = encodeURIComponent(`${title}\n\n${truncateText(description, 200)}\n\n🔗 ${url}`);
-        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(title + '\n\n' + truncateText(description, 200) + '\n\n🔗 ' + url)}`;
     };
 
-    // Copiar Link
+    // ============================================================
+    // INSTAGRAM
+    // ============================================================
+    window.copyInstagramFeed = function() {
+        const { title, description } = getShareData();
+        const hashtags = getHashtags();
+        const text = `📢 ${title}\n\n${truncateText(description, 200)}\n\n🔗 Acesse o conteúdo completo no link da bio ou no site.\n\n👩‍⚖️ Dra. Vera Catarina | OAB/RS 19.315\n📍 Sapucaia do Sul - RS\n📱 (51) 3450-2229\n\n${hashtags}\n\n@adv.veracatarina`;
+        copyToClipboard(text, '📋 Texto copiado para o Feed!');
+    };
+
+    window.shareInstagramStory = function() {
+        const { title, description } = getShareData();
+        const hashtags = getHashtags();
+        const text = `📢 ${title}\n\n${truncateText(description, 150)}\n\n👆 Clique no link para ler o artigo completo!\n\n👩‍⚖️ @adv.veracatarina\n📍 Sapucaia do Sul - RS\n📱 (51) 3450-2229\n\n${hashtags}`;
+        copyToClipboard(text, '📋 Texto copiado para o Story!');
+    };
+
+    window.copyInstagramBio = function() {
+        const { title, url } = getShareData();
+        const text = `📢 ${title}\n\n🔗 ${url}\n\n👩‍⚖️ Dra. Vera Catarina\n📍 Sapucaia do Sul - RS\n📱 (51) 3450-2229\n\n#AdvocaciaVeraCatarina`;
+        copyToClipboard(text, '📋 Link copiado para a Bio!');
+    };
+
+    // ============================================================
+    // COPIAR LINK
+    // ============================================================
     window.copyLink = function() {
         const url = window.location.href;
         const btn = document.getElementById('copyLinkBtn');
+        const icon = btn ? btn.querySelector('i') : null;
         
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(url).then(() => {
-                if (btn) btn.classList.add('copied');
-                showCopiedMessage('✅ Link copiado!');
-                setTimeout(() => { if (btn) btn.classList.remove('copied'); }, 2000);
-            }).catch(() => fallbackCopyLink(url));
+                showCopyFeedback(btn, icon);
+            }).catch(() => {
+                fallbackCopyLink(url, btn, icon);
+            });
         } else {
-            fallbackCopyLink(url);
+            fallbackCopyLink(url, btn, icon);
         }
     };
 
-    function fallbackCopyLink(text) {
+    function fallbackCopyLink(text, btn, icon) {
         const textarea = document.createElement('textarea');
         textarea.value = text;
         textarea.style.position = 'fixed';
@@ -170,48 +184,41 @@
         textarea.select();
         try {
             document.execCommand('copy');
-            showCopiedMessage('✅ Link copiado!');
+            showCopyFeedback(btn, icon);
         } catch (err) {
             alert('📋 Copie manualmente: ' + text);
         }
         document.body.removeChild(textarea);
     }
 
-    // ============================================================
-    // INSTAGRAM
-    // ============================================================
-
-    // Instagram Feed
-    window.copyInstagramFeed = function() {
-        const { title, description } = getShareData();
-        const hashtags = getHashtags();
-        const text = `📢 ${title}\n\n${truncateText(description, 200)}\n\n🔗 Acesse o conteúdo completo no link da bio ou no site.\n\n👩‍⚖️ Dra. Vera Catarina | OAB/RS 19.315\n📍 Sapucaia do Sul - RS\n📱 (51) 3450-2229\n\n${hashtags}\n\n@adv.veracatarina`;
-        copyToClipboard(text, '📋 Texto copiado para o Feed!');
-    };
-
-    // Instagram Story
-    window.shareInstagramStory = function() {
-        const { title, description } = getShareData();
-        const hashtags = getHashtags();
-        const text = `📢 ${title}\n\n${truncateText(description, 150)}\n\n👆 Clique no link para ler o artigo completo!\n\n👩‍⚖️ @adv.veracatarina\n📍 Sapucaia do Sul - RS\n📱 (51) 3450-2229\n\n${hashtags}`;
-        copyToClipboard(text, '📋 Texto copiado para o Story!');
-    };
-
-    // Instagram Bio
-    window.copyInstagramBio = function() {
-        const { title, url } = getShareData();
-        const text = `📢 ${title}\n\n🔗 ${url}\n\n👩‍⚖️ Dra. Vera Catarina\n📍 Sapucaia do Sul - RS\n📱 (51) 3450-2229\n\n#AdvocaciaVeraCatarina`;
-        copyToClipboard(text, '📋 Link copiado para a Bio!');
-    };
+    function showCopyFeedback(btn, icon) {
+        if (!btn) return;
+        const originalIcon = icon ? icon.className : 'fas fa-link';
+        const label = btn.querySelector('.label');
+        const originalLabel = label ? label.textContent : 'Copiar Link';
+        
+        if (icon) icon.className = 'fas fa-check';
+        if (label) label.textContent = '✅ Copiado!';
+        
+        btn.style.color = '#22c55e';
+        
+        setTimeout(() => {
+            if (icon) icon.className = originalIcon;
+            if (label) label.textContent = originalLabel;
+            btn.style.color = '';
+        }, 2000);
+    }
 
     // ============================================================
-    // FUNÇÕES AUXILIARES
+    // FUNÇÃO AUXILIAR - COPIAR PARA ÁREA DE TRANSFERÊNCIA
     // ============================================================
-
     function copyToClipboard(text, message) {
         if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(text).then(() => showCopiedMessage(message))
-                .catch(() => fallbackCopyText(text, message));
+            navigator.clipboard.writeText(text).then(() => {
+                showCopiedMessage(message);
+            }).catch(() => {
+                fallbackCopyText(text, message);
+            });
         } else {
             fallbackCopyText(text, message);
         }
@@ -261,176 +268,233 @@
     }
 
     // ============================================================
-    // TOGGLE PARA MOBILE
+    // CONTROLE DO MENU (HOVER)
     // ============================================================
+    let shareHoverTimeout;
 
-    let shareVisible = false;
-
-    window.toggleShareButtons = function() {
-        const buttons = document.getElementById('shareButtons');
-        if (!buttons) return;
-        shareVisible = !shareVisible;
-        buttons.classList.toggle('hidden');
-        const toggleBtn = document.querySelector('.share-toggle');
-        if (toggleBtn) {
-            toggleBtn.innerHTML = shareVisible ? '<i class="fas fa-share-alt"></i>' : '<i class="fas fa-times"></i>';
+    function openSharePopup() {
+        const container = document.getElementById('sharePopup');
+        if (container) {
+            clearTimeout(shareHoverTimeout);
+            container.classList.add('active');
         }
-    };
+    }
+
+    function closeSharePopup() {
+        const container = document.getElementById('sharePopup');
+        const btn = document.getElementById('shareMainBtn');
+        if (container) {
+            shareHoverTimeout = setTimeout(() => {
+                const isHoveringBtn = btn && btn.matches(':hover');
+                const isHoveringPopup = container && container.matches(':hover');
+                
+                if (!isHoveringBtn && !isHoveringPopup) {
+                    container.classList.remove('active');
+                }
+            }, 150);
+        }
+    }
 
     // ============================================================
     // INJETAR BOTÕES NA PÁGINA
     // ============================================================
-
     function injectShareButtons() {
-        if (document.getElementById('shareButtons')) return;
+        if (document.getElementById('shareMainBtn')) return;
 
         const url = window.location.pathname;
         if (url.includes('/admin') || url.includes('/login')) return;
 
         const shareHTML = `
-        <div id="shareButtons" class="share-buttons">
-            <button class="share-btn share-btn-whatsapp" onclick="shareOnWhatsApp()" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span>
-            </button>
-            <button class="share-btn share-btn-facebook" onclick="shareOnFacebook()" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i><span class="tooltip">Facebook</span>
-            </button>
-            <button class="share-btn share-btn-linkedin" onclick="shareOnLinkedIn()" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i><span class="tooltip">LinkedIn</span>
-            </button>
-            <button class="share-btn share-btn-twitter" onclick="shareOnTwitter()" aria-label="Twitter/X">
-                <i class="fab fa-x-twitter"></i><span class="tooltip">Twitter</span>
-            </button>
-            <button class="share-btn share-btn-telegram" onclick="shareOnTelegram()" aria-label="Telegram">
-                <i class="fab fa-telegram-plane"></i><span class="tooltip">Telegram</span>
-            </button>
-            <button class="share-btn share-btn-email" onclick="shareOnEmail()" aria-label="E-mail">
-                <i class="fas fa-envelope"></i><span class="tooltip">E-mail</span>
-            </button>
-            <button class="share-btn share-btn-instagram-feed" onclick="copyInstagramFeed()" aria-label="Instagram Feed">
-                <i class="fab fa-instagram"></i><span class="tooltip">Feed</span>
-            </button>
-            <button class="share-btn share-btn-instagram-story" onclick="shareInstagramStory()" aria-label="Instagram Story">
-                <i class="fas fa-circle"></i><span class="tooltip">Story</span>
-            </button>
-            <button class="share-btn share-btn-instagram-bio" onclick="copyInstagramBio()" aria-label="Instagram Bio">
-                <i class="fas fa-link"></i><span class="tooltip">Bio</span>
-            </button>
-            <button class="share-btn share-btn-copy" onclick="copyLink()" aria-label="Copiar link" id="copyLinkBtn">
-                <i class="fas fa-link"></i><span class="tooltip">Copiar Link</span>
-            </button>
-        </div>
-        <button class="share-toggle" onclick="toggleShareButtons()" aria-label="Compartilhar">
-            <i class="fas fa-share-alt"></i>
+        <!-- ===== BOTÃO ÚNICO DE COMPARTILHAMENTO ===== -->
+        <button class="share-main-btn" id="shareMainBtn" aria-label="Abrir opções de compartilhamento">
+            <i class="fas fa-share-alt"></i> Compartilhar
         </button>
+
+        <!-- ===== MENU DE COMPARTILHAMENTO ===== -->
+        <div class="share-popup-container" id="sharePopup">
+            <div class="share-popup">
+                <button class="share-btn" onclick="shareOnWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="label">WhatsApp</span>
+                </button>
+                <button class="share-btn" onclick="shareOnFacebook()">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="label">Facebook</span>
+                </button>
+                <button class="share-btn" onclick="shareOnLinkedIn()">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="label">LinkedIn</span>
+                </button>
+                <button class="share-btn" onclick="shareOnTwitter()">
+                    <i class="fab fa-x-twitter"></i>
+                    <span class="label">Twitter/X</span>
+                </button>
+                <button class="share-btn" onclick="shareOnTelegram()">
+                    <i class="fab fa-telegram-plane"></i>
+                    <span class="label">Telegram</span>
+                </button>
+                <button class="share-btn" onclick="shareOnEmail()">
+                    <i class="fas fa-envelope"></i>
+                    <span class="label">E-mail</span>
+                </button>
+                
+                <hr class="divider">
+                
+                <button class="share-btn" onclick="copyInstagramFeed()">
+                    <i class="fab fa-instagram"></i>
+                    <span class="label">Instagram Feed</span>
+                </button>
+                <button class="share-btn" onclick="shareInstagramStory()">
+                    <i class="fas fa-circle"></i>
+                    <span class="label">Instagram Story</span>
+                </button>
+                <button class="share-btn" onclick="copyInstagramBio()">
+                    <i class="fas fa-link"></i>
+                    <span class="label">Link na Bio</span>
+                </button>
+                
+                <hr class="divider">
+                
+                <button class="share-btn" onclick="copyLink()" id="copyLinkBtn">
+                    <i class="fas fa-link"></i>
+                    <span class="label">Copiar Link</span>
+                </button>
+            </div>
+        </div>
         `;
 
         document.body.insertAdjacentHTML('beforeend', shareHTML);
-        adjustShareButtons();
-        window.addEventListener('resize', adjustShareButtons);
 
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.shiftKey && (e.key === 's' || e.key === 'S')) {
-                e.preventDefault();
-                toggleShareButtons();
+        // Adicionar eventos de hover
+        const btn = document.getElementById('shareMainBtn');
+        const container = document.getElementById('sharePopup');
+        
+        if (btn) {
+            btn.addEventListener('mouseenter', openSharePopup);
+            btn.addEventListener('mouseleave', closeSharePopup);
+        }
+        
+        if (container) {
+            container.addEventListener('mouseenter', function() {
+                clearTimeout(shareHoverTimeout);
+            });
+            container.addEventListener('mouseleave', closeSharePopup);
+        }
+
+        // Fechar ao clicar fora
+        document.addEventListener('click', function(event) {
+            const container = document.getElementById('sharePopup');
+            const btn = document.getElementById('shareMainBtn');
+            if (!container || !btn) return;
+            
+            if (!container.contains(event.target) && !btn.contains(event.target)) {
+                container.classList.remove('active');
             }
         });
 
-        console.log('📢 Botões de compartilhamento ativos!');
-    }
-
-    // ============================================================
-    // AJUSTE PARA MOBILE
-    // ============================================================
-
-    function adjustShareButtons() {
-        const isMobile = window.innerWidth <= 992;
-        const toggleBtn = document.querySelector('.share-toggle');
-        const buttons = document.getElementById('shareButtons');
-        if (!buttons) return;
-
-        if (isMobile) {
-            if (toggleBtn) toggleBtn.style.display = 'flex';
-            buttons.classList.add('hidden');
-            shareVisible = false;
-            if (toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-share-alt"></i>';
-        } else {
-            if (toggleBtn) toggleBtn.style.display = 'none';
-            buttons.classList.remove('hidden');
-            shareVisible = true;
-        }
+        console.log('📢 Botão único de compartilhamento ativo!');
+        console.log('  Passe o mouse sobre "Compartilhar" para ver as opções.');
     }
 
     // ============================================================
     // INJETAR ESTILOS DINAMICAMENTE
     // ============================================================
-
     function injectStyles() {
         if (document.getElementById('share-buttons-styles')) return;
 
         const styles = `
         <style id="share-buttons-styles">
-            .share-buttons {
-                position: fixed; top: 50%; right: 10px; transform: translateY(-50%);
-                z-index: 9999; display: flex; flex-direction: column; gap: 8px;
-                padding: 10px 8px; background: rgba(255,255,255,0.95);
-                backdrop-filter: blur(10px); border-radius: 12px;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-                border: 1px solid rgba(197,168,128,0.2);
+            .share-main-btn {
+                position: fixed; top: 100px; right: 20px; z-index: 9999;
+                background: #0b251e; color: white;
+                border: 2px solid #c5a880; border-radius: 50px;
+                padding: 10px 18px; font-size: 0.85rem; font-weight: 700;
+                cursor: pointer; display: flex; align-items: center; gap: 8px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+                transition: all 0.3s ease;
+                font-family: 'Inter', sans-serif;
+                text-transform: uppercase; letter-spacing: 0.5px;
             }
-            .share-btn {
-                width: 40px; height: 40px; border-radius: 50%; border: none;
-                cursor: pointer; font-size: 1.1rem; display: flex;
-                align-items: center; justify-content: center;
-                transition: all 0.3s ease; color: white; position: relative;
+            .share-main-btn:hover {
+                background: #c5a880; color: #0b251e;
+                transform: scale(1.03);
+                box-shadow: 0 6px 30px rgba(0,0,0,0.25);
             }
-            .share-btn:hover { transform: scale(1.12); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-            .share-btn .tooltip {
-                position: absolute; right: 52px; background: #1e293b;
-                color: white; padding: 4px 10px; border-radius: 4px;
-                font-size: 0.65rem; font-weight: 600; white-space: nowrap;
-                opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+            .share-main-btn i { font-size: 1.1rem; }
+            
+            .share-popup-container {
+                position: fixed; top: 150px; right: 20px; z-index: 9998;
+                opacity: 0; visibility: hidden;
+                transform: translateY(-10px) scale(0.95);
+                transition: all 0.25s ease;
+                pointer-events: none;
             }
-            .share-btn:hover .tooltip { opacity: 1; }
-            .share-btn-whatsapp { background: #25D366; }
-            .share-btn-facebook { background: #1877F2; }
-            .share-btn-linkedin { background: #0A66C2; }
-            .share-btn-twitter { background: #000000; }
-            .share-btn-telegram { background: #26A5E4; }
-            .share-btn-email { background: #EA4335; }
-            .share-btn-copy { background: #64748B; }
-            .share-btn-copy.copied { background: #22c55e; }
-            .share-btn-instagram-feed {
-                background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            .share-popup-container.active {
+                opacity: 1; visibility: visible;
+                transform: translateY(0) scale(1);
+                pointer-events: all;
             }
-            .share-btn-instagram-story {
-                background: linear-gradient(45deg, #f56040, #fd1d1d, #f56040);
+            
+            .share-popup {
+                background: rgba(11,37,30,0.97);
+                backdrop-filter: blur(12px);
+                border: 1px solid #c5a880;
+                border-radius: 12px;
+                padding: 12px 8px;
+                min-width: 190px;
+                box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+                display: flex; flex-direction: column; gap: 4px;
             }
-            .share-btn-instagram-bio { background: #405DE6; }
-            .share-toggle {
-                width: 44px; height: 44px; border-radius: 50%;
-                border: 2px solid #c5a880; background: #0b251e; color: white;
-                cursor: pointer; font-size: 1.2rem; display: none;
-                align-items: center; justify-content: center;
-                transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-                position: fixed; bottom: 150px; right: 15px; z-index: 9998;
+            .share-popup .share-btn {
+                width: 100%; padding: 8px 14px; border: none;
+                border-radius: 6px; cursor: pointer;
+                font-size: 0.78rem; font-weight: 600;
+                display: flex; align-items: center; gap: 10px;
+                transition: all 0.2s ease;
+                background: transparent; color: #e2e8f0;
+                font-family: 'Inter', sans-serif; text-align: left;
             }
-            .share-toggle:hover { background: #c5a880; color: #0b251e; transform: scale(1.05); }
-            .share-buttons.hidden { display: none; }
+            .share-popup .share-btn:hover {
+                background: rgba(197,168,128,0.15);
+                color: #c5a880;
+            }
+            .share-popup .share-btn i { width: 20px; text-align: center; font-size: 1rem; }
+            .share-popup .share-btn .label { flex: 1; }
+            .share-popup .divider {
+                border: none; border-top: 1px solid rgba(255,255,255,0.06);
+                margin: 4px 8px;
+            }
+            .share-popup .share-btn .fa-whatsapp { color: #25D366; }
+            .share-popup .share-btn .fa-facebook-f { color: #1877F2; }
+            .share-popup .share-btn .fa-linkedin-in { color: #0A66C2; }
+            .share-popup .share-btn .fa-x-twitter { color: #ffffff; }
+            .share-popup .share-btn .fa-telegram-plane { color: #26A5E4; }
+            .share-popup .share-btn .fa-envelope { color: #EA4335; }
+            .share-popup .share-btn .fa-instagram { color: #E4405F; }
+            .share-popup .share-btn .fa-circle { color: #F56040; }
+            .share-popup .share-btn .fa-link { color: #94a3b8; }
+            .share-popup .share-btn .fa-link.copied { color: #22c55e; }
+            
+            .share-popup::before {
+                content: '';
+                position: absolute; top: -8px; right: 20px;
+                width: 0; height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid rgba(11,37,30,0.97);
+            }
+            
             @media (max-width: 992px) {
-                .share-buttons {
-                    bottom: 90px; top: auto; right: 15px; transform: none;
-                    flex-direction: row; flex-wrap: wrap; justify-content: center;
-                    padding: 8px 12px; gap: 6px; border-radius: 50px;
-                    max-width: 90vw; width: auto;
-                }
-                .share-btn { width: 36px; height: 36px; font-size: 0.9rem; }
-                .share-btn .tooltip { display: none; }
-                .share-toggle { display: flex; }
+                .share-main-btn { top: 75px; right: 15px; padding: 8px 14px; font-size: 0.75rem; }
+                .share-popup-container { top: 120px; right: 15px; }
+                .share-popup { min-width: 170px; padding: 10px 6px; }
+                .share-popup .share-btn { padding: 8px 12px; font-size: 0.72rem; }
             }
             @media (max-width: 600px) {
-                .share-buttons { bottom: 80px; right: 10px; padding: 6px 10px; gap: 4px; }
-                .share-btn { width: 32px; height: 32px; font-size: 0.8rem; }
+                .share-main-btn { top: 70px; right: 10px; padding: 6px 12px; font-size: 0.7rem; }
+                .share-popup-container { top: 110px; right: 10px; }
+                .share-popup { min-width: 155px; padding: 8px 4px; }
+                .share-popup .share-btn { padding: 6px 10px; font-size: 0.68rem; }
             }
         </style>
         `;
@@ -441,7 +505,6 @@
     // ============================================================
     // INICIALIZAR
     // ============================================================
-
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             injectStyles();
