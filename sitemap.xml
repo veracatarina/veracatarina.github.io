@@ -7,15 +7,21 @@
 
   <url>
     <loc>https://veracatarina.adv.br/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/index.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/areas-de-atuacao.html</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/sobre.html</loc>
@@ -37,7 +43,7 @@
   </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -49,7 +55,7 @@
   </url>
   <url>
     <loc>https://veracatarina.adv.br/sitemap.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -206,11 +212,330 @@
 
 
   <!-- ========================================================== -->
-  <!-- ===== NOTÍCIAS E ARTIGOS ===== -->
+  <!-- ===== NOTÍCIAS E ARTIGOS - AGOSTO 2026 ===== -->
   <!-- ========================================================== -->
 
-  <!-- ===== ARTIGOS RECENTES (AGOSTO 2026) ===== -->
+  <!-- ===== BLOCO 1 - INFÂNCIA E JUVENTUDE (Julho/Agosto) ===== -->
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/crimes-contra-criancas-adolescentes.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/lgpd-eca-digital-privacidade.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/eca-digital-crimes-virtuais-protecao.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/eca-direitos-basicos-protecao.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/marco-legal-primeira-infancia.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/protecao-integral-eca-eca-digital.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
 
+  <!-- ===== BLOCO 2 - DIREITO DIGITAL ===== -->
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/site-agora-acessivel.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/site-lgpd-acessibilidade-oab.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/direito-ao-esquecimento-case-academico-premiado.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/lgpd-entenda-lei-geral-protecao-dados.html</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/crimes-virtuais-calunia-difamacao-injuria.html</loc>
+    <lastmod>2025-06-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/marco-civil-internet-direitos-digitais.html</loc>
+    <lastmod>2025-07-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/perseguicao-digital-stalking-prova-pericial.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- ===== BLOCO 3 - DIREITO DE FAMÍLIA ===== -->
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/como-pedir-pensao-alimenticia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/planejamento-sucessorio-protocolo-familiar.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/separacao-consensual-litigiosa.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/inventario-usucapiao-sapucaia-do-sul.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- ===== BLOCO 4 - POSTAGENS AGOSTO (COM HORÁRIO) ===== -->
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/eca-relacoes-familiares-guarda-pensao.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/atendimento-24h-urgente-criancas.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/limpar-nome-spc-serasa-guia.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/golpe-do-pix-como-recuperar-dinheiro.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/assedio-moral-trabalho-provar.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/whatsapp-hackeado-como-agir.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/feliz-aniversario-dra-vera-catarina.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/execucao-de-alimentos-guia-credor.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/aposentadoria-tempo-contribuicao-guia.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/execucao-de-alimentos-defesa.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/fraudes-bancarias-indenizacao.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/guarda-compartilhada-direitos.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/cyberbullying-infantil-o-que-fazer-sapucaia.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/limpar-nome-spc-sapucaia-do-sul.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/golpe-do-pix-sapucaia-do-sul.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/pensao-alimenticia-esteio.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/advogado-criminal-canoas-prisao.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/limpar-nome-sao-leopoldo.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/guarda-dos-filhos-gravatai.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/inventario-cachoeirinha.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/fraudes-bancarias-porto-alegre.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/aposentadoria-sao-leopoldo.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/assedio-moral-canoas.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/erro-medico-sapucaia-do-sul.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/guarda-compartilhada-esteio.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- ===== BLOCO 5 - SEMANA READEQUADA (17/08 a 23/08) ===== -->
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/fraudes-bancarias-online-indenizacao.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/provas-digitais-como-coletar.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/vazamento-dados-indenizacao.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/pensao-alimenticia-canoas.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/limpar-nome-gravatai.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/advogado-criminal-sao-leopoldo.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/inventario-esteio.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/recuperar-dinheiro-golpe-pix-canoas.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/aposentadoria-gravatai.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/assedio-moral-sao-leopoldo.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias/usucapiao-cachoeirinha.html</loc>
     <lastmod>2026-08-22</lastmod>
@@ -218,82 +543,90 @@
     <priority>0.70</priority>
   </url>
   <url>
+    <loc>https://veracatarina.adv.br/noticias/semana-nacional-pessoa-deficiencia-sapucaia-do-sul.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <!-- ===== BLOCO 6 - POSTAGENS RECENTES (24/08 a 28/08) ===== -->
+  <url>
     <loc>https://veracatarina.adv.br/noticias/divida-indevida-canoas.html</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias/divorcio-consensual-sao-leopoldo.html</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/correspondente-juridico-o-que-e.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/capacitismo-o-que-e-sapucaia-do-sul.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias/direitos-trabalhador-esteio.html</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias/revisao-aposentadoria-porto-alegre.html</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/loas-bpc-guia-completo-sapucaia-do-sul.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias/advogado-criminal-cachoeirinha.html</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias/whatsapp-hackeado-canoas.html</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://veracatarina.adv.br/noticias/correspondente-juridico-sapucaia-do-sul.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias/erro-medico-sao-leopoldo.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
   </url>
   <url>
     <loc>https://veracatarina.adv.br/noticias/inventario-porto-alegre.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://veracatarina.adv.br/noticias/guarda-compartilhada-esteio.html</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://veracatarina.adv.br/noticias/pensao-alimenticia-cachoeirinha.html</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://veracatarina.adv.br/noticias/eca-digital-direitos-criancas.html</loc>
+    <loc>https://veracatarina.adv.br/noticias/usucapiao-sapucaia-do-sul-guia-completo.html</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://veracatarina.adv.br/noticias/contrato-empresarial-cuidados.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://veracatarina.adv.br/noticias/provas-digitais-preservar.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
   </url>
 
 
@@ -301,95 +634,54 @@
   <!-- ===== NOVAS POSTAGENS - INCLUSÃO E DEFICIÊNCIA ===== -->
   <!-- ========================================================== -->
 
-  <!-- Semana Nacional da Pessoa com Deficiência -->
-  <url>
-    <loc>https://veracatarina.adv.br/noticias/semana-nacional-pessoa-deficiencia-sapucaia-do-sul.html</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.72</priority>
-  </url>
-
-  <!-- Capacitismo -->
-  <url>
-    <loc>https://veracatarina.adv.br/noticias/capacitismo-o-que-e-sapucaia-do-sul.html</loc>
-    <lastmod>2026-08-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.72</priority>
-  </url>
-
-  <!-- LOAS/BPC - Guia completo -->
-  <url>
-    <loc>https://veracatarina.adv.br/noticias/loas-bpc-guia-completo-sapucaia-do-sul.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-  </url>
-
-  <!-- Dia Nacional de Luta das Pessoas com Deficiência (21/09) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul.html</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
-
-  <!-- Dia Nacional do Surdo / Libras (26/09) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-nacional-surdo-libras-sapucaia-do-sul.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
-
-  <!-- Dia Nacional da Pessoa com Deficiência Física (11/10) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-deficiencia-fisica-sapucaia-do-sul.html</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
-
-  <!-- Dia Internacional da Pessoa com Deficiência (03/12) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-internacional-pessoa-deficiencia-sapucaia-do-sul.html</loc>
     <lastmod>2026-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
-
-  <!-- Dia Nacional da Pessoa com Deficiência Visual (13/12) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-deficiencia-visual-sapucaia-do-sul.html</loc>
     <lastmod>2026-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
-
-  <!-- Dia Internacional da Síndrome de Down (21/03/2027) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-sindrome-down-sapucaia-do-sul.html</loc>
     <lastmod>2027-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
-
-  <!-- Dia Mundial de Conscientização do Autismo (02/04/2027) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-autismo-sapucaia-do-sul.html</loc>
     <lastmod>2027-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
-
-  <!-- Dia Nacional da Deficiência Intelectual (22/04/2027) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-deficiencia-intelectual-sapucaia-do-sul.html</loc>
     <lastmod>2027-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
-
-  <!-- Dia Nacional da Libras (24/04/2027) -->
   <url>
     <loc>https://veracatarina.adv.br/noticias/dia-nacional-libras-sapucaia-do-sul.html</loc>
     <lastmod>2027-04-24</lastmod>
