@@ -1,1087 +1,1029 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- ===== REDIRECIONAMENTO PARA O NOVO DOMÍNIO ===== -->
-  <script src="/redirect.js"></script>
-  
-  <meta name="author" content="Fábio Wlademir | Advocacia Vera Catarina">
-  <meta name="description" content="Mapa do site da Advocacia Vera Catarina. Encontre todas as páginas, áreas de atuação, notícias e conteúdos estratégicos em um só lugar.">
-  <meta name="keywords" content="mapa do site, sitemap, todas as páginas, advocacia vera catarina, sapucaia do sul, direito digital, provas digitais, correspondente jurídico">
-  <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  
-  <!-- ===== CANONICAL ===== -->
-  <link rel="canonical" href="https://veracatarina.adv.br/sitemap.html">
-  
-  <!-- ===== OPEN GRAPH ===== -->
-  <meta property="og:title" content="Mapa do Site | Advocacia Vera Catarina">
-  <meta property="og:description" content="Mapa do site com todas as páginas, áreas de atuação, notícias e conteúdos estratégicos da Dra. Vera Catarina.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://veracatarina.adv.br/sitemap.html">
-  <meta property="og:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/sitemap-mapa-site-advocacia.jpg">
-  <meta property="og:image:alt" content="Mapa do site - Advocacia Vera Catarina">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  
-  <!-- ===== TWITTER CARDS ===== -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mapa do Site | Advocacia Vera Catarina">
-  <meta name="twitter:description" content="Mapa do site com todas as páginas, áreas de atuação, notícias e conteúdos estratégicos da Dra. Vera Catarina.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/sitemap-mapa-site-advocacia.jpg">
-  
-  <title>Mapa do Site | Advocacia Vera Catarina</title>
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/acessibilidade.css">
-
-  <style>
-    /* ===== ESTILOS PADRÃO ===== */
-    :root {
-      --primary-dark: #0b251e;
-      --primary: #143d33;
-      --secondary: #0f172a;
-      --accent: #c5a880;
-      --accent-hover: #b39369;
-      --danger: #991b1b;
-      --text-dark: #1e293b;
-      --text-light: #64748b;
-      --bg-light: #f8fafc;
-      --border: #e2e8f0;
-      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; padding-top: 120px; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    h1, h2, h3, h4, .brand-font { font-family: 'Cinzel', serif; }
-
-    /* ===== TOP BAR E HEADER ===== */
-    .top-bar { background: #061612; height: 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; align-items: center; }
-    .top-container { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.8rem; color: #cbd5e1; }
-    .top-socials { display: flex; gap: 15px; }
-    .top-socials a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; font-size: 0.95rem; }
-    .top-socials a:hover { color: var(--accent); }
-    .top-contact-info { display: flex; gap: 15px; }
-    .top-contact-info span i { color: var(--accent); margin-right: 4px; }
-    .top-contact-info .obs-tel { font-size: 0.7rem; color: #94a3b8; font-weight: normal; margin-left: 2px; }
-
-    header { position: fixed; top: 40px; left: 0; right: 0; height: 80px; background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; align-items: center; }
-    .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-    .logo { color: white; text-decoration: none; display: flex; flex-direction: column; z-index: 1002; }
-    .logo .main-txt { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
-    .logo .sub-txt { color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
-
-    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
-    .menu-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s ease; }
-    #menu-checkbox { display: none; }
-
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      gap: 14px;
-      align-items: center;
-    }
-    .nav-menu > li { position: relative; list-style: none; }
-    .nav-menu > li > a {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-size: 0.78rem;
-      font-weight: 600;
-      transition: color 0.2s, border-color 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-      padding: 4px 0;
-      border-bottom: 2px solid transparent;
-      display: inline-block;
-    }
-    .nav-menu > li > a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-    .nav-menu > li > a.ativo { color: var(--accent); border-bottom-color: var(--accent); }
-    .btn-emergency-nav {
-      background: var(--danger);
-      color: white !important;
-      padding: 6px 14px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.75rem !important;
-      animation: pulse 2s infinite;
-      border: none !important;
-      border-bottom: none !important;
-    }
-    .btn-emergency-nav:hover { background: #b91c1c; color: white !important; border-bottom: none !important; }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: rgba(11, 37, 30, 0.98);
-      backdrop-filter: blur(10px);
-      min-width: 200px;
-      border: 1px solid var(--accent);
-      border-radius: 6px;
-      padding: 8px 0;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      z-index: 1003;
-    }
-    .dropdown-content li { display: block; margin: 0; padding: 0; }
-    .dropdown-content li a {
-      display: block;
-      padding: 10px 20px;
-      color: #e2e8f0;
-      text-decoration: none;
-      font-size: 0.78rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-      border-bottom: none !important;
-      transition: background 0.2s;
-    }
-    .dropdown-content li a:hover { background: rgba(197, 168, 128, 0.15); color: var(--accent); }
-    .dropdown:hover .dropdown-content { display: block; }
-    .dropbtn i { transition: transform 0.2s; }
-    .dropdown:hover .dropbtn i { transform: rotate(180deg); }
-
-    /* ===== HERO ===== */
-    .page-hero {
-      background: linear-gradient(rgba(11, 37, 30, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200') center/cover;
-      color: white;
-      padding: 70px 0 60px;
-      text-align: center;
-      border-bottom: 4px solid var(--accent);
-    }
-    .page-hero h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 10px;
-      font-weight: 500;
-    }
-    .page-hero h1 span { color: var(--accent); }
-    .page-hero p {
-      font-size: clamp(0.95rem, 2vw, 1.15rem);
-      color: #cbd5e1;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    /* ===== CONTEÚDO ===== */
-    .content-section { padding: 60px 0; }
-    .content-section h2 { font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 15px; position: relative; padding-bottom: 10px; }
-    .content-section h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--accent); }
-
-    .sitemap-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-    .sitemap-category {
-      background: var(--bg-light);
-      padding: 25px 30px;
-      border-radius: 8px;
-      border-left: 4px solid var(--accent);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .sitemap-category:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    }
-    .sitemap-category h3 {
-      font-size: 1.2rem;
-      color: var(--primary-dark);
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .sitemap-category h3 i { color: var(--accent); }
-    .sitemap-category ul { list-style: none; }
-    .sitemap-category ul li {
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .sitemap-category ul li:last-child { border-bottom: none; }
-    .sitemap-category ul li a {
-      color: var(--text-dark);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .sitemap-category ul li a:hover { color: var(--accent); }
-    .sitemap-category ul li a i {
-      color: var(--accent);
-      font-size: 0.9rem;
-      width: 20px;
-      text-align: center;
-    }
-    .sitemap-category ul li .desc {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      font-weight: 400;
-      margin-left: 30px;
-      display: block;
-    }
-
-    .cta-box {
-      background: var(--primary-dark);
-      color: white;
-      padding: 40px;
-      border-radius: 8px;
-      text-align: center;
-      margin: 40px 0;
-    }
-    .cta-box h3 { color: white; font-size: 1.8rem; margin-bottom: 10px; }
-    .cta-box p { color: #cbd5e1; margin-bottom: 20px; }
-    .btn-cta {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 14px 40px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: background 0.2s;
-    }
-    .btn-cta:hover { background: var(--accent-hover); }
-
-    .btn-emergency-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      color: white;
-      padding: 14px 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-      z-index: 999;
-      animation: pulse-green 2s infinite;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    footer { background: var(--primary-dark); color: #cbd5e1; padding: 50px 0 30px; border-top: 4px solid var(--accent); }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 40px; font-size: 0.9rem; }
-    .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a { color: #cbd5e1; text-decoration: none; cursor: pointer; }
-    .footer-col ul li a:hover { color: var(--accent); }
-    .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.78rem; color: #94a3b8; }
-    .visitor-counter { margin-top: 15px; font-size: 0.78rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(197, 168, 128, 0.2); }
-    .visitor-counter i { color: var(--accent); }
-    .visitor-counter img { height: 16px; vertical-align: middle; border-radius: 2px; }
-
-    /* ===== ACCESSIBILITY TOOLBAR ===== */
-    .accessibility-toolbar-toggle {
-      position: fixed;
-      bottom: 70px;
-      left: 20px;
-      z-index: 9998;
-      background: var(--primary-dark, #0b251e);
-      color: white;
-      border: 2px solid var(--accent, #c5a880);
-      border-radius: 50%;
-      width: 52px;
-      height: 52px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      transition: transform 0.2s, background 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .accessibility-toolbar-toggle:hover {
-      transform: scale(1.05);
-      background: var(--accent, #c5a880);
-      color: var(--primary-dark, #0b251e);
-    }
-    .accessibility-toolbar {
-      position: fixed;
-      bottom: 180px;
-      left: 20px;
-      z-index: 9997;
-      background: rgba(11, 37, 30, 0.95);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--accent, #c5a880);
-      border-radius: 12px;
-      padding: 20px 16px;
-      width: 220px;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-      display: none;
-      flex-direction: column;
-      gap: 12px;
-      color: #e2e8f0;
-      font-family: 'Inter', sans-serif;
-    }
-    .accessibility-toolbar.open { display: flex; }
-    .accessibility-toolbar .toolbar-title {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent, #c5a880);
-      text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding-bottom: 8px;
-      margin-bottom: 4px;
-    }
-    .accessibility-toolbar .btn-group {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px;
-    }
-    .accessibility-toolbar button {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: #e2e8f0;
-      padding: 8px 6px;
-      border-radius: 6px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, border-color 0.2s;
-      font-family: 'Inter', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-    }
-    .accessibility-toolbar button:hover {
-      background: rgba(255,255,255,0.15);
-      border-color: var(--accent, #c5a880);
-    }
-    .accessibility-toolbar button.active {
-      background: var(--accent, #c5a880);
-      color: var(--primary-dark, #0b251e);
-      border-color: var(--accent, #c5a880);
-    }
-
-    @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(153, 27, 27, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); } }
-    @keyframes pulse-green { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-
-    @media (max-width: 992px) {
-      body { padding-top: 150px; }
-      header { top: 70px; height: 75px; }
-      .top-bar { height: auto; padding: 8px 0; position: fixed; }
-      .top-container { flex-direction: column; gap: 6px; text-align: center; }
-      .top-contact-info { flex-direction: column; gap: 2px; }
-      .menu-toggle { display: flex; }
-      .nav-menu {
-        position: fixed;
-        top: 145px;
-        right: -100%;
-        background: rgba(11, 37, 30, 0.98);
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 145px);
-        gap: 25px;
-        padding: 40px 20px;
-        transition: right 0.3s ease;
-        z-index: 999;
-        border-top: 1px solid var(--accent);
-        align-items: center;
-      }
-      .nav-menu > li { width: 100%; text-align: center; }
-      .nav-menu > li > a { font-size: 1rem !important; border-bottom: none !important; }
-      .nav-menu > li > a:hover { border-bottom: none !important; }
-      .dropdown-content {
-        position: static;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        padding-left: 20px;
-        min-width: auto;
-        display: none !important;
-      }
-      .dropdown.open .dropdown-content { display: block !important; }
-      .dropdown-content li a { font-size: 0.9rem; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05) !important; }
-      #menu-checkbox:checked ~ .nav-menu { right: 0; }
-      #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-      #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
-      #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-      .sitemap-grid { grid-template-columns: 1fr; gap: 20px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
-      footer { padding-bottom: 110px; }
-      .accessibility-toolbar { width: 190px; bottom: 180px; left: 10px; padding: 15px 12px; }
-      .accessibility-toolbar .btn-group { grid-template-columns: 1fr 1fr; gap: 4px; }
-      .accessibility-toolbar button { font-size: 0.6rem; padding: 6px 4px; }
-      .accessibility-toolbar-toggle { width: 46px; height: 46px; font-size: 1.2rem; bottom: 70px; left: 10px; }
-    }
-    @media (max-width: 600px) { .sitemap-category { padding: 18px; } }
-  </style>
-</head>
-<body>
-
-  <!-- ===== TOP BAR ===== -->
-  <div class="top-bar">
-    <div class="container top-container">
-      <div class="top-contact-info">
-        <span><i class="fas fa-phone"></i> (51) 3450-2229 <span class="obs-tel">(Somente WhatsApp)</span></span>
-        <span><i class="fas fa-location-dot"></i> Sapucaia do Sul - RS</span>
-      </div>
-      <div class="top-socials">
-        <a href="https://www.instagram.com/adv.veracatarina/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/AdvocaciaVeraCatarina" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://advocaciasapucaia.blogspot.com/" target="_blank" rel="noopener" title="Blogger Institucional"><i class="fab fa-blogger"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=555134502229" target="_blank" rel="noopener" title="Atendimento WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== WHATSAPP FLUTUANTE ===== -->
-  <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%2C%20vim%20pelo%20mapa%20do%20site." class="btn-emergency-float" target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp"></i> Fale Conosco
-  </a>
-
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="container nav-container">
-      <a href="index.html" class="logo">
-        <span class="main-txt">Vera Catarina</span>
-        <span class="sub-txt">Advocacia Especializada</span>
-      </a>
-      <input type="checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="menu-toggle" aria-label="Abrir menu de navegação">
-        <span></span><span></span><span></span>
-      </label>
-
-      <ul class="nav-menu">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
-        <li><a href="noticias.html">Notícias</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li class="dropdown" onmouseenter="openDropdown()" onmouseleave="closeDropdown()">
-          <a href="javascript:void(0)" onclick="toggleDropdown()" class="dropbtn">
-            Mais <i class="fas fa-chevron-down" style="font-size:0.5rem; margin-left:4px;"></i>
-          </a>
-          <ul class="dropdown-content">
-            <li><a href="index.html#servicos">Utilidades</a></li>
-            <li><a href="index.html#restrito">Canal Restrito</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="legal.html">Legal &amp; Suporte</a></li>
-            <li><a href="sitemap.html" class="ativo">🗺️ Mapa</a></li>
-            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="https://api.whatsapp.com/send?phone=555134502229&text=URGENTE%20-%20Plant%C3%A3o%2024h" target="_blank" class="btn-emergency-nav">
-            <i class="fas fa-shield-halved"></i> Plantão 24h
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
-  <main id="main-content">
-    <section class="page-hero">
-      <div class="container">
-        <h1>🗺️ Mapa do <span>Site</span></h1>
-        <p>Encontre todas as páginas, áreas de atuação e conteúdos estratégicos do site da Dra. Vera Catarina em um só lugar.</p>
-      </div>
-    </section>
-
-    <!-- ===== IMAGEM ILUSTRATIVA ===== -->
-    <div style="text-align: center; padding: 30px 20px 10px; background: var(--bg-light);">
-      <div style="max-width: 500px; margin: 0 auto;">
-        <img
-          src="https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/sitemap-mapa-site-advocacia.jpg"
-          alt="Mapa do site - Advocacia Vera Catarina - Encontre todas as páginas e áreas de atuação"
-          title="Mapa do Site | Advocacia Vera Catarina"
-          loading="lazy"
-          style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
-        />
-        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 8px; font-style: italic;">
-          <i class="fas fa-sitemap" style="color: var(--accent);"></i>
-          Navegue por todas as páginas do site de forma organizada
-        </p>
-      </div>
-    </div>
-
-    <section class="content-section">
-      <div class="container">
-
-        <div class="sitemap-grid">
-
-          <!-- ===== COLUNA 1 ===== -->
-          <div>
-
-            <!-- PÁGINAS PRINCIPAIS -->
-            <div class="sitemap-category">
-              <h3><i class="fas fa-home"></i> Páginas Principais</h3>
-              <ul>
-                <li><a href="index.html"><i class="fas fa-arrow-right"></i> Início <span class="desc">Página inicial com todas as áreas de atuação</span></a></li>
-                <li><a href="sobre.html"><i class="fas fa-arrow-right"></i> Sobre a Dra. Vera Catarina <span class="desc">Biografia e trajetória profissional</span></a></li>
-                <li><a href="contato.html"><i class="fas fa-arrow-right"></i> Contato <span class="desc">Formulário e canais de atendimento</span></a></li>
-                <li><a href="legal.html"><i class="fas fa-arrow-right"></i> Legal &amp; Suporte <span class="desc">Políticas de privacidade, termos e cookies</span></a></li>
-                <li><a href="noticias.html"><i class="fas fa-arrow-right"></i> Notícias e Artigos <span class="desc">Blog com conteúdo jurídico atualizado</span></a></li>
-                <li><a href="blog.html"><i class="fas fa-arrow-right"></i> Blog (Redirecionamento) <span class="desc">Acesse o blog institucional no Blogger</span></a></li>
-                <li><a href="depoimentos.html"><i class="fas fa-arrow-right"></i> Depoimentos <span class="desc">O que nossos clientes dizem</span></a></li>
-                <li><a href="acessibilidade.html"><i class="fas fa-arrow-right"></i> Acessibilidade <span class="desc">Recursos para navegação inclusiva</span></a></li>
-                <li><a href="sitemap.html"><i class="fas fa-arrow-right"></i> Mapa do Site <span class="desc">Você está aqui</span></a></li>
-                <li><a href="404.html"><i class="fas fa-arrow-right"></i> Página 404 <span class="desc">Página de erro personalizada</span></a></li>
-              </ul>
-            </div>
-
-            <!-- UTILIDADES E SERVIÇOS -->
-            <div class="sitemap-category">
-              <h3><i class="fas fa-tools"></i> Utilidades e Serviços</h3>
-              <ul>
-                <li><a href="area-restrita.html"><i class="fas fa-lock"></i> Área Restrita <span class="desc">Envio de documentos e contratos</span></a></li>
-                <li><a href="acompanhar-processos.html"><i class="fas fa-search"></i> Acompanhar Processos <span class="desc">Links para sistemas judiciais</span></a></li>
-                <li><a href="solicitar-andamento.html"><i class="fas fa-hourglass-half"></i> Solicitar Andamento <span class="desc">Atualização de processos</span></a></li>
-                <li><a href="pesquisa.html"><i class="fas fa-search"></i> Busca no Site <span class="desc">Pesquise por conteúdo no portal</span></a></li>
-                <li><a href="sites-uteis.html"><i class="fas fa-link"></i> Índice de Links Jurídicos <span class="desc">Tribunais, legislação e ferramentas</span></a></li>
-                <li><a href="advogado-online.html"><i class="fas fa-headset"></i> Advogado Online 24h <span class="desc">Atendimento jurídico imediato pelo WhatsApp</span></a></li>
-                <li><a href="arquivo.html"><i class="fas fa-archive"></i> Arquivo <span class="desc">Conteúdos arquivados do site</span></a></li>
-              </ul>
-            </div>
-
-          </div>
-
-          <!-- ===== COLUNA 2 ===== -->
-          <div>
-
-            <!-- ÁREAS DE ATUAÇÃO -->
-            <div class="sitemap-category">
-              <h3><i class="fas fa-gavel"></i> Áreas de Atuação</h3>
-              <ul>
-                <li><a href="direito-familia.html"><i class="fas fa-people-roof"></i> Direito de Família <span class="desc">Divórcio, guarda, pensão alimentícia, união estável</span></a></li>
-                <li><a href="direito-digital.html"><i class="fas fa-laptop-code"></i> Direito Digital <span class="desc">Crimes virtuais, golpes financeiros, remoção de conteúdo</span></a></li>
-                <li><a href="direito-criminal.html"><i class="fas fa-shield-halved"></i> Direito Criminal <span class="desc">Prisões, Habeas Corpus, tráfico de drogas, Lei Maria da Penha</span></a></li>
-                <li><a href="direito-trabalhista.html"><i class="fas fa-briefcase"></i> Direito Trabalhista <span class="desc">Reversão de justa causa, assédio moral, verbas rescisórias</span></a></li>
-                <li><a href="direito-previdenciario.html"><i class="fas fa-users-rays"></i> Direito Previdenciário <span class="desc">Aposentadorias, pensão por morte, LOAS/BPC</span></a></li>
-                <li><a href="direito-consumidor.html"><i class="fas fa-scale-balanced"></i> Direito do Consumidor <span class="desc">Exclusão de SPC/SERASA, revisão de contratos bancários, juros abusivos</span></a></li>
-                <li><a href="direito-civil.html"><i class="fas fa-gavel"></i> Direito Civil e Sucessões <span class="desc">Inventário, usucapião, contratos, responsabilidade civil</span></a></li>
-                <li><a href="direito-empresarial.html"><i class="fas fa-handshake"></i> Advocacia Empresarial <span class="desc">Defesa trabalhista patronal, contratos, compliance</span></a></li>
-              </ul>
-            </div>
-
-            <!-- CONTEÚDO ESTRATÉGICO -->
-            <div class="sitemap-category" style="border-left-color: #25d366;">
-              <h3><i class="fas fa-rocket"></i> Conteúdo Estratégico</h3>
-              <ul>
-                <li><a href="infancia-e-juventude.html"><i class="fas fa-shield-halved"></i> Infância e Juventude <span class="desc">ECA, ECA Digital, proteção de crianças e adolescentes</span></a></li>
-                <li><a href="provas-digitais.html"><i class="fas fa-microchip"></i> Provas Digitais e Perícia Forense <span class="desc">Coleta, preservação e análise de evidências digitais</span></a></li>
-                <li><a href="apoio-juridico-diligencias.html"><i class="fas fa-handshake"></i> Correspondente Jurídico <span class="desc">Diligências, audiências e perícia para outros advogados (B2B)</span></a></li>
-                <li><a href="faq-juridico.html"><i class="fas fa-question-circle"></i> Perguntas Frequentes (FAQ) <span class="desc">Central de dúvidas sobre todas as áreas do Direito</span></a></li>
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- ===== NOTÍCIAS E ARTIGOS ===== -->
-        <div style="margin-top: 50px;">
-          <h2 style="font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 25px; position: relative; padding-bottom: 10px;">
-            📰 Notícias e Artigos
-            <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--accent);"></span>
-          </h2>
-
-          <div class="sitemap-grid">
-            <!-- ===== COLUNA 1 - Notícias A-M ===== -->
-            <div>
-              <div class="sitemap-category">
-                <h3><i class="fas fa-newspaper"></i> Artigos A - M</h3>
-                <ul>
-                  <li><a href="/noticias/advogado-criminal-cachoeirinha.html"><i class="fas fa-arrow-right"></i> Advogado criminal em Cachoeirinha</a></li>
-                  <li><a href="/noticias/advogado-criminal-canoas-prisao.html"><i class="fas fa-arrow-right"></i> Advogado criminal em Canoas</a></li>
-                  <li><a href="/noticias/advogado-criminal-sao-leopoldo.html"><i class="fas fa-arrow-right"></i> Advogado criminal em São Leopoldo</a></li>
-                  <li><a href="/noticias/aposentadoria-gravatai.html"><i class="fas fa-arrow-right"></i> Aposentadoria em Gravataí</a></li>
-                  <li><a href="/noticias/aposentadoria-sao-leopoldo.html"><i class="fas fa-arrow-right"></i> Aposentadoria em São Leopoldo</a></li>
-                  <li><a href="/noticias/aposentadoria-tempo-contribuicao-guia.html"><i class="fas fa-arrow-right"></i> Aposentadoria por tempo de contribuição</a></li>
-                  <li><a href="/noticias/assedio-moral-canoas.html"><i class="fas fa-arrow-right"></i> Assédio moral em Canoas</a></li>
-                  <li><a href="/noticias/assedio-moral-sao-leopoldo.html"><i class="fas fa-arrow-right"></i> Assédio moral em São Leopoldo</a></li>
-                  <li><a href="/noticias/assedio-moral-trabalho-provar.html"><i class="fas fa-arrow-right"></i> Assédio moral no trabalho</a></li>
-                  <li><a href="/noticias/atendimento-24h-urgente-criancas.html"><i class="fas fa-arrow-right"></i> Atendimento 24h - crianças</a></li>
-                  <li><a href="/noticias/como-pedir-pensao-alimenticia.html"><i class="fas fa-arrow-right"></i> Como pedir pensão alimentícia</a></li>
-                  <li><a href="/noticias/crimes-contra-criancas-adolescentes.html"><i class="fas fa-arrow-right"></i> Crimes contra crianças e adolescentes</a></li>
-                  <li><a href="/noticias/crimes-virtuais-calunia-difamacao-injuria.html"><i class="fas fa-arrow-right"></i> Crimes virtuais - calúnia, difamação, injúria</a></li>
-                  <li><a href="/noticias/cyberbullying-infantil-o-que-fazer-sapucaia.html"><i class="fas fa-arrow-right"></i> Cyberbullying infantil</a></li>
-                  <li><a href="/noticias/direito-ao-esquecimento-case-academico-premiado.html"><i class="fas fa-arrow-right"></i> Direito ao esquecimento</a></li>
-                  <li><a href="/noticias/direitos-trabalhador-esteio.html"><i class="fas fa-arrow-right"></i> Direitos do trabalhador em Esteio</a></li>
-                  <li><a href="/noticias/divida-indevida-canoas.html"><i class="fas fa-arrow-right"></i> Dívida indevida em Canoas</a></li>
-                  <li><a href="/noticias/divorcio-consensual-sao-leopoldo.html"><i class="fas fa-arrow-right"></i> Divórcio consensual em São Leopoldo</a></li>
-                  <li><a href="/noticias/eca-digital-crimes-virtuais-protecao.html"><i class="fas fa-arrow-right"></i> ECA Digital</a></li>
-                  <li><a href="/noticias/eca-direitos-basicos-protecao.html"><i class="fas fa-arrow-right"></i> ECA - direitos básicos</a></li>
-                  <li><a href="/noticias/eca-relacoes-familiares-guarda-pensao.html"><i class="fas fa-arrow-right"></i> ECA - relações familiares</a></li>
-                  <li><a href="/noticias/erro-medico-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Erro médico em Sapucaia do Sul</a></li>
-                  <li><a href="/noticias/execucao-de-alimentos-defesa.html"><i class="fas fa-arrow-right"></i> Execução de alimentos - defesa</a></li>
-                  <li><a href="/noticias/execucao-de-alimentos-guia-credor.html"><i class="fas fa-arrow-right"></i> Execução de alimentos - credor</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- ===== COLUNA 2 - Notícias N-Z ===== -->
-            <div>
-              <div class="sitemap-category">
-                <h3><i class="fas fa-newspaper"></i> Artigos N - Z</h3>
-                <ul>
-                  <li><a href="/noticias/feliz-aniversario-dra-vera-catarina.html"><i class="fas fa-arrow-right"></i> Feliz Aniversário Dra. Vera</a></li>
-                  <li><a href="/noticias/fraudes-bancarias-indenizacao.html"><i class="fas fa-arrow-right"></i> Fraudes bancárias - indenização</a></li>
-                  <li><a href="/noticias/fraudes-bancarias-online-indenizacao.html"><i class="fas fa-arrow-right"></i> Fraudes bancárias online</a></li>
-                  <li><a href="/noticias/fraudes-bancarias-porto-alegre.html"><i class="fas fa-arrow-right"></i> Fraudes bancárias em Porto Alegre</a></li>
-                  <li><a href="/noticias/golpe-do-pix-como-recuperar-dinheiro.html"><i class="fas fa-arrow-right"></i> Golpe do PIX - como recuperar</a></li>
-                  <li><a href="/noticias/golpe-do-pix-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Golpe do PIX em Sapucaia do Sul</a></li>
-                  <li><a href="/noticias/guarda-compartilhada-direitos.html"><i class="fas fa-arrow-right"></i> Guarda compartilhada - direitos</a></li>
-                  <li><a href="/noticias/guarda-compartilhada-esteio.html"><i class="fas fa-arrow-right"></i> Guarda compartilhada em Esteio</a></li>
-                  <li><a href="/noticias/guarda-dos-filhos-gravatai.html"><i class="fas fa-arrow-right"></i> Guarda dos filhos em Gravataí</a></li>
-                  <li><a href="/noticias/inventario-cachoeirinha.html"><i class="fas fa-arrow-right"></i> Inventário em Cachoeirinha</a></li>
-                  <li><a href="/noticias/inventario-esteio.html"><i class="fas fa-arrow-right"></i> Inventário em Esteio</a></li>
-                  <li><a href="/noticias/lgpd-eca-digital-privacidade.html"><i class="fas fa-arrow-right"></i> LGPD e ECA Digital</a></li>
-                  <li><a href="/noticias/lgpd-entenda-lei-geral-protecao-dados.html"><i class="fas fa-arrow-right"></i> LGPD - Lei Geral de Proteção de Dados</a></li>
-                  <li><a href="/noticias/limpar-nome-gravatai.html"><i class="fas fa-arrow-right"></i> Limpar nome em Gravataí</a></li>
-                  <li><a href="/noticias/limpar-nome-sao-leopoldo.html"><i class="fas fa-arrow-right"></i> Limpar nome em São Leopoldo</a></li>
-                  <li><a href="/noticias/limpar-nome-spc-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Limpar nome em Sapucaia do Sul</a></li>
-                  <li><a href="/noticias/limpar-nome-spc-serasa-guia.html"><i class="fas fa-arrow-right"></i> Limpar nome no SPC/SERASA</a></li>
-                  <li><a href="/noticias/marco-civil-internet-direitos-digitais.html"><i class="fas fa-arrow-right"></i> Marco Civil da Internet</a></li>
-                  <li><a href="/noticias/marco-legal-primeira-infancia.html"><i class="fas fa-arrow-right"></i> Marco Legal da Primeira Infância</a></li>
-                  <li><a href="/noticias/pensao-alimenticia-canoas.html"><i class="fas fa-arrow-right"></i> Pensão alimentícia em Canoas</a></li>
-                  <li><a href="/noticias/pensao-alimenticia-esteio.html"><i class="fas fa-arrow-right"></i> Pensão alimentícia em Esteio</a></li>
-                  <li><a href="/noticias/perseguicao-digital-stalking-prova-pericial.html"><i class="fas fa-arrow-right"></i> Perseguição digital - stalking</a></li>
-                  <li><a href="/noticias/protecao-integral-eca-eca-digital.html"><i class="fas fa-arrow-right"></i> Proteção integral - ECA</a></li>
-                  <li><a href="/noticias/provas-digitais-como-coletar.html"><i class="fas fa-arrow-right"></i> Provas digitais - como coletar</a></li>
-                  <li><a href="/noticias/recuperar-dinheiro-golpe-pix-canoas.html"><i class="fas fa-arrow-right"></i> Recuperar dinheiro golpe PIX em Canoas</a></li>
-                  <li><a href="/noticias/revisao-aposentadoria-porto-alegre.html"><i class="fas fa-arrow-right"></i> Revisão de aposentadoria em Porto Alegre</a></li>
-                  <li><a href="/noticias/site-agora-acessivel.html"><i class="fas fa-arrow-right"></i> Site agora acessível</a></li>
-                  <li><a href="/noticias/site-lgpd-acessibilidade-oab.html"><i class="fas fa-arrow-right"></i> Site LGPD, Acessibilidade e OAB</a></li>
-                  <li><a href="/noticias/usucapiao-cachoeirinha.html"><i class="fas fa-arrow-right"></i> Usucapião em Cachoeirinha</a></li>
-                  <li><a href="/noticias/vazamento-dados-indenizacao.html"><i class="fas fa-arrow-right"></i> Vazamento de dados - indenização</a></li>
-                  <li><a href="/noticias/whatsapp-hackeado-como-agir.html"><i class="fas fa-arrow-right"></i> WhatsApp hackeado - como agir</a></li>
-                  <li><a href="/noticias/whatsapp-hackeado-canoas.html"><i class="fas fa-arrow-right"></i> WhatsApp hackeado em Canoas</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- ===== NOVAS POSTAGENS - INCLUSÃO E DEFICIÊNCIA ===== -->
-          <div style="margin-top: 40px;">
-            <h3 style="font-size: 1.4rem; color: var(--primary-dark); margin-bottom: 20px; position: relative; padding-bottom: 10px;">
-              ♿ Inclusão e Deficiência - Novos Artigos
-              <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--accent);"></span>
-            </h3>
-            <div class="sitemap-grid">
-              <div>
-                <div class="sitemap-category" style="border-left-color: #f59e0b;">
-                  <ul>
-                    <li><a href="/noticias/semana-nacional-pessoa-deficiencia-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Semana Nacional da Pessoa com Deficiência</a></li>
-                    <li><a href="/noticias/loas-bpc-guia-completo-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> LOAS/BPC - Guia completo em Sapucaia do Sul</a></li>
-                    <li><a href="/noticias/capacitismo-o-que-e-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> O que é capacitismo?</a></li>
-                    <li><a href="/noticias/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Nacional de Luta das Pessoas com Deficiência</a></li>
-                    <li><a href="/noticias/dia-nacional-surdo-libras-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Nacional do Surdo e Libras</a></li>
-                    <li><a href="/noticias/dia-deficiencia-fisica-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Nacional da Pessoa com Deficiência Física</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <div class="sitemap-category" style="border-left-color: #f59e0b;">
-                  <ul>
-                    <li><a href="/noticias/dia-internacional-pessoa-deficiencia-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Internacional da Pessoa com Deficiência</a></li>
-                    <li><a href="/noticias/dia-deficiencia-visual-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Nacional da Pessoa com Deficiência Visual</a></li>
-                    <li><a href="/noticias/dia-sindrome-down-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Internacional da Síndrome de Down</a></li>
-                    <li><a href="/noticias/dia-autismo-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Mundial de Conscientização do Autismo</a></li>
-                    <li><a href="/noticias/dia-deficiencia-intelectual-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Nacional da Deficiência Intelectual</a></li>
-                    <li><a href="/noticias/dia-nacional-libras-sapucaia-do-sul.html"><i class="fas fa-arrow-right"></i> Dia Nacional da Libras</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- ===== CTA ===== -->
-        <div class="cta-box">
-          <h3>Precisa de orientação jurídica?</h3>
-          <p>Conte com a experiência de 40 anos da Dra. Vera Catarina para proteger seus direitos.</p>
-          <a href="https://api.whatsapp.com/send?phone=555134502229&text=Ol%C3%A1%20Dra.%20Vera%2C%20vim%20pelo%20mapa%20do%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." class="btn-cta" target="_blank">
-            <i class="fab fa-whatsapp"></i> Fale agora no WhatsApp
-          </a>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h5>Dra. Vera Catarina</h5>
-          <p style="font-size: 0.85rem; max-width:320px; color:#94a3b8;">Defesa técnica especializada e representação corporativa rigorosa em Sapucaia do Sul e região metropolitana.</p>
-          <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 8px;">OAB/RS 19.315</p>
-        </div>
-        <div class="footer-col">
-          <h5>Links Rápidos</h5>
-          <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="index.html#atuacao">Áreas de Atuação</a></li>
-            <li><a href="noticias.html">📰 Notícias e Artigos</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="legal.html">Legal</a></li>
-            <li><a href="sitemap.html">🗺️ Mapa do Site</a></li>
-            <li><a href="acessibilidade.html">♿ Acessibilidade</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Áreas Específicas</h5>
-          <ul>
-            <li><a href="direito-familia.html">Direito de Família</a></li>
-            <li><a href="direito-digital.html">Direito Digital</a></li>
-            <li><a href="direito-criminal.html">Direito Criminal</a></li>
-            <li><a href="direito-trabalhista.html">Direito Trabalhista</a></li>
-            <li><a href="direito-previdenciario.html">Direito Previdenciário</a></li>
-            <li><a href="direito-consumidor.html">Direito do Consumidor</a></li>
-            <li><a href="direito-civil.html">Direito Civil e Sucessões</a></li>
-            <li><a href="direito-empresarial.html">🏢 Advocacia Empresarial</a></li>
-            <li><a href="advogado-online.html">📱 Advogado Online 24h</a></li>
-            <li><a href="infancia-e-juventude.html">👶 Infância e Juventude</a></li>
-            <li><a href="provas-digitais.html">💻 Provas Digitais</a></li>
-            <li><a href="apoio-juridico-diligencias.html">📌 Correspondente Jurídico</a></li>
-            <li><a href="faq-juridico.html">❓ FAQ Jurídico</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p style="margin-bottom:12px;">&copy; 2026 Advocacia Vera Catarina. Todos os direitos reservados. | Desenvolvido em conformidade técnica de SEO, LGPD e Acessibilidade.</p>
-        <p style="font-size:0.75rem; color:#94a3b8; display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;">
-          <span>⚡ Design & Desenvolvimento:</span>
-          <a href="https://fabiowlademir.github.io/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-weight:600;">💻 Fábio Wlademir</a>
-          <span style="color:rgba(255,255,255,0.2);">·</span>
-          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <span style="color:rgba(255,255,255,0.2);">·</span>
-          <a href="https://www.instagram.com/fabiowlademir" target="_blank" rel="noopener" style="color:#cbd5e1; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
-        </p>
-        <div>
-          <div class="visitor-counter" title="Total de visualizações de página">
-            <i class="fas fa-eye"></i>
-            <span>Visitas ao portal:</span>
-            <img src="https://hits.dwyl.com/veracatarina/veracatarina.github.io.svg" alt="Contador de Acessos">
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ===== BANNER LGPD ===== -->
-  <div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid var(--accent,#c5a880); z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
-    <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
-      <i class="fas fa-shield-alt" style="color:var(--accent,#c5a880); margin-right:8px; font-size:1.1rem;"></i>
-      <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="legal.html#privacidade" style="color:var(--accent,#c5a880); text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="legal.html#cookies" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
-    </div>
-    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
-      <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
-      <button onclick="acceptCookies()" style="background:var(--accent,#c5a880); color:var(--primary-dark,#0b251e); border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
-    </div>
-  </div>
-
-  <!-- ===== VLIBRAS ===== -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
-
-  <!-- ===== ACESSIBILIDADE JS ===== -->
-  <script src="/acessibilidade.js"></script>
-
-  <!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
-  <button class="accessibility-toolbar-toggle" onclick="toggleAccessibilityToolbar()" aria-label="Abrir ferramentas de acessibilidade">♿</button>
-  <div class="accessibility-toolbar" id="accessibilityToolbar">
-    <div class="toolbar-title">Acessibilidade</div>
-    <div class="btn-group">
-      <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Escuro</button>
-      <button onclick="toggleHighContrast()" id="highContrastBtn">🔲 Contraste</button>
-      <button onclick="changeFontSize('decrease')">A-</button>
-      <button onclick="changeFontSize('reset')">A</button>
-      <button onclick="changeFontSize('increase')">A+</button>
-      <button onclick="changeFontSize('xincrease')">A++</button>
-      <button onclick="toggleDyslexicFont()" id="dyslexicBtn">📖 Dislexia</button>
-      <button onclick="toggleReducedMotion()" id="motionBtn">🎬 Reduzir</button>
-    </div>
-  </div>
-
-  <!-- ===== BOTÃO DE LEITURA POR ÁUDIO (TTS) ===== -->
-  <div style="position: fixed; bottom: 160px; left: 20px; z-index: 9998;">
-    <button id="audio-reader-btn" onclick="readPageAloud()" style="
-      background: var(--accent, #c5a880);
-      color: var(--primary-dark, #0b251e);
-      border: none;
-      border-radius: 50px;
-      padding: 10px 18px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <i class="fas fa-volume-up"></i> Ouvir Página
-    </button>
-    <button id="audio-stop-btn" onclick="stopReading()" style="
-      background: var(--danger, #991b1b);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      padding: 10px 18px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      transition: all 0.2s;
-      display: none;
-      align-items: center;
-      gap: 8px;
-      margin-top: 8px;
-    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <i class="fas fa-stop"></i> Parar
-    </button>
-  </div>
-
-  <!-- ===== SCRIPTS ===== -->
-  <script>
-    // ===== DROPDOWN (MOBILE) =====
-    function toggleDropdown() {
-      const dropdown = document.querySelector('.dropdown');
-      if (window.innerWidth <= 992) {
-        dropdown.classList.toggle('open');
-      }
-    }
-    function openDropdown() {
-      if (window.innerWidth > 992) {
-        document.querySelector('.dropdown-content').style.display = 'block';
-      }
-    }
-    function closeDropdown() {
-      if (window.innerWidth > 992) {
-        document.querySelector('.dropdown-content').style.display = 'none';
-      }
-    }
-    document.addEventListener('click', function(e) {
-      const dropdown = document.querySelector('.dropdown');
-      if (dropdown && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('open');
-      }
-    });
-
-    // ===== LGPD COOKIES =====
-    function setCookieConsent(choice) {
-      localStorage.setItem('cookieConsent', choice);
-      const banner = document.getElementById('cookie-consent-banner');
-      banner.style.opacity = '0';
-      banner.style.transform = 'translateX(-50%) translateY(20px)';
-      setTimeout(() => { banner.style.display = 'none'; }, 500);
-    }
-    function acceptCookies() {
-      setCookieConsent('accepted');
-      console.log('📊 Cookies de análise ativados.');
-    }
-    function rejectCookies() {
-      setCookieConsent('rejected');
-      console.log('❌ Cookies de análise recusados.');
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      const consent = localStorage.getItem('cookieConsent');
-      if (consent === 'accepted' || consent === 'rejected') {
-        document.getElementById('cookie-consent-banner').style.display = 'none';
-      }
-    });
-
-    // ===== FECHAR MENU MOBILE =====
-    function closeMenu() {
-      document.getElementById('menu-checkbox').checked = false;
-    }
-    document.querySelectorAll('.nav-menu a').forEach(function(link) {
-      link.addEventListener('click', closeMenu);
-    });
-
-    // ===== ARIA EXPANDED =====
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuCheckbox = document.getElementById('menu-checkbox');
-    if (menuToggle && menuCheckbox) {
-      menuCheckbox.addEventListener('change', function() {
-        menuToggle.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
-      });
-    }
-
-    // ===== TOOLBAR DE ACESSIBILIDADE =====
-    function toggleAccessibilityToolbar() {
-      document.getElementById('accessibilityToolbar').classList.toggle('open');
-    }
-
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark-mode');
-      document.getElementById('darkModeBtn').classList.toggle('active');
-      localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode') ? 'true' : 'false');
-    }
-
-    function toggleHighContrast() {
-      document.documentElement.classList.toggle('high-contrast');
-      document.getElementById('highContrastBtn').classList.toggle('active');
-      localStorage.setItem('highContrast', document.documentElement.classList.contains('high-contrast') ? 'true' : 'false');
-    }
-
-    function changeFontSize(action) {
-      const sizes = ['font-small', 'font-medium', 'font-large', 'font-xlarge'];
-      const current = sizes.find(cls => document.documentElement.classList.contains(cls)) || 'font-medium';
-      let index = sizes.indexOf(current);
-      if (action === 'decrease') index = Math.max(0, index - 1);
-      else if (action === 'increase') index = Math.min(sizes.length - 1, index + 1);
-      else if (action === 'xincrease') index = Math.min(sizes.length - 1, index + 2);
-      else if (action === 'reset') index = 1;
-      document.documentElement.classList.remove(...sizes);
-      document.documentElement.classList.add(sizes[index]);
-      localStorage.setItem('fontSize', sizes[index]);
-    }
-
-    function toggleDyslexicFont() {
-      document.documentElement.classList.toggle('dyslexic-font');
-      document.getElementById('dyslexicBtn').classList.toggle('active');
-      localStorage.setItem('dyslexicFont', document.documentElement.classList.contains('dyslexic-font') ? 'true' : 'false');
-    }
-
-    function toggleReducedMotion() {
-      document.documentElement.classList.toggle('reduce-motion');
-      document.getElementById('motionBtn').classList.toggle('active');
-      localStorage.setItem('reduceMotion', document.documentElement.classList.contains('reduce-motion') ? 'true' : 'false');
-    }
-
-    // Carregar preferências salvas
-    document.addEventListener('DOMContentLoaded', function() {
-      if (localStorage.getItem('darkMode') === 'true') {
-        document.documentElement.classList.add('dark-mode');
-        document.getElementById('darkModeBtn').classList.add('active');
-      }
-      if (localStorage.getItem('highContrast') === 'true') {
-        document.documentElement.classList.add('high-contrast');
-        document.getElementById('highContrastBtn').classList.add('active');
-      }
-      const fontSize = localStorage.getItem('fontSize');
-      if (fontSize) {
-        document.documentElement.classList.add(fontSize);
-      } else {
-        document.documentElement.classList.add('font-medium');
-      }
-      if (localStorage.getItem('dyslexicFont') === 'true') {
-        document.documentElement.classList.add('dyslexic-font');
-        document.getElementById('dyslexicBtn').classList.add('active');
-      }
-      if (localStorage.getItem('reduceMotion') === 'true') {
-        document.documentElement.classList.add('reduce-motion');
-        document.getElementById('motionBtn').classList.add('active');
-      }
-    });
-
-    // ===== LEITURA POR ÁUDIO (TTS) =====
-    let currentUtterance = null;
-    let isReading = false;
-
-    function readPageAloud() {
-      if (isReading) {
-        stopReading();
-        setTimeout(() => { readPageAloud(); }, 300);
-        return;
-      }
-
-      const mainContent = document.querySelector('main') || document.querySelector('.content-section') || document.body;
-      const clone = mainContent.cloneNode(true);
-      const removeSelectors = ['nav', 'footer', '.nav-menu', '.top-bar', '.footer-grid', '.visitor-counter', '.backlinks-section', '#cookie-consent-banner'];
-      removeSelectors.forEach(selector => {
-        const elements = clone.querySelectorAll(selector);
-        elements.forEach(el => el.remove());
-      });
-
-      let text = clone.textContent || '';
-      text = text.replace(/\s+/g, ' ').trim();
-
-      if (!text || text.length < 10) {
-        alert('Não há conteúdo suficiente para leitura nesta página.');
-        return;
-      }
-
-      currentUtterance = new SpeechSynthesisUtterance(text);
-      currentUtterance.lang = 'pt-BR';
-      currentUtterance.rate = 0.9;
-      currentUtterance.pitch = 1.0;
-      currentUtterance.volume = 1;
-
-      const voices = window.speechSynthesis.getVoices();
-      const ptVoice = voices.find(v => v.lang === 'pt-BR' && v.name.includes('Female')) ||
-                      voices.find(v => v.lang === 'pt-BR') ||
-                      voices.find(v => v.lang.startsWith('pt'));
-      if (ptVoice) {
-        currentUtterance.voice = ptVoice;
-      }
-
-      currentUtterance.onstart = function() {
-        isReading = true;
-        document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-pause"></i> Pausar';
-        document.getElementById('audio-reader-btn').style.background = '#f59e0b';
-        document.getElementById('audio-stop-btn').style.display = 'flex';
-      };
-
-      currentUtterance.onend = function() {
-        isReading = false;
-        document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página';
-        document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)';
-        document.getElementById('audio-stop-btn').style.display = 'none';
-      };
-
-      currentUtterance.onerror = function() {
-        isReading = false;
-        document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página';
-        document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)';
-        document.getElementById('audio-stop-btn').style.display = 'none';
-        console.warn('Erro na leitura de áudio.');
-      };
-
-      window.speechSynthesis.speak(currentUtterance);
-    }
-
-    function stopReading() {
-      if (window.speechSynthesis) {
-        window.speechSynthesis.cancel();
-      }
-      isReading = false;
-      document.getElementById('audio-reader-btn').innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página';
-      document.getElementById('audio-reader-btn').style.background = 'var(--accent, #c5a880)';
-      document.getElementById('audio-stop-btn').style.display = 'none';
-    }
-
-    if (window.speechSynthesis) {
-      window.speechSynthesis.getVoices();
-      window.speechSynthesis.onvoiceschanged = function() {
-        window.speechSynthesis.getVoices();
-      };
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && isReading) {
-        stopReading();
-      }
-    });
-  </script>
-</body>
-</html>
+// ==========================================================
+//  POSTS (dados das notícias) - CENTRALIZADO
+//  Arquivo: /dados/posts.js
+//  Carregado por: noticias.html e arquivo.html
+// ==========================================================
+
+// ==========================================================
+//  CATEGORIAS DISPONÍVEIS:
+//  direito-digital, direito-criminal, direito-familia,
+//  direito-trabalhista, direito-consumidor, direitos-cidadao,
+//  infancia, direito-previdenciario, direito-empresarial,
+//  direito-civil, provas-digitais, correspondente, institucional
+// ==========================================================
+
+const posts = [
+  // ==========================================================
+  //  BLOCO 1: INFÂNCIA E JUVENTUDE (Julho/Agosto 2026)
+  // ==========================================================
+  {
+    titulo: "Crimes contra crianças e adolescentes: O que a lei prevê e como agir em qualquer ambiente",
+    link: "https://veracatarina.adv.br/noticias/crimes-contra-criancas-adolescentes.html",
+    resumo: "Violência, abuso, exploração, assédio virtual e negligência são crimes graves. Conheça as medidas protetivas e como buscar justiça.",
+    data: "31/07/2026",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/crimes-contra-criancas-adolescentes-responsabilidade-defesa.png",
+    destaque: false
+  },
+  {
+    titulo: "LGPD e ECA Digital: A privacidade de crianças e adolescentes tem regras próprias e mais rigorosas",
+    link: "https://veracatarina.adv.br/noticias/lgpd-eca-digital-privacidade.html",
+    resumo: "A LGPD e o ECA Digital estabelecem regras rigorosas para a coleta e uso de dados de menores. Famílias têm direito a exigir exclusão e reparação.",
+    data: "30/07/2026",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/lgpd-eca-digital-privacidade-criancas-adolescentes.png",
+    destaque: false
+  },
+  {
+    titulo: "ECA Digital: Como a nova lei protege crianças e adolescentes na internet",
+    link: "https://veracatarina.adv.br/noticias/eca-digital-crimes-virtuais-protecao.html",
+    resumo: "O ECA Digital define regras para redes sociais, jogos e aplicativos, protegendo menores contra assédio, exposição indevida e crimes virtuais. Saiba mais.",
+    data: "29/07/2026",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/lei-eca-digital-protecao-criancas-adolescentes-internet.png",
+    destaque: false
+  },
+  {
+    titulo: "ECA: O que diz a lei que protege crianças e adolescentes em todas as situações",
+    link: "https://veracatarina.adv.br/noticias/eca-direitos-basicos-protecao.html",
+    resumo: "O ECA assegura direitos fundamentais como vida, saúde, educação, convivência familiar e proteção contra violência. Conheça como essa lei é aplicada na prática.",
+    data: "28/07/2026",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/lei-eca-protecao-criancas-adolescentes-situacoes.png",
+    destaque: false
+  },
+  {
+    titulo: "Marco Legal da Primeira Infância: Proteção integrada para os primeiros anos de vida – de 0 a 6 anos",
+    link: "https://veracatarina.adv.br/noticias/marco-legal-primeira-infancia.html",
+    resumo: "A Lei 13.257/2016 estabelece políticas integradas para crianças de 0 a 6 anos, ampliando a proteção do ECA e garantindo desenvolvimento pleno.",
+    data: "27/07/2026",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/marco-legal-primeira-infancia-lei-13257-2016-0-6-anos.png",
+    destaque: false
+  },
+  {
+    titulo: "Proteção integral: Conheça o ECA e o novo ECA Digital – Seus direitos garantidos, dentro e fora da internet",
+    link: "https://veracatarina.adv.br/noticias/protecao-integral-eca-eca-digital.html",
+    resumo: "O Estatuto da Criança e do Adolescente (ECA) e o ECA Digital (Lei 15.211/2025) garantem proteção integral a crianças e adolescentes, dentro e fora da internet. Conheça seus direitos.",
+    data: "24/07/2026",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/protecao-integral-eca-eca-digital-direitos-garantidos.png",
+    destaque: false
+  },
+
+  // ==========================================================
+  //  BLOCO 2: DIREITO DIGITAL
+  // ==========================================================
+  {
+    titulo: "Site agora com recursos de acessibilidade",
+    link: "https://veracatarina.adv.br/noticias/site-agora-acessivel.html",
+    resumo: "Conheça os recursos de acessibilidade do portal da Dra. Vera Catarina: modo escuro, alto contraste, VLibras, fonte para dislexia e muito mais.",
+    data: "21/07/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/acessibilidade-digital-inclusao.webp",
+    destaque: false
+  },
+  {
+    titulo: "Site adequado à LGPD, Acessibilidade e OAB",
+    link: "https://veracatarina.adv.br/noticias/site-lgpd-acessibilidade-oab.html",
+    resumo: "O portal foi reformulado para atender à LGPD, às diretrizes de acessibilidade digital (WCAG 2.2, eMAG, LBI) e ao Provimento 205/2021 da OAB.",
+    data: "19/07/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/site-lgpd-acessibilidade-oab.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Direito ao Esquecimento: Case Acadêmico Premiado – Análise do RE 1.010.606/STF",
+    link: "https://veracatarina.adv.br/noticias/direito-ao-esquecimento-case-academico-premiado.html",
+    resumo: "Trabalho interdisciplinar com Kelsen, Dworkin e Bobbio sobre o Caso Aída Curi. Nota máxima na UNISINOS.",
+    data: "18/07/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/direito-ao-esquecimento.jpg",
+    destaque: false
+  },
+  {
+    titulo: "LGPD: Entenda a Lei Geral de Proteção de Dados e sua Importância para a Segurança Online",
+    link: "https://veracatarina.adv.br/noticias/lgpd-entenda-lei-geral-protecao-dados.html",
+    resumo: "A Lei Geral de Proteção de Dados (LGPD) é uma legislação brasileira que visa proteger os direitos fundamentais das pessoas em relação ao tratamento de seus dados pessoais.",
+    data: "05/06/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/lgpd-protecao-dados.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Crimes Virtuais: Entenda Calúnia, Difamação e Injúria nas Redes Sociais",
+    link: "https://veracatarina.adv.br/noticias/crimes-virtuais-calunia-difamacao-injuria.html",
+    resumo: "As redes sociais se tornaram um espaço onde a liberdade de expressão pode ser usada de forma indevida, dando origem a crimes contra a honra.",
+    data: "18/06/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/crimes-virtuais-calunia-difamacao.jpg",
+    destaque: false
+  },
+  {
+    titulo: "🌐 MARCO CIVIL DA INTERNET: Seus Direitos Digitais e Proteção na Rede!",
+    link: "https://veracatarina.adv.br/noticias/marco-civil-internet-direitos-digitais.html",
+    resumo: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil.",
+    data: "19/07/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/marco-civil-internet.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Perseguição Digital: 5 Anos da Lei do Stalking e a Importância da Prova Pericial",
+    link: "https://veracatarina.adv.br/noticias/perseguicao-digital-stalking-prova-pericial.html",
+    resumo: "O stalking (perseguição obsessiva) é crime grave no Brasil. A Lei 14.132/2021 completa cinco anos em 2026.",
+    data: "31/03/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/stalking-prova-pericial.jpg",
+    destaque: false
+  },
+
+  // ==========================================================
+  //  BLOCO 3: DIREITO DE FAMÍLIA
+  // ==========================================================
+  {
+    titulo: "Como pedir Pensão Alimentícia em Sapucaia do Sul? Passo a passo completo",
+    link: "https://veracatarina.adv.br/noticias/como-pedir-pensao-alimenticia.html",
+    resumo: "Entenda quem tem direito à pensão, quais documentos reunir, como calcular o valor e quando procurar uma advogada especializada.",
+    data: "15/07/2026",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/pensao-alimenticia-guia.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Planejamento Sucessório e o Protocolo Familiar: Protegendo o Patrimônio e a Harmonia",
+    link: "https://veracatarina.adv.br/noticias/planejamento-sucessorio-protocolo-familiar.html",
+    resumo: "Planejamento sucessório e Protocolo Familiar cresceram em 2026. Famílias buscam evitar a morosidade e o custo emocional de inventários judiciais complexos.",
+    data: "08/04/2026",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/planejamento-sucessorio-protocolo-familiar-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Separação Consensual x Litigiosa: Qual a melhor saída?",
+    link: "https://veracatarina.adv.br/noticias/separacao-consensual-litigiosa.html",
+    resumo: "Conheça as diferenças entre separação consensual e litigiosa, os custos envolvidos, o tempo de duração e saiba qual caminho é mais adequado para o seu caso.",
+    data: "15/07/2026",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/separacao-consensual-litigiosa-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Inventário e Usucapião em Sapucaia do Sul: Regularize seu imóvel",
+    link: "https://veracatarina.adv.br/noticias/inventario-usucapiao-sapucaia-do-sul.html",
+    resumo: "Seja para transferir um patrimônio após um falecimento ou para regularizar um imóvel sem escritura, o Direito Imobiliário oferece soluções com quem tem 40 anos de experiência.",
+    data: "15/07/2026",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/inventario-usucapiao-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+
+  // ==========================================================
+  //  BLOCO 4: ARTIGOS DO BLOGGER (Blogger)
+  // ==========================================================
+  {
+    titulo: "Proteja-se: Denunciando Crimes na Internet com o Auxílio de um Advogado Especializado",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/proteja-se-denunciando-crimes-na.html",
+    resumo: "A internet é um espaço fértil para crimes e abusos. Se você está sendo vítima, é fundamental buscar ajuda de um advogado especializado.",
+    data: "16/06/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "Crimes nas Redes Sociais: Como se Proteger e Buscar Justiça | Dra. Vera Catarina",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/crimes-nas-redes-sociais-como-se.html",
+    resumo: "Cyberbullying, fake news, vingança pornográfica e golpes virtuais são perigos nas redes sociais. Conhecer seus direitos é o primeiro passo.",
+    data: "19/06/2025",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "ECA Digital: A Lei que as Plataformas Não Podem Mais Ignorar",
+    link: "https://advocaciasapucaia.blogspot.com/2026/04/eca-digital-lei-que-as-plataformas-nao.html",
+    resumo: "A Lei 15.211/2025 (ECA Digital) entrou em vigor em março de 2026. Redes sociais, jogos e aplicativos são obrigados a proteger crianças e adolescentes.",
+    data: "13/04/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "5 Direitos Digitais que Todo Usuário da Internet Precisa Conhecer",
+    link: "https://advocaciasapucaia.blogspot.com/2026/04/5-direitos-digitais-que-todo-usuario-da.html",
+    resumo: "Do Marco Civil de 2014 à realidade de 2026: o que mudou, o que permanece e o que você ainda pode exigir.",
+    data: "09/04/2026",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "LBI | Lei Brasileira de Inclusão, download",
+    link: "https://advocaciasapucaia.blogspot.com/2015/09/lbi-lei-brasileira-de-inclusao-download.html",
+    resumo: "A Lei Brasileira de Inclusão (LBI) - nº 13.146/2015 - promove o exercício dos direitos e liberdades fundamentais pelas pessoas com deficiência.",
+    data: "19/02/2015",
+    categoria: "direitos-cidadao",
+    categoriaLabel: "📜 Direitos do Cidadão",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "Advocacia Criminal em Sapucaia: Defesa Especializada | Dra. Vera Catarina",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/advocacia-criminal-em-sapucaia-defesa.html",
+    resumo: "Defesa criminal especializada com atuação estratégica e presença imediata: assistência em prisões, tráfico de drogas, crimes de trânsito, Lei Maria da Penha e Habeas Corpus.",
+    data: "05/06/2025",
+    categoria: "direito-criminal",
+    categoriaLabel: "⚖️ Direito Criminal",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "Defesa em Casos de Caça-Níquel, Jogo do Bicho e Máquinas de Ursinho | Dra. Vera Catarina",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/defesa-em-casos-de-caca-niquel-jogo-do.html",
+    resumo: "Defesa contra acusações criminais por operação de jogos ilegais. Atuação para reconhecimento da legalidade de máquinas lúdicas.",
+    data: "10/06/2025",
+    categoria: "direito-criminal",
+    categoriaLabel: "⚖️ Direito Criminal",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "Busca e Apreensão de Veículos? Saiba Como Evitar e Reverter | Advogado Especializado",
+    link: "https://advocaciasapucaia.blogspot.com/2025/06/busca-e-apreensao-de-veiculos-saiba.html",
+    resumo: "Apreensão do veículo pode trazer prejuízos financeiros. Saiba como suspender a ordem de apreensão, negociar com bancos e recuperar o veículo.",
+    data: "17/06/2025",
+    categoria: "direito-consumidor",
+    categoriaLabel: "🛒 Direito do Consumidor",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "Direito Trabalhista: Defender Seus Direitos é Valorizar Sua História de Trabalho",
+    link: "https://advocaciasapucaia.blogspot.com/2016/10/direito-trabalhista-defenda-seus.html",
+    resumo: "Assédio moral, desvio de função, horas extras não pagas, justa causa injusta e acidente de trabalho. Saiba como a lei protege você.",
+    data: "15/04/2016",
+    categoria: "direito-trabalhista",
+    categoriaLabel: "📋 Direito Trabalhista",
+    imagem: "",
+    destaque: false
+  },
+  {
+    titulo: "Pejotização e Novas Formas de Trabalho: Desafios Éticos e Jurídicos em 2026",
+    link: "https://advocaciasapucaia.blogspot.com/2026/04/pejotizacao-e-novas-formas-de-trabalho.html",
+    resumo: "A pejotização e a 'falsa autonomia' continuam sendo pontos de atenção no Direito do Trabalho. Atuação tanto na defesa de trabalhadores quanto na consultoria a empresas.",
+    data: "10/04/2026",
+    categoria: "direito-trabalhista",
+    categoriaLabel: "📋 Direito Trabalhista",
+    imagem: "",
+    destaque: false
+  },
+
+  // ==========================================================
+  //  BLOCO 5: POSTAGENS COM HORÁRIO (Agosto 2026)
+  // ==========================================================
+  {
+    titulo: "ECA nas relações familiares: Guarda, convivência e pensão sempre com foco no desenvolvimento saudável",
+    link: "https://veracatarina.adv.br/noticias/eca-relacoes-familiares-guarda-pensao.html",
+    resumo: "Em disputas de guarda, visitas e pensão, o ECA exige que o interesse superior da criança seja prioridade. Saiba como a lei protege o vínculo familiar.",
+    data: "01/08/2026",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/eca-relacoes-familiares-guarda-convivencia-pensao.png",
+    destaque: false
+  },
+  {
+    titulo: "Situações urgentes envolvendo crianças e adolescentes: Conte com atendimento imediato",
+    link: "https://veracatarina.adv.br/noticias/atendimento-24h-urgente-criancas.html",
+    resumo: "Violações de direitos de menores exigem providências rápidas. Conte com atendimento online 24h por WhatsApp para medidas protetivas e remoção de conteúdo.",
+    data: "02/08/2026",
+    horario: "08:00",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/atendimento-24h-urgente-criancas-adolescentes.png",
+    destaque: false
+  },
+  {
+    titulo: "Como limpar o nome no SPC e SERASA mesmo com dívidas: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/limpar-nome-spc-serasa-guia.html",
+    resumo: "Seu nome está negativado? Saiba como limpar o nome no SPC e SERASA, quais são seus direitos como consumidor e como pedir indenização por danos morais.",
+    data: "02/08/2026",
+    horario: "14:00",
+    categoria: "direito-consumidor",
+    categoriaLabel: "🛒 Direito do Consumidor",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-spc-serasa-guia-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Golpe do PIX: o que fazer juridicamente para recuperar seu dinheiro",
+    link: "https://veracatarina.adv.br/noticias/golpe-do-pix-como-recuperar-dinheiro.html",
+    resumo: "Vítima de golpe do PIX? Saiba quais medidas judiciais tomar, como pedir indenização ao banco e como agir imediatamente para tentar recuperar o valor perdido. Atendimento online 24h.",
+    data: "03/08/2026",
+    horario: "08:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-como-recuperar-dinheiro-advocacia-vera-catarina.jpg",
+    destaque: true
+  },
+  {
+    titulo: "Assédio moral no trabalho: como provar e pedir indenização",
+    link: "https://veracatarina.adv.br/noticias/assedio-moral-trabalho-provar.html",
+    resumo: "Você sofre assédio moral no trabalho? Saiba como provar, quais são seus direitos e como pedir indenização por danos morais. Atendimento online 24h.",
+    data: "03/08/2026",
+    horario: "14:00",
+    categoria: "direito-trabalhista",
+    categoriaLabel: "📋 Direito Trabalhista",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-trabalho-provar-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "WhatsApp hackeado: como agir e quais medidas judiciais tomar",
+    link: "https://veracatarina.adv.br/noticias/whatsapp-hackeado-como-agir.html",
+    resumo: "Seu WhatsApp foi hackeado? Saiba quais medidas imediatas tomar, como registrar boletim de ocorrência, quais ações judiciais cabíveis e como proteger seus dados. Atendimento online 24h.",
+    data: "04/08/2026",
+    horario: "08:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-como-agir-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "🎉 Feliz Aniversário, Dra. Vera Catarina! 40 anos de dedicação à Justiça e à Educação",
+    link: "https://veracatarina.adv.br/noticias/feliz-aniversario-dra-vera-catarina.html",
+    resumo: "Hoje é um dia especial! Celebramos o aniversário da Dra. Vera Catarina, uma vida dedicada à Justiça e à Educação. Conheça sua história, sua família e os livros de seu filho Fábio Wlademir.",
+    data: "04/08/2026",
+    horario: "13:00",
+    categoria: "institucional",
+    categoriaLabel: "🎉 Institucional",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/feliz-aniversario-dra-vera-catarina-familia.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como dar entrada na execução de alimentos: guia completo para o credor",
+    link: "https://veracatarina.adv.br/noticias/execucao-de-alimentos-guia-credor.html",
+    resumo: "O devedor de pensão alimentícia não pagou? Saiba como dar entrada na execução de alimentos, quais os ritos disponíveis (prisão ou penhora) e como funciona a cumulação de execuções no STJ.",
+    data: "05/08/2026",
+    horario: "09:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/execucao-de-alimentos-guia-credor-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como solicitar aposentadoria por tempo de contribuição: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/aposentadoria-tempo-contribuicao-guia.html",
+    resumo: "Como solicitar aposentadoria por tempo de contribuição em 2026? Guia completo com requisitos, documentos, cálculo e orientação jurídica. Atendimento online 24h.",
+    data: "05/08/2026",
+    horario: "14:00",
+    categoria: "direito-previdenciario",
+    categoriaLabel: "📜 Direito Previdenciário",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-tempo-contribuicao-guia-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Execução de alimentos: defesa do executado – quais são seus direitos",
+    link: "https://veracatarina.adv.br/noticias/execucao-de-alimentos-defesa.html",
+    resumo: "Foi citado em uma execução de alimentos? Saiba quais são seus direitos, como se defender, quais os prazos e como evitar a prisão civil.",
+    data: "06/08/2026",
+    horario: "09:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/execucao-de-alimentos-defesa-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Fraudes bancárias online: como se proteger e pedir indenização",
+    link: "https://veracatarina.adv.br/noticias/fraudes-bancarias-indenizacao.html",
+    resumo: "Vítima de fraude bancária online? Saiba como se proteger, quais são seus direitos, como pedir indenização ao banco e quais medidas judiciais tomar.",
+    data: "06/08/2026",
+    horario: "14:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/fraudes-bancarias-indenizacao-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Guarda compartilhada: como funciona na prática e quais os direitos dos pais",
+    link: "https://veracatarina.adv.br/noticias/guarda-compartilhada-direitos.html",
+    resumo: "A guarda compartilhada é a regra no Brasil. Entenda como funciona na prática, quais os direitos e deveres dos pais e como ela beneficia os filhos.",
+    data: "07/08/2026",
+    horario: "09:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-compartilhada-direitos-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "O que fazer se seu filho for vítima de cyberbullying ou exposição indevida em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/cyberbullying-infantil-o-que-fazer-sapucaia.html",
+    resumo: "Seu filho sofreu cyberbullying ou teve imagens expostas indevidamente em Sapucaia do Sul? Saiba como agir, quais medidas legais tomar e como proteger seus direitos com base no ECA Digital. Atendimento em Sapucaia do Sul, Canoas, São Leopoldo, Esteio e Porto Alegre.",
+    data: "07/08/2026",
+    horario: "14:00",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/cyberbullying-infantil-o-que-fazer-sapucaia-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como limpar o nome no SPC em Sapucaia do Sul: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/limpar-nome-spc-sapucaia-do-sul.html",
+    resumo: "Seu nome está negativado em Sapucaia do Sul? Saiba como limpar o nome no SPC, quais são seus direitos como consumidor e como pedir indenização por danos morais. Atendimento em Sapucaia do Sul e região.",
+    data: "08/08/2026",
+    horario: "09:00",
+    categoria: "direito-consumidor",
+    categoriaLabel: "🛒 Direito do Consumidor",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-spc-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como recuperar dinheiro de golpe do Pix em Sapucaia do Sul: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/golpe-do-pix-sapucaia-do-sul.html",
+    resumo: "Vítima de golpe do Pix em Sapucaia do Sul? Saiba quais medidas judiciais tomar, como pedir indenização ao banco e como agir imediatamente para recuperar o valor perdido. Atendimento em Sapucaia do Sul, Canoas, São Leopoldo, Esteio e Porto Alegre.",
+    data: "10/08/2026",
+    horario: "09:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/golpe-do-pix-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como pedir pensão alimentícia em Esteio: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/pensao-alimenticia-esteio.html",
+    resumo: "Como pedir pensão alimentícia em Esteio? Entenda quem tem direito, quais documentos reunir, como calcular o valor e quando procurar uma advogada especializada em Esteio e região.",
+    data: "10/08/2026",
+    horario: "14:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pensao-alimenticia-esteio-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Advogado criminal em Canoas: o que fazer em caso de prisão",
+    link: "https://veracatarina.adv.br/noticias/advogado-criminal-canoas-prisao.html",
+    resumo: "Preso em flagrante em Canoas? Saiba quais são seus direitos, como funciona o Habeas Corpus, a audiência de custódia e como contratar um advogado criminal em Canoas e região.",
+    data: "11/08/2026",
+    horario: "09:00",
+    categoria: "direito-criminal",
+    categoriaLabel: "⚖️ Direito Criminal",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/advogado-criminal-canoas-prisao-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como limpar o nome em São Leopoldo: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/limpar-nome-sao-leopoldo.html",
+    resumo: "Seu nome está negativado em São Leopoldo? Saiba como limpar o nome no SPC e SERASA, quais são seus direitos como consumidor e como pedir indenização por danos morais em São Leopoldo.",
+    data: "11/08/2026",
+    horario: "14:00",
+    categoria: "direito-consumidor",
+    categoriaLabel: "🛒 Direito do Consumidor",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-sao-leopoldo-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como pedir guarda dos filhos em Gravataí: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/guarda-dos-filhos-gravatai.html",
+    resumo: "Como pedir guarda dos filhos em Gravataí? Entenda os tipos de guarda, como funciona o processo judicial, quais os direitos dos pais e como garantir o bem-estar das crianças. Atendimento em Gravataí e região.",
+    data: "12/08/2026",
+    horario: "09:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-dos-filhos-gravatai-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como fazer inventário em Cachoeirinha: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/inventario-cachoeirinha.html",
+    resumo: "Como fazer inventário em Cachoeirinha? Entenda como funciona, quais os prazos, documentos necessários e quando contratar um advogado especializado. Atendimento em Cachoeirinha e região.",
+    data: "12/08/2026",
+    horario: "14:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/inventario-cachoeirinha-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Advogado para fraudes bancárias em Porto Alegre: como agir e pedir indenização",
+    link: "https://veracatarina.adv.br/noticias/fraudes-bancarias-porto-alegre.html",
+    resumo: "Vítima de fraude bancária em Porto Alegre? Saiba como agir, quais medidas judiciais tomar, como pedir indenização ao banco e proteger seus direitos. Atendimento em Porto Alegre e região.",
+    data: "13/08/2026",
+    horario: "09:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/fraudes-bancarias-porto-alegre-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como solicitar aposentadoria em São Leopoldo: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/aposentadoria-sao-leopoldo.html",
+    resumo: "Como solicitar aposentadoria em São Leopoldo em 2026? Guia completo com requisitos, documentos, cálculo e orientação jurídica. Atendimento em São Leopoldo e região.",
+    data: "13/08/2026",
+    horario: "14:00",
+    categoria: "direito-previdenciario",
+    categoriaLabel: "📜 Direito Previdenciário",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-sao-leopoldo-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Assédio moral no trabalho em Canoas: como provar e pedir indenização",
+    link: "https://veracatarina.adv.br/noticias/assedio-moral-canoas.html",
+    resumo: "Você sofre assédio moral no trabalho em Canoas? Saiba como provar, quais são seus direitos, como pedir indenização por danos morais e como agir legalmente. Atendimento em Canoas e região.",
+    data: "14/08/2026",
+    horario: "09:00",
+    categoria: "direito-trabalhista",
+    categoriaLabel: "📋 Direito Trabalhista",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-canoas-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como pedir indenização por erro médico em Sapucaia do Sul: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/erro-medico-sapucaia-do-sul.html",
+    resumo: "Vítima de erro médico em Sapucaia do Sul? Saiba como pedir indenização, quais documentos reunir, como comprovar o erro e quais são seus direitos como paciente. Atendimento em Sapucaia do Sul e região.",
+    data: "14/08/2026",
+    horario: "14:00",
+    categoria: "direito-consumidor",
+    categoriaLabel: "🛒 Direito do Consumidor",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/erro-medico-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como funciona a guarda compartilhada em Esteio: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/guarda-compartilhada-esteio.html",
+    resumo: "Como funciona a guarda compartilhada em Esteio? Entenda os direitos dos pais, como funciona na prática e como ela beneficia os filhos. Atendimento em Esteio e região.",
+    data: "15/08/2026",
+    horario: "09:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-compartilhada-esteio-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+
+  // ==========================================================
+  //  BLOCO 6: SEMANA READEQUADA (17/08 a 22/08)
+  // ==========================================================
+  {
+    titulo: "Fraudes bancárias online: como pedir indenização",
+    link: "https://veracatarina.adv.br/noticias/fraudes-bancarias-online-indenizacao.html",
+    resumo: "Vítima de fraude bancária online? Saiba como pedir indenização ao banco, quais documentos reunir, como comprovar o erro e quais são seus direitos como consumidor. Atendimento em Sapucaia do Sul e região.",
+    data: "17/08/2026",
+    horario: "09:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/fraudes-bancarias-online-indenizacao-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como coletar e preservar provas digitais",
+    link: "https://veracatarina.adv.br/noticias/provas-digitais-como-coletar.html",
+    resumo: "Aprenda como coletar e preservar provas digitais corretamente para usar em ações judiciais. Guia completo com prints, e-mails, perícia e tudo que a lei exige. Atendimento em Sapucaia do Sul e região.",
+    data: "17/08/2026",
+    horario: "14:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/provas-digitais-como-coletar-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Vazamento de dados: como pedir indenização",
+    link: "https://veracatarina.adv.br/noticias/vazamento-dados-indenizacao.html",
+    resumo: "Teve seus dados vazados? Saiba como pedir indenização por danos morais e materiais com base na LGPD. Guia completo com direitos, provas e como agir. Atendimento em Sapucaia do Sul e região.",
+    data: "18/08/2026",
+    horario: "09:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/vazamento-dados-indenizacao-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como pedir pensão alimentícia em Canoas: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/pensao-alimenticia-canoas.html",
+    resumo: "Saiba como pedir pensão alimentícia em Canoas: quem tem direito, como calcular o valor, documentos necessários e como funciona a execução. Atendimento em Canoas e região.",
+    data: "18/08/2026",
+    horario: "14:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pensao-alimenticia-canoas-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como limpar o nome em Gravataí: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/limpar-nome-gravatai.html",
+    resumo: "Saiba como limpar o nome em Gravataí: quais são seus direitos, como negociar dívidas, como funciona a negativação e como pedir indenização por danos morais. Atendimento em Gravataí e região.",
+    data: "19/08/2026",
+    horario: "09:00",
+    categoria: "direito-consumidor",
+    categoriaLabel: "🛒 Direito do Consumidor",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/limpar-nome-gravatai-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Advogado criminal em São Leopoldo: como escolher o melhor",
+    link: "https://veracatarina.adv.br/noticias/advogado-criminal-sao-leopoldo.html",
+    resumo: "Precisa de um advogado criminal em São Leopoldo? Saiba como escolher o melhor profissional para sua defesa, quais critérios avaliar e como funciona a atuação criminal. Atendimento em São Leopoldo e região.",
+    data: "19/08/2026",
+    horario: "14:00",
+    categoria: "direito-criminal",
+    categoriaLabel: "⚖️ Direito Criminal",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/advogado-criminal-sao-leopoldo-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como fazer inventário em Esteio: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/inventario-esteio.html",
+    resumo: "Saiba como fazer inventário em Esteio: quais os tipos de inventário, documentos necessários, prazos, custos e como funciona a partilha de bens. Atendimento em Esteio e região.",
+    data: "20/08/2026",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/inventario-esteio-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como recuperar dinheiro de golpe do PIX em Canoas",
+    link: "https://veracatarina.adv.br/noticias/recuperar-dinheiro-golpe-pix-canoas.html",
+    resumo: "Vítima de golpe do PIX em Canoas? Saiba como recuperar seu dinheiro, quais medidas tomar imediatamente, como acionar o banco e como pedir indenização. Atendimento em Canoas e região.",
+    data: "20/08/2026",
+    horario: "14:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/recuperar-dinheiro-golpe-pix-canoas-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como solicitar aposentadoria em Gravataí: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/aposentadoria-gravatai.html",
+    resumo: "Saiba como solicitar aposentadoria em Gravataí: quais os tipos de aposentadoria, requisitos, documentos necessários, como calcular o valor e como funciona o processo no INSS. Atendimento em Gravataí e região.",
+    data: "21/08/2026",
+    horario: "09:00",
+    categoria: "direito-previdenciario",
+    categoriaLabel: "📜 Direito Previdenciário",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/aposentadoria-gravatai-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Assédio moral no trabalho em São Leopoldo: como provar e pedir indenização",
+    link: "https://veracatarina.adv.br/noticias/assedio-moral-sao-leopoldo.html",
+    resumo: "Vítima de assédio moral no trabalho em São Leopoldo? Saiba como provar, quais são seus direitos, como pedir indenização por danos morais e como agir legalmente. Atendimento em São Leopoldo e região.",
+    data: "21/08/2026",
+    horario: "14:00",
+    categoria: "direito-trabalhista",
+    categoriaLabel: "📋 Direito Trabalhista",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-sao-leopoldo-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como funciona a usucapião em Cachoeirinha: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/usucapiao-cachoeirinha.html",
+    resumo: "Saiba como funciona a usucapião em Cachoeirinha: requisitos, prazos, documentos necessários, tipos de usucapião e como dar entrada no processo. Atendimento em Cachoeirinha e região.",
+    data: "22/08/2026",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/usucapiao-cachoeirinha-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+  titulo: "Semana Nacional da Pessoa com Deficiência em Sapucaia do Sul: direitos, inclusão e acessibilidade",
+  link: "https://veracatarina.adv.br/noticias/semana-nacional-pessoa-deficiencia-sapucaia-do-sul.html",
+  resumo: "Saiba quais são os direitos das pessoas com deficiência em Sapucaia do Sul durante a Semana Nacional (21 a 28/08). Conheça a LBI, acessibilidade e como a Dra. Vera Catarina pode ajudar.",
+  data: "23/08/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/semana-nacional-pessoa-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+
+  // ==========================================================
+  //  BLOCO 7: NOVAS POSTAGENS (24/08 a 26/08)
+  // ==========================================================
+  {
+    titulo: "Empresa cobrando dívida indevida em Canoas? Saiba como agir",
+    link: "https://veracatarina.adv.br/noticias/divida-indevida-canoas.html",
+    resumo: "Recebeu cobrança indevida em Canoas? Saiba como identificar, o que fazer, seus direitos, como pedir indenização por danos morais e como agir legalmente. Atendimento em Canoas e região.",
+    data: "24/08/2026",
+    horario: "09:00",
+    categoria: "direito-consumidor",
+    categoriaLabel: "🛒 Direito do Consumidor",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divida-indevida-canoas-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Advogado para divórcio consensual em São Leopoldo: como escolher",
+    link: "https://veracatarina.adv.br/noticias/divorcio-consensual-sao-leopoldo.html",
+    resumo: "Precisa de um advogado para divórcio consensual em São Leopoldo? Saiba como escolher, quais os custos, documentos necessários e como funciona o processo. Atendimento em São Leopoldo e região.",
+    data: "24/08/2026",
+    horario: "14:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divorcio-consensual-sao-leopoldo-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+  titulo: "O que é capacitismo? Entenda e saiba como combater em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/capacitismo-o-que-e-sapucaia-do-sul.html",
+  resumo: "O que é capacitismo? Entenda essa forma de discriminação contra pessoas com deficiência, como ela se manifesta, o que a lei diz e como combater em Sapucaia do Sul. Atendimento da Dra. Vera Catarina.",
+  data: "24/08/2026",
+  horario: "17:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/capacitismo-o-que-e-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+    titulo: "Quais são os direitos do trabalhador em Esteio: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/direitos-trabalhador-esteio.html",
+    resumo: "Conheça os direitos do trabalhador em Esteio: FGTS, férias, 13º salário, horas extras, rescisão, assédio moral e muito mais. Atendimento em Esteio e região.",
+    data: "25/08/2026",
+    horario: "09:00",
+    categoria: "direito-trabalhista",
+    categoriaLabel: "📋 Direito Trabalhista",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/direitos-trabalhador-esteio-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como pedir revisão de aposentadoria em Porto Alegre: guia completo",
+    link: "https://veracatarina.adv.br/noticias/revisao-aposentadoria-porto-alegre.html",
+    resumo: "Seu benefício está menor do que deveria? Saiba como pedir revisão de aposentadoria em Porto Alegre, quais os tipos de revisão, documentos necessários e como aumentar seu benefício. Atendimento em Porto Alegre e região.",
+    data: "25/08/2026",
+    horario: "14:00",
+    categoria: "direito-previdenciario",
+    categoriaLabel: "📜 Direito Previdenciário",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/revisao-aposentadoria-porto-alegre-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+  titulo: "Benefício de Prestação Continuada (BPC/LOAS): guia completo para solicitar em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/loas-bpc-guia-completo-sapucaia-do-sul.html",
+  resumo: "Saiba como solicitar o Benefício de Prestação Continuada (BPC/LOAS) em Sapucaia do Sul: quem tem direito, documentos, como funciona a avaliação e como dar entrada no pedido. Atendimento da Dra. Vera Catarina.",
+  data: "25/08/2026",
+  horario: "17:00",
+  categoria: "direito-previdenciario",
+  categoriaLabel: "📜 Direito Previdenciário",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/loas-bpc-guia-completo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+    titulo: "Advogado criminal em Cachoeirinha: como escolher e quando procurar",
+    link: "https://veracatarina.adv.br/noticias/advogado-criminal-cachoeirinha.html",
+    resumo: "Precisa de um advogado criminal em Cachoeirinha? Saiba quando procurar, como escolher o melhor profissional, quais critérios avaliar e como funciona a defesa criminal. Atendimento em Cachoeirinha e região.",
+    data: "26/08/2026",
+    horario: "09:00",
+    categoria: "direito-criminal",
+    categoriaLabel: "⚖️ Direito Criminal",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/advogado-criminal-cachoeirinha-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "O que fazer se seu WhatsApp for hackeado em Canoas: guia completo",
+    link: "https://veracatarina.adv.br/noticias/whatsapp-hackeado-canoas.html",
+    resumo: "Seu WhatsApp foi hackeado em Canoas? Saiba o que fazer imediatamente, como recuperar sua conta, como evitar golpes e quais medidas legais tomar. Atendimento em Canoas e região.",
+    data: "26/08/2026",
+    horario: "14:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-canoas-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+
+  // ==========================================================
+  //  BLOCO 8: POSTAGENS PENDENTES (27/08 a 31/08)
+  // ==========================================================
+  {
+    titulo: "Como pedir indenização por erro médico em São Leopoldo",
+    link: "https://veracatarina.adv.br/noticias/erro-medico-sao-leopoldo.html",
+    resumo: "Vítima de erro médico em São Leopoldo? Saiba como pedir indenização, quais documentos reunir, como comprovar o erro e quais são seus direitos. Atendimento em São Leopoldo e região.",
+    data: "27/08/2026",
+    horario: "09:00",
+    categoria: "direito-consumidor",
+    categoriaLabel: "🛒 Direito do Consumidor",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/erro-medico-sao-leopoldo-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Advogado para inventário em Porto Alegre: como escolher",
+    link: "https://veracatarina.adv.br/noticias/inventario-porto-alegre.html",
+    resumo: "Precisa de um advogado para inventário em Porto Alegre? Saiba como escolher, quais os custos, documentos necessários e como funciona o processo. Atendimento em Porto Alegre e região.",
+    data: "27/08/2026",
+    horario: "14:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/inventario-porto-alegre-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como funciona a guarda compartilhada em Esteio: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/guarda-compartilhada-esteio.html",
+    resumo: "Saiba como funciona a guarda compartilhada em Esteio: direitos e deveres dos pais, como é definida a guarda, documentos necessários e como pedir. Atendimento em Esteio e região.",
+    data: "28/08/2026",
+    horario: "09:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-compartilhada-esteio-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Como pedir pensão alimentícia em Cachoeirinha: guia completo 2026",
+    link: "https://veracatarina.adv.br/noticias/pensao-alimenticia-cachoeirinha.html",
+    resumo: "Saiba como pedir pensão alimentícia em Cachoeirinha: quem tem direito, como calcular o valor, documentos necessários e como funciona a execução. Atendimento em Cachoeirinha e região.",
+    data: "28/08/2026",
+    horario: "14:00",
+    categoria: "direito-familia",
+    categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pensao-alimenticia-cachoeirinha-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "ECA Digital: quais são os direitos de crianças e adolescentes na internet?",
+    link: "https://veracatarina.adv.br/noticias/eca-digital-direitos-criancas.html",
+    resumo: "Saiba quais são os direitos de crianças e adolescentes na internet com base no ECA Digital: proteção de dados, remoção de conteúdo, responsabilidade das plataformas e muito mais.",
+    data: "29/08/2026",
+    horario: "09:00",
+    categoria: "infancia",
+    categoriaLabel: "👶 Infância e Juventude",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/eca-digital-direitos-criancas-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Contrato empresarial: quais cuidados uma empresa deve tomar antes de assinar?",
+    link: "https://veracatarina.adv.br/noticias/contrato-empresarial-cuidados.html",
+    resumo: "Saiba quais cuidados uma empresa deve tomar antes de assinar um contrato: cláusulas essenciais, riscos, negociação e como evitar problemas jurídicos. Atendimento em toda a região.",
+    data: "31/08/2026",
+    horario: "09:00",
+    categoria: "direito-empresarial",
+    categoriaLabel: "🏢 Direito Empresarial",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/contrato-empresarial-cuidados-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Provas digitais: como preservar mensagens, áudios, imagens e documentos para uso em processo",
+    link: "https://veracatarina.adv.br/noticias/provas-digitais-preservar.html",
+    resumo: "Aprenda como preservar provas digitais para uso em processos judiciais: mensagens, áudios, imagens, documentos e tudo que a lei exige para validade da prova.",
+    data: "31/08/2026",
+    horario: "14:00",
+    categoria: "provas-digitais",
+    categoriaLabel: "🔐 Provas Digitais",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/provas-digitais-preservar-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+  titulo: "Dia Nacional de Luta das Pessoas com Deficiência (21/09): o que a lei garante em Sapucaia do Sul?",
+  link: "https://veracatarina.adv.br/noticias/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul.html",
+  resumo: "Dia Nacional de Luta das Pessoas com Deficiência (21/09): saiba o que a lei garante em Sapucaia do Sul. Conheça a LBI, Setembro Verde e como a Dra. Vera Catarina pode ajudar.",
+  data: "21/09/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Dia Nacional do Surdo: a importância da Libras para a inclusão em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-nacional-surdo-libras-sapucaia-do-sul.html",
+  resumo: "Dia Nacional do Surdo (26/09): saiba a importância da Libras para a inclusão em Sapucaia do Sul. Conheça os direitos da pessoa surda, a Lei de Libras e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "26/09/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-surdo-libras-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Dia Nacional da Pessoa com Deficiência Física: direitos, acessibilidade e LOAS em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-fisica-sapucaia-do-sul.html",
+  resumo: "Dia Nacional da Pessoa com Deficiência Física (11/10): saiba quais são os direitos, acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "11/10/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-fisica-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Dia Internacional da Pessoa com Deficiência: direitos, acessibilidade e inclusão em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-internacional-pessoa-deficiencia-sapucaia-do-sul.html",
+  resumo: "Dia Internacional da Pessoa com Deficiência (03/12): saiba quais são os direitos garantidos pela LBI, como funciona a acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "03/12/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-internacional-pessoa-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Dia Nacional da Pessoa com Deficiência Visual: acessibilidade e direitos em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-visual-sapucaia-do-sul.html",
+  resumo: "Dia Nacional da Pessoa com Deficiência Visual (13/12): saiba quais são os direitos, acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "13/12/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-visual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Dia Internacional da Síndrome de Down: inclusão, afeto e direitos em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-sindrome-down-sapucaia-do-sul.html",
+  resumo: "Dia Internacional da Síndrome de Down (21/03): saiba quais são os direitos, a inclusão em Sapucaia do Sul, como solicitar o LOAS/BPC e conheça a história da Dra. Vera Catarina e sua filha Fabrícia.",
+  data: "21/03/2027",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-sindrome-down-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Dia Mundial de Conscientização do Autismo: direitos e LOAS em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-autismo-sapucaia-do-sul.html",
+  resumo: "Dia Mundial de Conscientização do Autismo (02/04): saiba quais são os direitos da pessoa com Transtorno do Espectro Autista (TEA), como solicitar o LOAS/BPC em Sapucaia do Sul e como a Dra. Vera Catarina pode ajudar.",
+  data: "02/04/2027",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-autismo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Dia Nacional da Deficiência Intelectual: direitos e inclusão em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-intelectual-sapucaia-do-sul.html",
+  resumo: "Dia Nacional da Deficiência Intelectual (22/04): saiba quais são os direitos, a inclusão em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "22/04/2027",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-intelectual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
+  titulo: "Dia Nacional da Libras: a língua que conecta e inclui em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-nacional-libras-sapucaia-do-sul.html",
+  resumo: "Dia Nacional da Libras (24/04): saiba a importância da Língua Brasileira de Sinais para a inclusão em Sapucaia do Sul, os direitos da comunidade surda e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "24/04/2027",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-libras-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+}
+];
+
+// ==========================================================
+//  NÃO MODIFICAR A LINHA ABAIXO (exportação)
+// ==========================================================
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = posts;
+}
+// ==========================================================
+//  TEMPLATE PARA NOVAS POSTAGENS (COPIAR E COLAR)
+//  Remova os comentários /* e */ quando for usar
+// ==========================================================
+/*
+{
+  titulo: "Título da postagem",
+  link: "https://veracatarina.github.io/noticias/slug-da-postagem.html",
+  resumo: "Resumo da postagem...",
+  data: "DD/MM/AAAA",
+  horario: "HH:MM",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/nome-da-imagem.jpg",
+  destaque: false
+},
+{
+  titulo: "Outro título",
+  link: "https://veracatarina.github.io/noticias/outro-slug.html",
+  resumo: "Outro resumo...",
+  data: "DD/MM/AAAA",
+  horario: "HH:MM",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/outra-imagem.jpg",
+  destaque: false
+}
+*/
+// ==========================================================
+//  CATEGORIAS DISPONÍVEIS:
+//  direito-digital, direito-criminal, direito-familia,
+//  direito-trabalhista, direito-consumidor, direitos-cidadao,
+//  infancia, direito-previdenciario, direito-empresarial,
+//  direito-civil, provas-digitais, correspondente, institucional
+// ==========================================================
