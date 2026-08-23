@@ -862,7 +862,18 @@ const posts = [
     categoriaLabel: "🔐 Provas Digitais",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/provas-digitais-preservar-advocacia-vera-catarina.jpg",
     destaque: false
-  }
+  },
+  {
+  titulo: "Dia Nacional de Luta das Pessoas com Deficiência (21/09): o que a lei garante em Sapucaia do Sul?",
+  link: "https://veracatarina.adv.br/noticias/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul.html",
+  resumo: "Dia Nacional de Luta das Pessoas com Deficiência (21/09): saiba o que a lei garante em Sapucaia do Sul. Conheça a LBI, Setembro Verde e como a Dra. Vera Catarina pode ajudar.",
+  data: "21/09/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+}
 ];
 
 // ==========================================================
