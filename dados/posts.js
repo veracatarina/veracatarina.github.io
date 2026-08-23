@@ -908,6 +908,17 @@ const posts = [
   destaque: false
 },
   {
+  titulo: "Dia Nacional da Pessoa com Deficiência Física: direitos, acessibilidade e LOAS em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-fisica-sapucaia-do-sul.html",
+  resumo: "Dia Nacional da Pessoa com Deficiência Física (11/10): saiba quais são os direitos, acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "11/10/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-fisica-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
   titulo: "Dia Internacional da Pessoa com Deficiência: direitos, acessibilidade e inclusão em Sapucaia do Sul",
   link: "https://veracatarina.adv.br/noticias/dia-internacional-pessoa-deficiencia-sapucaia-do-sul.html",
   resumo: "Dia Internacional da Pessoa com Deficiência (03/12): saiba quais são os direitos garantidos pela LBI, como funciona a acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
