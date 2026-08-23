@@ -961,6 +961,17 @@ const posts = [
   categoriaLabel: "🏛️ Direito Civil",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-autismo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Dia Nacional da Deficiência Intelectual: direitos e inclusão em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-intelectual-sapucaia-do-sul.html",
+  resumo: "Dia Nacional da Deficiência Intelectual (22/04): saiba quais são os direitos, a inclusão em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+  data: "22/04/2027",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-intelectual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
