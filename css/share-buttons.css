@@ -1,0 +1,169 @@
+/* ========================================================== */
+/*  BOTÕES DE COMPARTILHAMENTO FLUTUANTES - GLOBAL            */
+/* ========================================================== */
+
+/* ===== BOTÕES PRINCIPAIS ===== */
+.share-buttons {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 8px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.share-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: white;
+  position: relative;
+  text-decoration: none;
+}
+
+.share-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn .tooltip {
+  position: absolute;
+  right: 52px;
+  background: #1e293b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.share-btn:hover .tooltip {
+  opacity: 1;
+}
+
+/* ===== CORES DOS BOTÕES ===== */
+.share-btn-whatsapp { background: #25D366; }
+.share-btn-facebook { background: #1877F2; }
+.share-btn-linkedin { background: #0A66C2; }
+.share-btn-twitter { background: #000000; }
+.share-btn-telegram { background: #26A5E4; }
+.share-btn-email { background: #EA4335; }
+.share-btn-copy { background: #64748B; }
+.share-btn-copy.copied { background: #22c55e; }
+
+/* ===== BOTÕES INSTAGRAM ===== */
+.share-btn-instagram-feed {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.share-btn-instagram-story {
+  background: linear-gradient(45deg, #f56040 0%, #fd1d1d 50%, #f56040 100%);
+}
+.share-btn-instagram-bio {
+  background: #405DE6;
+}
+
+/* ===== TOGGLE MOBILE ===== */
+.share-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #c5a880;
+  background: #0b251e;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  bottom: 150px;
+  right: 15px;
+  z-index: 9998;
+}
+
+.share-toggle:hover {
+  background: #c5a880;
+  color: #0b251e;
+  transform: scale(1.05);
+}
+
+.share-buttons.hidden {
+  display: none;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 992px) {
+  .share-buttons {
+    position: fixed;
+    bottom: 90px;
+    top: auto;
+    right: 15px;
+    transform: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 12px;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(197, 168, 128, 0.2);
+    max-width: 90vw;
+    width: auto;
+  }
+
+  .share-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .share-btn .tooltip {
+    display: none;
+  }
+
+  .share-toggle {
+    display: flex;
+  }
+
+  .share-buttons.hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .share-buttons {
+    bottom: 80px;
+    right: 10px;
+    padding: 6px 10px;
+    gap: 4px;
+  }
+
+  .share-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+}
