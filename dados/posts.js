@@ -939,6 +939,17 @@ const posts = [
   categoriaLabel: "🏛️ Direito Civil",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-visual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
   destaque: false
+},
+  {
+  titulo: "Dia Internacional da Síndrome de Down: inclusão, afeto e direitos em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/dia-sindrome-down-sapucaia-do-sul.html",
+  resumo: "Dia Internacional da Síndrome de Down (21/03): saiba quais são os direitos, a inclusão em Sapucaia do Sul, como solicitar o LOAS/BPC e conheça a história da Dra. Vera Catarina e sua filha Fabrícia.",
+  data: "21/03/2027",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-sindrome-down-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
 }
 ];
 
