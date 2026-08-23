@@ -714,7 +714,7 @@ const posts = [
 },
 
   // ==========================================================
-  //  BLOCO 7: NOVAS POSTAGENS (24/08 a 26/08)
+  //  BLOCO 7: POSTAGENS 24/08 a 26/08 (COM AJUSTES)
   // ==========================================================
   {
     titulo: "Empresa cobrando dívida indevida em Canoas? Saiba como agir",
@@ -738,28 +738,28 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divorcio-consensual-sao-leopoldo-advocacia-vera-catarina.jpg",
     destaque: false
   },
-{
-  titulo: "O que é um correspondente jurídico e quando contratar?",
-  link: "https://veracatarina.adv.br/noticias/correspondente-juridico-o-que-e.html",
-  resumo: "Saiba o que é um correspondente jurídico, quando contratar, quais serviços oferece e como ele pode otimizar sua atuação em Sapucaia do Sul e região. Atendimento B2B para advogados e escritórios.",
-  data: "24/08/2026",
-  horario: "15:30",
-  categoria: "correspondente",
-  categoriaLabel: "🤝 Correspondente Jurídico",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/correspondente-juridico-o-que-e-advocacia-vera-catarina.jpg",
-  destaque: false
-},
   {
-  titulo: "O que é capacitismo? Entenda e saiba como combater em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/capacitismo-o-que-e-sapucaia-do-sul.html",
-  resumo: "O que é capacitismo? Entenda essa forma de discriminação contra pessoas com deficiência, como ela se manifesta, o que a lei diz e como combater em Sapucaia do Sul. Atendimento da Dra. Vera Catarina.",
-  data: "24/08/2026",
-  horario: "17:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/capacitismo-o-que-e-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "O que é um correspondente jurídico e quando contratar?",
+    link: "https://veracatarina.adv.br/noticias/correspondente-juridico-o-que-e.html",
+    resumo: "Saiba o que é um correspondente jurídico, quando contratar, quais serviços oferece e como ele pode otimizar sua atuação em Sapucaia do Sul e região. Atendimento B2B para advogados e escritórios.",
+    data: "24/08/2026",
+    horario: "15:30",
+    categoria: "correspondente",
+    categoriaLabel: "🤝 Correspondente Jurídico",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/correspondente-juridico-o-que-e-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "O que é capacitismo? Entenda e saiba como combater em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/capacitismo-o-que-e-sapucaia-do-sul.html",
+    resumo: "O que é capacitismo? Entenda essa forma de discriminação contra pessoas com deficiência, como ela se manifesta, o que a lei diz e como combater em Sapucaia do Sul. Atendimento da Dra. Vera Catarina.",
+    data: "24/08/2026",
+    horario: "17:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/capacitismo-o-que-e-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
     titulo: "Quais são os direitos do trabalhador em Esteio: guia completo 2026",
     link: "https://veracatarina.adv.br/noticias/direitos-trabalhador-esteio.html",
@@ -783,16 +783,16 @@ const posts = [
     destaque: false
   },
   {
-  titulo: "Benefício de Prestação Continuada (BPC/LOAS): guia completo para solicitar em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/loas-bpc-guia-completo-sapucaia-do-sul.html",
-  resumo: "Saiba como solicitar o Benefício de Prestação Continuada (BPC/LOAS) em Sapucaia do Sul: quem tem direito, documentos, como funciona a avaliação e como dar entrada no pedido. Atendimento da Dra. Vera Catarina.",
-  data: "25/08/2026",
-  horario: "17:00",
-  categoria: "direito-previdenciario",
-  categoriaLabel: "📜 Direito Previdenciário",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/loas-bpc-guia-completo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Benefício de Prestação Continuada (BPC/LOAS): guia completo para solicitar em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/loas-bpc-guia-completo-sapucaia-do-sul.html",
+    resumo: "Saiba como solicitar o Benefício de Prestação Continuada (BPC/LOAS) em Sapucaia do Sul: quem tem direito, documentos, como funciona a avaliação e como dar entrada no pedido. Atendimento da Dra. Vera Catarina.",
+    data: "25/08/2026",
+    horario: "17:00",
+    categoria: "direito-previdenciario",
+    categoriaLabel: "📜 Direito Previdenciário",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/loas-bpc-guia-completo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
     titulo: "Advogado criminal em Cachoeirinha: como escolher e quando procurar",
     link: "https://veracatarina.adv.br/noticias/advogado-criminal-cachoeirinha.html",
@@ -804,20 +804,9 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/advogado-criminal-cachoeirinha-advocacia-vera-catarina.jpg",
     destaque: false
   },
-  {
-    titulo: "O que fazer se seu WhatsApp for hackeado em Canoas: guia completo",
-    link: "https://veracatarina.adv.br/noticias/whatsapp-hackeado-canoas.html",
-    resumo: "Seu WhatsApp foi hackeado em Canoas? Saiba o que fazer imediatamente, como recuperar sua conta, como evitar golpes e quais medidas legais tomar. Atendimento em Canoas e região.",
-    data: "26/08/2026",
-    horario: "14:00",
-    categoria: "direito-digital",
-    categoriaLabel: "💻 Direito Digital",
-    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-canoas-advocacia-vera-catarina.jpg",
-    destaque: false
-  },
-
   // ==========================================================
-  //  BLOCO 8: POSTAGENS PENDENTES (27/08 a 31/08)
+  //  BLOCO 8: POSTAGENS 27/08 a 28/08
+  //  (WhatsApp hackeado e Correspondente movidos para evitar flood)
   // ==========================================================
   {
     titulo: "Como pedir indenização por erro médico em São Leopoldo",
@@ -842,10 +831,36 @@ const posts = [
     destaque: false
   },
   {
+    titulo: "O que fazer se seu WhatsApp for hackeado em Canoas: guia completo",
+    link: "https://veracatarina.adv.br/noticias/whatsapp-hackeado-canoas.html",
+    resumo: "Seu WhatsApp foi hackeado em Canoas? Saiba o que fazer imediatamente, como recuperar sua conta, como evitar golpes e quais medidas legais tomar. Atendimento em Canoas e região.",
+    data: "28/08/2026",
+    horario: "09:00",
+    categoria: "direito-digital",
+    categoriaLabel: "💻 Direito Digital",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/whatsapp-hackeado-canoas-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+  {
+    titulo: "Correspondente jurídico em Sapucaia do Sul: serviços e vantagens",
+    link: "https://veracatarina.adv.br/noticias/correspondente-juridico-sapucaia-do-sul.html",
+    resumo: "Conheça os serviços e vantagens de contratar um correspondente jurídico em Sapucaia do Sul. Atendimento B2B para advogados e escritórios com 40 anos de experiência.",
+    data: "28/08/2026",
+    horario: "14:00",
+    categoria: "correspondente",
+    categoriaLabel: "🤝 Correspondente Jurídico",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/correspondente-juridico-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+
+  // ==========================================================
+  //  BLOCO 9: POSTAGENS PENDENTES (29/08 a 01/09)
+  // ==========================================================
+  {
     titulo: "Como funciona a guarda compartilhada em Esteio: guia completo 2026",
     link: "https://veracatarina.adv.br/noticias/guarda-compartilhada-esteio.html",
     resumo: "Saiba como funciona a guarda compartilhada em Esteio: direitos e deveres dos pais, como é definida a guarda, documentos necessários e como pedir. Atendimento em Esteio e região.",
-    data: "28/08/2026",
+    data: "29/08/2026",
     horario: "09:00",
     categoria: "direito-familia",
     categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
@@ -856,8 +871,8 @@ const posts = [
     titulo: "Como pedir pensão alimentícia em Cachoeirinha: guia completo 2026",
     link: "https://veracatarina.adv.br/noticias/pensao-alimenticia-cachoeirinha.html",
     resumo: "Saiba como pedir pensão alimentícia em Cachoeirinha: quem tem direito, como calcular o valor, documentos necessários e como funciona a execução. Atendimento em Cachoeirinha e região.",
-    data: "28/08/2026",
-    horario: "14:00",
+    data: "31/08/2026",
+    horario: "09:00",
     categoria: "direito-familia",
     categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pensao-alimenticia-cachoeirinha-advocacia-vera-catarina.jpg",
@@ -867,8 +882,8 @@ const posts = [
     titulo: "ECA Digital: quais são os direitos de crianças e adolescentes na internet?",
     link: "https://veracatarina.adv.br/noticias/eca-digital-direitos-criancas.html",
     resumo: "Saiba quais são os direitos de crianças e adolescentes na internet com base no ECA Digital: proteção de dados, remoção de conteúdo, responsabilidade das plataformas e muito mais.",
-    data: "29/08/2026",
-    horario: "09:00",
+    data: "31/08/2026",
+    horario: "14:00",
     categoria: "infancia",
     categoriaLabel: "👶 Infância e Juventude",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/eca-digital-direitos-criancas-advocacia-vera-catarina.jpg",
@@ -878,7 +893,7 @@ const posts = [
     titulo: "Contrato empresarial: quais cuidados uma empresa deve tomar antes de assinar?",
     link: "https://veracatarina.adv.br/noticias/contrato-empresarial-cuidados.html",
     resumo: "Saiba quais cuidados uma empresa deve tomar antes de assinar um contrato: cláusulas essenciais, riscos, negociação e como evitar problemas jurídicos. Atendimento em toda a região.",
-    data: "31/08/2026",
+    data: "01/09/2026",
     horario: "09:00",
     categoria: "direito-empresarial",
     categoriaLabel: "🏢 Direito Empresarial",
@@ -889,112 +904,122 @@ const posts = [
     titulo: "Provas digitais: como preservar mensagens, áudios, imagens e documentos para uso em processo",
     link: "https://veracatarina.adv.br/noticias/provas-digitais-preservar.html",
     resumo: "Aprenda como preservar provas digitais para uso em processos judiciais: mensagens, áudios, imagens, documentos e tudo que a lei exige para validade da prova.",
-    data: "31/08/2026",
+    data: "01/09/2026",
     horario: "14:00",
     categoria: "provas-digitais",
     categoriaLabel: "🔐 Provas Digitais",
     imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/provas-digitais-preservar-advocacia-vera-catarina.jpg",
     destaque: false
   },
+
+  // ==========================================================
+  //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
+  //  Dias especiais podem ter mais de 2 postagens
+  // ==========================================================
   {
-  titulo: "Dia Nacional de Luta das Pessoas com Deficiência (21/09): o que a lei garante em Sapucaia do Sul?",
-  link: "https://veracatarina.adv.br/noticias/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul.html",
-  resumo: "Dia Nacional de Luta das Pessoas com Deficiência (21/09): saiba o que a lei garante em Sapucaia do Sul. Conheça a LBI, Setembro Verde e como a Dra. Vera Catarina pode ajudar.",
-  data: "21/09/2026",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Dia Nacional de Luta das Pessoas com Deficiência (21/09): o que a lei garante em Sapucaia do Sul?",
+    link: "https://veracatarina.adv.br/noticias/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul.html",
+    resumo: "Dia Nacional de Luta das Pessoas com Deficiência (21/09): saiba o que a lei garante em Sapucaia do Sul. Conheça a LBI, Setembro Verde e como a Dra. Vera Catarina pode ajudar.",
+    data: "21/09/2026",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-luta-pessoas-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
-  titulo: "Dia Nacional do Surdo: a importância da Libras para a inclusão em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/dia-nacional-surdo-libras-sapucaia-do-sul.html",
-  resumo: "Dia Nacional do Surdo (26/09): saiba a importância da Libras para a inclusão em Sapucaia do Sul. Conheça os direitos da pessoa surda, a Lei de Libras e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
-  data: "26/09/2026",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-surdo-libras-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Dia Nacional do Surdo: a importância da Libras para a inclusão em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/dia-nacional-surdo-libras-sapucaia-do-sul.html",
+    resumo: "Dia Nacional do Surdo (26/09): saiba a importância da Libras para a inclusão em Sapucaia do Sul. Conheça os direitos da pessoa surda, a Lei de Libras e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+    data: "26/09/2026",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-surdo-libras-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
-  titulo: "Dia Nacional da Pessoa com Deficiência Física: direitos, acessibilidade e LOAS em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-fisica-sapucaia-do-sul.html",
-  resumo: "Dia Nacional da Pessoa com Deficiência Física (11/10): saiba quais são os direitos, acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
-  data: "11/10/2026",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-fisica-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Dia Nacional da Pessoa com Deficiência Física: direitos, acessibilidade e LOAS em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/dia-deficiencia-fisica-sapucaia-do-sul.html",
+    resumo: "Dia Nacional da Pessoa com Deficiência Física (11/10): saiba quais são os direitos, acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+    data: "11/10/2026",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-fisica-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
-  titulo: "Dia Internacional da Pessoa com Deficiência: direitos, acessibilidade e inclusão em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/dia-internacional-pessoa-deficiencia-sapucaia-do-sul.html",
-  resumo: "Dia Internacional da Pessoa com Deficiência (03/12): saiba quais são os direitos garantidos pela LBI, como funciona a acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
-  data: "03/12/2026",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-internacional-pessoa-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Dia Internacional da Pessoa com Deficiência: direitos, acessibilidade e inclusão em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/dia-internacional-pessoa-deficiencia-sapucaia-do-sul.html",
+    resumo: "Dia Internacional da Pessoa com Deficiência (03/12): saiba quais são os direitos garantidos pela LBI, como funciona a acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+    data: "03/12/2026",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-internacional-pessoa-deficiencia-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
-  titulo: "Dia Nacional da Pessoa com Deficiência Visual: acessibilidade e direitos em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-visual-sapucaia-do-sul.html",
-  resumo: "Dia Nacional da Pessoa com Deficiência Visual (13/12): saiba quais são os direitos, acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
-  data: "13/12/2026",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-visual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Dia Nacional da Pessoa com Deficiência Visual: acessibilidade e direitos em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/dia-deficiencia-visual-sapucaia-do-sul.html",
+    resumo: "Dia Nacional da Pessoa com Deficiência Visual (13/12): saiba quais são os direitos, acessibilidade em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+    data: "13/12/2026",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-visual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
+
+  // ==========================================================
+  //  BLOCO 11: DATAS COMEMORATIVAS (2027)
+  //  Dias especiais podem ter mais de 2 postagens
+  // ==========================================================
   {
-  titulo: "Dia Internacional da Síndrome de Down: inclusão, afeto e direitos em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/dia-sindrome-down-sapucaia-do-sul.html",
-  resumo: "Dia Internacional da Síndrome de Down (21/03): saiba quais são os direitos, a inclusão em Sapucaia do Sul, como solicitar o LOAS/BPC e conheça a história da Dra. Vera Catarina e sua filha Fabrícia.",
-  data: "21/03/2027",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-sindrome-down-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Dia Internacional da Síndrome de Down: inclusão, afeto e direitos em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/dia-sindrome-down-sapucaia-do-sul.html",
+    resumo: "Dia Internacional da Síndrome de Down (21/03): saiba quais são os direitos, a inclusão em Sapucaia do Sul, como solicitar o LOAS/BPC e conheça a história da Dra. Vera Catarina e sua filha Fabrícia.",
+    data: "21/03/2027",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-sindrome-down-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
-  titulo: "Dia Mundial de Conscientização do Autismo: direitos e LOAS em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/dia-autismo-sapucaia-do-sul.html",
-  resumo: "Dia Mundial de Conscientização do Autismo (02/04): saiba quais são os direitos da pessoa com Transtorno do Espectro Autista (TEA), como solicitar o LOAS/BPC em Sapucaia do Sul e como a Dra. Vera Catarina pode ajudar.",
-  data: "02/04/2027",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-autismo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Dia Mundial de Conscientização do Autismo: direitos e LOAS em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/dia-autismo-sapucaia-do-sul.html",
+    resumo: "Dia Mundial de Conscientização do Autismo (02/04): saiba quais são os direitos da pessoa com Transtorno do Espectro Autista (TEA), como solicitar o LOAS/BPC em Sapucaia do Sul e como a Dra. Vera Catarina pode ajudar.",
+    data: "02/04/2027",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-autismo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
-  titulo: "Dia Nacional da Deficiência Intelectual: direitos e inclusão em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/dia-deficiencia-intelectual-sapucaia-do-sul.html",
-  resumo: "Dia Nacional da Deficiência Intelectual (22/04): saiba quais são os direitos, a inclusão em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
-  data: "22/04/2027",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-intelectual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-},
+    titulo: "Dia Nacional da Deficiência Intelectual: direitos e inclusão em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/dia-deficiencia-intelectual-sapucaia-do-sul.html",
+    resumo: "Dia Nacional da Deficiência Intelectual (22/04): saiba quais são os direitos, a inclusão em Sapucaia do Sul e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+    data: "22/04/2027",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-deficiencia-intelectual-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  },
   {
-  titulo: "Dia Nacional da Libras: a língua que conecta e inclui em Sapucaia do Sul",
-  link: "https://veracatarina.adv.br/noticias/dia-nacional-libras-sapucaia-do-sul.html",
-  resumo: "Dia Nacional da Libras (24/04): saiba a importância da Língua Brasileira de Sinais para a inclusão em Sapucaia do Sul, os direitos da comunidade surda e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
-  data: "24/04/2027",
-  horario: "09:00",
-  categoria: "direito-civil",
-  categoriaLabel: "🏛️ Direito Civil",
-  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-libras-sapucaia-do-sul-advocacia-vera-catarina.jpg",
-  destaque: false
-}
+    titulo: "Dia Nacional da Libras: a língua que conecta e inclui em Sapucaia do Sul",
+    link: "https://veracatarina.adv.br/noticias/dia-nacional-libras-sapucaia-do-sul.html",
+    resumo: "Dia Nacional da Libras (24/04): saiba a importância da Língua Brasileira de Sinais para a inclusão em Sapucaia do Sul, os direitos da comunidade surda e como solicitar o LOAS/BPC. Atendimento da Dra. Vera Catarina.",
+    data: "24/04/2027",
+    horario: "09:00",
+    categoria: "direito-civil",
+    categoriaLabel: "🏛️ Direito Civil",
+    imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/dia-nacional-libras-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+    destaque: false
+  }
 ];
 
 // ==========================================================
