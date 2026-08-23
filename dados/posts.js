@@ -772,6 +772,17 @@ const posts = [
     destaque: false
   },
   {
+  titulo: "Benefício de Prestação Continuada (BPC/LOAS): guia completo para solicitar em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/loas-bpc-guia-completo-sapucaia-do-sul.html",
+  resumo: "Saiba como solicitar o Benefício de Prestação Continuada (BPC/LOAS) em Sapucaia do Sul: quem tem direito, documentos, como funciona a avaliação e como dar entrada no pedido. Atendimento da Dra. Vera Catarina.",
+  data: "25/08/2026",
+  horario: "17:00",
+  categoria: "direito-previdenciario",
+  categoriaLabel: "📜 Direito Previdenciário",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/loas-bpc-guia-completo-sapucaia-do-sul-advocacia-vera-catarina.jpg",
+  destaque: false
+},
+  {
     titulo: "Advogado criminal em Cachoeirinha: como escolher e quando procurar",
     link: "https://veracatarina.adv.br/noticias/advogado-criminal-cachoeirinha.html",
     resumo: "Precisa de um advogado criminal em Cachoeirinha? Saiba quando procurar, como escolher o melhor profissional, quais critérios avaliar e como funciona a defesa criminal. Atendimento em Cachoeirinha e região.",
