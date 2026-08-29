@@ -930,6 +930,17 @@ const posts = [
     destaque: false
   },
   {
+  titulo: "Como funciona a mediação de conflitos em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/mediacao-conflitos-sapucaia-do-sul.html",
+  resumo: "Entenda como funciona a mediação de conflitos em Sapucaia do Sul, suas vantagens, quando utilizar e como a Dra. Vera Catarina pode ajudar a resolver disputas de forma ágil e consensual.",
+  data: "02/09/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/mediacao-conflitos-sapucaia-do-sul.jpg",
+  destaque: false
+},
+  {
   titulo: "O que é Teoria do Direito e por que ela é importante para a sociedade?",
   link: "https://veracatarina.adv.br/noticias/o-que-e-teoria-do-direito-importancia-sociedade.html",
   resumo: "Entenda o que é a Teoria do Direito, sua importância para a sociedade e como ela fundamenta a formação jurídica e a justiça no Brasil.",
