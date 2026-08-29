@@ -951,6 +951,20 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/teoria-do-direito-importancia-formacao-juridica.jpg",
   destaque: false
 },
+  // ==========================================================
+//  NOVAS POSTAGENS (06/09 - 09:00)
+// ==========================================================
+{
+  titulo: "Direitos fundamentais: por que a Constituição protege os cidadãos?",
+  link: "https://veracatarina.adv.br/noticias/direitos-fundamentais-constituicao-protege-cidadaos.html",
+  resumo: "Entenda o que são os direitos fundamentais, por que a Constituição Federal protege os cidadãos e como esses direitos são aplicados no dia a dia. Conheça os principais direitos e saiba quando procurar orientação jurídica.",
+  data: "06/09/2026",
+  horario: "09:00",
+  categoria: "direitos-cidadao",
+  categoriaLabel: "📜 Direitos do Cidadão",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/direitos-fundamentais-constituicao-protege-cidadaos.jpg",
+  destaque: false
+},
 
   // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
