@@ -976,6 +976,20 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/direitos-fundamentais-constituicao-protege-cidadaos.jpg",
   destaque: false
 },
+  // ==========================================================
+//  NOVAS POSTAGENS (07/09 - 09:00)
+// ==========================================================
+{
+  titulo: "Planejamento Sucessório e Protocolo Familiar: protegendo o patrimônio e a harmonia",
+  link: "https://veracatarina.adv.br/noticias/planejamento-sucessorio-protocolo-familiar.html",
+  resumo: "Proteja seu patrimônio e preserve a harmonia familiar com planejamento sucessório e protocolo familiar. Saiba como funciona, quais documentos são necessários e quando contratar um advogado especialista em Sapucaia do Sul.",
+  data: "07/09/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/planejamento-sucessorio-protocolo-familiar-advocacia-vera-catarina.jpg",
+  destaque: false
+},
 
   // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
