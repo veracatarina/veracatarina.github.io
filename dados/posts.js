@@ -1047,6 +1047,20 @@ const posts = [
   destaque: false
 },
   // ==========================================================
+//  NOVAS POSTAGENS (10/09 - 09:00)
+// ==========================================================
+{
+  titulo: "Assédio moral no trabalho em Canoas: como provar e pedir indenização",
+  link: "https://veracatarina.adv.br/noticias/assedio-moral-trabalho-canoas-provar-indenizacao.html",
+  resumo: "Vítima de assédio moral no trabalho em Canoas? Saiba como provar, quais são seus direitos, como pedir indenização por danos morais e quando procurar um advogado trabalhista.",
+  data: "10/09/2026",
+  horario: "09:00",
+  categoria: "direito-trabalhista",
+  categoriaLabel: "📋 Direito Trabalhista",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/assedio-moral-trabalho-canoas-provar-indenizacao.jpg",
+  destaque: false
+},
+  // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
   // ==========================================================
