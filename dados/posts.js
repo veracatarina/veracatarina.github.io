@@ -1075,6 +1075,20 @@ const posts = [
   destaque: false
 },
   // ==========================================================
+//  NOVAS POSTAGENS (11/09 - 09:00)
+// ==========================================================
+{
+  titulo: "Guarda de netos pelos avós: direitos e procedimentos em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/guarda-netos-avos-direitos-procedimentos-sapucaia-do-sul.html",
+  resumo: "Saiba como funciona a guarda de netos pelos avós em Sapucaia do Sul, quais são os direitos dos avós, os requisitos legais e como proceder para solicitar a guarda judicial ou extrajudicial.",
+  data: "11/09/2026",
+  horario: "09:00",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-netos-avos-direitos-procedimentos-sapucaia-do-sul.jpg",
+  destaque: false
+},
+  // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
   // ==========================================================
