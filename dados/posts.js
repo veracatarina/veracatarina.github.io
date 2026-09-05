@@ -990,7 +990,20 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/planejamento-sucessorio-protocolo-familiar-advocacia-vera-catarina.jpg",
   destaque: false
 },
-
+// ==========================================================
+//  NOVAS POSTAGENS (08/09 - 09:00)
+// ==========================================================
+{
+  titulo: "Direitos do consumidor em compras online: como se proteger em Sapucaia do Sul",
+  link: "https://veracatarina.adv.br/noticias/direitos-consumidor-compras-online-sapucaia-do-sul.html",
+  resumo: "Saiba quais são os direitos do consumidor em compras online, como se proteger de fraudes, como pedir indenização por danos morais e materiais e quando procurar um advogado em Sapucaia do Sul.",
+  data: "08/09/2026",
+  horario: "09:00",
+  categoria: "direito-consumidor",
+  categoriaLabel: "🛒 Direito do Consumidor",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/direitos-consumidor-compras-online-sapucaia-do-sul.jpg",
+  destaque: false
+},
   // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
