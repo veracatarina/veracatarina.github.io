@@ -1114,6 +1114,20 @@ const posts = [
   destaque: false
 },
   // ==========================================================
+//  NOVAS POSTAGENS (12/09 - 14:00)
+// ==========================================================
+{
+  titulo: "Pesquisa jurídica: por que a produção científica é importante para o Direito?",
+  link: "https://veracatarina.adv.br/noticias/pesquisa-juridica-producao-cientifica-importancia-direito.html",
+  resumo: "Entenda a importância da pesquisa jurídica e da produção científica para a evolução do Direito, a formação de profissionais e a transformação social.",
+  data: "12/09/2026",
+  horario: "14:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🎓 Acadêmico",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/pesquisa-juridica-producao-cientifica-importancia-direito.jpg",
+  destaque: false
+},
+  // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
   // ==========================================================
