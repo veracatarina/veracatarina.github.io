@@ -860,10 +860,7 @@ const posts = [
     destaque: false
   },
 
-  // ==========================================================
-  //  BLOCO 9: POSTAGENS PENDENTES (29/08 a 10/09)
-  // ==========================================================
-  {
+   {
   titulo: "Como funciona a usucapião em Sapucaia do Sul: guia completo 2026",
   link: "https://veracatarina.adv.br/noticias/usucapiao-sapucaia-do-sul-guia-completo.html",
   resumo: "Saiba como funciona a usucapião em Sapucaia do Sul: requisitos, prazos, tipos de usucapião, documentos necessários e como dar entrada no processo. Atendimento da Dra. Vera Catarina.",
@@ -1086,6 +1083,20 @@ const posts = [
   categoria: "direito-familia",
   categoriaLabel: "👨‍👩‍👧‍👦 Direito de Família",
   imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/guarda-netos-avos-direitos-procedimentos-sapucaia-do-sul.jpg",
+  destaque: false
+},
+  // ==========================================================
+//  NOVAS POSTAGENS (11/09 - 14:00)
+// ==========================================================
+{
+  titulo: "Como denunciar abuso sexual infantil em Gravataí: guia para famílias",
+  link: "https://veracatarina.adv.br/noticias/denunciar-abuso-sexual-infantil-gravatai.html",
+  resumo: "Saiba como denunciar abuso sexual infantil em Gravataí, quais os canais de denúncia, como proteger a criança e quando buscar orientação jurídica. Um guia completo para famílias.",
+  data: "11/09/2026",
+  horario: "14:00",
+  categoria: "infancia",
+  categoriaLabel: "👶 Infância e Juventude",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/denunciar-abuso-sexual-infantil-gravatai.jpg",
   destaque: false
 },
   // ==========================================================
