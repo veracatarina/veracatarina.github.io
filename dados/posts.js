@@ -1005,6 +1005,20 @@ const posts = [
   destaque: false
 },
   // ==========================================================
+//  NOVAS POSTAGENS (08/09 - 14:00)
+// ==========================================================
+{
+  titulo: "Como pedir divórcio litigioso em São Leopoldo: guia completo 2026",
+  link: "https://veracatarina.adv.br/noticias/divorcio-litigioso-sao-leopoldo.html",
+  resumo: "Saiba como funciona o divórcio litigioso em São Leopoldo: prazos, documentos, custos e quando contratar um advogado especializado. Entenda as diferenças entre divórcio consensual e litigioso.",
+  data: "08/09/2026",
+  horario: "14:00",
+  categoria: "direito-familia",
+  categoriaLabel: "👨‍👩‍👧 Direito de Família",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/divorcio-litigioso-sao-leopoldo-guia-completo.jpg",
+  destaque: false
+},
+  // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
   // ==========================================================
