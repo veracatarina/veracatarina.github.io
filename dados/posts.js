@@ -1128,6 +1128,20 @@ const posts = [
   destaque: false
 },
   // ==========================================================
+//  NOVAS POSTAGENS (13/09 - 09:00)
+// ==========================================================
+{
+  titulo: "Direito à informação: por que documentos e provas são tão importantes?",
+  link: "https://veracatarina.adv.br/noticias/direito-informacao-documentos-provas-importantes.html",
+  resumo: "Entenda por que o direito à informação e a preservação de documentos e provas são fundamentais para a justiça, a cidadania e a defesa dos seus direitos.",
+  data: "13/09/2026",
+  horario: "09:00",
+  categoria: "direitos-cidadao",
+  categoriaLabel: "📜 Direitos do Cidadão",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/direito-informacao-documentos-provas-importantes.jpg",
+  destaque: false
+},
+  // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
   // ==========================================================
