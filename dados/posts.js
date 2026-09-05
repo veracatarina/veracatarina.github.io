@@ -1033,6 +1033,20 @@ const posts = [
   destaque: false
 },
   // ==========================================================
+//  NOVAS POSTAGENS (09/09 - 14:00)
+// ==========================================================
+{
+  titulo: "Direitos do inquilino em Esteio: o que a lei garante",
+  link: "https://veracatarina.adv.br/noticias/direitos-inquilino-esteio-lei-garante.html",
+  resumo: "Saiba quais são os direitos do inquilino em Esteio: contrato de locação, reajuste de aluguel, vistoria, rescisão e muito mais. Conheça a Lei do Inquilinato (Lei nº 8.245/91) e saiba quando buscar orientação jurídica.",
+  data: "09/09/2026",
+  horario: "14:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🏛️ Direito Civil",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/direitos-inquilino-esteio-lei-garante.jpg",
+  destaque: false
+},
+  // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
   // ==========================================================
