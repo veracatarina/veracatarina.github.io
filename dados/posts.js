@@ -1100,6 +1100,20 @@ const posts = [
   destaque: false
 },
   // ==========================================================
+//  NOVAS POSTAGENS (12/09 - 09:00)
+// ==========================================================
+{
+  titulo: "Por que estudar Direito também significa compreender a sociedade?",
+  link: "https://veracatarina.adv.br/noticias/estudar-direito-compreender-sociedade.html",
+  resumo: "Entenda por que o estudo do Direito vai além das leis e normas, envolvendo a compreensão da sociedade, da política e dos direitos humanos. Uma visão acadêmica e crítica.",
+  data: "12/09/2026",
+  horario: "09:00",
+  categoria: "direito-civil",
+  categoriaLabel: "🎓 Acadêmico",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/estudar-direito-compreender-sociedade.jpg",
+  destaque: false
+},
+  // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
   // ==========================================================
