@@ -1019,6 +1019,20 @@ const posts = [
   destaque: false
 },
   // ==========================================================
+//  NOVAS POSTAGENS (09/09 - 09:00)
+// ==========================================================
+{
+  titulo: "Crimes cibernéticos: como denunciar e buscar justiça em Canoas",
+  link: "https://veracatarina.adv.br/noticias/crimes-ciberneticos-denunciar-canoas.html",
+  resumo: "Saiba como denunciar crimes cibernéticos em Canoas: calúnia, difamação, injúria, fraudes e golpes virtuais. Conheça seus direitos e saiba quando buscar orientação jurídica.",
+  data: "09/09/2026",
+  horario: "09:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/veracatarina/veracatarina.github.io/main/noticias/imagens/crimes-ciberneticos-denunciar-canoas.jpg",
+  destaque: false
+},
+  // ==========================================================
   //  BLOCO 10: DATAS COMEMORATIVAS (Setembro a Dezembro 2026)
   //  Dias especiais podem ter mais de 2 postagens
   // ==========================================================
